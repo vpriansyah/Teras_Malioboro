@@ -88,9 +88,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="d-flex">
-                            <button class="btn btn-success" type="submit">Masuk</button>
-                        </div>
                     </nav>
                 </div>
             </div>
@@ -106,8 +103,6 @@
                         <h1><b class="iq-font-black iq-tw-4">Teras Malioboro</b></h1><br>
                         <h5 class="iq-font-black iq-mtb-20">Teras Malioboro ini merupakan tempat baru bagi para Pedagang
                             Kaki Lima (PKL) Malioboro.</h5><br>
-                        <button href="#" class="rounded-pill btn btn-success" type="submit">Masuk</button>
-                        <h6><b class="iq-font-black iq-tw-4">*Login sebagai pedagang</b></h6>
                     </div>
                     <div class="col-md-6">
                         <img class="banner-img img-fluid center-block" src="images/home.jpg">
@@ -155,9 +150,6 @@
             <span class="iq-objects-03" data-bottom="transform:translatex(50px)"
                 data-top="transform:translatex(-100px);">
                 <img src="images/drive/04.png" alt="drive02">
-            </span>
-            <span class="iq-objects-04 iq-fadebounce">
-                <span class="iq-round"></span>
             </span>
         </div>
     </section>
