@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+//Pedagang
 Route::get('/', function () {
     return view('dashboard');
 });
@@ -45,3 +45,9 @@ Route::get('/agenda', function () {
 Route::get('/informasi', function () {
     return view('informasipenting');
 });
+
+//Publik
+Route::get('/publik/', function () {
+    return view('publik/index');
+});
+
