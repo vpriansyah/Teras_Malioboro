@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Teras Malioboro</title>
+    <title>SiBakul Jogja | Teras Malioboro</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/SiBakul.png" />
     <!-- Google Fonts -->
@@ -78,7 +78,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto justify-content-end mx-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link mx-3" href="#how-it-works">Home</a>
+                                    <a class="nav-link mx-3" href="#home">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link mx-3" href="#infolanjut">Info Lanjutan</a>
@@ -98,8 +98,8 @@
     </header>
     <!-- Header End -->
     <!-- Banner -->
-    <section id="home" class="iq-banner-12 overview-block-pt white-bg">
-        <div class="container">
+    <section id="home" class="iq-banner-12 light-success-bg">
+        <div class="container" id="home">
             <div class="banner-text text-left">
                 <div class="row justify-content-between">
                     <div class="col-md-6 align-self-center">
@@ -118,7 +118,7 @@
         <div class="banner-objects">
             <span class="banner-objects-01" data-bottom="transform:translatey(50px)"
                 data-top="transform:translatey(-50px);">
-                <img src="images/dr ive/03.png" alt="drive02">
+                <img src="images/drive/03.png" alt="drive02">
             </span>
             <span class="banner-objects-02 iq-fadebounce">
                 <span class="iq-round"></span>
@@ -152,9 +152,6 @@
             </div>
         </div>
         <div class="iq-objects">
-            <span class="iq-objects-01">
-                <img src="images/drive/02.png" alt="drive02">
-            </span>
             <span class="iq-objects-03" data-bottom="transform:translatex(50px)"
                 data-top="transform:translatex(-100px);">
                 <img src="images/drive/04.png" alt="drive02">
@@ -254,9 +251,8 @@
                     <div class="logo">
                         <section class="footer-info">
                             <br><br><br>
-                            <iframe class="map"
-                                src="images/maps.jpg"
-                                style="border:0" allowfullscreen></iframe>
+                            <iframe class="map" src="images/maps.jpg" style="border:0"
+                                allowfullscreen></iframe>
                     </div>
                     </section>
                 </div>
