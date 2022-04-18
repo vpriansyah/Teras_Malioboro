@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Teras Malioboro</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/SiBakul.png" />
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900"
@@ -89,8 +89,7 @@
                             </ul>
                         </div>
                         <div class="d-flex">
-                            <button class="btn btn-outline-success" type="submit">Masuk</button>
-                            <button class="btn btn-success" type="submit">Daftar</button>
+                            <button class="btn btn-success" type="submit">Masuk</button>
                         </div>
                     </nav>
                 </div>
@@ -248,58 +247,79 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="iq-footerr iq-ptb-40 ">
+    <footer id="kontak" class="iq-footerr iq-ptb-40 ">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-20">
+                <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-10 iq-mtb-20">
                     <div class="logo">
-                        <img class="width=300px" src="images/maps.jpg" alt="">
+                        <section class="footer-info">
+                            <br><br><br>
+                            <iframe class="map"
+                                src="images/maps.jpg"
+                                style="border:0" allowfullscreen></iframe>
                     </div>
+                    </section>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-20 ">
-                    <div class="contact-bg">
-                        <h5 class="iq-tw-6 iq-font-black  iq-mb-10">Teras Malioboro 1</h5>
-                        <ul class="iq-contact">
-                            <li>
-                                <i class="ion-ios-location-outline"></i>
-                                <p>Jl. Margo Mulyo, Ngupasan, Kec. Gondomanan, Kota Yogyakarta, Daerah Istimewa
-                                    Yogyakarta 55122</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="contact-bg">
-                        <h5 class="iq-tw-6 iq-font-black  iq-mb-10">Teras Malioboro 2</h5>
-                        <ul class="iq-contact">
-                            <li>
-                                <i class="ion-ios-location-outline"></i>
-                                <p>Jl. Malioboro No.56, Suryatmajan, Kec. Danurejan, Kota Yogyakarta, Daerah Istimewa
-                                    Yogyakarta 55212</p>
-                            </li>
-                        </ul>
+                <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-mtb-20">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 col-sm-6">
+                            <div class="contact-bg">
+                                <h5 class="iq-tw-6 iq-font-black iq-mb-10">Teras Malioboro 1</h5>
+                                <ul class="iq-contact">
+                                    <li>
+                                        <i class="ion-ios-location-outline iq-pt-20"></i>
+                                        <p>Jl. Margo Mulyo, Ngupasan, Kec. Gondomanan, Kota Yogyakarta, Daerah Istimewa
+                                            Yogyakarta 55122</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6 col-sm-6">
+                            <div class="contact-bg">
+                                <h5 class="iq-tw-6 iq-font-black iq-mb-10">Teras Malioboro 2</h5>
+                                <ul class="iq-contact">
+                                    <li>
+                                        <i class="ion-ios-location-outline iq-pt-20"></i>
+                                        <p>Jl. Malioboro No.56, Suryatmajan, Kec. Danurejan, Kota Yogyakarta, Daerah
+                                            Istimewa
+                                            Yogyakarta 55212</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-20 mx-auto">
-                    <h5 class="iq-tw-6 iq-font-black  iq-mb-10">Contact Us</h5>
-                    <p><i class="fa-solid fa-phone"></i> +628123190xx</p>
-                    <p><i class="fa-brands fa-instagram"> @terasmalioboro_</i></p>
-                    <p><i class="fa-regular fa-envelope"> terasmalioboro@gmail.com</i></p>
+                <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-pb-10 iq-mtb-20">
+                    <h5 class="iq-tw-6 iq-font-black iq-mb-10">Contact Us</h5>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-4 col-sm-4">
+                            <a><i class="fa-solid fa-phone"></i> +628123190xx</a>
+                        </div>
+                        <div class="col-lg-12 col-md-4 col-sm-4">
+                            <a><i class="fa-brands fa-instagram"> @terasmalioboro_</i></a>
+                        </div>
+                        <div class="col-lg-12 col-md-4 col-sm-4">
+                            <a><i class="fa-regular fa-envelope"> terasmalioboro@gmail.com</i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <hr>
-            <div class="row iq-mt-20">
+            <div class="row iq-mt-10">
                 <div class="mx-auto">
                     <div class="iq-copyright ">
                         Copyright @
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> <a href="index-02.html">Sofbox</a> All Rights Reserved
+                        </script> <a>Sofbox</a> All Rights Reserved
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Footer END -->
+
     <!-- back-to-top -->
     <div id="back-to-top">
         <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>

@@ -14,36 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Pedagang
-Route::get('/', function () {
-    return view('dashboard');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/pedagang', function () {
+    return view('/pedagang/dashboard');
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('/pedagang/login');
 });
 
 Route::get('/daftar', function () {
-    return view('daftar');
+    return view('/pedagang/daftar');
 });
 
 Route::get('/saran', function () {
-    return view('saran');
+    return view('/pedagang/saran');
 });
 
 Route::get('/statistik', function () {
-    return view('statistik');
+    return view('/pedagang/statistik');
 });
 
 Route::get('/agenda', function () {
-    return view('agenda');
+    return view('/pedagang/agenda');
 });
 
 Route::get('/informasi', function () {
-    return view('informasipenting');
+    return view('/pedagang/informasipenting');
 });
 
 //Publik
