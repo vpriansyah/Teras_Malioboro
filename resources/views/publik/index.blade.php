@@ -1,103 +1,6 @@
-<!doctype html>
-<html lang="en">
+@extends('publik.layouts.home')
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>SiBakul Jogja | Teras Malioboro</title>
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/SiBakul.png" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- owl-carousel -->
-  <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="css/font-awesome.css" />
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" />
-  <!-- media element player -->
-  <link href="css/mediaelementplayer.min.css" rel="stylesheet" type="text/css" />
-  <!-- Animate -->
-  <link rel="stylesheet" href="css/animate.css" />
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <!-- variable -->
-  <link rel="stylesheet" href="css/variables.css">
-  <!-- Style -->
-  <link rel="stylesheet" href="css/style-publik.css">
-  <!-- color -->
-  <link rel="stylesheet" href="css/color.css">
-  <!-- Responsive -->
-  <link rel="stylesheet" href="css/responsive.css">
-  <!-- custom style -->
-  <link rel="stylesheet" href="css/custom.css" />
-
-</head>
-
-<body data-spy="scroll" data-offset="80">
-  <!-- loading -->
-  <div id="loading">
-    <div id="loading-center">
-      <div class="loader">
-        <div class="cube">
-          <div class="sides">
-            <div class="top"></div>
-            <div class="right"></div>
-            <div class="bottom"></div>
-            <div class="left"></div>
-            <div class="front"></div>
-            <div class="back"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- loading End -->
-  <!-- Header -->
-
-  <header id="main-header" class="header-one">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="publik">
-              <img class="img-fluid logo_img" id="logo_img" src="images/tulisan tm.png" style="width: auto; height: 1.5rem;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="ion-navicon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="#iq-home">Home</a>
-                </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="#tentang">Tentang</a>
-                </li> -->
-                <li class="nav-item">
-                  <a class="nav-link" href="#layanan">Layanan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#peta">Peta</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#kontak">Kontak</a>
-                </li>
-              </ul>
-              <div class="d-flex" style="padding-left: 1.2rem">
-                <a href=" #" class="btn btn-success pull-right">Masuk</a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- Header End -->
+@section('content')
   <!-- Banner -->
   <section id="iq-home" class="iq-banner-12 light-success-bg">
     <div class="container" id="home">
@@ -107,13 +10,13 @@
             <h1 class="iq-font-black iq-tw-4"><b>Teras Malioboro</b></h1>
             <h5 class="iq-font-black iq-mtb-40">Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki Lima (PKL) Malioboro.</h5>
             <div>
-              <button href="#" class="rounded-pill btn btn-success" type="submit">Masuk</button><br>
+              <button href="#" class="rounded-pill btn btn-success">Masuk</button><br>
             </div>
             <br>
 
           </div>
           <div class="col-md-6">
-            <img class="banner-img img-fluid" src="images/teras-malioboro.jpg" alt="teras-malioboro" style="width: 120%;">
+            <img class="banner-img img-fluid" src="{!! asset('images/teras-malioboro.jpg')!!}" alt="teras-malioboro" style="width: 120%;">
             <img class="banner-phone img-fluid center-block wow fadeInUp" src="images/SiBakul.png" alt="SiBakul">
           </div>
         </div>
@@ -121,7 +24,7 @@
     </div>
     <div class="banner-objects">
       <span class="banner-objects-01" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-50px);">
-        <img src="images/03(2).png" alt="drive02">
+        <img src="{!! asset('images/03(2).png')!!}" alt="drive02">
       </span>
       <span class="banner-objects-02 iq-fadebounce">
         <span class="iq-round"></span>
@@ -130,7 +33,7 @@
         <span class="iq-round"></span>
       </span>
       <span class="banner-objects-04" data-bottom="transform:translatex(100px)" data-top="transform:translatex(-100px);">
-        <img src="images/04(2).png" alt="drive02">
+        <img src="{!! asset('images/04(2).png')!!}" alt="drive02">
     </div>
   </section>
   <!-- Banner End -->
@@ -190,7 +93,7 @@
       </div>
       <div class="row justify-content-md-center">
         <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="#">
+          <a href="publik/selfassessment">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <i class="ion-qr-scanner iq-mb-10"></i>
@@ -200,7 +103,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="#">
+          <a href="publik/galeri">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <i class="ion-android-cart iq-mb-10"></i>
@@ -210,7 +113,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="#">
+          <a href="publik/aduansaran">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <i class="ion-chatbubble-working iq-mb-10"></i>
@@ -220,7 +123,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="#">
+          <a href="publik/agenda">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <i class="ion-clipboard iq-mb-10"></i>
@@ -230,7 +133,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="#">
+          <a href="publik/cctv">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <i class="ion-ios-videocam iq-mb-10"></i>
@@ -240,11 +143,21 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="#">
+          <a href="publik/statistik">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <i class="ion-stats-bars iq-mb-10"></i>
                 <h5 class="iq-tw-6 iq-pb-10">Data Statistik</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 iq-mtb-15">
+          <a href="#">
+            <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+              <div>
+                <i class="ion-information-circled iq-mb-10"></i>
+                <h5 class="iq-tw-6 iq-pb-10">Informasi Penting</h5>
               </div>
             </div>
           </a>
@@ -270,14 +183,14 @@
   <!-- Peta Interaktif-->
 
   <!-- Footer -->
-  <footer id="kontak" class="iq-footerr iq-ptb-40 ">
+  <footer id="kontak" class="iq-footerr iq-ptb-20 ">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-10 iq-mtb-20">
+        <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-40 iq-mb-20">
           <div class="logo">
-          <section class="footer-info">
-            <br><br><br>
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.840108181602!2d144.95373631539215!3d-37.8172139797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1497005461921" style="border:0" allowfullscreen></iframe>
+            <section class="footer-info">
+              <br><br><br>
+              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.840108181602!2d144.95373631539215!3d-37.8172139797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1497005461921" style="border:0" allowfullscreen></iframe>
           </div>
           </section>
         </div>
@@ -310,22 +223,19 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-pb-10 iq-mtb-20">
+        <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-pb-40 iq-mb-20">
           <h5 class="iq-tw-6 iq-font-white iq-mb-10">Contact Us</h5>
           <div class="row">
             <div class="col-lg-12 col-md-4 col-sm-4">
-            <a><i class="fa-solid fa-phone"></i> +628123190xx</a>
+              <a><i class="fa-solid fa-phone"></i> +628123190xx</a>
             </div>
             <div class="col-lg-12 col-md-4 col-sm-4">
-            <a><i class="fa-brands fa-instagram"> @terasmalioboro_</i></a>
+              <a><i class="fa-brands fa-instagram"> @terasmalioboro_</i></a>
             </div>
             <div class="col-lg-12 col-md-4 col-sm-4">
-            <a><i class="fa-regular fa-envelope"> terasmalioboro@gmail.com</i></a>
+              <a><i class="fa-regular fa-envelope"> terasmalioboro@gmail.com</i></a>
             </div>
           </div>
-          
-          
-          
         </div>
       </div>
       <hr>
@@ -335,30 +245,17 @@
             Copyright @
             <script>
               document.write(new Date().getFullYear())
-            </script> <a>Sofbox</a> All Rights Reserved
+            </script> Kelompok 2 All Rights Reserved
           </div>
         </div>
       </div>
     </div>
   </footer>
   <!-- Footer END -->
+
   <!-- back-to-top -->
   <div id="back-to-top">
     <a class="top" id="top" href="#top"> <i class="ion-ios-upload-outline"></i> </a>
   </div>
   <!-- back-to-top End -->
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <!-- Main js -->
-  <script src="js/main.js"></script>
-  <!-- Google captcha code Js -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-  <!-- Custom -->
-  <script src="js/custom.js"></script>
-  <script src="https://kit.fontawesome.com/5014e491f0.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
+@endsection
