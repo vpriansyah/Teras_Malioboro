@@ -88,6 +88,9 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="d-flex">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -300,7 +303,7 @@
                         Copyright @
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> <a>Sofbox</a> All Rights Reserved
+                        </script> <a>Kelompok 4</a> All Rights Reserved
                     </div>
                 </div>
             </div>
