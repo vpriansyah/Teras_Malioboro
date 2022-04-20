@@ -106,7 +106,7 @@
                         <h1><b class="iq-font-black iq-tw-4">Teras Malioboro</b></h1><br>
                         <h5 class="iq-font-black iq-mtb-20">Teras Malioboro ini merupakan tempat baru bagi para Pedagang
                             Kaki Lima (PKL) Malioboro.</h5><br>
-                        <h5 class="text-danger iq-mtb-20">*Laman ini khusus untuk pedagang.</h5><br>
+                        <h5 class="text-danger   iq-mtb-20">*Laman ini khusus untuk pedagang.</h5><br>
                     </div>
                     <div class="col-md-6">
                         <img class="banner-img img-fluid center-block" src="images/home.jpg">
