@@ -47,3 +47,26 @@ Route::get('/publik/', function () {
     return view('publik/index');
 });
 
+Route::get('/publik/selfassessment', function () {
+    return view('/publik/selfassessment');
+});
+
+Route::get('/publik/galeri', function () {
+    return view('/publik/galeri');
+});
+
+Route::get('/publik/aduansaran', function () {
+    return view('/publik/aduansaran');
+});
+
+Route::get('/publik/agenda', function () {
+    return view('/publik/agenda');
+});
+
+Route::get('/publik/cctv', function () {
+    return view('/publik/cctv');
+});
+
+Route::get('/publik/statistik', function () {
+    return view('/publik/statistik');
+});
