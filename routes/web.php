@@ -55,7 +55,7 @@ Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');
 });
 
-Route::get('/publik/    galeri', function () {
+Route::get('/publik/galeri', function () {
     return view('/publik/galeri');
 });
 
