@@ -1,4 +1,4 @@
 @extends('pedagang.layouts.main')
 @section('container')
-    <h1>HALAMAN AGENDA</h1>
+    <h1>HALAMAN PROFIL</h1>
 @endsection

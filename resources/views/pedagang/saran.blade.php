@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Saran</title>
-</head>
-<body>
-    <h1>HALAMAN SARAN DAN ADUAN</h1>
-</body>
-</html>
+@extends('pedagang.layouts.main')
+@section('container')
+    <h1>HALAMAN SARAN ADUAN</h1>
+@endsection

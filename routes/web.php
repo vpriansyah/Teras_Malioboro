@@ -18,28 +18,32 @@ Route::get('/pedagang', function () {
     return view('/pedagang/dashboard');
 });
 
-Route::get('/login', function () {
+Route::get('pedagang/login', function () {
     return view('/pedagang/login');
 });
 
-Route::get('/daftar', function () {
+Route::get('pedagang/daftar', function () {
     return view('/pedagang/daftar');
 });
 
-Route::get('/saran', function () {
+Route::get('pedagang/saran', function () {
     return view('/pedagang/saran');
 });
 
-Route::get('/statistik', function () {
+Route::get('pedagang/profil', function () {
+    return view('/pedagang/profil');
+});
+
+Route::get('pedagang/statistik', function () {
     return view('/pedagang/statistik');
 });
 
-Route::get('/agenda', function () {
+Route::get('pedagang/agenda', function () {
     return view('/pedagang/agenda');
 });
 
-Route::get('/informasi', function () {
-    return view('/pedagang/informasipenting');
+Route::get('pedagang/informasi', function () {
+    return view('/pedagang/informasi');
 });
 
 //Publik
@@ -51,7 +55,7 @@ Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');
 });
 
-Route::get('/publik/galeri', function () {
+Route::get('/publik/    galeri', function () {
     return view('/publik/galeri');
 });
 
