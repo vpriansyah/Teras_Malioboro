@@ -10,7 +10,7 @@
             <h1 class="iq-font-black iq-tw-4"><b>Teras Malioboro</b></h1>
             <h5 class="iq-font-black iq-mtb-40">Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki Lima (PKL) Malioboro.</h5>
             <div>
-              <button href="#" class="rounded-pill btn btn-success">Masuk</button><br>
+              <button href="auth/login" class="rounded-pill btn btn-success">Masuk</button><br>
             </div>
             <br>
 

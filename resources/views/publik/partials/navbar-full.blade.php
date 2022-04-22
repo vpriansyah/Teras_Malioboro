@@ -52,7 +52,7 @@
                 </li>
               </ul>
               <div class="d-flex" style="padding-left: 1.2rem">
-                <a href=" #" class="btn btn-success pull-right">Masuk</a>
+                <a href="auth/login" class="btn btn-success pull-right">Masuk</a>
               </div>
             </div>
           </nav>
