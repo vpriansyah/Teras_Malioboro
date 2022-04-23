@@ -42,9 +42,9 @@
                     <img src="{!! asset('images/LOGO_TERAS_HITAM.png') !!}" alt="logo-teras" width="150" height="100">
                 </div>
             </div>
-            <div class="card border-success mb-3 text-center" style="max-width: 18rem;">
+            <div class="card border-success mb-3">
                 <div class="card-body">
-                    <h5 class="card-title mb-3 text-success">Please sign in</h5>
+                    <h5 class="card-title mb-3 text-success text-center">Please sign in</h5>
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email address</label>
