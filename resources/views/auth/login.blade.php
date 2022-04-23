@@ -37,11 +37,11 @@
 <body>
     <main class="form-signin">
         <form>
-            <!-- <div class="header">
+            <div class="header">
                 <div class="header-body text-center mb-5">
                     <img src="{!! asset('images/LOGO_TERAS_HITAM.png') !!}" alt="logo-teras" width="150" height="100">
                 </div>
-            </div> -->
+            </div>
             <div class="card border-success mb-3">
                 <div class="card-body">
                     <h5 class="card-title mb-3 text-success text-center">Please sign in</h5>
