@@ -1,10 +1,46 @@
 @extends('publik.layouts.layanan')
 
 @section('content')
-<h1>Galeri</h1>
-
 <section class="iq-feature1 overview-block-ptb grey-bg" id="layanan">
     <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="heading-title text-center">
+            <h2 class="title iq-tw-6">Gallery</h2>
+          </div>
+        </div>
+      </div>
+      <div class="tab-v1">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">All</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Aksesoris Fashion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pakaian</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Food Court</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Oleh-oleh</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jasa dan Lain-lain</a>
+          </li>
+          <li>
+          <form class="d-flex">
+                <div class="input-group">                    
+                    <input type="text" class="form-control" placeholder="Search">
+                    <button type="button" class="btn btn-secondary"><i class="bi-search"></i></button>
+                </div>
+        </form>
+          </li>
+        </ul>
+        
+      </div>
       <div class="row justify-content-md-center">
         <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
           <a href="">
