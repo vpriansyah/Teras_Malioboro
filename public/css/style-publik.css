@@ -247,6 +247,18 @@ Section padding
 .overview-block-pt { padding: 100px 0 0; }
 .overview-block-pb { padding: 0 0 100px; }
 
+.overview-block-ptb-10 { padding: 10px 0; }
+.overview-block-ptb-20 { padding: 20px 0; }
+.overview-block-ptb-25 { padding: 25px 0; }
+.overview-block-ptb-30 { padding: 30px 0; }
+.overview-block-ptb-40 { padding: 40px 0; }
+.overview-block-ptb-50 { padding: 50px 0; }
+.overview-block-ptb-60 { padding: 60px 0; }
+.overview-block-ptb-70 { padding: 70px 0; }
+.overview-block-ptb-75 { padding: 75px 0; }
+.overview-block-ptb-80 { padding: 80px 0; }
+.overview-block-ptb-90 { padding: 90px 0; }
+
 /*----------------
 Padding All 
 ----------------*/
@@ -576,6 +588,11 @@ Margin Right
 .heading-title .title { position: relative; padding-bottom: 20px; margin-bottom: 25px; }
 .heading-title .title:before { content: ""; position: absolute; bottom: 0; border-radius: 4px; left: 50%; margin-left: -40px; width: 80px; height: 4px; background: #28a745; }
 .heading-title p { padding: 0 80px; display: block; margin-bottom: 50px; }
+
+.heading-title-layanan { margin-bottom: 25px; text-align: center; }
+.heading-title-layanan .title { position: relative; padding-bottom: 20px; margin-bottom: 25px; }
+.heading-title-layanan .title:before { content: ""; position: absolute; bottom: 0; border-radius: 4px; left: 50%; margin-left: -40px; width: 80px; height: 4px; background: #28a745; }
+.heading-title-layanan p { padding: 0 80px; display: block; margin-bottom: 50px; }
 
 /* Section title white */
 .heading-title.white .title { color: #fff; }

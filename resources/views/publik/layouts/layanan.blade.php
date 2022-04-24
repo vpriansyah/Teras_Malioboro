@@ -48,9 +48,7 @@
 
     <!-- Content -->
     <section id="content" class="iq-banner-12 light-bg">
-        <div class="container">
         @yield('content')
-        </div>
     </section>
     <!-- Content End -->
 

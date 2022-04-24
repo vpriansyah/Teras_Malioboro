@@ -153,7 +153,7 @@
           </a>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 iq-mtb-15">
-          <a href="#">
+          <a role="button" data-toggle="modal" data-target="#informasi">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <i class="ion-information-circled iq-mb-10"></i>
@@ -166,6 +166,13 @@
     </div>
   </section>
 
+  <?php
+  $peta1 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%201%20Jl.%20Margo%20Mulyo,%20Ngupasan,%20Kec.%20Gondomanan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055122+(Teras%20Malioboro%201)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
+  $peta2 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%201%20Jl.%20Margo%20Mulyo,%20Ngupasan,%20Kec.%20Gondomanan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055122+(Teras%20Malioboro%201)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
+  $tm1 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%201%20Jl.%20Margo%20Mulyo,%20Ngupasan,%20Kec.%20Gondomanan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055122+(Teras%20Malioboro%201)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
+  $tm2 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%202%20Jl.%20Malioboro%20No.56,%20Suryatmajan,%20Kec.%20Danurejan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055212+(Teras%20Malioboro%202)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
+  ?>
+
   <!-- Peta Interaktif -->
   <section class="overview-block-ptb white-bg " id="peta">
     <div class="container">
@@ -176,7 +183,7 @@
       </div>
       <section class="footer-info">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.840108181602!2d144.95373631539215!3d-37.8172139797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1497005461921" style="border:0" allowfullscreen></iframe>
+        <?= $peta1 ?>
       </section>
     </div>
   </section>
@@ -190,15 +197,15 @@
           <div class="logo">
             <section class="footer-info">
               <br><br><br>
-              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.840108181602!2d144.95373631539215!3d-37.8172139797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1497005461921" style="border:0" allowfullscreen></iframe>
-          </div>
+              <?= $peta2 ?>
+            </div>
           </section>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-mtb-20">
           <div class="row">
             <div class="col-lg-12 col-md-6 col-sm-6">
               <div class="contact-bg">
-                <h5 class="iq-tw-6 iq-font-white  iq-mb-10">Teras Malioboro 1</h5>
+                <h5 class="iq-tw-6 iq-font-white iq-mb-10">Teras Malioboro 1</h5>
                 <ul class="iq-contact">
                   <li>
                     <i class="ion-ios-location-outline iq-pt-20"></i>
@@ -210,7 +217,7 @@
             </div>
             <div class="col-lg-12 col-md-6 col-sm-6">
               <div class="contact-bg">
-                <h5 class="iq-tw-6 iq-font-white  iq-mb-10">Teras Malioboro 2</h5>
+                <h5 class="iq-tw-6 iq-font-white iq-mb-10">Teras Malioboro 2</h5>
                 <ul class="iq-contact">
                   <li>
                     <i class="ion-ios-location-outline iq-pt-20"></i>
@@ -252,6 +259,45 @@
     </div>
   </footer>
   <!-- Footer END -->
+
+  {{-- Modal Informasi Penting --}}
+  <div class="modal fade" id="informasi" tabindex="-1" role="log">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="title iq-tw-6">Informasi Penting</h5>
+          <a role="button" class="close" data-dismiss="modal">&times;</a>
+        </div>
+        <div class="modal-body">
+          <div id="infopenting" class="carousel slide" data-bs-ride="carousel">
+            <ul class="carousel-indicators">
+              <li data-target="#infopenting" data-slide-to="0" class="active"></li>
+              <li data-target="#infopenting" data-slide-to="1"></li>
+              <li data-target="#infopenting" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{!! asset('images/teras-malioboro.jpg')!!}" class="d-block w-100" alt="teras-malioboro">
+              </div>
+              <div class="carousel-item">
+                <img src="{!! asset('images/maps.jpg')!!}" class="d-block w-100" alt="teras-malioboro">
+              </div>
+              <div class="carousel-item">
+                <img src="{!! asset('images/home.jpg')!!}" class="d-block w-100" alt="teras-malioboro">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#infopenting" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#infopenting" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{-- Modal Informasi Penting END --}}
 
   <!-- back-to-top -->
   <div id="back-to-top">
