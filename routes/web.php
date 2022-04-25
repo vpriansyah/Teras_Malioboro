@@ -53,13 +53,17 @@ Route::get('pedagang/informasi', function () {
 });
 
 //Publik
-Route::get('/', function () {
-    return view('publik/index');
-});
+Route::get('/', [PublikController::class,'index']);
 
-Route::get('/publik/', function () {
-    return view('publik/index');
-});
+Route::get('/publik/', [PublikController::class,'index']);
+
+// Route::get('/', function () {
+//     return view('publik/index');
+// });
+
+// Route::get('/publik/', function () {
+//     return view('publik/index');
+// });
 
 Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');

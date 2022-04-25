@@ -1472,7 +1472,7 @@ Pricing 5
 /*---------------------------------------------------------------------
                             Footer 3
 -----------------------------------------------------------------------*/
-.iq-footerr { background: #fff; padding-top: 80px;}
+.iq-footerr { background: rgba(40, 167, 69, 0.1); padding-top: 80px;}
 .iq-footerr .footer-top { background: #242424; }
 .iq-footerr { color: #222222; }
 .iq-footerr hr { margin: 0; border-top: 0px; padding: 0px; border-bottom: 1px solid #3333; }
