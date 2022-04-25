@@ -65,6 +65,8 @@ Route::get('/publik', 'App\Http\Controllers\PublikController@index');
 //     return view('publik/index');
 // });
 
+
+//Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');
 });
@@ -77,9 +79,10 @@ Route::get('/publik/aduansaran', function () {
     return view('/publik/aduansaran');
 });
 
-Route::get('/publik/agenda', function () {
-    return view('/publik/agenda');
-});
+Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index') ;
+//{
+    //return view('/publik/agenda');
+//};
 
 Route::get('/publik/cctv', function () {
     return view('/publik/cctv');

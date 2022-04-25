@@ -1,18 +1,21 @@
 <?php
  
 namespace App\Http\Controllers;
- 
+
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
- 
-use App\Agenda;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
+use App\Alumni;
  
 class AgendaController extends Controller
 {
  
     public function index()
     {
-    	$agenda = Agenda::all();
-    	return view('agenda', ['agenda' => $agenda]);
+    	//$info_agenda = DB::table('agenda');
+        $info_agenda=DB::table('agenda')->get();
+    	return view('publik.agenda', ['info_agenda' => $info_agenda]);
     }
  
 }
