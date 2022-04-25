@@ -1,5 +1,5 @@
-<div class="container" id="home">
-    @yield('container')
+<div class="content" id="home">
+    @yield('content')
 </div>
 
 <!-- Footer -->

@@ -526,8 +526,8 @@ Margin Right
 .dark-bg { background: #222222; }
 .light-bg { background: #f8f7ff; }
 .light-blue-bg { background: #bbe5f6; }
-.success-bg { background: #1e7e34; }
-.light-success-bg { background: rgba(40, 167, 69, 0.1); }
+.green-bg { background: #1e7e34; }
+.light-green-bg { background: rgba(40, 167, 69, 0.1); }
 
 
 /*---------------------------------------------------------------------
