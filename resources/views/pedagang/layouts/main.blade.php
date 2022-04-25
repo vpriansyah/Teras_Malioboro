@@ -1,5 +1,5 @@
-<div class="container" id="home">
-    @yield('container')
+<div class="content" id="home">
+    @yield('content')
 </div>
 
 <!-- Footer -->
@@ -50,9 +50,11 @@
                     <div class="col-lg-12 col-md-4 col-sm-4">
                         <a><i class="fa-solid fa-phone"></i> +628123190xx</a>
                     </div>
+                    <br>
                     <div class="col-lg-12 col-md-4 col-sm-4">
                         <a><i class="fa-brands fa-instagram"> @terasmalioboro_</i></a>
                     </div>
+                    <br>
                     <div class="col-lg-12 col-md-4 col-sm-4">
                         <a><i class="fa-regular fa-envelope"> terasmalioboro@gmail.com</i></a>
                     </div>

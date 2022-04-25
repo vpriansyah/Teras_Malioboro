@@ -1,5 +1,5 @@
 @extends('pedagang.layouts.main')
-@section('container')
+@section('content')
     <!doctype html>
     <html lang="en">
 
