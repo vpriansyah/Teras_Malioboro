@@ -99,7 +99,7 @@
         </header>
         <!-- Header End -->
         <!-- Banner -->
-        <section id="home" class="iq-banner-12 light-success-bg">
+        <section id="home" class="iq-banner-12 light-green-bg">
             <div class="container" id="home">
                 <div class="banner-text text-left">
                     <div class="row justify-content-between">
