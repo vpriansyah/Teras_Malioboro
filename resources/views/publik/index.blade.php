@@ -205,7 +205,7 @@
                     <div class="logo">
                         <section class="footer-info">
                             <br><br><br>
-                            <?= $p  eta2 ?>
+                        
                     </div>
                     </section>
                 </div>
