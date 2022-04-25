@@ -8,5 +8,6 @@ main:
   script:
     - apt-get update -qq && apt-get install -y -qq lftp
     - lftp -c "set ftp:ssl-allow no; open -u $USER,$PASS $HOST; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/ --exclude assets/ "
+    - lftp -c "set ftp:ssl-allow no; open -u $USER2,$PASS2 $HOST2; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/ --exclude assets/ "
   only:
     - main
