@@ -11,7 +11,7 @@
                         <h5 class="iq-font-black iq-mtb-40">Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
                             Lima (PKL) Malioboro.</h5>
                         <div>
-                            <button href="auth/login" class="rounded-pill btn btn-success">Masuk</button><br>
+                            <a href="auth/login" class="rounded-pill btn btn-success">Masuk</a><br>
                         </div>
                         <br>
 
