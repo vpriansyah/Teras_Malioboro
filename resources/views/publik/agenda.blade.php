@@ -11,5 +11,23 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+      <div>
+      <center><h4>Halaman Agenda untuk menampilkan list kegiatan Teras Malioboro</h4></center>
+      <table class="table">
+        <table class="row">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Alamat</th>
+          </tr>
+        </thead>
+        </table>
+      </div>
+      </div>
+      </div>
+    </div>
 </section>
 @endsection
