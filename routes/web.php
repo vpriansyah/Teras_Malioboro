@@ -79,3 +79,7 @@ Route::get('/publik/cctv', function () {
 Route::get('/publik/statistik', function () {
     return view('/publik/statistik');
 });
+
+Route::get('/publik/galeri/data', function(){
+    return view('/publik/galeri-data');
+});
