@@ -2,18 +2,6 @@
 @include('pedagang.partials.navbar')
 @section('content')
 <style>
-    #kotak {
-        position: relative;
-width: 1150px;
-height: 190px;
-left: 10px;
-top: 20px;
-
-background: #FFFFFF;
-box-shadow: 0px 9px 80px rgba(0, 0, 0, 0.04), 0px 3.75998px 33.4221px rgba(0, 0, 0, 0.0287542), 0px 2.01027px 17.869px rgba(0, 0, 0, 0.0238443), 0px 1.12694px 10.0172px rgba(0, 0, 0, 0.02), 0px 0.598509px 5.32008px rgba(0, 0, 0, 0.0161557), 0px 0.249053px 2.21381px rgba(0, 0, 0, 0.0112458);
-border-radius: 10px;
-    }
-    
 </style>
     <!DOCTYPE html>
     <html lang="en">
@@ -24,18 +12,53 @@ border-radius: 10px;
         <title>Profile Pedagang</title>
     </head>
     <body>
-       
-        <div class="container">
-            <div id="kotak">
-
+    <section class="iq-feature1 overview-block-ptb grey-bg">
+    <div class="container">
+        <div class="col-lg-12 col-md-6 col-sm-12 iq-mtb-15">
+            <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                    <div>
+                        <i class="ion-ios-grid-view-outline iq-mb-10"></i>
+                        <img class="ion-ios-grid-view-outline iq-mb-10" style="width: 150px; height: 150px; border-radius:100%;" 
+                            src="{!! asset('images/fotoprofile.png') !!}" alt="fotoprofile">
+                        <h5 class="iq-tw-6">Profil</h5>
+                    </div>
+                <div class="content-blog">
+                    <p>Berisi profil pedagang teras malioboro</p>
+                </div>
             </div>
-            <br>
-            <br>
+        </div>
+    </section>
+    <section id="infolanjut" class="overview-block-ptb how-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="iq-tw-6 iq-mb-25 text-danger">INFORMASI LANJUT</h4>
+                    <h1><b>TERAS MALIOBORO</b></h1>
+                    <p class="iq-font-15 iq-mt-20">Teras Malioboro 1 berlokasi di Gedung Eks Bioskop Indra, tepat berada
+                        di seberang Pasar Beringharjo.
+                        Sementara itu, Teras Malioboro 2 bertempat di eks Gedung Kantor Dinas Pariwisata DIY, tepatnya
+                        di
+                        sebelah utara Kantor DPRD DIY.</p>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <img class="iq-works-img" src="{!! asset('images/logo.png') !!}">
+                </div>
+            </div>
+        </div>
+        <div class="iq-objects">
+            <span class="iq-objects-03" data-bottom="transform:translatex(50px)"
+                data-top="transform:translatex(-100px);">
+                <img src="{!! asset('images/drive/04.png') !!}" alt="drive02">
+            </span>
+        </div>
+    </section>
+    <div class="container">
     <h2>Profile Pedagang</h2>
     <br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa et, sed doloremque eius molestias, recusandae iure illum optio quas ea veritatis odit ad hic error dolore deleniti nostrum itaque.</p>
-
-</div>
+    </div>
+    </div>
+    
     </body>
     </html>
 @endsection
