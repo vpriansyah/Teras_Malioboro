@@ -46,12 +46,12 @@
                 <div class="card-body">
                     <h5 class="card-title mb-3 text-success text-center">Please sign in</h5>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
+                        <input type="email" class="form-control" id="floatingInput" placeholder="No KTP atau NIK">
+                        <label for="floatingInput">No KTP atau NIK</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="No Kios">
+                        <label for="floatingPassword">No Kios</label>
                     </div>
 
                     <div class="checkbox mb-3">
