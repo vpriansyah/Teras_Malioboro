@@ -32,7 +32,12 @@ Route::get('pedagang/saran', function () {
 });
 
 Route::get('pedagang/profil', function () {
-    return view('/pedagang/profil');
+    return view('/pedagang/profil', [
+        "nama" => "Christya Ayu Dewi",
+        "sebagai" => "Pedagang",
+        "status" => "Aktif",
+
+    ]);
 });
 
 Route::get('pedagang/statistik', function () {
