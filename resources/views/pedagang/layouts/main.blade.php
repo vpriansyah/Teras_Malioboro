@@ -1,9 +1,9 @@
-<div class="content" id="home">
+<div class="home" id="home">
     @yield('content')
 </div>
 
 <!-- Footer -->
-<footer id="kontak" class="iq-footerr iq-ptb-20" >
+<footer id="kontak" class="iq-footerr iq-ptb-20">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-40 iq-mtb-20">
