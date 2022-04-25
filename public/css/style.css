@@ -522,10 +522,13 @@ Margin Right
 -----------------------------------------------------------------------*/
 .white-bg { background: #ffffff;padding: 100px; }
 .grey-bg { background: #f5f7fb; }
-.blue-bg { background: #28a745; }
+.blue-bg { background: #0374dd; }
 .dark-bg { background: #222222; }
 .light-bg { background: #f8f7ff; }
 .light-blue-bg { background: #bbe5f6; }
+.success-bg { background: #1e7e34; }
+.light-success-bg { background: rgba(40, 167, 69, 0.1); }
+
 
 /*---------------------------------------------------------------------
                              BG Effect
