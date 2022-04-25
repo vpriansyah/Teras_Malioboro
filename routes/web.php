@@ -48,6 +48,10 @@ Route::get('pedagang/informasi', function () {
 });
 
 //Publik
+Route::get('/', function () {
+    return view('publik/index');
+});
+
 Route::get('/publik/', function () {
     return view('publik/index');
 });
@@ -74,4 +78,8 @@ Route::get('/publik/cctv', function () {
 
 Route::get('/publik/statistik', function () {
     return view('/publik/statistik');
+});
+
+Route::get('/publik/galeri/data', function(){
+    return view('/publik/galeri-data');
 });

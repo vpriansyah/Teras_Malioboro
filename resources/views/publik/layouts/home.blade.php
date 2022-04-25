@@ -11,7 +11,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css')!!}">
+    {{-- <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css')!!}"> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- owl-carousel -->
     <link rel="stylesheet" href="{!! asset('css/owl-carousel/owl.carousel.css')!!}" />
     <!-- Font Awesome -->
@@ -61,5 +62,6 @@
 <!-- Custom -->
 <script src="{!! asset('js/custom.js')!!}"></script>
 <script src="https://kit.fontawesome.com/5014e491f0.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

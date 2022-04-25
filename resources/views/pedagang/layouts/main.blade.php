@@ -3,14 +3,14 @@
 </div>
 
 <!-- Footer -->
-<footer id="kontak" class="iq-footerr iq-ptb-40 ">
+<footer id="kontak" class="iq-footerr iq-ptb-20 ">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-10 iq-mtb-20">
+            <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-40 iq-mtb-20">
                 <div class="logo">
                     <section class="footer-info">
                         <br><br><br>
-                        <iframe class="map" src="{!! asset('images/maps.jpg') !!}" style="border:0" allowfullscreen></iframe>
+                        <iframe class="map" src="{!! asset('images/maps.jpg') !!}"></iframe>
                 </div>
                 </section>
             </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-pb-10 iq-mtb-20">
+            <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-pb-40 iq-mb-20">
                 <h5 class="iq-tw-6 iq-font-black iq-mb-10">Contact Us</h5>
                 <div class="row">
                     <div class="col-lg-12 col-md-4 col-sm-4">
@@ -90,6 +90,7 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <!-- Custom -->
 <script src="{!! asset('js/custom.js') !!}"></script>
+<script src="https://kit.fontawesome.com/5014e491f0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

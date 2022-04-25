@@ -5,8 +5,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12">
-          <div class="heading-title-layanan text-center">
-            <h2 class="title iq-tw-6">CCTV Teras</h2>
+        <div class="heading-title-layanan text-center">
+            <h2 class="title iq-tw-6">nama barang</h2>
           </div>
         </div>
       </div>
