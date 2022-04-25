@@ -53,9 +53,9 @@ Route::get('pedagang/informasi', function () {
 });
 
 //Publik
-Route::get('/', [PublikController::class,'index']);
+Route::get('/', 'App\Http\Controllers\PublikController@index');
 
-Route::get('/publik/', [PublikController::class,'index']);
+Route::get('/publik', 'App\Http\Controllers\PublikController@index');
 
 // Route::get('/', function () {
 //     return view('publik/index');
