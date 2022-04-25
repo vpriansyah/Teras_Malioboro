@@ -52,7 +52,7 @@ Route::get('/', function () {
     return view('publik/index');
 });
 
-Route::get('/publik/', function () {
+Route::get('/publik', function () {
     return view('publik/index');
 });
 
