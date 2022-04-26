@@ -62,19 +62,8 @@ Route::get('pedagang/informasi', function () {
 
 //Publik
 Route::get('/', [PublikController::class, 'index']);
-
 Route::get('/publik', [PublikController::class, 'index']);
 
-// Route::get('/', function () {
-//     return view('publik/index');
-// });
-
-// Route::get('/publik/', function () {
-//     return view('publik/index');
-// });
-
-
-//Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');
 });
@@ -85,17 +74,10 @@ Route::get('/publik/selfassessment', function () {
 
 Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
 
- Route::get('/publik/aduansaran', function () {
-    return view('/publik/aduansaran');
- });
-
-
+Route::get('/publik/aduansaran', 'App\Http\Controllers\AduanController@index');
 Route::post('/publik/tambah', 'App\Http\Controllers\AduanController@tambah');
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
-//{
-//return view('/publik/agenda');
-//};
 
 Route::get('/publik/cctv', function () {
     return view('/publik/cctv');
