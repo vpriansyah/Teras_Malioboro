@@ -33,7 +33,7 @@
         </div>
     </section>
 
-    <section class="iq-feature1 overview-block-nw grey-bg">
+    <section class="iq-feature1 overview-block-md grey-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-sm-12 iq-mtb-15">
@@ -158,7 +158,7 @@
         </div>
         </section>
 
-        <section class="iq-feature1 overview-block-md grey-bg" id="menupilihan">
+        <section class="iq-feature1 overview-block-ptb grey-bg" id="menupilihan">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
