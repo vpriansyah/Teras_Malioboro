@@ -1,4 +1,4 @@
-@extends('pedagang.layouts.main')
+@extends('pedagang.layouts.footer')
 @section('content')
     <!doctype html>
     <html lang="en">
@@ -169,7 +169,7 @@
                             sebelah utara Kantor DPRD DIY.</p>
                     </div>
                 </div>
-            </div>  
+            </div>
         </section>
 
         <section class="iq-feature1 overview-block-ptb grey-bg" id="menupilihan">
