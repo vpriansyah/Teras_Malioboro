@@ -30,7 +30,7 @@
 
       <div class="row justify-content-md-center">
         <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="data">
+          <a  data-toggle="modal" data-target="#data_pedagang">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <img class="mx-auto d-block" src="{!! asset('images/Autan.png')!!}" alt="Autan1" style="width: 100%;">
@@ -40,7 +40,7 @@
           </a>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="data">
+          <a data-toggle="modal" data-target="#data_pedagang">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
               <img class="mx-auto d-block" src="{!! asset('images/Autan2.png')!!}" alt="Autan2" style="width: 100%; height: 150%;">
@@ -50,7 +50,7 @@
           </a>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="data">
+          <a data-toggle="modal" data-target="#data_pedagang">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
                 <img class="mx-auto d-block" src="{!! asset('images/Baygon.png')!!}" alt="Baygon" style="width: 33%; height: 33%;">
@@ -62,4 +62,36 @@
       </div>
     </div>
   </section>
+  {{-- Modal Data Pedagang --}}
+    <div class="modal fade" id="data_pedagang" tabindex="-1" role="log">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="title iq-tw-6">Data Pedagang</h5>
+                    <a role="button" class="close" data-dismiss="modal">&times;</a>
+                </div>
+                <div class="modal-body">
+                    <div id="datapedagang" class="carousel slide" data-bs-ride="carousel">
+                        <ul class="carousel-indicators">
+                            <li data-target="#datapedagang" data-slide-to="0" class="active"></li>
+                            
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img class="mx-auto d-block" src="{!! asset('images/Autan.png')!!}" alt="Autan1" style="width: 100%;">
+                              <center> <h5 class="iq-tw-6 iq-pb-10">Autan Sachet</h5> </center>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#data_pedagang" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#data_pedagang" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- Modal Data Pedagang END --}}
 @endsection
