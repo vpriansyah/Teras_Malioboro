@@ -1,6 +1,6 @@
 @extends('pedagang.layouts.footer')
 @include('pedagang.partials.navbar')
-@section('container')
+@section('content')
     <h1>HALAMAN SARAN ADUAN</h1>
     <style>
         :root {
