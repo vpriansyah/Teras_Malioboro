@@ -12,24 +12,11 @@
       </div>
       <div class="tab-v1">
         <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">All</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Aksesoris Fashion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pakaian</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Food Court</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Oleh-oleh</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Jasa dan Lain-lain</a>
-          </li>
+            @foreach($kat_brg as $kat)
+              <li class="nav-item">
+                <a class="nav-link" href="{{$kat->nama}}" data-toggle="tab">{{$kat->nama}}</a></li>
+            @endforeach
+            
           <li>
           <form class="d-flex">
                 <div class="input-group">                    
@@ -39,8 +26,8 @@
         </form>
           </li>
         </ul>
-        
       </div>
+
       <div class="row justify-content-md-center">
         <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
           <a href="data">

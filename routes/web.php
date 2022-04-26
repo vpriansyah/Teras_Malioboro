@@ -71,9 +71,11 @@ Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');
 });
 
-Route::get('/publik/galeri', function () {
-    return view('/publik/galeri');
-});
+//Route::get('/publik/galeri', function () {
+//    return view('/publik/galeri');
+//});
+
+Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index') ;
 
 Route::get('/publik/aduansaran', function () {
     return view('/publik/aduansaran');
