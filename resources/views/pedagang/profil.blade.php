@@ -22,6 +22,15 @@
                 </div>
             </div>
         </div>
+        <div class="banner-objects">
+            {{-- <span class="banner-objects-01" data-bottom="transform:translatey(50px)"
+                data-top="transform:translatey(-50px);">
+                <img src="images/03(2).png" alt="drive02">
+            </span> --}}
+            <span class="banner-objects-02 iq-fadebounce">
+                <span class="iq-round"></span>
+            </span>
+        </div>
     </section>
 
     <section class="iq-feature1 overview-block-nw grey-bg">
@@ -42,7 +51,7 @@
                             <table>
                                 <tr>
                                     <th style="width:10%"></th>
-                                    <th style="width:45%"></th>
+                                    <th style="width:55%"></th>
                                     <th style="width:5%"></th>
                                 </tr>
                                 <tr>
