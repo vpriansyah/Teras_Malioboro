@@ -13,7 +13,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{!! asset('images/SiBakul.png') !!}" />
 
-    <!-- <link rel="stylesheet" href="/css/signin.css"> -->
+    <!-- <link rel="stylesheet" href="{!! asset('css/signin.css') !!}"> -->
 </head>
 
 <body>
@@ -41,16 +41,16 @@
                         <img src="{!! asset('images/tulisan tm.png') !!}" alt="logo-teras" width="300">
                     </div>
                 </div>
-                <form action="/auth/login" method="post">
+                <form action="{{ url('auth/login') }}" method="POST">
                     @csrf
                     <div class="card border-success mb-3 mt-5">
                         <div class="card-body">
                             <h5 class="card-title mb-3 text-success text-center">Please Login</h5>
                             <div class="form-input mb-3">
-                                <input type="name" name="nama_lengkap" class="form-control" id="nama_lengkap" placeholder="Nama Lengkap" required>
+                                <input type="number" name="nik" class="form-control" id="nik" placeholder="No KTP atau NIK" required>
                             </div>
                             <div class="form-input mb-3">
-                                <input type="password" name="nik" class="form-control" id="nik" placeholder="No KTP atau NIK" required>
+                                <input type="password" name="lokasi_no_kios_id" class="form-control" id="lokasi_no_kios_id" placeholder="No Kios" required>
                             </div>
 
                             <button class="w-100 btn btn-success" type="submit" href="/pedagang">Login</button>
