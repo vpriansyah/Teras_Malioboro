@@ -59,15 +59,15 @@
         </div>
     </div>
     <!-- loading End -->
-     <!-- Header -->
+    <!-- Header -->
 
-     <header id="main-header" class="header-one">
+    <header id="main-header" class="header-one">
 
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="">
+                        <a class="navbar-brand" href="/pedagang">
                             <img class="img-fluid logo_img" id="logo_img" src="{!! asset('images/Logo SiBakul.png') !!}">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -78,7 +78,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto justify-content-end mx-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link mx-3" href="#home">Home</a>
+                                    <a class="nav-link mx-3" href="/pedagang">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link mx-3" href="#infolanjut">Info Lanjutan</a>
