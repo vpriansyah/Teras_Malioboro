@@ -8,7 +8,15 @@
                     <div class="heading-title-layanan text-center">
                         <h2 class="title iq-tw-6">Aduan & saran</h2>
                     </div>
-                    <form action="simpan-aduan.php" method="post">
+                    <form action="/publik/tambah" method="post">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                            <label>Jenis</label>
+                            <select class="form-control" name="jenis" id="combo1">
+                                <option value="privat">Privat</option>
+                                <option value="public">Public</option>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label>Nama Pengadu</label>
                             <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" />
@@ -19,30 +27,26 @@
                         </div>
                         <div class="form-group">
                             <label>Nomor WhatsApp</label>
-                            <input type="number" name="no_hp" class="form-control" placeholder="Masukan Nomor WhatsApp" />
+                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control" placeholder="Masukan Nomor WhatsApp" />
                         </div>
-                        <div><input type="checkbox" name="nomor" value="nomor"> Kirim Tanggapan ke WhatsApp<br></div>
+                       
                         <div class="form-group">
                             <label>Saran / Aduan</label>
-                            <textarea name="aduan" class="form-control" rows="5" placeholder="Masukan saran dan aduan anda"></textarea>
+                            <textarea name="saran_aduan" class="form-control" rows="5" placeholder="Masukan saran dan aduan anda"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Kategori Aduan</label>
-                            <select class="form-control" name="combo1" id="combo1">
-                                <option value="aduan 1">-Pilih Kategori Aduan-</option>
-                                <option value="aduan 2">Umum</option>
-                                <option value="aduan 3">Privat</option>
-                                <option value="aduan 4">Apalagi yhak?</option>
-                                <option value="aduan 5">dll ajha yups</option>
+                            <select class="form-control" name="kategori" id="combo1">
+                                <option value="umum">Umum</option>
+                                <option value="keuangan">Keuangan</option>
+                                <option value="pungli">Pungli</option>
+                                <option value="teknik">Teknik</option>
+                                <option value="lainnya">Lainnya</option>
                             </select>
+                       
                         </div>
                         <div class="form-group">
-                            <label for="human" class="col-sm-2 control-label">3 + 3 = ?</label>
-                            <div class="form-group">
-                                <input type="hidden" name="captchaAnswer" id="captchaAnswer" value="6">
-                                <input type="text" class="form-control" id="captcha" name="captcha"
-                                    placeholder="Berapa hayooo????">
-                            </div>
+                            <input name="waktu" type="hidden" value="<?php echo date('Y-m-d h:i:s');?>" > 
                         </div>
 
                         <div class="form-group">
@@ -55,6 +59,15 @@
                             </center>
                         
                         </div>
+                        <script>
+		function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+		   if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+		    return false;
+		  return true;
+		}
+	</script>
 
                     </form>
                 </div>

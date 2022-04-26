@@ -79,9 +79,12 @@ Route::get('/publik/selfassessment', function () {
 
 Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
 
-Route::get('/publik/aduansaran', function () {
+ Route::get('/publik/aduansaran', function () {
     return view('/publik/aduansaran');
-});
+ });
+
+
+Route::post('/publik/tambah', 'App\Http\Controllers\AduanController@tambah');
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 //{

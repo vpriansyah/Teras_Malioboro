@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PublikController extends Controller
+class StatistikPublikController extends Controller
 {
     public function index()
     {
-        $info_penting = DB::table('info')->where('status', 'Aktif')->get();
-        return view('publik.index', ['info' => $info_penting]);
+        $data['laki'] = DB::table('data_pkl')->where('gender', 'L')->get();
+        $data['perempuan'] = DB::table('data_pkl')->where('gender', 'P')->get();
+
+        return view('publik.statistik', ['data' => $data]);
     }
 }
