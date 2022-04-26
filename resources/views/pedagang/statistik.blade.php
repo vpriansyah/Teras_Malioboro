@@ -1,5 +1,5 @@
 @extends('pedagang.layouts.footer')
 @include('pedagang.partials.navbar')
-@section('container')
+@section('content')
     <h1>HALAMAN STATISTIK</h1>
 @endsection
