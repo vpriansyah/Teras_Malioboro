@@ -41,7 +41,7 @@
                             <div class="form-group">
                                 <input type="hidden" name="captchaAnswer" id="captchaAnswer" value="6">
                                 <input type="text" class="form-control" id="captcha" name="captcha"
-                                    placeholder="Berapa hayooo">
+                                    placeholder="Berapa hayooo????">
                             </div>
                         </div>
 
@@ -53,6 +53,7 @@
                                         onclick="return validateForm();">
                                 </div>
                             </center>
+                        
                         </div>
 
                     </form>
