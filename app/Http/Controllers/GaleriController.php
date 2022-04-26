@@ -10,10 +10,8 @@ class GaleriController extends Controller
 {
     public function index()
     {
-//        $data_pkl = DB::table('data_pkl')->get();
-//        return view('publik.galeri', ['data_pkl' => $data_pkl]);
-
+        $data_pkl = DB::table('data_pkl')->get();
         $kat_brg = DB::table('kat_dagangan')->get();
-        return view('publik.galeri', ['kat_brg' => $kat_brg]);
+        return view('publik.galeri', ['kat_brg' => $kat_brg],['data_pkl' => $data_pkl]);
     }
 }
