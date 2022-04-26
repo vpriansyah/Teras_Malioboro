@@ -8,12 +8,13 @@
                     <div class="heading-title-layanan text-center">
                         <h2 class="title iq-tw-6">Aduan & saran</h2>
                     </div>
-                    <form action="simpan.php" method="post">
+                    <form action="/publik/tambah" method="post">
+                    {{ csrf_field() }}
                     <div class="form-group">
                             <label>Jenis</label>
-                            <select class="form-control" name="combo1" id="combo1">
-                                <option value="aduan 1">Privat</option>
-                                <option value="aduan 2">Public</option>
+                            <select class="form-control" name="jenis" id="combo1">
+                                <option value="privat">Privat</option>
+                                <option value="public">Public</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -26,7 +27,7 @@
                         </div>
                         <div class="form-group">
                             <label>Nomor WhatsApp</label>
-                            <input type="number" name="no_hp" class="form-control" placeholder="Masukan Nomor WhatsApp" />
+                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control" placeholder="Masukan Nomor WhatsApp" />
                         </div>
                        
                         <div class="form-group">
@@ -35,13 +36,17 @@
                         </div>
                         <div class="form-group">
                             <label>Kategori Aduan</label>
-                            <select class="form-control" name="combo1" id="combo1">
+                            <select class="form-control" name="kategori" id="combo1">
                                 <option value="umum">Umum</option>
-                                <option value="keungan">Keuangan</option>
+                                <option value="keuangan">Keuangan</option>
                                 <option value="pungli">Pungli</option>
+                                <option value="teknik">Teknik</option>
                                 <option value="lainnya">Lainnya</option>
                             </select>
                        
+                        </div>
+                        <div class="form-group">
+                            <input name="waktu" type="hidden" value="<?php echo date('Y-m-d h:i:s');?>" > 
                         </div>
 
                         <div class="form-group">
@@ -54,6 +59,15 @@
                             </center>
                         
                         </div>
+                        <script>
+		function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+		   if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+		    return false;
+		  return true;
+		}
+	</script>
 
                     </form>
                 </div>
