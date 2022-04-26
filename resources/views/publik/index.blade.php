@@ -110,7 +110,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/galeri">
+                    <a href="/publik/galeri">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-android-cart iq-mb-10"></i>
@@ -120,7 +120,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/aduansaran">
+                    <a href="/publik/aduansaran">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-chatbubble-working iq-mb-10"></i>
@@ -130,7 +130,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/agenda">
+                    <a href="/publik/agenda">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-clipboard iq-mb-10"></i>
@@ -140,7 +140,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/cctv">
+                    <a href="/publik/cctv">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-ios-videocam iq-mb-10"></i>
@@ -150,7 +150,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/statistik">
+                    <a href="/publik/statistik">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-stats-bars iq-mb-10"></i>
