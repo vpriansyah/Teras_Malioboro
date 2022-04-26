@@ -2,7 +2,7 @@
 @include('pedagang.partials.navbar')
 @section('container')
     <h1>HALAMAN SARAN ADUAN</h1>
-    <style>
+<style>
     :root {
   --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   --msger-bg: #fff;
@@ -152,15 +152,11 @@ body {
 .msger-chat {
   background-color: #fcfcfe; 
 }
-
 </style>
 <section class="msger">
-    <header class="msger-header">
-      <div class="msger-header-title">
+<div class="container">
+  <div class="msg-header-img">
         <i class="fas fa-comment-alt"></i> Sipaling Teras
-      </div>
-      <div class="msger-header-options">
-        <span><i class="fas fa-cog"></i></span>
       </div>
     </header>
   
