@@ -17,8 +17,8 @@
         <div class="col-lg-12 col-md-6 col-sm-12 iq-mtb-15">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                 <div class="content-blog iq-pr-50">
-                    <h5 class="">Profil</h5>
-                    <p>Berisi profil pedagang teras malioboro</p>
+                    <h3 class="">Nama Pedagang</h3>
+                    <h5 class="text-success">Status AKTIF</h5>
                 </div>
             </div>
         </div>
@@ -54,11 +54,12 @@
                                     <th style="width:55%"></th>
                                     <th style="width:5%"></th>
                                 </tr>
+                                @foreach($data_pkl as $data)
                                 <tr>
                                     <td></td>
                                     <td>Nama Toko</td>
                                     <td>:</td>
-                                    <td>coba doangg</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td></td>
@@ -97,54 +98,58 @@
                                     <th style="width: 5%"></th>
                                     <th style="width: 30%"></th>
                                 </tr>
+        
+                               
                                 <tr>
                                     <td></td>
                                     <td>Nama Lengkap</td>
                                     <td>:</td>
-                                    <td>Tes satu dua</td>
+                                    <td>{{$data->nama_lengkap}}</td>
                                 </tr>
+                              
                                 <tr>
                                     <td></td>
                                     <td>Nomor HP</td>
                                     <td>:</td>
-                                    <td></td>
+                                    <td>{{$data->no_hp}}</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>Gender</td>
                                     <td>:</td>
-                                    <td></td>
+                                    <td>{{$data->gender}}</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>Alamat</td>
                                     <td>:</td>
-                                    <td></td>
+                                    <td>{{$data->alamat_ktp}}</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>Paguyuban</td>
                                     <td>:</td>
-                                    <td></td>
+                                    <td>{{$data->paguyuban_id}}</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>NIK</td>
                                     <td>:</td>
-                                    <td></td>
+                                    <td>{{$data->nik}}</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>No KK</td>
                                     <td>:</td>
-                                    <td></td>
+                                    <td>{{$data->no_kk}}</td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>Nomor NIB</td>
                                     <td>:</td>
-                                    <td></td>
+                                    <td>{{$data->nomor_nib}}</td>
                                 </tr>
+                              
                             </table>
                             <br>
                             <center><button type="button" class="btn btn-success"><span class="spinner-border spinner-border-sm"></span>Edit</button></center>
@@ -156,6 +161,7 @@
                 </div>
                 
         </div>
+        @endforeach
         </section>
 
         <section class="iq-feature1 overview-block-ptb grey-bg" id="menupilihan">

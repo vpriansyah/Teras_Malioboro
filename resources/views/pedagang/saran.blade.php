@@ -171,7 +171,7 @@
 
     </style>
     <section class="msger">
-        <div class="container">
+        <div class="container justify-content-center">
             <div class="msg-header-img">
                 <i class="fas fa-comment-alt"></i> Sipaling Teras
             </div>

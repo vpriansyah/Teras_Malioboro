@@ -32,15 +32,15 @@ Route::get('pedagang/daftar', function () {
 Route::get('pedagang/saran', function () {
     return view('/pedagang/saran');
 });
+Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index');
+// Route::get('pedagang/profil', function () {
+//     return view('/pedagang/profil', [
+//         "nama" => "Christya Ayu Dewi",
+//         "sebagai" => "Pedagang",
+//         "status" => "Aktif",
 
-Route::get('pedagang/profil', function () {
-    return view('/pedagang/profil', [
-        "nama" => "Christya Ayu Dewi",
-        "sebagai" => "Pedagang",
-        "status" => "Aktif",
-
-    ]);
-});
+//     ]);
+// });
 
 Route::get('pedagang/statistik', function () {
     return view('/pedagang/statistik');
