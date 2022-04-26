@@ -11,7 +11,7 @@
                         <h5 class="iq-font-black iq-mtb-40">Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
                             Lima (PKL) Malioboro.</h5>
                         <div>
-                            <button href="auth/login" class="rounded-pill btn btn-success">Masuk</button><br>
+                            <a href="auth/login" class="rounded-pill btn btn-success">Masuk</a><br>
                         </div>
                         <br>
 
@@ -45,45 +45,45 @@
 
     <!-- Tentang -->
     <!-- <section class="overview-block-pt">
-            <div class="container" id="tentang">
-              <div class="row iq-mt-10">
-                <div class="col-sm-12">
-                  <div class="heading-title iq-mt-50">
-                    <h3 class="title iq-tw-7">Tentang</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> -->
+                            <div class="container" id="tentang">
+                              <div class="row iq-mt-10">
+                                <div class="col-sm-12">
+                                  <div class="heading-title iq-mt-50">
+                                    <h3 class="title iq-tw-7">Tentang</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section> -->
     <!-- Tentang -->
 
     <!-- Rincian -->
     <!-- <section class="how-works r-mt-40 overview-block-ptb">
-            <div class="container">
-              <div class="row flex-row-reverse">
-                <div class="col-lg-8 ">
-                  <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
-                </div>
-                <div class="col-lg-4  align-self-center">
-                  <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
-                  <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
-                  <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div class="iq-objectsnew">
-                  <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
-                    <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                  </span>
-                  <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
-                    <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                  </span>
-                  <span class="iq-objects-04 iq-fadebounce">
-                    <span class="iq-round"></span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section> -->
+                            <div class="container">
+                              <div class="row flex-row-reverse">
+                                <div class="col-lg-8 ">
+                                  <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
+                                </div>
+                                <div class="col-lg-4  align-self-center">
+                                  <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
+                                  <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
+                                  <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </div>
+                                <div class="iq-objectsnew">
+                                  <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
+                                    <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                                  </span>
+                                  <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
+                                    <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                                  </span>
+                                  <span class="iq-objects-04 iq-fadebounce">
+                                    <span class="iq-round"></span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </section> -->
 
     <!-- Layanan -->
     <section class="iq-feature1 overview-block-ptb grey-bg" id="layanan">
@@ -110,7 +110,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/galeri">
+                    <a href="/publik/galeri">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-android-cart iq-mb-10"></i>
@@ -120,7 +120,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/aduansaran">
+                    <a href="/publik/aduansaran">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-chatbubble-working iq-mb-10"></i>
@@ -130,7 +130,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/agenda">
+                    <a href="/publik/agenda">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-clipboard iq-mb-10"></i>
@@ -140,7 +140,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/cctv">
+                    <a href="/publik/cctv">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-ios-videocam iq-mb-10"></i>
@@ -150,7 +150,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/statistik">
+                    <a href="/publik/statistik">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-stats-bars iq-mb-10"></i>
@@ -175,7 +175,7 @@
 
     <?php
     $peta1 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%201%20Jl.%20Margo%20Mulyo,%20Ngupasan,%20Kec.%20Gondomanan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055122+(Teras%20Malioboro%201)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
-    $peta2 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%201%20Jl.%20Margo%20Mulyo,%20Ngupasan,%20Kec.%20Gondomanan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055122+(Teras%20Malioboro%201)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
+    $peta2 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%202%20Jl.%20Malioboro%20No.56,%20Suryatmajan,%20Kec.%20Danurejan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055212+(Teras%20Malioboro%202)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
     $tm1 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%201%20Jl.%20Margo%20Mulyo,%20Ngupasan,%20Kec.%20Gondomanan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055122+(Teras%20Malioboro%201)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
     $tm2 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%202%20Jl.%20Malioboro%20No.56,%20Suryatmajan,%20Kec.%20Danurejan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055212+(Teras%20Malioboro%202)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
     ?>
@@ -205,7 +205,7 @@
                     <div class="logo">
                         <section class="footer-info">
                             <br><br><br>
-                            <?= $p  eta2 ?>
+                            <?= $peta2 ?>
                     </div>
                     </section>
                 </div>
@@ -278,22 +278,32 @@
                     <a role="button" class="close" data-dismiss="modal">&times;</a>
                 </div>
                 <div class="modal-body">
+
                     <div id="infopenting" class="carousel slide" data-bs-ride="carousel">
                         <ul class="carousel-indicators">
-                            <li data-target="#infopenting" data-slide-to="0" class="active"></li>
-                            <li data-target="#infopenting" data-slide-to="1"></li>
-                            <li data-target="#infopenting" data-slide-to="2"></li>
+                            @php $count = -1; @endphp
+                            @foreach ($info as $data)
+                                @php $count++; @endphp
+                                <?php if ($count == 0) { ?>
+                                <li data-target="#infopenting" data-slide-to="<?= $count ?>" class="active"></li>
+                                <?php } else if ($count != 0) { ?>
+                                <li data-target="#infopenting" data-slide-to="<?= $count ?>"></li>
+                                <?php } ?>
+                            @endforeach
                         </ul>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{!! asset('images/teras-malioboro.jpg') !!}" class="d-block w-100" alt="teras-malioboro">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{!! asset('images/maps.jpg') !!}" class="d-block w-100" alt="teras-malioboro">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{!! asset('images/home.jpg') !!}" class="d-block w-100" alt="teras-malioboro">
-                            </div>
+                            @php $count = -1; @endphp
+                            @foreach ($info as $data)
+                                @php $count++; @endphp
+                                <?php if ($count == 0) { ?>
+                                <div class="carousel-item active">
+                                    <?php } else if ($count != 0) { ?>
+                                    <div class="carousel-item">
+                                        <?php } ?>
+                                        <img src="{{ asset('images/informasi-penting/' . $data->nama . '') }}"
+                                            class="d-block w-100" alt="''.$data->nama.''">
+                                    </div>
+                            @endforeach
                         </div>
                         <a class="carousel-control-prev" href="#infopenting" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>

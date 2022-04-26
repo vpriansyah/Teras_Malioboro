@@ -1,5 +1,6 @@
 @extends('publik.layouts.layanan')
 
+
 @section('content')
 <section class="iq-feature1 overview-block-ptb-25 grey-bg" id="layanan">
     <div class="container">
@@ -23,21 +24,23 @@
     <div class="container table-responsive">
     <table class="table table-bordered table-striped table-hover">
     <caption>Agenda Teras Malioboro</caption>
-			<thead>
+
 				<tr>
+          <th>No</th>
 					<th>Waktu</th>
 					<th>Nama</th>
 				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>23 Agustus 2022</td>
-					<td>Pukul orang gabut</td>	
-				</tr>
-				<tr>
-					<td>25 Oktober 2022</td>
-					<td>Makan-Makan Di wedangan</td>
-			</tbody>
+    
+            @php $no=0 @endphp
+            @foreach($info_agenda as $item)
+            @php $no++ @endphp
+              <tr>
+                <td>{{$no}}</td>
+                <td>{{ $item->waktu}}</td>
+                <td>{{ $item->nama}}</td>
+              </tr>
+            @endforeach
+			
 		</table>
  
 	</div>

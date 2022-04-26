@@ -55,7 +55,7 @@
     <!-- Footer -->
     <footer class="iq-footer-box ">
         <div class="container">
-            <div class="row iq-mt-10">
+            <div class="row iq-mtb-10">
                 <div class="mx-auto">
                     <div class="iq-copyright ">
                         Copyright @

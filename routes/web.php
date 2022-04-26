@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,12 @@ Route::get('pedagang/saran', function () {
 });
 
 Route::get('pedagang/profil', function () {
-    return view('/pedagang/profil');
+    return view('/pedagang/profil', [
+        "nama" => "Christya Ayu Dewi",
+        "sebagai" => "Pedagang",
+        "status" => "Aktif",
+
+    ]);
 });
 
 Route::get('pedagang/statistik', function () {
@@ -48,29 +54,38 @@ Route::get('pedagang/informasi', function () {
 });
 
 //Publik
-Route::get('/', function () {
-    return view('publik/index');
-});
+Route::get('/', [PublikController::class, 'index']);
 
-Route::get('/publik/', function () {
-    return view('publik/index');
-});
+Route::get('/publik', [PublikController::class, 'index']);
 
+// Route::get('/', function () {
+//     return view('publik/index');
+// });
+
+// Route::get('/publik/', function () {
+//     return view('publik/index');
+// });
+
+
+//Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');
 });
 
-Route::get('/publik/galeri', function () {
-    return view('/publik/galeri');
-});
+//Route::get('/publik/galeri', function () {
+//    return view('/publik/galeri');
+//});
+
+Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index') ;
 
 Route::get('/publik/aduansaran', function () {
     return view('/publik/aduansaran');
 });
 
-Route::get('/publik/agenda', function () {
-    return view('/publik/agenda');
-});
+Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index') ;
+//{
+    //return view('/publik/agenda');
+//};
 
 Route::get('/publik/cctv', function () {
     return view('/publik/cctv');

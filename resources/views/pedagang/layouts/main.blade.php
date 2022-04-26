@@ -1,12 +1,12 @@
-<div class="container" id="home">
-    @yield('container')
+<div class="home" id="home">
+    @yield('content')
 </div>
 
 <!-- Footer -->
-<footer id="kontak" class="iq-footerr iq-ptb-20 ">
+<footer id="kontak" class="iq-footerr iq-ptb-20">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-40 iq-mtb-20">
+            <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-20 iq-mtb-20">
                 <div class="logo">
                     <section class="footer-info">
                         <br><br><br>
@@ -50,9 +50,11 @@
                     <div class="col-lg-12 col-md-4 col-sm-4">
                         <a><i class="fa-solid fa-phone"></i> +628123190xx</a>
                     </div>
+                    <br>
                     <div class="col-lg-12 col-md-4 col-sm-4">
                         <a><i class="fa-brands fa-instagram"> @terasmalioboro_</i></a>
                     </div>
+                    <br>
                     <div class="col-lg-12 col-md-4 col-sm-4">
                         <a><i class="fa-regular fa-envelope"> terasmalioboro@gmail.com</i></a>
                     </div>
