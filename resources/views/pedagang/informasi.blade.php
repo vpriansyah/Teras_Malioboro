@@ -69,35 +69,32 @@
 
     <div class="container justify-content-end">
         <div class="card" style="width:max">
-            <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+            <img class="mx-auto d-block" src="{!! asset('images/fototoko.png') !!}" alt="Card image" style="width:50%">
             <div class="card-body">
                 <h4 class="card-title">Lorem Ipsum</h4>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, magnam
                     aperiam quam molestiae aliquam molestias in assumenda sed eum corrupti! Placeat harum dolores esse
                     vel dolore, voluptate nemo nisi aperiam.</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
             </div>
         </div>
-        <br>
+        <br><br>
         <div class="card" style="width:max">
-            <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+            <img class="mx-auto d-block" src="{!! asset('images/fototoko.png') !!}" alt="Card image" style="width:50%">
             <div class="card-body">
                 <h4 class="card-title">Lorem Ipsum</h4>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, magnam
                     aperiam quam molestiae aliquam molestias in assumenda sed eum corrupti! Placeat harum dolores esse
                     vel dolore, voluptate nemo nisi aperiam.</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
             </div>
         </div>
-        <br>
+        <br><br>
         <div class="card" style="width:max">
-            <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+            <img class="mx-auto d-block" src="{!! asset('images/fototoko.png') !!}" alt="Card image" style="width:50%">
             <div class="card-body">
                 <h4 class="card-title">Lorem Ipsum</h4>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, magnam
                     aperiam quam molestiae aliquam molestias in assumenda sed eum corrupti! Placeat harum dolores esse
                     vel dolore, voluptate nemo nisi aperiam.</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
             </div>
         </div>
         <div>
