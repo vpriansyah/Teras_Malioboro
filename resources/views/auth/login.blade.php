@@ -13,61 +13,53 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{!! asset('images/SiBakul.png') !!}" />
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
-
-    <!-- Custom styles for this template -->
-    <link href="{!! asset('css/signin.css') !!}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/signin.css"> -->
 </head>
 
 <body>
-    <main class="form-signin">
-        <form>
-            <div class="header">
-                <div class="header-body text-center mb-5">
-                    <img src="{!! asset('images/LOGO_TERAS_HITAM.png') !!}" alt="logo-teras" width="150" height="100">
-                </div>
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+
+            @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
             </div>
-            <div class="card border-success mb-3">
-                <div class="card-body">
-                    <h5 class="card-title mb-3 text-success text-center">Please sign in</h5>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="No KTP atau NIK">
-                        <label for="floatingInput">No KTP atau NIK</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="No Kios">
-                        <label for="floatingPassword">No Kios</label>
-                    </div>
+            @endif
 
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>
+            @if(session()->has('loginError'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('loginErrors') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
+            </div>
+            @endif
 
-                    <div class="d-grid gap-2">
-                        <a class="btn btn-lg btn-success" type="submit" href="/pedagang">Login</a>
+            <main class="form-signin pt-4">
+                <div class="header">
+                    <div class="header-body text-center">
+                        <img src="{!! asset('images/Logo SiBakul.png') !!}" alt="logo-teras" width="250">
+                        <img src="{!! asset('images/tulisan tm.png') !!}" alt="logo-teras" width="300">
                     </div>
                 </div>
-            </div>
-        </form>
-    </main>
+                <form action="/auth/login" method="post">
+                    @csrf
+                    <div class="card border-success mb-3 mt-5">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3 text-success text-center">Please Login</h5>
+                            <div class="form-input mb-3">
+                                <input type="name" name="nama_lengkap" class="form-control" id="nama_lengkap" placeholder="Nama Lengkap" required>
+                            </div>
+                            <div class="form-input mb-3">
+                                <input type="password" name="nik" class="form-control" id="nik" placeholder="No KTP atau NIK" required>
+                            </div>
 
+                            <button class="w-100 btn btn-success" type="submit" href="/pedagang">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

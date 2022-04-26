@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublikController;
 
+use App\Http\Controllers\LoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +17,8 @@ use App\Http\Controllers\PublikController;
 */
 
 //Auth
-Route::get('auth/login', function () {
-    return view('/auth/login');
-});
+Route::get('auth/login', [LoginController::class, 'index']);
+Route::post('auth/login', [LoginController::class, 'authenticate']);
 
 //Pedagang
 Route::get('/pedagang', function () {
@@ -76,15 +77,15 @@ Route::get('/publik/selfassessment', function () {
 //    return view('/publik/galeri');
 //});
 
-Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index') ;
+Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
 
 Route::get('/publik/aduansaran', function () {
     return view('/publik/aduansaran');
 });
 
-Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index') ;
+Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 //{
-    //return view('/publik/agenda');
+//return view('/publik/agenda');
 //};
 
 Route::get('/publik/cctv', function () {
@@ -95,6 +96,6 @@ Route::get('/publik/statistik', function () {
     return view('/publik/statistik');
 });
 
-Route::get('/publik/galeri/data', function(){
+Route::get('/publik/galeri/data', function () {
     return view('/publik/galeri-data');
 });
