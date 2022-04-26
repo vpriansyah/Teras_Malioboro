@@ -34,7 +34,8 @@
           <a href="{{$data->id}}">
             <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
               <div>
-                <img class="mx-auto d-block" src="{!! asset('images/{{$data->foto_lapak}}')!!}" style="width: 100%;">
+                <!--<img class="mx-auto d-block" src="{ asset('images/' . $data->foto_lapak . '') }" style="width: 100%;">-->
+                <img src="{!! asset('images/Publik_Galeri/' . $data->foto_lapak . '') !!}" class="d-block w-100" alt="''.$data->foto_lapak.''">
                 <center> <h5 class="iq-tw-6 iq-pb-10">{{$data->nama_lengkap}}</h5> </center>
                 <center>{{$data->dagangan}}</center>
                 
