@@ -45,45 +45,45 @@
 
     <!-- Tentang -->
     <!-- <section class="overview-block-pt">
-                        <div class="container" id="tentang">
-                          <div class="row iq-mt-10">
-                            <div class="col-sm-12">
-                              <div class="heading-title iq-mt-50">
-                                <h3 class="title iq-tw-7">Tentang</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p>
+                            <div class="container" id="tentang">
+                              <div class="row iq-mt-10">
+                                <div class="col-sm-12">
+                                  <div class="heading-title iq-mt-50">
+                                    <h3 class="title iq-tw-7">Tentang</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </section> -->
+                          </section> -->
     <!-- Tentang -->
 
     <!-- Rincian -->
     <!-- <section class="how-works r-mt-40 overview-block-ptb">
-                        <div class="container">
-                          <div class="row flex-row-reverse">
-                            <div class="col-lg-8 ">
-                              <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
+                            <div class="container">
+                              <div class="row flex-row-reverse">
+                                <div class="col-lg-8 ">
+                                  <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
+                                </div>
+                                <div class="col-lg-4  align-self-center">
+                                  <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
+                                  <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
+                                  <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </div>
+                                <div class="iq-objectsnew">
+                                  <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
+                                    <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                                  </span>
+                                  <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
+                                    <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                                  </span>
+                                  <span class="iq-objects-04 iq-fadebounce">
+                                    <span class="iq-round"></span>
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                            <div class="col-lg-4  align-self-center">
-                              <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
-                              <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
-                              <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            </div>
-                            <div class="iq-objectsnew">
-                              <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
-                                <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                              </span>
-                              <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
-                                <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                              </span>
-                              <span class="iq-objects-04 iq-fadebounce">
-                                <span class="iq-round"></span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </section> -->
+                          </section> -->
 
     <!-- Layanan -->
     <section class="iq-feature1 overview-block-ptb grey-bg" id="layanan">
@@ -278,30 +278,31 @@
                     <a role="button" class="close" data-dismiss="modal">&times;</a>
                 </div>
                 <div class="modal-body">
-                    
+
                     <div id="infopenting" class="carousel slide" data-bs-ride="carousel">
                         <ul class="carousel-indicators">
                             @php $count = -1; @endphp
-                            @foreach($info_penting as $data)
-                            @php $count++; @endphp
-                            <?php if ($count == 0) { ?>
-                            <li data-target="#infopenting" data-slide-to="<?= $count ?>" class="active"></li>
-                            <?php } else if ($count != 0) { ?>
-                            <li data-target="#infopenting" data-slide-to="<?= $count ?>"></li>
-                            <?php } ?>
+                            @foreach ($info as $data)
+                                @php $count++; @endphp
+                                <?php if ($count == 0) { ?>
+                                <li data-target="#infopenting" data-slide-to="<?= $count ?>" class="active"></li>
+                                <?php } else if ($count != 0) { ?>
+                                <li data-target="#infopenting" data-slide-to="<?= $count ?>"></li>
+                                <?php } ?>
                             @endforeach
                         </ul>
                         <div class="carousel-inner">
                             @php $count = -1; @endphp
-                            @foreach($info_penting as $data)
-                            @php $count++; @endphp
-                            <?php if ($count == 0) { ?>
-                            <div class="carousel-item active">
-                            <?php } else if ($count != 0) { ?>
-                            <div class="carousel-item">
-                            <?php } ?>
-                                <img src="{{ asset('images/informasi-penting/'.$data->nama.'')}}" class="d-block w-100" alt="''.$data->nama.''">
-                            </div>
+                            @foreach ($info as $data)
+                                @php $count++; @endphp
+                                <?php if ($count == 0) { ?>
+                                <div class="carousel-item active">
+                                    <?php } else if ($count != 0) { ?>
+                                    <div class="carousel-item">
+                                        <?php } ?>
+                                        <img src="{{ asset('images/informasi-penting/' . $data->nama . '') }}"
+                                            class="d-block w-100" alt="''.$data->nama.''">
+                                    </div>
                             @endforeach
                         </div>
                         <a class="carousel-control-prev" href="#infopenting" data-slide="prev">
