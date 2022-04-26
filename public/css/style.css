@@ -246,6 +246,8 @@ Section padding
 .overview-block-ptb { padding: 100px 0; }
 .overview-block-pt { padding: 100px 0 0; }
 .overview-block-pb { padding: 0 0 100px; }
+.overview-block-nw { padding: 20px 0px 10px; }
+.overview-block-md { padding: 70px 0px 10px; }
 
 /*----------------
 Padding All 

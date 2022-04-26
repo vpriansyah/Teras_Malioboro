@@ -1,108 +1,244 @@
 @extends('pedagang.layouts.footer')
 @include('pedagang.partials.navbar')
 @section('content')
-    <style>
-    </style>
+<style>
+</style>
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Profile Pedagang</title>
     </head>
-
     <body>
-        <section class="iq-feature1 overview-block-ptb grey-bg">
-            <div class="container">
-                <div class="col-lg-12 col-md-6 col-sm-12 iq-mtb-15">
+    <section class="iq-feature1 overview-block-nw grey-bg">
+    <div class="container">
+        <div class="col-lg-12 col-md-6 col-sm-12 iq-mtb-15">
+            <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                <div class="content-blog iq-pr-50">
+                    <h5 class="">Profil</h5>
+                    <p>Berisi profil pedagang teras malioboro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="iq-feature1 overview-block-nw grey-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-12 iq-mtb-15">
                     <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                        <div>
-                            <i class="ion-ios-grid-view-outline iq-mb-10"></i>
-                            <img class="ion-ios-grid-view-outline iq-mb-10"
-                                style="width: 150px; height: 150px; border-radius:100%;" src="{!! asset('images/fotoprofile.png') !!}"
-                                alt="fotoprofile">
-                            <h5 class="iq-tw-6">Profil</h5>
-                        </div>
-                        <div class="content-blog">
-                            <p>Berisi profil pedagang teras malioboro</p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <section id="infolanjut" class="overview-block-ptb how-works">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h4 class="iq-tw-6 iq-mb-25 text-danger">INFORMASI LANJUT</h4>
-                        <h1><b>TERAS MALIOBORO</b></h1>
-                        <p class="iq-font-15 iq-mt-20">Teras Malioboro 1 berlokasi di Gedung Eks Bioskop Indra, tepat berada
-                            di seberang Pasar Beringharjo.
-                            Sementara itu, Teras Malioboro 2 bertempat di eks Gedung Kantor Dinas Pariwisata DIY, tepatnya
-                            di
-                            sebelah utara Kantor DPRD DIY.</p>
-                    </div>
-                    <div class="col-lg-6 align-self-center">
-                        <img class="iq-works-img" src="{!! asset('images/logo.png') !!}">
-                    </div>
-                </div>
-            </div>
-            <div class="iq-objects">
-                <span class="iq-objects-03" data-bottom="transform:translatex(50px)"
-                    data-top="transform:translatex(-100px);">
-                    <img src="{!! asset('images/drive/04.png') !!}" alt="drive02">
-                </span>
-            </div>
-        </section>
-        <section class="iq-feature1 overview-block-ptb grey-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6 col-sm-12 iq-mtb-15">
-                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
 
                             <div>
                                 <h5 class="mx-auto"><b>Profil Toko</b></h5>
                             </div>
                             <br>
                             <div class="col-lg-6 align-self-center">
-                                <img class="iq-works-img"
-                                    style="width: 370px; height: 250px; border-radius:10%; align-self-center;"
-                                    src="{!! asset('images/fototoko.png') !!}" alt="">
+                            <img class="iq-works-img" style="width: 370px; height: 250px; border-radius:10%; align-self-center;" src="{!! asset('images/fototoko.png') !!}" alt="">
                             </div>
                             <br>
                             <br>
-                            <p>Nama Toko : {{ $nama }}</p>
-                            <p>Jam Opersioanal :</p>
-                            <p>Dagangan :</p>
-                            <p>Lokasi :</p>
-
-                        </div>
+                            <table>
+                                <tr>
+                                    <th style="width:10%"></th>
+                                    <th style="width:45%"></th>
+                                    <th style="width:5%"></th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Nama Toko</td>
+                                    <td>:</td>
+                                    <td>coba doangg</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jam Operasional</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Dagangan</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Lokasi</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                            </table>   
+                            <br>
+                            <center><button type="button" class="btn btn-success">Edit</button></center>         
                     </div>
-                    <div class="col-lg-7 col-md-6 col-sm-12 iq-mtb-15">
-                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-12 iq-mtb-15">
+                    <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
 
                             <div>
                                 <h5 class="mx-auto"><b>Profil Pedagang</b></h5>
                             </div>
                             <br>
+                            <table>
+                                <tr>
+                                    <th style="width: 30%"></th>
+                                    <th style="width: 40%"></th>
+                                    <th style="width: 5%"></th>
+                                    <th style="width: 30%"></th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Nama Lengkap</td>
+                                    <td>:</td>
+                                    <td>Tes satu dua</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Nomor HP</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Gender</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Alamat</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Paguyuban</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>NIK</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>No KK</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Nomor NIB</td>
+                                    <td>:</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <br>
+                            <center><button type="button" class="btn btn-success"><span class="spinner-border spinner-border-sm"></span>Edit</button></center>
+                    </div>
+                    <br>
+                    <div class="alert alert-warning">
+                        <strong>Warning ! </strong> Tidak boleh asal dalam mengedit data pedagang.
+                      </div>
+                </div>
+                
+        </div>
+        </section>
+
+        <section class="iq-feature1 overview-block-md grey-bg" id="menupilihan">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="heading-title text-center">
+                            <h2 class="title iq-tw-6">Menu Pilihan</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <a href="/saran">
+                                <div>
+                                    <i class="ion-ios-lightbulb-outline iq-mb-10"></i>
+                                    <h5 class="iq-tw-6">Saran dan Aduan</h5>
+                                </div>
+                            </a>
                             <div class="content-blog">
-                                <p>Nama Lengkap :</p>
-                                <p>Nomor HP :</p>
-                                <p>Gender :</p>
-                                <p>Alamat :</p>
-                                <p>Paguyuban :</p>
-                                <p>NIK :</p>
-                                <p>No KK :</p>
-                                <p>Nomor NIB :</p>
+                                <p>Saran dan aduan untuk pengelola teras malioboro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <a href="/profil">
+                                <div>
+                                    <i class="ion-ios-grid-view-outline iq-mb-10"></i>
+                                    <h5 class="iq-tw-6">Profil</h5>
+                                </div>
+                            </a>
+                            <div class="content-blog">
+                                <p>Berisi profil pedagang teras malioboro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <a href="/informasi">
+                                <div>
+                                    <i class="ion-ios-heart-outline iq-mb-10"></i>
+                                    <h5 class="iq-tw-6">Info Penting</h5>
+                                </div>
+                            </a>
+                            <div class="content-blog">
+                                <p>Informasi penting yang harus dibaca/diikuti oleh pedagang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <div>
+                                <i class="ion-ios-albums-outline iq-mb-10"></i>
+                                <h5 class="iq-tw-6">Tindak Lanjut</h5>
+                            </div>
+                            <div class="content-blog">
+                                <p>Infomasi tindak lanjut dari saran dan aduan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <a href="/statistik">
+                                <div>
+                                    <i class="ion-ios-settings iq-mb-10"></i>
+                                    <h5 class="iq-tw-6">Statistik</h5>
+                                </div>
+                            </a>
+                            <div class="content-blog">
+                                <p>Data statistik yang diperlukan pedagang, seperti jumlah pengunjung di teras malioboro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <a href="/agenda">
+                                <div>
+                                    <i class="ion-ios-color-wand-outline iq-mb-10"></i>
+                                    <h5 class="iq-tw-6">Agenda Teras</h5>
+                                </div>
+                            </a>
+                            <div class="content-blog">
+                                <p>informasi kegiatan seni, pertunjukan atau kegiatan lain di teras malioboro</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
-        </div>
-
+    
     </body>
-
     </html>
 @endsection
