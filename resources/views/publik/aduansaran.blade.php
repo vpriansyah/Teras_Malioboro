@@ -57,7 +57,7 @@
                                 </div>
                             </center>
                         </div>
-                        
+
                         <script>
                             function hanyaAngka(evt) {
                                 var charCode = (evt.which) ? evt.which : event.keyCode
@@ -79,5 +79,9 @@
 
                         });
         </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+                    swal("Apakah Anda Yakin Ingin Mengirim Aduan & Saran");
+                </script>
     </section>
 @endsection
