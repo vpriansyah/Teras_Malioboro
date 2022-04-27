@@ -78,6 +78,7 @@ Route::get('/publik/aduansaran', 'App\Http\Controllers\AduanController@index');
 Route::post('/publik/tambah', 'App\Http\Controllers\AduanController@tambah');
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
+Route::get('/publik/galeri-data', 'App\Http\Controllers\GaleriController@data');
 
 Route::get('/publik/cctv', function () {
     return view('/publik/cctv');
@@ -87,6 +88,3 @@ Route::get('/publik/statistik', function () {
     return view('/publik/statistik');
 });
 
-Route::get('/publik/galeri/data', function () {
-    return view('/publik/galeri-data');
-});

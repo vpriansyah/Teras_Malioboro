@@ -14,4 +14,10 @@ class GaleriController extends Controller
         $kat_brg = DB::table('kat_dagangan')->get();
         return view('publik.galeri', ['kat_brg' => $kat_brg],['data_pkl' => $data_pkl]);
     }
+
+    public function data()
+    {   
+        $data_pkl = DB::table('data_pkl')->find(1);
+        return view('publik.galeri-data', ['data_pkl' => $data_pkl]);
+    }
 }
