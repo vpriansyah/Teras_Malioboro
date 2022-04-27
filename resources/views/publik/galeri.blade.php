@@ -14,10 +14,10 @@
       <div class="tab-v1">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="tab">Semua</a></li>
+            <a class="nav-link" href="galeri" data-toggle="tab">Semua</a></li>
           @foreach($kat_brg as $kat)
             <li class="nav-item">
-              <a class="nav-link" href="{{$kat->nama}}" data-toggle="tab">{{$kat->nama}}</a></li>
+              <a class="nav-link" href="galeri/{{$kat->nama}}" data-toggle="tab">{{$kat->nama}}</a></li>
           @endforeach
           <li>
           <form class="d-flex">
@@ -31,32 +31,36 @@
       </div>
       <!---->
       
+
+
       <!--card galeri-->
       @foreach($data_pkl as $data)
-      <div class="row justify-content-md-center">
-        <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
-          <a href="{{$data->id}}">
-            <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-              <div>
-                @php 
-                $foto = ($data->foto_lapak);
-                if ($data->foto_lapak == null) $foto= "notfound.jpg";
-                
-                
-                @endphp
-                <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100" alt="''.$data->foto_lapak.''">
-                <center> <h5 class="iq-tw-6 iq-pb-10">{{$data->nama_lengkap}}</h5> </center>
-                <center>{{$data->dagangan}}</center>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
+            <a href="{{ url('galeri-data',$data->id)}}">
+              <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                <div>
+                  @php 
+                  $foto = ($data->foto_lapak);
+                  if ($data->foto_lapak == null) $foto= "notfound.jpg";                
+                  @endphp
+                  <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100" alt="''.$data->foto_lapak.''">
+                  <center> <h5 class="iq-tw-6 iq-pb-10">{{$data->nama_lengkap}}</h5> </center>
+                  <center>{{$data->dagangan}}</center>
+                  <p>{{$data->operasional}}<br>
+                  Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
+        @endforeach
+        <!---->
       </div>
-      @endforeach
-      <!---->
     </div>
   </section>
-
+<!-- not used
   {{-- Modal Data Pedagang --}}
     <div class="modal fade" id="data_pedagang" tabindex="-1" role="log">
         <div class="modal-dialog modal-lg" role="document">
@@ -89,4 +93,5 @@
         </div>
     </div>
   {{-- Modal Data Pedagang END --}}
+-->
 @endsection
