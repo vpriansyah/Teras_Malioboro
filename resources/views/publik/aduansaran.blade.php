@@ -70,6 +70,7 @@
             </div>
         </div>
         </div>  
+
         <script>
             $('.btn-tambah').click(function() {
                             swal("Hello world!");
