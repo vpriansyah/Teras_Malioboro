@@ -81,7 +81,11 @@
     <script src="{!! asset('js/popper.min.js')!!}"></script>
     <script src="{!! asset('js/bootstrap.min.js')!!}"></script>
     <!-- Main js -->
-    <script src="{!! asset('js/main.js')!!}"></script>
+<script src="{!! asset('js/main.js')!!}"></script>
+<script src="{!! asset('js/script.js')!!}"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- Google captcha code Js -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- Custom -->

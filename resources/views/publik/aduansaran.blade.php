@@ -13,7 +13,7 @@
                         <div class="form-group iq-pt-10">
                             <label>Jenis</label>
                             <select class="form-control" name="jenis" id="combo1">
-                                <option value="privat">Private</option>
+                                <option value="private">Private</option>
                                 <option value="public">Public</option>
                             </select>
                         </div>
@@ -51,7 +51,7 @@
                             <center>
                                 <div>
                                     <input id="submit" name="submit" type="submit" value="Kirim"
-                                        class="rounded-pill btn btn-success" onsubmit="return validateForm();"
+                                        class="rounded-pill btn btn-success btn-tambah" onsubmit="return validateForm();"
                                         onclick="return validateForm();">
                                 </div>
                             </center>
@@ -69,6 +69,12 @@
                 </body>
             </div>
         </div>
-        </div>
+        </div>  
+        <script>
+            $('.btn-tambah').click(function() {
+                            swal("Hello world!");
+
+                        });
+        </script>
     </section>
 @endsection

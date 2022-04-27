@@ -32,3 +32,4 @@ class AduanController extends Controller
         return redirect('/publik');
     }
 }
+
