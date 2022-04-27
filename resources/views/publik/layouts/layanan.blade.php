@@ -84,6 +84,9 @@
 <script src="{!! asset('js/main.js')!!}"></script>
 <script src="{!! asset('js/script.js')!!}"></script>
 
+
+
+    <!-- Alert Js -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Google captcha code Js -->
