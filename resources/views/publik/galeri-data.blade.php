@@ -6,6 +6,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12">
+          <button type="button" class="btn btn-danger" onclick="history.back();">Kembali</button>
             <div class="heading-title-layanan text-center">
               <h2 class="title iq-tw-6">Data Pedagang</h2>
               @foreach($data_pkl as $data_pkl)
@@ -64,16 +65,16 @@
                   }
 
                   @endphp
-                  <center><img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-25" alt="''.$data_pkl->foto_lapak.''"></center>
-              </br> 
-              <h4>Dagangan: {{$data_pkl->nama_lengkap}}</h4>
+              <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-25" alt="''.$data_pkl->foto_lapak.''">
+              <div class ="card border-0 justify-content-center" style="width: 500px; height:300px;">
+              <h4>Dagangan : {{$data_pkl->nama_lengkap}}</h4>
               </br>
-              <h4>Dagangan: {{$data_pkl->dagangan}}</h4>
+              <h4>Dagangan : {{$data_pkl->dagangan}}</h4>
               </br>
-              <h4>Nomor HP: {{$nomor}}</h4>
+              <h4>Nomor HP : {{$nomor}}</h4>
               </br>
               <h4>Lokasi : {{$lantai}}, {{$gedung}}, {{$teras}}</h4>
-               
+              </div>
                
                @endforeach
             </div>
