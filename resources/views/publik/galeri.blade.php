@@ -34,8 +34,8 @@
 
 
       <!--card galeri-->
-      @foreach($data_pkl as $data)
       <div class="container">
+      @foreach($data_pkl as $data)
         <div class="row justify-content-md-center">
           <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
             <a href="galeri-data">
@@ -57,7 +57,7 @@
         </div>
         @endforeach
         <!---->
-      </div>
+      <div>
     </div>
   </section>
 @endsection
