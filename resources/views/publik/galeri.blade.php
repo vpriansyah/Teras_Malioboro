@@ -34,11 +34,6 @@
 
 
       <!--card galeri-->
-<<<<<<< Updated upstream
-=======
-      
-      @foreach($data_pkl as $data)
->>>>>>> Stashed changes
       <div class="container">
         <div class="row justify-content-md-center">
           @foreach($data_pkl as $data)
