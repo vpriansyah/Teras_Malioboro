@@ -35,6 +35,8 @@
 
             </table>
 
+
         </div>
+        {{ $info_agenda->links() }}
     </section>
 @endsection
