@@ -103,8 +103,8 @@
                                             <td><h6>{{ $lantai }}, {{ $gedung }}, {{ $teras }}</h6></td>
                                         </tr>
                                     </table>
-                                    <div class="iq-pb-10">
-                                      <button type="button" class="btn btn-success"><i class="fab fa-whatsapp"></i> Hubungi Penjual</button>
+                                    <div class="iq-pb-20">
+                                      <button type="button" class="btn btn-success"><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</button>
                                     </div>
                                   </div>
                                 </div>
