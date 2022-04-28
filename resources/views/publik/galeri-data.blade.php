@@ -8,6 +8,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="heading-title-layanan text-center">
               <h2 class="title iq-tw-6">Data Pedagang</h2>
+              @foreach($data_pkl as $data_pkl)
                   @php 
                   $foto = ($data_pkl->foto_lapak);
                   $lantai = ($data_pkl->lokasi_lantai_id);
@@ -62,7 +63,7 @@
 
                   @endphp
                   <center><img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-25" alt="''.$data_pkl->foto_lapak.''"></center>
-              </br>
+              </br> 
               <h4>Dagangan: {{$data_pkl->nama_lengkap}}</h4>
               </br>
               <h4>Dagangan: {{$data_pkl->dagangan}}</h4>
@@ -70,7 +71,9 @@
               <h4>Nomor HP: {{$data_pkl->no_hp}}</h4>
               </br>
               <h4>Lokasi : {{$lantai}}, {{$gedung}}, {{$teras}}</h4>
-              
+               
+               
+               @endforeach
             </div>
           </div>
         </div>

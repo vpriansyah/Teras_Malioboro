@@ -73,12 +73,12 @@ Route::get('/publik/selfassessment', function () {
 //});
 
 Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
+Route::get('/publik/galeri-data/{id}', 'App\Http\Controllers\GaleriController@data');
 
 Route::get('/publik/aduansaran', 'App\Http\Controllers\AduanController@index');
 Route::post('/publik/tambah', 'App\Http\Controllers\AduanController@tambah');
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
-Route::get('/publik/galeri-data', 'App\Http\Controllers\GaleriController@data');
 
 Route::get('/publik/cctv', function () {
     return view('/publik/cctv');
