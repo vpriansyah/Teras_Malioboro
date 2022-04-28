@@ -35,29 +35,31 @@
 
       <!--card galeri-->
       <div class="container">
-      @foreach($data_pkl as $data)
         <div class="row justify-content-md-center">
-          <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15">
-            <a href="galeri-data">
-              <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                <div>
-                  @php 
-                  $foto = ($data->foto_lapak);
-                  if ($data->foto_lapak == null) $foto= "notfound.jpg";                
-                  @endphp
-                  <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100" alt="''.$data->foto_lapak.''">
-                  <center> <h5 class="iq-tw-6 iq-pb-10">{{$data->nama_lengkap}}</h5> </center>
-                  <center>{{$data->dagangan}}</center>
-                  <p>{{$data->operasional}}<br>
-                  Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+          @foreach($data_pkl as $data)
+            <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15 d-flex align-items-stretch>
+              <a href="galeri-data">
+                <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                 <div>
+                    @php 
+                      $foto = ($data->foto_lapak);
+                      if ($data->foto_lapak == null) $foto= "notfound.jpg";                
+                    @endphp
+                    <div class ="card border-0 justify-content-center" style="width: 200px; height:200px;">
+                     <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100 " alt="''.$data->foto_lapak.''">
+                    </div> 
+                      <center> <h5 class="iq-tw-6 iq-pb-10">{{$data->nama_lengkap}}</h5> </center>
+                      <center>{{$data->dagangan}}</center>
+                      <p>{{$data->operasional}}<br>
+                         Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        @endforeach
+              </a>
+            </div>
+          @endforeach
         <!---->
-      <div>
+        </div>
+      </div>
     </div>
   </section>
 @endsection
