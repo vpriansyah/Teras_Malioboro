@@ -81,28 +81,31 @@
                                   <div class="iq-plr-20 iq-pt-20">
                                     <h3 class="iq-tw-9 iq-plr-10">{{ $data_pkl->nama_lengkap }}</h3>
                                     <hr class="iq-pb-10 iq-mb-10">
-                                    <table class="table table-borderless">
+                                    <table class="table table-borderless table-striped">
                                         {{-- <tr>
-                                            <td><h5>Pedagang</h5></td>
-                                            <td><h5> : </h5></td>
-                                            <td><h5>{{ $data_pkl->nama_lengkap }}</h5></td>
+                                            <td><h6>Pedagang</h6></td>
+                                            <td><h6> : </h6></td>
+                                            <td><h6>{{ $data_pkl->nama_lengkap }}</h6></td>
                                         </tr> --}}
                                         <tr>
-                                            <td><h5>Dagangan</h5></td>
-                                            <td><h5> : </h5></td>
-                                            <td><h5>{{ $data_pkl->dagangan }}</h5></td>
+                                            <td><h6>Dagangan</h6></td>
+                                            <td><h6> : </h6></td>
+                                            <td><h6>{{ $data_pkl->dagangan }}</h6></td>
                                         </tr>
                                         <tr>
-                                            <td><h5>Nomor HP</h5></td>
-                                            <td><h5> : </h5></td>
-                                            <td><h5>{{ $nomor }}</h5></td>
+                                            <td><h6>Nomor HP</h6></td>
+                                            <td><h6> : </h6></td>
+                                            <td><h6>{{ $nomor }}</h6></td>
                                         </tr>
                                         <tr>
-                                            <td><h5>Lokasi</h5></td>
-                                            <td><h5> : </h5></td>
-                                            <td><h5>{{ $lantai }}, {{ $gedung }}, {{ $teras }}</h5></td>
+                                            <td><h6>Lokasi</h6></td>
+                                            <td><h6> : </h6></td>
+                                            <td><h6>{{ $lantai }}, {{ $gedung }}, {{ $teras }}</h6></td>
                                         </tr>
                                     </table>
+                                    <div class="iq-pb-10">
+                                      <button type="button" class="btn btn-success"><i class="fab fa-whatsapp"></i> Hubungi Penjual</button>
+                                    </div>
                                   </div>
                                 </div>
                             </div>
