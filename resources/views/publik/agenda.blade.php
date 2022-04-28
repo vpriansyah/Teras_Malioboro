@@ -37,6 +37,8 @@
 
 
         </div>
+        <div class="container">
         {{ $info_agenda->links() }}
+        </div>
     </section>
 @endsection
