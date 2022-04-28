@@ -11,6 +11,8 @@
               @foreach($data_pkl as $data_pkl)
                   @php 
                   $foto = ($data_pkl->foto_lapak);
+                  $nomor = ($data_pkl->no_hp);
+                  if ($data_pkl->no_hp == null) $nomor= "-";
                   $lantai = ($data_pkl->lokasi_lantai_id);
                   $no_kios = ($data_pkl->lokasi_no_kios_id);
                   $gedung = ($data_pkl->lokasi_gedung_id);
@@ -68,7 +70,7 @@
               </br>
               <h4>Dagangan: {{$data_pkl->dagangan}}</h4>
               </br>
-              <h4>Nomor HP: {{$data_pkl->no_hp}}</h4>
+              <h4>Nomor HP: {{$nomor}}</h4>
               </br>
               <h4>Lokasi : {{$lantai}}, {{$gedung}}, {{$teras}}</h4>
                
