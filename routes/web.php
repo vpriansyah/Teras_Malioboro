@@ -74,6 +74,8 @@ Route::get('/publik/selfassessment', function () {
 //});
 
 Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
+Route::get('/publik/galeri/{id}', 'App\Http\Controllers\GaleriController@group');
+
 Route::get('/publik/galeri-data/{id}', 'App\Http\Controllers\GaleriController@data');
 
 Route::get('/publik/aduansaran', 'App\Http\Controllers\AduanController@index');

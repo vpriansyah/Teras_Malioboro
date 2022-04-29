@@ -25,4 +25,11 @@ class GaleriController extends Controller
                 ->get();
         return view('publik.galeri-data', ['data_pkl' => $data_pkl],['lokasi_no_kios' => $lokasi_no_kios]);
     }
+
+    public function group($id)
+    {
+        $kat_brg = DB::table('kat_dagangan')->get();
+        $data_pkl = DB::table('data_pkl')->where('kat_dagangan_id',$id)->get();
+        return view('publik.galeri',['data_pkl'=>$data_pkl],['kat_brg' => $kat_brg]);
+    }
 }
