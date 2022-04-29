@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublikController;
+use App\Http\Controllers\StatistikPublikController;
 
 use App\Http\Controllers\LoginController;
 
@@ -84,7 +85,8 @@ Route::get('/publik/cctv', function () {
     return view('/publik/cctv');
 });
 
-Route::get('/publik/statistik', function () {
-    return view('/publik/statistik');
-});
+Route::get('/publik/statistik', [StatistikPublikController::class, 'index']);
+// Route::get('/publik/statistik', function () {
+//     return view('/publik/statistik');
+// });
 
