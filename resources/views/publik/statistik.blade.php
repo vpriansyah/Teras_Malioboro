@@ -23,12 +23,48 @@
                                     ];
 
                                     new Chart("jk", {
-                                        type: "pie",
+                                        type: 'pie',
+                                        responsive: true,
                                         data: {
                                             labels: xValues,
                                             datasets: [{
                                                 backgroundColor: barColors,
                                                 data: yValues
+                                            }]
+                                        },
+                                        // options: {
+                                        //     title: {
+                                        //         display: true,
+                                        //         text: "Pedagang per Jenis Kelamin"
+                                        //     }
+                                        // }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="card-header">Paguyuban Pedagang</h5>
+                            <div class="card-body">
+                                <canvas id="paguyuban" style="width:100%;max-width:1000px"></canvas>
+                                <script type="text/javascript">
+                                    var aValues = ['PPKLY 37', 'PEMALNI', 'MATARAM', 'PADMA', 'SENOPATI', 'PERWAKILAN', 'HANDAYANI', 'SOSROKUSUMO',
+                                                    'TITIK NOL', 'PPMS', 'PAPELA'   ];
+                                    var bValues = {
+                                        datasets: [{
+                                            backgroundColor: "pink",
+                                            data: '$data["$p"]'
+                                        }]
+
+};
+
+
+                                    new Chart("paguyuban", {
+                                        type: 'bar',
+                                        responsive: true,
+                                        data: {
+                                            labels: aValues,
+                                            datasets: [{
+                                                data: bValues
                                             }]
                                         },
                                         // options: {
