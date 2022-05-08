@@ -29,7 +29,7 @@ class AduanController extends Controller
             'waktu' => $request->waktu
         ]);
 
-        return redirect('/publik');
+        return redirect('/publik')->with('message','Berhasil mengajukan aduan/saran.');
     }
 }
 
