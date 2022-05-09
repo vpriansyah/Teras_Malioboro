@@ -1,5 +1,4 @@
 @extends('publik.layouts.layanan')
-
 @section('content')
 <section class="iq-feature1 overview-block-ptb-25 grey-bg" id="layanan">
     <div class="container">
@@ -11,25 +10,72 @@
         </div>
       </div>
       <!--navbar-->
-      <div class="tab-v1">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link" href="/publik/galeri">Semua</a></li>
-          @foreach($kat_brg as $kat)
-            <li class="nav-item">
-              <a class="nav-link" href="/publik/galeri/{{$kat->id}}">{{$kat->nama}}</a></li>
-          @endforeach
-          <li>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </li>
-        </ul>
-      </div>
+      <nav class="navbar navbar-expand-sm navbar" aria-label="Third navbar example">
+        <div class="container-fluid">  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/publik/galeri/">Semua</a>
+              </li>
+              @foreach($kat_brg as $kat)
+              <li class="nav-item">
+                <a class="nav-link" href="/publik/galeri/{{$kat->id}}">{{$kat->nama}}</a></li>
+              @endforeach
+              
+              <li>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <hr>
       <!---->
       
-
+      <!--dropdown lokasi-->
+      <div class="form-group iq-pt-10">
+        <div class="row">
+          <div class="col-lg-3 col-mb-6 col-sm-6">
+              <label>Teras</label>
+              <select class="form-control" name="jenis" id="combo1">            
+              @foreach($lokasi_teras as $teras)
+                  <option value="{{$teras->id}}">{{$teras->nama}}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="col-lg-3 col-mb-6 col-sm-6">
+            <label>Gedung</label>
+              <select class="form-control" name="jenis" id="combo1">            
+              @foreach($lokasi_gedung as $gedung)
+                  <option value="{{$gedung->id}}">{{$gedung->nama}}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="col-lg-3 col-mb-6 col-sm-6">
+            <label>lantai</label>
+              <select class="form-control" name="jenis" id="combo1">            
+              @foreach($lokasi_lantai as $lantai)
+                  <option value="{{$lantai->id}}">{{$lantai->nama}}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="col-lg-3 col-mb-6 col-sm-6">
+            <label>Kios</label>
+              <select class="form-control" name="jenis" id="combo1">            
+              @foreach($lokasi_kios as $kios)
+                  <option value="{{$kios->id}}">{{$kios->nama}}</option>
+              @endforeach
+            </select>
+          </div>
+        </div>
+      </div>
+      <!---->
 
       <!--card galeri-->
       <div class="container">

@@ -12,7 +12,12 @@ class GaleriController extends Controller
     {
         $data_pkl = DB::table('data_pkl')->get();
         $kat_brg = DB::table('kat_dagangan')->get();
-        return view('publik.galeri', ['kat_brg' => $kat_brg],['data_pkl' => $data_pkl]);
+        $lokasi_teras = DB::table('lokasi_teras')->get();
+        $lokasi_kios = DB::table('lokasi_no_kios')->get();
+        $lokasi_lantai = DB::table('lokasi_lantai')->get();
+        $lokasi_gedung = DB::table('lokasi_gedung')->get();
+//        dd($lokasi_teras);
+        return view('publik.galeri', compact('kat_brg','lokasi_teras','data_pkl','lokasi_kios','lokasi_lantai','lokasi_gedung'));
     }
 
     public function data($id)
@@ -28,8 +33,12 @@ class GaleriController extends Controller
 
     public function group($id)
     {
+        $data_pkl = DB::table('data_pkl')->get();
         $kat_brg = DB::table('kat_dagangan')->get();
-        $data_pkl = DB::table('data_pkl')->where('kat_dagangan_id',$id)->get();
-        return view('publik.galeri',['data_pkl'=>$data_pkl],['kat_brg' => $kat_brg]);
+        $lokasi_teras = DB::table('lokasi_teras')->get();
+        $lokasi_kios = DB::table('lokasi_no_kios')->get();
+        $lokasi_lantai = DB::table('lokasi_lantai')->get();
+        $lokasi_gedung = DB::table('lokasi_gedung')->get();
+        return view('publik.galeri', compact('kat_brg','lokasi_teras','data_pkl','lokasi_kios','lokasi_lantai','lokasi_gedung'));
     }
 }
