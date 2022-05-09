@@ -49,6 +49,7 @@
                                 <option value="lainnya">Lainnya</option>
                             </select>
                         </div>
+                        <div><font color='#ff0000'>*</font> Wajid Diisi :)</div>
                         <div class="form-group">
                             <input name="waktu" type="hidden" value="<?php echo date('Y-m-d h:i:s'); ?>">
                         </div>
