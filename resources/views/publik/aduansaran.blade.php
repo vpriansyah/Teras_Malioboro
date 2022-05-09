@@ -74,9 +74,9 @@
         </div>  
 
        
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script>
                     swal("Apakah Anda Yakin Ingin Mengirim Aduan & Saran");
-                </script>
+                </script> --}}
     </section>
 @endsection
