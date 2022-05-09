@@ -107,7 +107,13 @@
                                       @php
                                       $no_hp = ltrim($nomor, "0");
                                       @endphp
-                                      <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success"><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>
+                                        @if ($data_pkl->no_hp == null)
+                                            <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success btn disabled" aria-disabled="true"><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>
+                                        @else 
+                                            <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success" ><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>  
+                                        @endif 
+                                        <!--<a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success"><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>
+                                   -->
                                     </div>
                                   </div>
                                 </div>
