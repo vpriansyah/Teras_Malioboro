@@ -19,21 +19,20 @@
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Nama Pengadu</label>
-                            <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" required />
+                            <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" required/>
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Masukan Email" required />
+                            <input type="email" name="email" class="form-control" placeholder="Masukan Email" required/>
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Nomor WhatsApp</label>
-                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control"
+                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control" autocomplete="off"
                                 placeholder="Masukan Nomor WhatsApp" />
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Saran / Aduan</label>
-                            <textarea name="saran_aduan" class="form-control" rows="5" placeholder="Masukan saran dan aduan anda"
-                                required></textarea>
+                            <textarea name="saran_aduan" class="form-control" rows="5" placeholder="Masukan saran dan aduan anda" required></textarea>
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Kategori Aduan</label>
@@ -53,7 +52,8 @@
                             <center>
                                 <div>
                                     <input id="submit" name="submit" type="submit" value="Kirim"
-                                        class="rounded-pill btn btn-success">
+                                        class="rounded-pill btn btn-success btn-tambah" onsubmit="return validateForm();"
+                                        onclick="return validateForm();">
                                 </div>
                             </center>
                         </div>
@@ -63,7 +63,7 @@
                                 var charCode = (evt.which) ? evt.which : event.keyCode
                                 if (charCode > 31 && (charCode < 48 || charCode > 57))
                                     return false;
-                                return true;
+                                return true;                   
                             }
                         </script>
                     </form>
@@ -71,16 +71,12 @@
                 </body>
             </div>
         </div>
-        </div>
-        {{-- <script>
-            $('.btn-tambah').click(function() {
-                            swal("Hello world!");
+        </div>  
 
-                        });
-        </script>
+       
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script>
                     swal("Apakah Anda Yakin Ingin Mengirim Aduan & Saran");
-                </script> --}}
+                </script>
     </section>
 @endsection
