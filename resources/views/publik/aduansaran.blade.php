@@ -27,7 +27,7 @@
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Nomor WhatsApp</label>
-                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control"
+                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control" autocomplete="off"
                                 placeholder="Masukan Nomor WhatsApp" />
                         </div>
                         <div class="form-group iq-pt-10">
