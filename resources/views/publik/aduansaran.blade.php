@@ -12,6 +12,7 @@
                         {{ csrf_field() }}
                         <div class="form-group iq-pt-10">
                             <label>Jenis</label>
+                            <font color='#ff0000'>*</font>
                             <select class="form-control" name="jenis" id="combo1">
                                 <option value="private">Private</option>
                                 <option value="public">Public</option>
@@ -19,23 +20,27 @@
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Nama Pengadu</label>
+                            <font color='#ff0000'>*</font>
                             <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" required/>
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Email</label>
+                            <font color='#ff0000'>*</font>
                             <input type="email" name="email" class="form-control" placeholder="Masukan Email" required/>
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Nomor WhatsApp</label>
-                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control" autocomplete="off"
+                            <input type="text" name="no_hp" onkeypress="return hanyaAngka(event)" class="form-control"
                                 placeholder="Masukan Nomor WhatsApp" />
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Saran / Aduan</label>
+                            <font color='#ff0000'>*</font>
                             <textarea name="saran_aduan" class="form-control" rows="5" placeholder="Masukan saran dan aduan anda" required></textarea>
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Kategori Aduan</label>
+                            <font color='#ff0000'>*</font>
                             <select class="form-control" name="kategori" id="combo1">
                                 <option value="umum">Umum</option>
                                 <option value="keuangan">Keuangan</option>
@@ -73,10 +78,6 @@
         </div>
         </div>  
 
-       
-        {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script>
-                    swal("Apakah Anda Yakin Ingin Mengirim Aduan & Saran");
-                </script> --}}
+    
     </section>
 @endsection
