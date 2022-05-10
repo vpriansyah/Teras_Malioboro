@@ -1,7 +1,7 @@
 stages:
   - main
 
-# upload job, see https://lftp.yar.ru/lftp-man.html /
+# upload job, see https://lftp.yar.ru/lftp-man.html
 main:
   stage: main
   script:
