@@ -20,21 +20,6 @@
 <body>
     <div class="row justify-content-center">
         <div class="col-md-3">
-
-            @if (session()->has('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ session('success') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
-                </div>
-            @endif
-
-            @if (session()->has('loginError'))
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    {{ session('loginErrors') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-lable="Close"></button>
-                </div>
-            @endif
-
             <main class="form-signin pt-4">
                 <div class="header">
                     <div class="header-body text-center">
