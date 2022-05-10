@@ -82,7 +82,7 @@
         <div class="row justify-content-md-center">
           @foreach($data_pkl as $data)
             <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15 d-flex align-items-stretch">
-              <a href="/publik/galeri-data/{{$data->id}}">
+              <a href="galeri-data/{{$data->id}}">
                 <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                  <div>
                     @php 
