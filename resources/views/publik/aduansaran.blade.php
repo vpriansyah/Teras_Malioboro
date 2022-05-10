@@ -49,7 +49,7 @@
                                 <option value="lainnya">Lainnya</option>
                             </select>
                         </div>
-                        <div><font color='#ff0000'>*</font> Wajid Diisi :)</div>
+                        <div><a>(</a><font color='#ff0000'>*</font>) Tanda Tersebut Wajib Di isi :)</div>
                         <div class="form-group">
                             <input name="waktu" type="hidden" value="<?php echo date('Y-m-d h:i:s'); ?>">
                         </div>
