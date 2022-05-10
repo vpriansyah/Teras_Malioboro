@@ -35,7 +35,18 @@
             <em>
               <strong>Baca juga:&nbsp;<a href="https://www.solopos.com/ramai-pkl-pengunjung-teras-malioboro-2-malah-mengeluh-kenapa-1310450">Ramai! PKL &amp; Pengunjung Teras Malioboro 2</a></strong>
             </em>
-          </p>                   
+          </p>
+          <p>Jumlah kunjungan ini, lanjut Ekwanto, mematahkan asumsi apabila Pedagang Kaki Lima (PKL) direlokasi dari lorong toko ke Teras Malioboro akan sepi kunjungan. “Terpatahkan kalau relokasi bikin orang yang enggak datang ke Malioboro,” katanya. “Protokol kesehatan tetap jalan, ada penyediaan hand sanitizer, cek suhu, desinfektasi, dan lainnya.”</p>
+          <p>Ramainya pengunjung berdampak pada meningkatnya penjualan barang dagangan PKL. Salah satu pedagang pakaian, Dewa, mengatakan, peningkatan penjualan lumayan tinggi. Dalam sehari, Dewa bisa menjual lima kodi pakaian dalam sehari. Satu kodi berisi 20 buah baju. Dibandingkan hari normal, jumlah penjualan tidak menentu.</p>
+          <p>“Tapi kalau jujur, enak dulu [waktu di lorong toko jualannya] ramainya ramai dulu. Di sini panas banget. Pengunjung juga ngeluh. Kalau di sana udara masuk tertata seger,” katanya.</p>
+          <p>Sementara itu, beberapa sepeda motor sempat parkir di depan Teras Malioboro 2, atau di jalur cepat<a href="https://www.solopos.com/tag/jalan-malioboro-yogyakarta"> Jalan Malioboro</a>. Ekwanto mengatakan kejadian itu bermula sekitar subuh, Kamis (5/5/2022).</p>
+          <p>“Mungkin dia capek atau gimana, cari parkir penuh semua, [akhirnya] parkir berderet di depan Teras Malioboro 2. Ini jadi masalah, tahunya orang-orang, saya mengizinkan hal itu padahal tidak, itu daerah terlarang, enggak boleh parkir,” kata Ekwanto.</p>
+          <p>Petugas terjun di lapangan dan melakukan tindakan. Selain mencari pengendara motor, adapula proses hukum karena ada pelanggaran lalu lintas. “Kebanyakan pelat luar Kota Jogja semua, apakah mereka tidak tahu atau gimana. Sampai siang masih satu atau tiga motor yang masih parkir di depan Teras Malioboro 2,” katanya. “Nanti malam kami patroli agar tidak terulang lagi.”</p>
+          <p>
+            <em>
+              <strong>Artikel ini sudah tayang di Harianjogja.com dengan judul:&nbsp;<a href="https://wisata.harianjogja.com/read/2022/05/05/504/1100711/pengunjung-teras-malioboro-capai-25000-orang-diprediksi-terus-naik">Pengunjung Teras Malioboro Capai 25.000 Orang, Diprediksi Terus Naik</a></strong>
+            </em>
+          </p>                 
         </div>
       </div>
     </div>
