@@ -33,7 +33,7 @@ class GaleriController extends Controller
 
     public function group($id)
     {
-        $data_pkl = DB::table('data_pkl')->get();
+        $data_pkl = DB::table('data_pkl')->where('kat_dagangan_id', $id)->get();
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
         $lokasi_kios = DB::table('lokasi_no_kios')->get();
