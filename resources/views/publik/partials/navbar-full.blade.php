@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-sm-12">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="/publik">
+          <a class="navbar-brand" href="{{ url('publik'); }}">
             <img class="img-fluid logo_img" id="logo_img" src="{!! asset('images/tulisan tm.png')!!}" style="width: auto; height: 1.5rem;">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
               </li>
             </ul>
             <div class="d-flex" style="padding-left: 1.2rem">
-              <a href="auth/login" class="btn btn-success pull-right">Masuk</a>
+              <a href="{{ url('auth/login'); }}" class="btn btn-success pull-right">Masuk</a>
             </div>
           </div>
         </nav>
