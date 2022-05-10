@@ -41,7 +41,7 @@
       <!--dropdown lokasi-->
       <div class="form-group iq-pt-10">
         <div class="row">
-          <div class="col-lg-3 col-mb-6 col-sm-6">
+          <div class="col-lg-3 col-mb-6 col-sm-3">
               <label>Teras</label>
               <select class="form-control" name="jenis" id="combo1">            
               @foreach($lokasi_teras as $teras)
@@ -49,7 +49,7 @@
               @endforeach
             </select>
           </div>
-          <div class="col-lg-3 col-mb-6 col-sm-6">
+          <div class="col-lg-3 col-mb-6 col-sm-3">
             <label>Gedung</label>
               <select class="form-control" name="jenis" id="combo1">            
               @foreach($lokasi_gedung as $gedung)
@@ -57,7 +57,7 @@
               @endforeach
             </select>
           </div>
-          <div class="col-lg-3 col-mb-6 col-sm-6">
+          <div class="col-lg-3 col-mb-6 col-sm-3">
             <label>lantai</label>
               <select class="form-control" name="jenis" id="combo1">            
               @foreach($lokasi_lantai as $lantai)
@@ -65,7 +65,7 @@
               @endforeach
             </select>
           </div>
-          <div class="col-lg-3 col-mb-6 col-sm-6">
+          <div class="col-lg-3 col-mb-6 col-sm-3">
             <label>Kios</label>
               <select class="form-control" name="jenis" id="combo1">            
               @foreach($lokasi_kios as $kios)

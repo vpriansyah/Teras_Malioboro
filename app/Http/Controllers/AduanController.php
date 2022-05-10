@@ -19,7 +19,7 @@ class AduanController extends Controller
     {
 
         DB::table('aduan_saran_publik')->insert([
-            'id' => '',
+            'id' => null,
             'jenis' => $request->jenis,
             'nama' => $request->nama,
             'email' => $request->email,

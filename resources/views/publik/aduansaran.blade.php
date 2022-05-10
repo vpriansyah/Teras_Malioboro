@@ -8,7 +8,7 @@
                     <div class="heading-title-layanan text-center">
                         <h2 class="title iq-tw-6">Aduan & saran</h2>
                     </div>
-                    <form action="/publik/tambah" method="post">
+                    <form action="tambah" method="post">
                         {{ csrf_field() }}
                         <div class="form-group iq-pt-10">
                             <label>Jenis</label>
