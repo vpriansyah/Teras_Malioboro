@@ -18,14 +18,15 @@ use App\Http\Controllers\LoginController;
 */
 
 //Auth
-// Route::get('auth/login', [LoginController::class, 'index']);
-// Route::post('auth/login', [LoginController::class, 'authenticate']);
-$ctrl = '\App\Http\Controllers';
-Route::get('/auth/login', $ctrl . '\LoginController@index')->name('/auth/login');
-Route::post('/auth/login', $ctrl . '\LoginController@authenticate')->name('auth.login');
-Route::middleware('auth')->get('/', function () {
-    return "Berhasil Login";
-})->name('/pedagang');
+Route::get('auth/login', [LoginController::class, 'index']);
+Route::post('auth/login', [LoginController::class, 'authenticate']);
+
+// $ctrl = '\App\Http\Controllers';
+// Route::get('/auth/login', $ctrl . '\LoginController@index')->name('/auth/login');
+// Route::post('/auth/login', $ctrl . '\LoginController@authenticate')->name('auth.login');
+// Route::middleware('auth')->get('/', function () {
+//     return "Berhasil Login";
+// })->name('/pedagang');
 
 //Pedagang
 Route::get('/pedagang', function () {
