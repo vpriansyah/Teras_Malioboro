@@ -91,7 +91,24 @@
                             <input name="firstNumber" type="hidden" value="<?php echo $random_number1; ?>" />
                             <input name="secondNumber" type="hidden" value="<?php echo $random_number2; ?>" />
                         </div>
+                        <div>
+                            <form method="post">
+                                Kode Captcha : <img src="/public/captcha" /><br/>
+                                <input type="text" name="captcha" maxlength="6" /><br/>
+                                <input type="submit" name="cek" value="CEK"/>
+                            </form>
+                            <script>
+                            session_start();
+                            
+                            if (isset($_POST['cek'])){ 
+                                if($_SESSION['captcha']==$_POST['captcha']) {
+                                    echo "<script>alert('Berhasil! Kode CAPTCHA Valid')</script>";
+                                    echo "<script>alert('Berhasil! Kode CAPTCHA Tidak Valid')</script>";
+                                }
+                              }  
+                              </script>
 
+                        </div>
                         <div class="form-group iq-pt-10">
                             <center>
                                 <div>
