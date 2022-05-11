@@ -41,4 +41,17 @@ class GaleriController extends Controller
         $lokasi_gedung = DB::table('lokasi_gedung')->get();
         return view('publik.galeri', compact('kat_brg','lokasi_teras','data_pkl','lokasi_kios','lokasi_lantai','lokasi_gedung'));
     }
+
+    public function cari(Request $request)
+    {
+        $data['q'] = $request->query('search');
+        $dagangan = DB::table('data_pkl')-> where('dagangan','like','%'. $data["q"] .'%'); 
+        $data_pkl = DB::table('data_pkl')->where('nama_lengkap','like','%'. $data["q"] .'%')->union($dagangan)->get();
+        $kat_brg = DB::table('kat_dagangan')->get();
+        $lokasi_teras = DB::table('lokasi_teras')->get();
+        $lokasi_kios = DB::table('lokasi_no_kios')->get();
+        $lokasi_lantai = DB::table('lokasi_lantai')->get();
+        $lokasi_gedung = DB::table('lokasi_gedung')->get();
+        return view('publik.galeri', compact('kat_brg','lokasi_teras','data_pkl','lokasi_kios','lokasi_lantai','lokasi_gedung'));        
+    }
 }
