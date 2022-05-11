@@ -1,6 +1,21 @@
 @extends('publik.layouts.layanan')
 
 @section('content')
+    <script src="{!! asset('dist/sweetalert2.all.min.js') !!}"></script>
+
+    {{-- Notifikasi --}}
+    @if (Session::has('message'))
+        {{-- <li>{!! session('message') !!}</li> --}}
+        <script>
+            Swal.fire({
+                title: 'CAPTCHA',
+                text: 'Hasil penjumlahan salah.',
+                icon: 'error',
+                confirmButtonText: 'Oke!'
+            })
+        </script>
+    @endif
+    
     <section class="iq-feature1 overview-block-ptb-25 grey-bg" id="layanan">
         <div class="container">
             <div class="row">
@@ -21,12 +36,12 @@
                         <div class="form-group iq-pt-10">
                             <label>Nama Pengadu</label>
                             <font color='#ff0000'>*</font>
-                            <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" required/>
+                            <input type="text" name="nama" class="form-control" placeholder="Masukan Nama" required />
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Email</label>
                             <font color='#ff0000'>*</font>
-                            <input type="email" name="email" class="form-control" placeholder="Masukan Email" required/>
+                            <input type="email" name="email" class="form-control" placeholder="Masukan Email" required />
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Nomor WhatsApp</label>
@@ -36,7 +51,8 @@
                         <div class="form-group iq-pt-10">
                             <label>Saran / Aduan</label>
                             <font color='#ff0000'>*</font>
-                            <textarea name="saran_aduan" class="form-control" rows="5" placeholder="Masukan saran dan aduan anda" required></textarea>
+                            <textarea name="saran_aduan" class="form-control" rows="5" placeholder="Masukan saran dan aduan anda"
+                                required></textarea>
                         </div>
                         <div class="form-group iq-pt-10">
                             <label>Kategori Aduan</label>
@@ -49,9 +65,31 @@
                                 <option value="lainnya">Lainnya</option>
                             </select>
                         </div>
-                        <div><a>(</a><font color='#ff0000'>*</font>) Tanda Tersebut Wajib Di isi :)</div>
+                        <?php
+                        // init variables
+                        $min_number = 1;
+                        $max_number = 32;
+                        
+                        // generating random numbers
+                        $random_number1 = mt_rand($min_number, $max_number);
+                        $random_number2 = mt_rand($min_number, $max_number);
+                        ?>
+                        <div class="form-group iq-pt-10">
+                            <label>
+                                <?php
+                                echo $random_number1 . ' + ' . $random_number2 . ' = ';
+                                ?>
+                            </label>
+                            <input type="text" name="captchaResult" class="form-control" size="2" maxlength="2"
+                                onkeypress="return hanyaAngka(event)"/>
+                        </div>
+                        <div><a>(</a>
+                            <font color='#ff0000'>*</font>) Tanda Tersebut Wajib Di isi :)
+                        </div>
                         <div class="form-group">
                             <input name="waktu" type="hidden" value="<?php echo date('Y-m-d h:i:s'); ?>">
+                            <input name="firstNumber" type="hidden" value="<?php echo $random_number1; ?>" />
+                            <input name="secondNumber" type="hidden" value="<?php echo $random_number2; ?>" />
                         </div>
 
                         <div class="form-group iq-pt-10">
@@ -69,7 +107,7 @@
                                 var charCode = (evt.which) ? evt.which : event.keyCode
                                 if (charCode > 31 && (charCode < 48 || charCode > 57))
                                     return false;
-                                return true;                   
+                                return true;
                             }
                         </script>
                     </form>
@@ -77,8 +115,8 @@
                 </body>
             </div>
         </div>
-        </div>  
+        </div>
 
-    
+
     </section>
 @endsection
