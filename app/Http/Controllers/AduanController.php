@@ -17,19 +17,30 @@ class AduanController extends Controller
     
     public function tambah(Request $request)
     {
+        $captchaResult = $_POST["captchaResult"];
+        $firstNumber = $_POST["firstNumber"];
+        $secondNumber = $_POST["secondNumber"];
 
-        DB::table('aduan_saran_publik')->insert([
-            'id' => null,
-            'jenis' => $request->jenis,
-            'nama' => $request->nama,
-            'email' => $request->email,
-            'no_hp' => $request->no_hp,
-            'saran_aduan' => $request->saran_aduan,
-            'kategori' => $request->kategori,
-            'waktu' => $request->waktu
-        ]);
+        $checkTotal = $firstNumber + $secondNumber;
 
-        return redirect('/publik')->with('message','Berhasil mengajukan aduan/saran.');
+        if ($captchaResult == $checkTotal) {
+            DB::table('aduan_saran_publik')->insert([
+                'id' => null,
+                'jenis' => $request->jenis,
+                'nama' => $request->nama,
+                'email' => $request->email,
+                'no_hp' => $request->no_hp,
+                'saran_aduan' => $request->saran_aduan,
+                'kategori' => $request->kategori,
+                'waktu' => $request->waktu
+            ]);
+            return redirect('/publik')->with('message','Berhasil mengajukan aduan/saran.');
+
+        } else {
+            return back()->with('message','Hasil penjumlahan salah.');
+        }
+
+        
     }
 }
 

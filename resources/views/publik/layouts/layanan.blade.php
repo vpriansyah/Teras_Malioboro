@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="{!! asset('css/responsive.css')!!}">
     <!-- custom style -->
     <link rel="stylesheet" href="{!! asset('css/custom.css')!!}" />
-
+    <?php session_start(); ?>
 </head>
 
 <body data-spy="scroll" data-offset="80">
