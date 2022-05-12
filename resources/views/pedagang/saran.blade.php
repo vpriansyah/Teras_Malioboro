@@ -1,7 +1,74 @@
 @extends('pedagang.layouts.footer')
 @include('pedagang.partials.navbar')
 @section('content')
-    <h1>HALAMAN SARAN ADUAN</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <div class="container-fluid">
+    <!-- Row -->
+    <div class="row">
+        <div class="col-xl-12 pa-0">
+            <div class="faq-search-wrap bg-teal-light-3">
+                <div class="container">
+                    <h1 class="display-5 text-white mb-20">Halaman Saran dan Aduan.</h1>
+                    <div class="form-group w-100 mb-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <section class="msger">
+        <div class="container justify-content-center">
+            <div class="msg-header-img">
+                <i class="fas fa-comment-alt"></i> Sipaling Teras
+            </div>
+            </header>
+
+            <main class="msger-chat">
+                <div class="msg left-msg">
+                    <div class="msg-img"
+                    style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name">BOT</div>
+                            <div class="msg-info-time">12:45</div>
+                        </div>
+
+                        <div class="msg-text">
+                            Hai, selamat datang di Teras Malioboro! Apa yang bisa kami bantu? Silakan kirim pesan pada kami.
+                            😄
+                        </div>
+                    </div>
+                </div>
+
+                <div class="msg right-msg">
+                    <div class="msg-img"
+                        style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
+
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <div class="msg-info-name">KANG BAKSO</div>
+                            <div class="msg-info-time">12:46</div>
+                        </div>
+
+                        <div class="msg-text">
+                            Apakah saya bla bla bla
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <form class="msger-inputarea">
+                <input type="text" class="msger-input" placeholder="Enter your message...">
+                <button type="submit" class="msger-send-btn">Send</button>
+            </form>
+    </section>
     <style>
         :root {
             --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -168,53 +235,42 @@
         .msger-chat {
             background-color: #fcfcfe;
         }
+        body{
+    background:#f5f5f6;
+    margin-top:20px;
+}
+.faq-search-wrap {
+    padding: 50px 0 60px;
+}
+
+.faq-search-wrap .form-group .form-control,
+.faq-search-wrap .form-group .dd-handle {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.faq-search-wrap .form-group .input-group-append {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.faq-search-wrap .form-group .input-group-append .input-group-text {
+    background: transparent;
+    border: none;
+}
+
+.faq-search-wrap .form-group .input-group-append .input-group-text .feather-icon > svg {
+    height: 18px;
+    width: 18px;
+}
+.bg-teal-light-3 {
+    background-color:#28a745 !important;
+}
 
     </style>
-    <section class="msger">
-        <div class="container justify-content-center">
-            <div class="msg-header-img">
-                <i class="fas fa-comment-alt"></i> Sipaling Teras
-            </div>
-            </header>
-
-            <main class="msger-chat">
-                <div class="msg left-msg">
-                    <div class="msg-img"
-                    style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
-
-                    <div class="msg-bubble">
-                        <div class="msg-info">
-                            <div class="msg-info-name">BOT</div>
-                            <div class="msg-info-time">12:45</div>
-                        </div>
-
-                        <div class="msg-text">
-                            Hai, selamat datang di Teras Malioboro! Apa yang bisa kami bantu? Silakan kirim pesan pada kami.
-                            😄
-                        </div>
-                    </div>
-                </div>
-
-                <div class="msg right-msg">
-                    <div class="msg-img"
-                        style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
-
-                    <div class="msg-bubble">
-                        <div class="msg-info">
-                            <div class="msg-info-name">KANG BAKSO</div>
-                            <div class="msg-info-time">12:46</div>
-                        </div>
-
-                        <div class="msg-text">
-                            Apakah saya bla bla bla
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <form class="msger-inputarea">
-                <input type="text" class="msger-input" placeholder="Enter your message...">
-                <button type="submit" class="msger-send-btn">Send</button>
-            </form>
-    </section>
+   
 @endsection
