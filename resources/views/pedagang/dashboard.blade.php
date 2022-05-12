@@ -223,10 +223,12 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                            <div>
-                                <i class="ion-ios-albums-outline iq-mb-10"></i>
-                                <h5 class="iq-tw-6">Tindak Lanjut</h5>
-                            </div>
+                            <a href="pedagang/tindaklanjut">
+                                <div>
+                                    <i class="ion-ios-albums-outline iq-mb-10"></i>
+                                    <h5 class="iq-tw-6">Tindak Lanjut</h5>
+                                </div>
+                            </a>
                             <div class="content-blog">
                                 <p>Infomasi tindak lanjut dari saran dan aduan</p>
                             </div>
