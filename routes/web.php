@@ -79,15 +79,15 @@ Route::get('/publik/galeri/{id}', 'App\Http\Controllers\GaleriController@group')
 Route::get('/publik/cari', 'App\Http\Controllers\GaleriController@cari');
 
 Route::get('/publik/galeri-data/{id}', 'App\Http\Controllers\GaleriController@data');
-
+Route::get('/publik/cctv', 'App\Http\Controllers\CctvController@index');
 Route::get('/publik/aduansaran', 'App\Http\Controllers\AduanController@index');
 Route::post('/publik/tambah', 'App\Http\Controllers\AduanController@tambah');
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 
-Route::get('/publik/cctv', function () {
-    return view('/publik/cctv');
-});
+//Route::get('/publik/cctv', function () {
+  //  return view('/publik/cctv');
+//});
 
 Route::get('/publik/statistik', [StatistikPublikController::class, 'index']);
 // Route::get('/publik/statistik', function () {

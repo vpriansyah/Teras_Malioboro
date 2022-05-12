@@ -9,7 +9,11 @@
             <h2 class="title iq-tw-6">CCTV Teras</h2>
           </div>
           <center>
+           @foreach ($cctv as $cctv)
           <h3>Kepadatan Pengunjung Teras Malioboro</h3>
+          <h3><b>Status : {{ $cctv->status }}</b></h3>
+          @endforeach
+</br>
           <div name="description">Jumlah pengunjung di Teras Malioboro 2, Kota Jogja, mengalami peningkatan yang signifikan saat libur Lebaran 2022.</div>
           <p></p>
           <div class="myBox">Sumber : <a href="https://www.solopos.com/membeludak-pengunjung-teras-malioboro-capai-25-000-orang-dalam-sehari-1311018">SOLOPOS</a> </div>
@@ -46,7 +50,10 @@
             <em>
               <strong>Artikel ini sudah tayang di Harianjogja.com dengan judul:&nbsp;<a href="https://wisata.harianjogja.com/read/2022/05/05/504/1100711/pengunjung-teras-malioboro-capai-25000-orang-diprediksi-terus-naik">Pengunjung Teras Malioboro Capai 25.000 Orang, Diprediksi Terus Naik</a></strong>
             </em>
-          </p>                 
+          </p>
+          <div class="row justify-content-md-center">
+          <a href="/publik/selfassessment" type="button" class="btn btn-success btn-lg" > Kunjungi Teras Malioboro</a>  
+          </div>       
         </div>
       </div>
     </div>

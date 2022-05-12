@@ -112,8 +112,6 @@
                                         @else 
                                             <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success" ><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>  
                                         @endif 
-                                        <!--<a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success"><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>
-                                   -->
                                     </div>
                                   </div>
                                 </div>
