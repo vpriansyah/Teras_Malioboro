@@ -111,6 +111,10 @@
                         </script>
                     </form>
                 </div>
+                <script>
+                        $details['title'];
+                        $details['body'];
+                </script>
                 </body>
             </div>
         </div>
