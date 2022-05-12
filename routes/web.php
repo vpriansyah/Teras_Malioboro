@@ -5,6 +5,7 @@ use App\Http\Controllers\PublikController;
 use App\Http\Controllers\StatistikPublikController;
 
 use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,6 +88,27 @@ Route::get('/publik/galeri-data/{id}', 'App\Http\Controllers\GaleriController@da
 Route::get('/publik/cctv', 'App\Http\Controllers\CctvController@index');
 Route::get('/publik/aduansaran', 'App\Http\Controllers\AduanController@index');
 Route::post('/publik/tambah', 'App\Http\Controllers\AduanController@tambah');
+
+//...
+
+Route::get('send-mail', function () {
+
+    // file from /public/data folder.
+    $file = public_path('data/aduansaran.pdf');
+  
+    $details = [
+      'title' => 'Teras Malioboro',
+      'body' => 'Berikut rekapan aduan dan saran anda yang sudah berhasildiinput.',
+      'file' => $file // file attached here
+    ];
+  
+    Mail::to('sent_to_email@gmail.com')->send(new \App\Mail\MyTestMail($details));
+  
+    dd("Email is Sent, please check your inbox.");
+  });
+  
+  //...
+
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 
