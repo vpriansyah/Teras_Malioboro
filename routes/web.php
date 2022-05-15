@@ -5,6 +5,7 @@ use App\Http\Controllers\PublikController;
 use App\Http\Controllers\StatistikPublikController;
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Mail;
 
 /*
@@ -21,18 +22,13 @@ use Illuminate\Support\Facades\Mail;
 //Auth
 Route::get('auth/login', [LoginController::class, 'index']);
 Route::post('auth/login', [LoginController::class, 'authenticate']);
-
-// $ctrl = '\App\Http\Controllers';
-// Route::get('/auth/login', $ctrl . '\LoginController@index')->name('/auth/login');
-// Route::post('/auth/login', $ctrl . '\LoginController@authenticate')->name('auth.login');
-// Route::middleware('auth')->get('/', function () {
-//     return "Berhasil Login";
-// })->name('/pedagang');
+Route::get('auth/register', [RegisterController::class, 'index']);
+Route::post('auth/register', [RegisterController::class, 'post']);
 
 //Pedagang
 Route::get('/pedagang', function () {
     return view('/pedagang/dashboard');
-});
+})->name('pedagang');
 
 Route::get('pedagang/daftar', function () {
     return view('/pedagang/daftar');
@@ -95,29 +91,28 @@ Route::get('send-mail', function () {
 
     // file from /public/data folder.
     $file = public_path('data/aduansaran.pdf');
-  
+
     $details = [
-      'title' => 'Teras Malioboro',
-      'body' => 'Berikut rekapan aduan dan saran anda yang sudah berhasildiinput.',
-      'file' => $file // file attached here
+        'title' => 'Teras Malioboro',
+        'body' => 'Berikut rekapan aduan dan saran anda yang sudah berhasildiinput.',
+        'file' => $file // file attached here
     ];
-  
+
     Mail::to('sent_to_email@gmail.com')->send(new \App\Mail\MyTestMail($details));
-  
+
     dd("Email is Sent, please check your inbox.");
-  });
-  
-  //...
+});
+
+//...
 
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
 
 //Route::get('/publik/cctv', function () {
-  //  return view('/publik/cctv');
+//  return view('/publik/cctv');
 //});
 
 Route::get('/publik/statistik', [StatistikPublikController::class, 'index']);
 // Route::get('/publik/statistik', function () {
 //     return view('/publik/statistik');
 // });
-

@@ -26,24 +26,18 @@
                 </div>
             </div>
             <div class="card border-success mb-3 mt-5">
-                <h5 class="card-title mt-3 text-success text-center">Please Login</h5>
+                <h5 class="card-title mt-3 text-success text-center">Ayo Daftar</h5>
                 <main class="form-signin">
-                    <form action="/auth/login" method="POST">
+                    <form action="/auth/register" method="POST">
                         @csrf
                         <div class="card-body">
-                            @if(session()->has('loginError'))
-                            <div class="alert alert-danger alert dismissible fade show" role="alert">
-                                {{ session('loginError') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                            @endif
                             <div class="form-input mb-3">
                                 <input type="number" name="name" class="form-control" id="name" placeholder="No KTP atau NIK" autofocus required>
                             </div>
                             <div class="form-input mb-3">
                                 <input type="password" name="password" class="form-control" id="password" placeholder="No Kios" required>
                             </div>
-                            <button class="w-100 btn btn-success" type="submit">Login</button>
+                            <button class="w-100 btn btn-success" type="submit">Daftar</button>
                         </div>
                     </form>
                 </main>
