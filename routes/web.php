@@ -60,9 +60,10 @@ Route::get('pedagang/agenda', function () {
     return view('/pedagang/agenda');
 });
 
-Route::get('pedagang/informasi', function () {
-    return view('/pedagang/informasi');
-});
+Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index');
+//Route::get('pedagang/informasi', function () {
+//    return view('/pedagang/informasi');
+//});
 
 //Publik
 Route::get('/', [PublikController::class, 'index']);

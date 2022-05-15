@@ -88,9 +88,12 @@
                                         <a class="nav-link mx-3" href="#menupilihan">Menu Pilihan</a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa-solid fa-user"></i>
+                                <div class="d-flex">
+                                    <li class="nav-item">
+                                    <a class="px-2" href="{{url('pedagang/profil')}}">Wahyuni</a>
+                                    </li>
+                                    <i class="pt-1 fa-solid fa-user"></i>
+                                </div>
                             </div>
                         </nav>
                     </div>
