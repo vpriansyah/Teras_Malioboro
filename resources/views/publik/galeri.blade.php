@@ -13,19 +13,29 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <button class= "navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="ion-navicon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav justify-content-between">
+              
+              @php 
+                $Nav = " ";
+                if ($current == null) $Nav= 'active';                
+              @endphp
               <li>
-                <a class="nav-link" href="{{ url('publik/galeri');}}"> semua </a>
+                <a class="nav-link {{$Nav}}" href="{{ url('publik/galeri');}}"> Semua </a>
               </li>
-            @foreach($kat_brg as $kat)  
+            @foreach($kat_brg as $kat)
+              @php 
+                $Nav = " ";
+                if ($current == $kat->nama) $Nav= 'active';                
+              @endphp
               <li class="nav-item">
-                <a class="nav-link" href="{{ url('publik/galeri');}}/{{$kat->id}} ">{{$kat->nama}}</a>
+                <a class="nav-link {{$Nav}}" href="{{ url('publik/galeri');}}/{{$kat->nama}} ">{{$kat->nama}}</a>
               </li>
+              
             @endforeach
             </ul>
             <form class="form-inline my-2 my-lg-0 ml-auto" action="cari" value="search">
@@ -42,14 +52,66 @@
   </div>
 <hr>
 <!---->
-      
+
+      <!--dropdown lokasi-->
+<!--      <div class="form-group iq-pt-10">
+        <div class="row">
+
+          <div class="col-lg-4 col-mb-6 col-sm-6">
+          <label>Teras</label>
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href=''>Semua</a>
+              @foreach($lokasi_teras as $teras)
+                <a class="dropdown-item" href="{{ url('publik/galeri');}}/{{$teras->id}}">{{$teras->nama}}</a>
+              @endforeach
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-mb-6 col-sm-6">
+          <label>Gedung</label>
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href=''>Semua</a>
+              @foreach($lokasi_gedung as $gedung)
+                <a class="dropdown-item" href="{{ url('publik/galeri');}}/{{$gedung->id}}">{{$gedung->nama}}</a>
+              @endforeach
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-mb-6 col-sm-6">
+          <label>Lantai</label>
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href=''>Semua</a>
+              @foreach($lokasi_lantai as $lantai)
+                <a class="dropdown-item" href="{{ url('publik/galeri');}}/{{$lantai->id}}">{{$lantai->nama}}</a>
+              @endforeach
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+-->
       <!--dropdown lokasi-->
       <div class="form-group iq-pt-10">
         <div class="row">
           <div class="col-lg-4 col-mb-6 col-sm-6">
               <label>Teras</label>
               <select class="form-control" name="jenis" id="combo1">
-                <option value="!null">Semua</option>        
+                <option value=null>Semua</option>        
               @foreach($lokasi_teras as $teras)
                 <option value="{{$teras->id}}">{{$teras->nama}}</option>
               @endforeach
@@ -58,7 +120,7 @@
           <div class="col-lg-4 col-mb-6 col-sm-6">
             <label>Gedung</label>
               <select class="form-control" name="jenis" id="combo1">   
-                <option value="!null">Semua</option>         
+                <option value=null>Semua</option>         
               @foreach($lokasi_gedung as $gedung)
                 <option value="{{$gedung->id}}">{{$gedung->nama}}</option>
               @endforeach
@@ -67,7 +129,7 @@
           <div class="col-lg-4 col-mb-6 col-sm-6">
             <label>lantai</label>
               <select class="form-control" name="jenis" id="combo1">
-                <option value="!null">Semua</option>            
+                <option value=null>Semua</option>            
               @foreach($lokasi_lantai as $lantai)
                 <option value="{{$lantai->id}}">{{$lantai->nama}}</option>
               @endforeach
