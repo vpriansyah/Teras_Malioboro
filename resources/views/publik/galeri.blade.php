@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg">
           <button class= "navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="ion-navicon"></span>
           </button>
@@ -81,15 +81,15 @@
       <div class="container">
         <div class="row justify-content-md-center">
           @foreach($data_pkl as $data)
-            <div class="col-lg-3 col-md-6 col-sm-6 iq-mtb-15 d-flex align-items-stretch">
+            <div class="col-lg-3 justify-content-center col-md-6 col-sm-6 iq-mtb-15 d-flex align-items-stretch">
               <a href="{{ url('publik/galeri-data');}}/{{$data->id}}">
                 <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                 <div>
+                 <div class="m-auto justify-content-center">
                     @php 
                       $foto = ($data->foto_lapak);
                       if ($data->foto_lapak == null) $foto= "notfound.jpg";                
                     @endphp
-                    <div class ="card border-0 justify-content-center" style="width: 200px; height:200px;">
+                    <div class ="card m-auto border-0 justify-content-center" style="width: 200px; height:200px;">
                      <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100 " alt="''.$data->foto_lapak.''">
                     </div> 
                       <center> <h5 class="iq-tw-6 iq-pb-10">{{$data->nama_lengkap}}</h5> </center>
@@ -102,6 +102,9 @@
             </div>
           @endforeach
         <!---->
+        </div>
+        <div class="row mx-auto justify-content-center">
+        {{$data_pkl->links()}}
         </div>
       </div>
     </div>
