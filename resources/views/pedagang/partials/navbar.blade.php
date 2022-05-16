@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="{!! asset('css/responsive.css') !!}">
     <!-- custom style -->
     <link rel="stylesheet" href="{!! asset('css/custom.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('css/tindaklanjut.css') !!}" />
     <script src="https://kit.fontawesome.com/5014e491f0.js" crossorigin="anonymous"></script>
 
 </head>
