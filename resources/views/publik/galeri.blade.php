@@ -81,21 +81,23 @@
       <div class="container">
         <div class="row justify-content-md-center">
           @foreach($data_pkl as $data)
-            <div class="col-lg-3 justify-content-center col-md-6 col-sm-6 iq-mtb-15 d-flex align-items-stretch">
+            <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch bg-transparent border-0" style="width:50%;">
               <a href="{{ url('publik/galeri-data');}}/{{$data->id}}">
-                <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                 <div class="m-auto justify-content-center">
+                <div class=" iq-blog text-left iq-ptb-15 iq-pr-10 iq-pl-10 d-flex ">
+                  <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:275px; height:100%; max-height:800px">
                     @php 
                       $foto = ($data->foto_lapak);
                       if ($data->foto_lapak == null) $foto= "notfound.jpg";                
                     @endphp
-                    <div class ="card m-auto border-0 justify-content-center" style="width: 200px; height:200px;">
+                    <div class ="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; width: 75%; height:25%; max-height:100px" >
                      <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100 " alt="''.$data->foto_lapak.''">
-                    </div> 
-                      <center> <h5 class="iq-tw-6 iq-pb-10">{{$data->nama_lengkap}}</h5> </center>
-                      <center>{{$data->dagangan}}</center>
-                      <p>{{$data->operasional}}<br>
+                    </div>
+                    <div class="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; padding-top:max(50px);"> 
+                      <center> <h5 class="iq-tw-6 iq-pb-5" style=" font-size: 80%;">{{$data->nama_lengkap}}</h5> 
+                      <center style=" font-size: 80%;">{{$data->dagangan}}
+                      <p style=" font-size: 80%;">{{$data->operasional}}<br>
                          Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+                    </div>
                   </div>
                 </div>
               </a>
