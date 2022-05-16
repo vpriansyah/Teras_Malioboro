@@ -61,6 +61,7 @@ Route::get('pedagang/agenda', function () {
 });
 
 Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index');
+Route::get('/search', 'App\Http\Controllers\InfoPedagangController@search');
 //Route::get('pedagang/informasi', function () {
 //    return view('/pedagang/informasi');
 //});

@@ -59,7 +59,7 @@
     <!-- Banner -->
     <div class="navbar">
         <div class="container nav justify-content-end">
-            <form class="d-flex" action="/pedagang/informasi">
+            <form class="d-flex" action="/search" method="get">
                 <div class="input-group mb-3">
                 <input class="form-control me-2" type="text" placeholder="Cari..." name="search">
                 <button class="btn btn-success" type="submit">Cari</button>
