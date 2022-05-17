@@ -51,7 +51,7 @@
               <strong>Artikel ini sudah tayang di Harianjogja.com dengan judul:&nbsp;<a href="https://wisata.harianjogja.com/read/2022/05/05/504/1100711/pengunjung-teras-malioboro-capai-25000-orang-diprediksi-terus-naik">Pengunjung Teras Malioboro Capai 25.000 Orang, Diprediksi Terus Naik</a></strong>
             </em>
           </p>
-          <div class="row justify-content-md-center">
+          <div class="row justify-content-center">
           <a href="/publik/selfassessment" type="button" class="btn btn-success btn-lg" > Kunjungi Teras Malioboro</a>  
           </div>       
         </div>
