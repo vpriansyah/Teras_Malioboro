@@ -94,5 +94,5 @@
     <!-- Custom -->
     <script src="{!! asset('js/custom.js')!!}"></script>
     <script src="https://kit.fontawesome.com/5014e491f0.js" crossorigin="anonymous"></script>
-
+    
 </html>
