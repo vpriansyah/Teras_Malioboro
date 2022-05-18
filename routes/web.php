@@ -93,7 +93,11 @@ Route::get('send-mail', function () {
 
     // file from /public/data folder.
     $file = public_path('publik/aduansaran.pdf');
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
     $details = [
         'title' => 'Teras Malioboro',
         'body' => 'Berikut rekapan aduan dan saran anda yang sudah berhasildiinput.',
