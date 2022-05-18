@@ -38,8 +38,12 @@
               
             @endforeach
             </ul>
+            @php
+            $Search = $req;
+            if ($req == null){$Search = "Type any word...";}
+            @endphp
             <form class="form-inline my-2 my-lg-0 ml-auto" action="cari" value="search">
-              <input class="form-control mr-sm-2" type="search" name="search" placeholder="Type any word..." aria-label="Search">
+              <input class="form-control mr-sm-2" type="search" name="search" placeholder="{{$Search}}" aria-label="Search">
               <button class="btn btn-outline-success my-2 my-sm-0" 
                       onsubmit="return validateForm();"
                       onclick="return validateForm();"
