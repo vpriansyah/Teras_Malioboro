@@ -95,7 +95,7 @@
                       {
                       title : '{{ $item->nama}}',
                       start : '{{ $item->tanggal}}',
-                      time  : '{{ $item->jam}}'
+                      end   : '{{ $item->tanggal_akhir}}',
                     
                       
                     },
