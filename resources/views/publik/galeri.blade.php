@@ -56,26 +56,43 @@
       <!--dropdown lokasi-->
 <!--      <div class="form-group iq-pt-10">
         <div class="row">
-
           <div class="col-lg-4 col-mb-6 col-sm-6">
           <label>Teras</label>
             <div class="btn-group">
               <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
+                Teras
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href=''>Semua</a>
+                <a class="dropdown-item" href="{{ url('publik/galeri');}}">Semua</a>
               @foreach($lokasi_teras as $teras)
-                <a class="dropdown-item" href="{{ url('publik/galeri');}}/{{$teras->id}}">{{$teras->nama}}</a>
+              @php 
+                  $Drop = "";
+                  $link = url()->current();
+                  $value_teras = "$link/$teras->id";
+                  if ($current == null) $value_teras = "$link/$teras->id";
+                  
+                  else{
+                  $value_teras="$teras->id";
+                  if ($teras->id == $current) {$Drop = "disabled"; $value_teras="#";};
+                  }
+                @endphp
+                <a class="dropdown-item {{$Drop}}" href="{{$value_teras}}">{{$teras->nama}}</a>
               @endforeach
               </div>
             </div>
           </div>
-
+          @php 
+          
+          @endphp
           <div class="col-lg-4 col-mb-6 col-sm-6">
           <label>Gedung</label>
-            <div class="btn-group">
-              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @php 
+              $value_gedung = '';
+              if($current == null) $value_gedung = 'disabled';
+              if($current == '1') $value_gedung = '';
+            @endphp
+            <div class="btn-group" >
+              <button type="button" class="btn dropdown-toggle {{$value_gedung}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Action
               </button>
               <div class="dropdown-menu">
@@ -103,8 +120,8 @@
           </div>
 
         </div>
-      </div>
--->
+      </div>-->
+
       <!--dropdown lokasi-->
       <div class="form-group iq-pt-10">
         <div class="row">
