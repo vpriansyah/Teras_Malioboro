@@ -74,6 +74,10 @@ Route::get('/publik/selfassessment', function () {
     return view('/publik/selfassessment');
 });
 
+Route::get('/publik/scanner', function () {
+    return view('/publik/scanner');
+});
+
 //Route::get('/publik/galeri', function () {
 //    return view('/publik/galeri');
 //});
