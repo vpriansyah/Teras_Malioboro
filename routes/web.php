@@ -92,7 +92,7 @@ Route::post('/publik/tambah', 'App\Http\Controllers\AduanController@tambah');
 Route::get('send-mail', function () {
 
     // file from /public/data folder.
-    $file = public_path('data/aduansaran.pdf');
+    $file = public_path('publik/aduansaran.pdf');
 
     $details = [
         'title' => 'Teras Malioboro',
