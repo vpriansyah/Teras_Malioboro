@@ -9,9 +9,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{!! asset('images/SiBakul.png') !!}" />
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
     <!-- owl-carousel -->
@@ -71,15 +69,13 @@
                         <a class="navbar-brand" href="/pedagang">
                             <img class="img-fluid logo_img" id="logo_img" src="{!! asset('images/Logo SiBakul.png') !!}">
                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="ion-navicon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto justify-content-end mx-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link mx-3" href="/pedagang">Home</a>
+                                    <a class="nav-link mx-3" href="{{url('/pedagang')}}">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link mx-3" href="#infolanjut">Info Lanjutan</a>
@@ -90,7 +86,23 @@
                             </ul>
                         </div>
                         <div class="d-flex">
-                            <i class="fa-solid fa-user"></i>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="pt-1 fa-solid fa-user"></i>
+                                    {{ auth()->user()->username }}
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="{{url('pedagang/profil')}}">My Profil</a></li>
+                                    <li>
+                                        <form action="{{url('/auth/logout')}}" method="post">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item">
+                                                Logout
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
                         </div>
                     </nav>
                 </div>

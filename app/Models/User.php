@@ -21,6 +21,7 @@ class User extends Authenticatable
     // protected $table = 'data_pkl';
 
     protected $fillable = [
+        'username',
         'name',
         'password',
     ];

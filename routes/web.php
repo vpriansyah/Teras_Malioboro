@@ -21,32 +21,40 @@ use App\Http\Controllers\StatistikPublikController;
 */
 
 //Auth
-Route::get('auth/login', [LoginController::class, 'index']);
+Route::get('auth/login', [LoginController::class, 'index'])->name('login');
 Route::post('auth/login', [LoginController::class, 'authenticate']);
+Route::post('auth/logout', [LoginController::class, 'logout']);
 Route::get('auth/register', [RegisterController::class, 'index']);
 Route::post('auth/register', [RegisterController::class, 'post']);
 
 //Pedagang
 Route::get('/pedagang', function () {
     return view('/pedagang/dashboard');
-})->name('pedagang');
+})->name('pedagang')->middleware('auth');
 
 Route::get('pedagang/daftar', function () {
     return view('/pedagang/daftar');
-});
+})->middleware('auth');
 
 Route::get('pedagang/saran', function () {
     return view('/pedagang/saran');
-});
+})->middleware('auth');
 
 Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
-});
+})->middleware('auth');
+
+<<<<<<< HEAD
+Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
+=======
+Route::get('pedagang/full-calender', [FullCalenderController::class, 'index']);
+Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
 
 Route::get('pedagang/full-calender', [FullCalenderController::class, 'index']);
 Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index');
+>>>>>>> e528298604bf279e17734b736877c5288c8cf078
 // Route::get('pedagang/profil', function () {
 //     return view('/pedagang/profil', [
 //         "nama" => "Christya Ayu Dewi",
@@ -58,13 +66,13 @@ Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index');
 
 Route::get('pedagang/statistik', function () {
     return view('/pedagang/statistik');
-});
+})->middleware('auth');
 
 Route::get('pedagang/agenda', function () {
     return view('/pedagang/agenda');
-});
+})->middleware('auth');
 
-Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index');
+Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index')->middleware('auth');
 Route::get('/search', 'App\Http\Controllers\InfoPedagangController@search');
 //Route::get('pedagang/informasi', function () {
 //    return view('/pedagang/informasi');

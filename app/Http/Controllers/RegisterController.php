@@ -16,6 +16,7 @@ class RegisterController extends Controller
     public function post(Request $request)
     {
         $validateData = $request->validate([
+            'username' => 'required',
             'name' => 'required',
             'password' => 'required'
         ]);

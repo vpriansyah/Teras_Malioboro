@@ -17,25 +17,26 @@ class LoginController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'name' => 'required',
-            'password' => 'required',
+            'name' => 'required, max:16',
+            'password' => 'required, max:5',
         ]);
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/pedagang');
         }
-        // dd($credentials);
-        // $this->validate($request, [
-        //     'name'      => 'required',
-        //     'password'  => 'required',
-        // ]);
 
-        // if (Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
-        //     // Success
-        //     $request->session()->regenerate();
-        //     return redirect()->intended(route('pedagang'));
-        // }
         return back()->with('loginError', 'Login gagal!');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }
