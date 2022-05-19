@@ -52,7 +52,7 @@
             </em>
           </p>
           <div class="row justify-content-center">
-          <a href="/publik/selfassessment" type="button" class="btn btn-success btn-lg" > Kunjungi Teras Malioboro</a>  
+          <a href="{{ url('publik/selfassessment'); }}" type="button" class="btn btn-success btn-lg" > Kunjungi Teras Malioboro</a>  
           </div>       
         </div>
       </div>

@@ -20,7 +20,7 @@
         <p>~ Berusia di atas 12 tahun</p>
         <p>~ Menerapkan peraturan protokol kesehatan Cleanliness, Health, Safety, Environmental Sustainability (CHSE)</p>
         </p>
-        <a href="/publik/scanner" type="button" class="btn btn-success btn-lg" > Setuju</a>  
+        <a href="{{ url('publik/scanner'); }}" type="button" class="btn btn-success btn-lg" > Setuju</a>  
         </center>
     </div>
 </div>
