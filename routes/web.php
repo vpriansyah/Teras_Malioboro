@@ -44,9 +44,6 @@ Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
 })->middleware('auth');
 
-<<<<<<< HEAD
-Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
-=======
 Route::get('pedagang/full-calender', [FullCalenderController::class, 'index']);
 Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
 
@@ -54,7 +51,6 @@ Route::get('pedagang/full-calender', [FullCalenderController::class, 'index']);
 Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index');
->>>>>>> e528298604bf279e17734b736877c5288c8cf078
 // Route::get('pedagang/profil', function () {
 //     return view('/pedagang/profil', [
 //         "nama" => "Christya Ayu Dewi",
