@@ -1,12 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PublikController;
-use App\Http\Controllers\StatistikPublikController;
-
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+
+use App\Http\Controllers\PublikController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\FullCalenderController;
+use App\Http\Controllers\StatistikPublikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,9 @@ Route::get('pedagang/saran', function () {
 Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
 });
+
+Route::get('pedagang/full-calender', [FullCalenderController::class, 'index']);
+Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index');
 // Route::get('pedagang/profil', function () {

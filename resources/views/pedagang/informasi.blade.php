@@ -1,6 +1,6 @@
 @include('pedagang.partials.navbar')
 @section('content')
-    @extends('pedagang.layouts.footer')
+@extends('pedagang.layouts.footer')
 
     <!-- Banner -->
     <section id="home" class="iq-banner-12 light-green-bg">

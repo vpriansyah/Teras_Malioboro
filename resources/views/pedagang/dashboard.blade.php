@@ -90,7 +90,7 @@
                                 </ul>
                                 <div class="d-flex">
                                     <li class="nav-item">
-                                    <a class="px-2" href="{{url('pedagang/profil')}}">Wahyuni</a>
+                                        <a class="px-2" href="{{ url('pedagang/profil') }}">Wahyuni</a>
                                     </li>
                                     <i class="pt-1 fa-solid fa-user"></i>
                                 </div>
@@ -252,7 +252,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                            <a href="pedagang/agenda">
+                            <a href="pedagang/full-calender">
                                 <div>
                                     <i class="ion-ios-color-wand-outline iq-mb-10"></i>
                                     <h5 class="iq-tw-6">Agenda Teras</h5>
