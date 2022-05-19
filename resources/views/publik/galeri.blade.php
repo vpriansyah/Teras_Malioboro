@@ -38,8 +38,12 @@
               
             @endforeach
             </ul>
+            @php
+            $Search = $req;
+            if ($req == null){$Search = "Type any word...";}
+            @endphp
             <form class="form-inline my-2 my-lg-0 ml-auto" action="cari" value="search">
-              <input class="form-control mr-sm-2" type="search" name="search" placeholder="Type any word..." aria-label="Search">
+              <input class="form-control mr-sm-2" type="search" name="search" placeholder="{{$Search}}" aria-label="Search">
               <button class="btn btn-outline-success my-2 my-sm-0" 
                       onsubmit="return validateForm();"
                       onclick="return validateForm();"
@@ -171,7 +175,7 @@
                     <div class ="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; width: 75%; height:25%; max-height:100px" >
                      <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100 " alt="''.$data->foto_lapak.''">
                     </div>
-                    <div class="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; padding-top:max(50px);"> 
+                    <div class="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%;"> 
                       <center> <h5 class="iq-tw-6 iq-pb-5" style=" font-size: 80%;">{{$data->nama_lengkap}}</h5> 
                       <center style=" font-size: 80%;">{{$data->dagangan}}
                       <p style=" font-size: 80%;">{{$data->operasional}}<br>
