@@ -97,8 +97,8 @@
                       id    : '{{ $item->id}}',
                       title : '{{ $item->nama}}',
                       start : '{{ $item->tanggal}}',
-                      end   : '{{ $item->tanggal_akhir}}'
-                      //url   : '{{url ('<a data-toggle="modal" data-target="#infoo"></a>')}}',
+                      end   : '{{ $item->tanggal_akhir}}',
+                      url   : '{{url ('#infoo', $item->keterangan)}}',
                     
                       },
 
