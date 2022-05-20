@@ -22,7 +22,7 @@ class GaleriController extends Controller
 //        dd($lokasi_teras);
         return view('publik.galeri', compact('req','current','kat_brg','lokasi_teras','data_pkl','lokasi_kios','lokasi_lantai','lokasi_gedung'));
     }
-
+    
     public function data($id)
     {   
         $data_pkl = DB::table('data_pkl')->where("id",$id)->get();

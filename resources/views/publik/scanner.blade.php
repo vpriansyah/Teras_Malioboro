@@ -35,8 +35,10 @@
     <div>
       <p></p>
       <center>
+      <p>Klik tombol Scan QR Code</p>
       <p>Klik Allow agar bisa izinkan akses kamera untuk scan barcode Teras Malioboro</p>
-      <p> Setelah itu arahkan kamera pada barcode Teras Malioboro yang ingin di scan</p>
+      <p>Setelah itu arahkan kamera pada barcode Teras Malioboro yang ingin di scan</p>
+      <p></p>
         </center>
     </div>
 </section>

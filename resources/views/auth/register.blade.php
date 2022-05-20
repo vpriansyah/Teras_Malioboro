@@ -28,9 +28,12 @@
             <div class="card border-success mb-3 mt-5">
                 <h5 class="card-title mt-3 text-success text-center">Ayo Daftar</h5>
                 <main class="form-signin">
-                    <form action="/auth/register" method="POST">
+                    <form action="{{url('/auth/register')}}" method="POST">
                         @csrf
                         <div class="card-body">
+                            <div class="form-input mb-3">
+                                <input type="text" name="username" class="form-control" id="username" placeholder="Nama Lengkap" autofocus required>
+                            </div>
                             <div class="form-input mb-3">
                                 <input type="number" name="name" class="form-control" id="name" placeholder="No KTP atau NIK" autofocus required>
                             </div>

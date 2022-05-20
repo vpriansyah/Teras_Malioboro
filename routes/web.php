@@ -1,12 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PublikController;
-use App\Http\Controllers\StatistikPublikController;
-
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+
+use App\Http\Controllers\PublikController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\FullCalenderController;
+use App\Http\Controllers\StatistikPublikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,47 +21,43 @@ use Illuminate\Support\Facades\Mail;
 */
 
 //Auth
-Route::get('auth/login', [LoginController::class, 'index']);
+Route::get('auth/login', [LoginController::class, 'index'])->name('login');
 Route::post('auth/login', [LoginController::class, 'authenticate']);
+Route::post('auth/logout', [LoginController::class, 'logout']);
 Route::get('auth/register', [RegisterController::class, 'index']);
 Route::post('auth/register', [RegisterController::class, 'post']);
 
 //Pedagang
 Route::get('/pedagang', function () {
     return view('/pedagang/dashboard');
-})->name('pedagang');
+})->name('pedagang')->middleware('auth');
 
 Route::get('pedagang/daftar', function () {
     return view('/pedagang/daftar');
-});
+})->middleware('auth');
 
 Route::get('pedagang/saran', function () {
     return view('/pedagang/saran');
-});
+})->middleware('auth');
 
 Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
-});
+})->middleware('auth');
 
-Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index');
-// Route::get('pedagang/profil', function () {
-//     return view('/pedagang/profil', [
-//         "nama" => "Christya Ayu Dewi",
-//         "sebagai" => "Pedagang",
-//         "status" => "Aktif",
+Route::get('pedagang/full-calender', [FullCalenderController::class, 'index'])->middleware('auth');
+Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
 
-//     ]);
-// });
+Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
 
 Route::get('pedagang/statistik', function () {
     return view('/pedagang/statistik');
-});
+})->middleware('auth');
 
 Route::get('pedagang/agenda', function () {
     return view('/pedagang/agenda');
-});
+})->middleware('auth');
 
-Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index');
+Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index')->middleware('auth');
 Route::get('/search', 'App\Http\Controllers\InfoPedagangController@search');
 //Route::get('pedagang/informasi', function () {
 //    return view('/pedagang/informasi');
@@ -83,9 +80,12 @@ Route::get('/publik/scanner', function () {
 //});
 
 Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
+Route::get('/publik/galeri2', 'App\Http\Controllers\Galeri2Controller@index');
 Route::get('/publik/galeri/{id}', 'App\Http\Controllers\GaleriController@group');
 Route::get('/publik/galeri/{id}/{id2}', 'App\Http\Controllers\GaleriController@group2');
+Route::get('/publik/galeri2/{id}', 'App\Http\Controllers\Galeri2Controller@group');
 Route::get('/publik/cari', 'App\Http\Controllers\GaleriController@cari');
+Route::get('/publik/cari2', 'App\Http\Controllers\Galeri2Controller@cari');
 
 Route::get('/publik/galeri-data/{id}', 'App\Http\Controllers\GaleriController@data');
 Route::get('/publik/cctv', 'App\Http\Controllers\CctvController@index');

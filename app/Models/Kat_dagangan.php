@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profil extends Model
+class Kat_dagangan extends Model
 {
-    protected $table = 'data_pkl';
+
+    protected $table = 'kat_dagangan';
 }
