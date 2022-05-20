@@ -44,21 +44,10 @@ Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
 })->middleware('auth');
 
-Route::get('pedagang/full-calender', [FullCalenderController::class, 'index']);
+Route::get('pedagang/full-calender', [FullCalenderController::class, 'index'])->middleware('auth');
 Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
 
-Route::get('pedagang/full-calender', [FullCalenderController::class, 'index']);
-Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
-
-Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index');
-// Route::get('pedagang/profil', function () {
-//     return view('/pedagang/profil', [
-//         "nama" => "Christya Ayu Dewi",
-//         "sebagai" => "Pedagang",
-//         "status" => "Aktif",
-
-//     ]);
-// });
+Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
 
 Route::get('pedagang/statistik', function () {
     return view('/pedagang/statistik');
@@ -91,9 +80,12 @@ Route::get('/publik/scanner', function () {
 //});
 
 Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
+Route::get('/publik/galeri2', 'App\Http\Controllers\Galeri2Controller@index');
 Route::get('/publik/galeri/{id}', 'App\Http\Controllers\GaleriController@group');
 Route::get('/publik/galeri/{id}/{id2}', 'App\Http\Controllers\GaleriController@group2');
+Route::get('/publik/galeri2/{id}', 'App\Http\Controllers\Galeri2Controller@group');
 Route::get('/publik/cari', 'App\Http\Controllers\GaleriController@cari');
+Route::get('/publik/cari2', 'App\Http\Controllers\Galeri2Controller@cari');
 
 Route::get('/publik/galeri-data/{id}', 'App\Http\Controllers\GaleriController@data');
 Route::get('/publik/cctv', 'App\Http\Controllers\CctvController@index');
