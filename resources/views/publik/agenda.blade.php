@@ -88,18 +88,19 @@
                     initialView: 'dayGridMonth',
                     defaultDate: today,
                     navLinks: false,
+                    selecttable: true,
                     editable: false,
                     eventLimit: false,
                     events: [
                         @foreach($info_agenda as $item)
                       {
+                      id    : '{{ $item->id}}',
                       title : '{{ $item->nama}}',
                       start : '{{ $item->tanggal}}',
-                      end   : '{{ $item->tanggal_akhir}}',
-                      url   : '{{url('#'),}}',
+                      end   : '{{ $item->tanggal_akhir}}'
+                      //url   : '{{url ('<a data-toggle="modal" data-target="#infoo"></a>')}}',
                     
-                      
-                    },
+                      },
 
                 @endforeach
                      ],
@@ -111,6 +112,46 @@
                 calendar.render();
             });
         </script>
+        
+
+    <div class="modal fade" id="infoo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="infoo"></h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="modalError"></div>
+                      <div id="infooo"></div>
+                      <div class="row" style="margin-top:10px">
+                      <div class="col-lg-12">
+                          <table class="table table-bordered table-hover">
+                              <thead>
+                                  <tr> 
+                                      <th>Nama</th>
+                                      <th>Tanggal Mulai</th>
+                                      <th>Tanggal Berakhir</th>
+                                      <th>Jam</th>
+                                      <th>Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($info_agenda as $item)
+                                    <tr>
+                                        <td>{{ $item->nama }}</td>
+                                        <td>{{ $item->tanggal }}</td>
+                                        <td>{{ $item->tanggal_akhir }}</td>
+                                        <td>{{ $item->jam }}</td>
+                                        <td>{{ $item->keterangan }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="row">
         
     </section>
 @endsection
