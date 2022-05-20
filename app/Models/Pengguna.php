@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profil extends Model
 {
-    protected $table = 'data_pkl';
+    protected $table = 'users';
 
-    public function Pengguna()
+    public function Profil()
     {
-        return $this->belongsTo(Pengguna::class);
+        return $this->hasMany(Profil::class);
     }
 }
