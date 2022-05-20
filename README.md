@@ -6,6 +6,10 @@ Project digitalisasi Teras Malioboro Jogja
 
 Laman Teras Malioboro yang ditujukan untuk pedagang dimana pedagang dapat mengakses menu-menu diantaranya, update profil, memberikan saran dan aduan, melihat info penting, statistik penjualan dan tren produk, agenda teras yang berhubungan dengan pedagang.
 
+### LOGIN Menu Pedagang
+NIK : 8888888204790004
+No Kios : 11301
+
 ### Anggota-Link Hosting
 
 -   Devanza Priansyah Putra (V3420027) **(https://v3420027.mhs.d3tiuns.com/teras-malioboro-pedagang/public/)**
