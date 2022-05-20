@@ -172,8 +172,8 @@
                       $foto = ($data->foto_lapak);
                       if ($data->foto_lapak == null) $foto= "notfound.jpg";                
                     @endphp
-                    <div class ="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; width: 75%; height:25%; max-height:100px" >
-                     <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block w-100 " alt="''.$data->foto_lapak.''">
+                    <div class ="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; width:auto; max-width: 75%; height:25%; max-height:100px" >
+                     <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100" style="height:auto; max-height:175px; width:auto;" alt="''.$data->foto_lapak.''">
                     </div>
                     <div class="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%;"> 
                       <center> <h5 class="iq-tw-6 iq-pb-5" style=" font-size: 80%;">{{$data->nama_lengkap}}</h5> 
