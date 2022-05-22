@@ -58,26 +58,34 @@
 <!---->
 
       <!--dropdown lokasi-->
-<!--      <div class="form-group iq-pt-10">
+      <div class="form-group iq-pt-10">
         <div class="row">
           <div class="col-lg-4 col-mb-6 col-sm-6">
           <label>Teras</label>
             <div class="btn-group">
-              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Teras
+            
+                @php
+                $button = "Semua";
+                if ($current == $teras_sekarang->nama) {$button = $teras_sekarang->nama;}
+                @endphp
+              <button type="button" class="btn btn-outline-dark dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{$button}}
+            
               </button>
               <div class="dropdown-menu">
+               
                 <a class="dropdown-item" href="{{ url('publik/galeri');}}">Semua</a>
+                
               @foreach($lokasi_teras as $teras)
               @php 
                   $Drop = "";
                   $link = url()->current();
-                  $value_teras = "$link/$teras->id";
-                  if ($current == null) $value_teras = "$link/$teras->id";
+                  $value_teras = "$link/$teras->nama";
+                  if ($current == null) $value_teras = "$link/$teras->nama";
                   
                   else{
-                  $value_teras="$teras->id";
-                  if ($teras->id == $current) {$Drop = "disabled"; $value_teras="#";};
+                  $value_teras="$teras->nama";
+                  if ($teras->nama == $current) {$Drop = "disabled"; $value_teras="#";};
                   }
                 @endphp
                 <a class="dropdown-item {{$Drop}}" href="{{$value_teras}}">{{$teras->nama}}</a>
@@ -88,77 +96,7 @@
           @php 
           
           @endphp
-          <div class="col-lg-4 col-mb-6 col-sm-6">
-          <label>Gedung</label>
-            @php 
-              $value_gedung = '';
-              if($current == null) $value_gedung = 'disabled';
-              if($current == '1') $value_gedung = '';
-            @endphp
-            <div class="btn-group" >
-              <button type="button" class="btn dropdown-toggle {{$value_gedung}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href=''>Semua</a>
-              @foreach($lokasi_gedung as $gedung)
-                <a class="dropdown-item" href="{{ url('publik/galeri');}}/{{$gedung->id}}">{{$gedung->nama}}</a>
-              @endforeach
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-mb-6 col-sm-6">
-          <label>Lantai</label>
-            <div class="btn-group">
-              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href=''>Semua</a>
-              @foreach($lokasi_lantai as $lantai)
-                <a class="dropdown-item" href="{{ url('publik/galeri');}}/{{$lantai->id}}">{{$lantai->nama}}</a>
-              @endforeach
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>-->
-
-      <!--dropdown lokasi-->
-      <div class="form-group iq-pt-10">
-        <div class="row">
-          <div class="col-lg-4 col-mb-6 col-sm-6">
-              <label>Teras</label>
-              <select class="form-control" name="jenis" id="combo1">
-                <option value=null>Semua</option>        
-              @foreach($lokasi_teras as $teras)
-                <option value="{{$teras->id}}">{{$teras->nama}}</option>
-              @endforeach
-            </select>
-          </div>
-          <div class="col-lg-4 col-mb-6 col-sm-6">
-            <label>Gedung</label>
-              <select class="form-control" name="jenis" id="combo1">   
-                <option value=null>Semua</option>         
-              @foreach($lokasi_gedung as $gedung)
-                <option value="{{$gedung->id}}">{{$gedung->nama}}</option>
-              @endforeach
-            </select>
-          </div>
-          <div class="col-lg-4 col-mb-6 col-sm-6">
-            <label>lantai</label>
-              <select class="form-control" name="jenis" id="combo1">
-                <option value=null>Semua</option>            
-              @foreach($lokasi_lantai as $lantai)
-                <option value="{{$lantai->id}}">{{$lantai->nama}}</option>
-              @endforeach
-            </select>
-          </div>
-        </div>
-      </div>
-      <!---->
 
       <!--card galeri-->
       <div class="container">
@@ -176,10 +114,14 @@
                      <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100" style="height:auto; max-height:175px; width:auto;" alt="''.$data->foto_lapak.''">
                     </div>
                     <div class="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%;"> 
-                      <center> <h5 class="iq-tw-6 iq-pb-5" style=" font-size: 80%;">{{$data->nama_lengkap}}</h5> 
-                      <center style=" font-size: 80%;">{{$data->dagangan}}
+                      <h5 class="iq-tw-6 iq-pb-5 m-auto" style=" font-size: 80%;">{{$data->nama_lengkap}}</h5> 
+                      <p class='m-auto' style=" font-size: 80%;">{{$data->dagangan}}
                       <p style=" font-size: 80%;">{{$data->operasional}}<br>
                          Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+                      <p style=" font-size: 80%;">Letak: 
+                      <br>{{$teras_sekarang->nama}}
+                      <br>{{$gedung_sekarang->nama}}
+                      <br>{{$lantai_sekarang->nama}}</p>
                     </div>
                   </div>
                 </div>
