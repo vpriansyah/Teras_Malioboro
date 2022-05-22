@@ -11,24 +11,62 @@ class Galeri2Controller extends Controller
 {
     public function index()
     {
-        $data_pkl = Galeri::filter(request(['search', 'kat_dagangan']))->paginate(12);
+        $data_pkl = Galeri::filter(request(['search', 'kat_dagangan', 'lokasi_teras', 'lokasi_gedung', 'lokasi_lantai']))->paginate(12);
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
-        $lokasi_kios = DB::table('lokasi_no_kios')->get();
-        $lokasi_lantai = DB::table('lokasi_lantai')->get();
-        $lokasi_gedung = DB::table('lokasi_gedung')->get();
 
-            //    dd($data_pkl);
+        // dd($data_pkl);
         // return view('publik.galeri2', compact('kat_brg','lokasi_teras','data_pkl','lokasi_kios','lokasi_lantai','lokasi_gedung'));
 
         return view('publik.galeri2', [
             'data_pkl' => $data_pkl,
             'kat_brg' => $kat_brg,
-            'lokasi_teras' => $lokasi_teras,
-            'lokasi_gedung' => $lokasi_gedung,
-            'lokasi_lantai' => $lokasi_lantai,
-            'lokasi_kios' => $lokasi_kios
+            'lokasi_teras' => $lokasi_teras
         ]);
+    }
+
+    public function getgedung(Request $request)
+    {
+        $id_teras = $request->id_teras;
+        $lokasi_gedung = DB::table('lokasi_gedung')->where('lokasi_teras_id', $id_teras)->get();
+
+        if ($id_teras == 'TRUE') {
+            echo "<select class='form-select' name='gedung' id='lokasi_gedung' disabled>";
+            echo "<option value='TRUE'>Semua</option>";
+            foreach ($lokasi_gedung as $gedung) {
+                echo "<option value='$gedung->id'>$gedung->nama</option>";
+            }
+            echo "</select>";
+        } else {
+            echo "<select class='form-select' name='gedung' id='lokasi_gedung'>";
+            echo "<option value='TRUE'>Semua</option>";
+            foreach ($lokasi_gedung as $gedung) {
+                echo "<option value='$gedung->id'>$gedung->nama</option>";
+            }
+            echo "</select>";
+        }
+    }
+
+    public function getlantai(Request $request)
+    {
+        $id_gedung = $request->id_gedung;
+        $lokasi_lantai = DB::table('lokasi_lantai')->where('lokasi_gedung_id', $id_gedung)->get();
+
+        if ($id_gedung == 'TRUE') {
+            echo "<select class='form-select' name='lantai' id='lokasi_lantai' disabled>";
+            echo "<option value='TRUE'>Semua</option>";
+            foreach ($lokasi_lantai as $lantai) {
+                echo "<option value='$lantai->id'>$lantai->nama</option>";
+            }
+            echo "</select>";
+        } else {
+            echo "<select class='form-select' name='lantai' id='lokasi_lantai'>";
+            echo "<option value='TRUE'>Semua</option>";
+            foreach ($lokasi_lantai as $lantai) {
+                echo "<option value='$lantai->id'>$lantai->nama</option>";
+            }
+            echo "</select>";
+        }
     }
 
     public function data($id)

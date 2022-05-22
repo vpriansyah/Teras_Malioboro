@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\Galeri2Controller;
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FullCalenderController;
@@ -81,9 +82,10 @@ Route::get('/publik/scanner', function () {
 
 Route::get('/publik/galeri', 'App\Http\Controllers\GaleriController@index');
 Route::get('/publik/galeri2', 'App\Http\Controllers\Galeri2Controller@index');
+Route::post('/publik/getgedung', [Galeri2Controller::class, 'getgedung'])->name('getgedung');
+Route::post('/publik/getlantai', [Galeri2Controller::class, 'getlantai'])->name('getlantai');
 Route::get('/publik/galeri/{id}', 'App\Http\Controllers\GaleriController@group');
 Route::get('/publik/galeri/{id}/{id2}', 'App\Http\Controllers\GaleriController@group2');
-Route::get('/publik/galeri2/{id}', 'App\Http\Controllers\Galeri2Controller@group');
 Route::get('/publik/cari', 'App\Http\Controllers\GaleriController@cari');
 Route::get('/publik/cari2', 'App\Http\Controllers\Galeri2Controller@cari');
 
