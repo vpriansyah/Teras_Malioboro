@@ -112,6 +112,8 @@
                                         @else 
                                             <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success" ><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>  
                                         @endif 
+                                        <a href="" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #E1306C; border-color: #E1306C ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i>  Instagram</a> 
+                                        <a href="" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #FF6600 ; border-color: #FF6600  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i>  Shopee</a>  
                                     </div>
                                   </div>
                                 </div>
