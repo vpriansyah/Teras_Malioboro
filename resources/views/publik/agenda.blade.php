@@ -13,6 +13,7 @@
                 </div>
             </div>
         </div>
+        
         <!--<div class="container table-responsive">
             <table class="table table-bordered table-striped table-hover">
                 <caption>Agenda Teras Malioboro</caption>
@@ -45,7 +46,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Agenda</title>
         <!-- bootstrap cdn  -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
             integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -58,6 +59,7 @@
                 </div>
         </div> -->
         <div class="row mx-auto justify-content-center">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#infoo">Info Lengkap</button>
                             <div class="col-lg-8">
                                 <div class="card">
                                     <div class="card-header">
@@ -113,30 +115,30 @@
             });
         </script>
         
-
+    {{-- Modal Informasi Agenda --}}
     <div class="modal fade" id="infoo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="infoo"></h4>
+                      <h4 class="modal-title" id="modalMdTitle"></h4>
                   </div>
                   <div class="modal-body">
                       <div class="modalError"></div>
-                      <div id="infooo"></div>
-                      <div class="row" style="margin-top:10px">
-                      <div class="col-lg-12">
-                          <table class="table table-bordered table-hover">
-                              <thead>
-                                  <tr> 
-                                      <th>Nama</th>
-                                      <th>Tanggal Mulai</th>
-                                      <th>Tanggal Berakhir</th>
-                                      <th>Jam</th>
-                                      <th>Keterangan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                      <div id="modalMdContent"></div>
+                        <div class="row" style="margin-top:10px">
+                            <div class="col-12">
+                                <table class="container table table-bordered table-hover">
+                                    <thead>
+                                            <tr> 
+                                                <th>Nama</th>
+                                                 <th>Tanggal Mulai</th>
+                                                 <th>Tanggal Berakhir</th>
+                                                 <th>Jam</th>
+                                                 <th>Keterangan</th>
+                                            </tr>
+                                     </thead>
+                                    <tbody>
                                     @foreach($info_agenda as $item)
                                     <tr>
                                         <td>{{ $item->nama }}</td>
@@ -146,12 +148,14 @@
                                         <td>{{ $item->keterangan }}</td>
                                     </tr>
                                     @endforeach
-                                </tbody>
-                            </table>
+                                     </tbody>
+                                 </table>
                         </div>
                     </div>
                   </div>
-                  <div class="row">
+                  
+        {{-- Modal Informasi Penting END --}}
+                  
         
     </section>
 @endsection
