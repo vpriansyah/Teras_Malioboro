@@ -108,31 +108,40 @@
         @foreach ($data_pkl as $data)
         {{--
         <?php if ($data != null) {?> --}}
-        <div class="col-lg-3 justify-content-center col-md-4 col-sm-6 col-6 iq-mtb-15 d-flex align-items-stretch">
+        <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
           <a href="{{ url('publik/galeri-data') }}/{{ $data->id }}" style="text-decoration: none">
-            <div class="iq-blog iq-ptb-30 iq-pr-30 iq-pl-30">
-              <div class="m-auto justify-content-center">
+            <div class="iq-blog text-left iq-ptb-30 d-flex  ">
+              <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
                 @php
                 $foto = $data->foto_lapak;
                 if ($data->foto_lapak == null) $foto = 'notfound.jpg';
                 @endphp
-                <div class="card m-auto border-0 justify-content-center" style="
+                <div class="card m-auto justify-content-center bg-transparent border-0" 
+                style="
                                 background: url({!! asset('images/Publik_Galeri/' . $foto . '') !!});
                                 background-size:cover;
                                 background-position: center;
-                                max-width:150px;
+                                padding-top:30%; 
+                                width:auto; 
+                                min-width:100%;
+                                max-width: 150%; 
+                                min-height:100%;
+                                max-height:150%;
+                                max-width: 150px;
                                 min-width: 100px;
                                 max-height:150px;
-                                min-height: 100px;
+                                min-height: 100px; 
+
                               ">
                 </div>
-                <center>
-                  <h5 class="iq-tw-6 iq-pb-10">{{ $data->nama_lengkap }}</h5>
-                </center>
-                <center>{{ $data->dagangan }}</center>
-                <p>{{ $data->operasional }}<br>
-                  Jam Buka: {{ $data->operasional_jam_buka }}.00 -
-                  {{ $data->operasional_jam_tutup }}.00</p>
+                <div class="card m-auto justify-content-center bg-transparent border-0"> 
+                <h5 class="iq-tw-6 iq-pb-5 m-auto" style=" font-size: 80%;">{{$data->nama_lengkap}}</h5> 
+                
+                <p class='m-auto' style="font-size: 75%;">{{$data->dagangan}}
+                <p style="padding-left: 15%; font-size: 75%;">{{$data->operasional}}<br>
+                         Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+                <p style="padding-left: 15%; font-size: 75%;">
+                </div>
               </div>
             </div>
           </a>
