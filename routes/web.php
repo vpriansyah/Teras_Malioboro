@@ -116,6 +116,7 @@ Route::get('send-mail', function () {
 
 
 Route::get('/publik/agenda', 'App\Http\Controllers\AgendaController@index');
+Route::get('/publik/agenda2', 'App\Http\Controllers\Agenda2Controller@index');
 
 //Route::get('/publik/cctv', function () {
 //  return view('/publik/cctv');

@@ -90,23 +90,30 @@
                                         <tr>
                                             <td><h6>Dagangan</h6></td>
                                             <td><h6> : </h6></td>
-                                            <td><h6>{{ $data_pkl->dagangan }}</h6></td>
+                                            <td colspan="2"><h6>{{ $data_pkl->dagangan }}</h6></td>
                                         </tr>
                                         <tr>
                                             <td><h6>Nomor HP</h6></td>
                                             <td><h6> : </h6></td>
                                             <td><h6>{{ $nomor }}</h6></td>
+                                            <td align="right">
+                                                @php
+                                                $no_hp = ltrim($nomor, "0");
+                                                @endphp
+                                                @if ($data_pkl->no_hp == null)
+                                                <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success btn disabled" aria-disabled="true"><i class="fab fa-whatsapp"></i></a>
+                                                 @else 
+                                                <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success" ><i class="fab fa-whatsapp"></i></a>  
+                                                @endif 
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td><h6>Lokasi</h6></td>
                                             <td><h6> : </h6></td>
-                                            <td><h6>{{ $lantai }}, {{ $gedung }}, {{ $teras }}</h6></td>
+                                            <td colspan="2"><h6>{{ $lantai }}, {{ $gedung }}, {{ $teras }}</h6></td>
                                         </tr>
                                     </table>
                                     <div class="iq-pb-20">
-                                      @php
-                                      $no_hp = ltrim($nomor, "0");
-                                      @endphp
                                         @if ($data_pkl->no_hp == null)
                                             <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success btn disabled" aria-disabled="true"><i class="fab fa-whatsapp"></i>  Hubungi Pedagang</a>
                                         @else 
