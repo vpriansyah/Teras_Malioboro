@@ -135,9 +135,9 @@
                               ">
                 </div>
                 <div class="card m-auto justify-content-center bg-transparent border-0"> 
-                <h5 class="iq-tw-6 iq-pb-5 m-auto" style=" font-size: 80%;">{{$data->nama_lengkap}}</h5> 
+                <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; margin-left:10%; margin-right:10%;">{{$data->nama_lengkap}}</h5> 
                 
-                <p class='m-auto' style="font-size: 75%;">{{$data->dagangan}}
+                <p class='text-center m-auto' style="font-size: 75%;">{{$data->dagangan}}
                 <p style="padding-left: 15%; font-size: 75%;">{{$data->operasional}}<br>
                          Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
                 <p style="padding-left: 15%; font-size: 75%;">
