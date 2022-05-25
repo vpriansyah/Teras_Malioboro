@@ -9,6 +9,7 @@
                 <div class="heading-title-layanan text-center">
                     <h2 class="title iq-tw-6">Agenda Teras</h2>
                     <h6 class="iq-pb-20">Halaman Agenda untuk menampilkan list kegiatan Teras Malioboro</h6>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#infoo">Info Lengkap</button>
                 </div>
             </div>
         </div>
@@ -30,7 +31,6 @@
                 </div>
         </div> -->
     <div class="row mx-auto justify-content-center">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#infoo">Info Lengkap</button>
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
