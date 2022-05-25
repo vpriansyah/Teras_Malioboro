@@ -127,9 +127,10 @@
                       <div class="modalError"></div>
                       <div id="modalMdContent"></div>
                         <div class="row" style="margin-top:10px">
-                            <div class="col-12">
-                                <table class="container table table-bordered table-hover">
-                                    <thead>
+                            <!-- <div class="col-12"> -->
+                            <div class="container table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <!-- <thead> -->
                                             <tr> 
                                                 <th>Nama</th>
                                                  <th>Tanggal Mulai</th>
@@ -137,8 +138,8 @@
                                                  <th>Jam</th>
                                                  <th>Keterangan</th>
                                             </tr>
-                                     </thead>
-                                    <tbody>
+                                     <!-- </thead> -->
+                                    <!-- <tbody> -->
                                     @foreach($info_agenda as $item)
                                     <tr>
                                         <td>{{ $item->nama }}</td>
@@ -148,11 +149,13 @@
                                         <td>{{ $item->keterangan }}</td>
                                     </tr>
                                     @endforeach
-                                     </tbody>
-                                 </table>
+                                     <!-- </tbody> -->
+                                </table>
+                            </div>
                         </div>
                     </div>
-                  </div>
+                </div>
+            </div>
                   
         {{-- Modal Informasi Penting END --}}
                   
