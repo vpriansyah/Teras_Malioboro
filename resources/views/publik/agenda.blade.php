@@ -81,9 +81,9 @@
                 selectOverlap: function(event) {
                     return event.rendering === 'background';
                 }
-                // dateClick: function() {
+                //dateClick: function() {
                 //     // alert('a day has been clicked!');
-                // }
+                 //}
             });
 
             calendar.render();
