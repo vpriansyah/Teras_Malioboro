@@ -12,7 +12,9 @@ class AduanController extends Controller
 
     public function index()
     {
-        return view('publik.aduansaran');
+        $kat_aduan = DB::table('kat_aduan')->where('status', 'Aktif')->latest('id')->get();
+        // dd($kat_aduan);
+        return view('publik.aduansaran', ['kat_aduan' => $kat_aduan]);
     }
     
     public function tambah(Request $request)

@@ -58,11 +58,14 @@
                             <label>Kategori Aduan</label>
                             <font color='#ff0000'>*</font>
                             <select class="form-control" name="kategori" id="combo1">
-                                <option value="umum">Umum</option>
+                                @foreach ($kat_aduan as $kat)
+                                <option value="{{ $kat->id }}">{{ $kat->jenis }}</option>
+                                {{-- <option value="umum">Umum</option>
                                 <option value="keuangan">Keuangan</option>
                                 <option value="pungli">Pungli</option>
                                 <option value="teknik">Teknik</option>
-                                <option value="lainnya">Lainnya</option>
+                                <option value="lainnya">Lainnya</option> --}}
+                                @endforeach
                             </select>
                         </div>
                         <?php
