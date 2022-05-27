@@ -71,7 +71,7 @@
                         title: '{{ $item->nama}}',
                         start: '{{ $item->tanggal}}',
                         end: '{{ $item->tanggal_akhir}}',
-                        url: '{{url ('#infoo ', $item->keterangan)}}',
+                        // url: '{{url ('#infoo ', $item->keterangan)}}',
                         color: '#28a745',
                     },
 
