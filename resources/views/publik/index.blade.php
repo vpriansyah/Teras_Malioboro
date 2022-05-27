@@ -6,15 +6,15 @@
     {{-- Notifikasi --}}
     @if (Session::has('message'))
         {{-- <li>{!! session('message') !!}</li> --}}
-            <script>
-                Swal.fire({
-                    title: 'Aduan dan Saran',
-                    text: 'Berhasil mengajukan aduan/saran.',
-                    icon: 'success',
-                    confirmButtonColor: '#1e7e34',
-                    confirmButtonText: 'Oke!'
-                })
-            </script>
+        <script>
+            Swal.fire({
+                title: 'Aduan dan Saran',
+                text: 'Berhasil mengajukan aduan/saran.',
+                icon: 'success',
+                confirmButtonColor: '#1e7e34',
+                confirmButtonText: 'Oke!'
+            })
+        </script>
     @endif
 
     <!-- Banner -->
@@ -27,7 +27,7 @@
                         <h5 class="iq-font-black iq-mtb-40">Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
                             Lima (PKL) Malioboro.</h5>
                         <div>
-                            <a href="{{ url('auth/login'); }}" class="rounded-pill btn btn-success">Masuk</a><br>
+                            <a href="{{ url('auth/login') }}" class="rounded-pill btn btn-success">Masuk</a><br>
                         </div>
                         <br>
 
@@ -61,45 +61,45 @@
 
     <!-- Tentang -->
     <!-- <section class="overview-block-pt">
-                                    <div class="container" id="tentang">
-                                      <div class="row iq-mt-10">
-                                        <div class="col-sm-12">
-                                          <div class="heading-title iq-mt-50">
-                                            <h3 class="title iq-tw-7">Tentang</h3>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </section> -->
+                                            <div class="container" id="tentang">
+                                              <div class="row iq-mt-10">
+                                                <div class="col-sm-12">
+                                                  <div class="heading-title iq-mt-50">
+                                                    <h3 class="title iq-tw-7">Tentang</h3>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </section> -->
     <!-- Tentang -->
 
     <!-- Rincian -->
     <!-- <section class="how-works r-mt-40 overview-block-ptb">
-                                    <div class="container">
-                                      <div class="row flex-row-reverse">
-                                        <div class="col-lg-8 ">
-                                          <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
-                                        </div>
-                                        <div class="col-lg-4  align-self-center">
-                                          <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
-                                          <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
-                                          <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                        </div>
-                                        <div class="iq-objectsnew">
-                                          <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
-                                            <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                                          </span>
-                                          <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
-                                            <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                                          </span>
-                                          <span class="iq-objects-04 iq-fadebounce">
-                                            <span class="iq-round"></span>
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </section> -->
+                                            <div class="container">
+                                              <div class="row flex-row-reverse">
+                                                <div class="col-lg-8 ">
+                                                  <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
+                                                </div>
+                                                <div class="col-lg-4  align-self-center">
+                                                  <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
+                                                  <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
+                                                  <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                                </div>
+                                                <div class="iq-objectsnew">
+                                                  <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
+                                                    <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                                                  </span>
+                                                  <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
+                                                    <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                                                  </span>
+                                                  <span class="iq-objects-04 iq-fadebounce">
+                                                    <span class="iq-round"></span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </section> -->
 
     <!-- Layanan -->
     <section class="iq-feature1 overview-block-ptb grey-bg" id="layanan">
@@ -205,25 +205,24 @@
                 <p>Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a galley of
                     type and scrambled it to make a type specimen book.It has survived not only five centuries.</p>
             </div>
-            <section class="footer-info">
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <?= $peta1 ?>
-            </section>
+            <div>
+                <div class="footer-info" style="width: 100%; padding: 10%">
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <?= $peta1 ?>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Peta Interaktif-->
 
     <!-- Footer -->
-    <footer id="kontak" class="iq-footerr iq-ptb-20 ">
+    <footer id="kontak" class="iq-footerr">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-40 iq-mb-20">
-                    <div class="logo">
-                        <section class="footer-info">
-                            <br><br><br>
-                            <?= $peta2 ?>
-                    </div>
-                    </section>
+                <div class="col-lg-6 col-md-12 col-sm-12 iq-pt-10 iq-mb-20">
+                        <div class="footer-info" style="height: 100%; width: 100%; padding: 0%;">
+                            <?= $peta1 ?>
+                        </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-mtb-20">
                     <div class="row">
