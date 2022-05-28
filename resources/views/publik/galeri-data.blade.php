@@ -8,58 +8,9 @@
             if ($data_pkl->no_hp == null) {
                 $nomor = '-';
             }
-            $lantai = $data_pkl->lokasi_lantai_id;
-            $no_kios = $data_pkl->lokasi_no_kios_id;
-            $gedung = $data_pkl->lokasi_gedung_id;
-            $teras = $data_pkl->lokasi_teras_id;
             if ($data_pkl->foto_lapak == null) {
                 $foto = 'notfound.jpg';
-            }
-            switch ($lantai) {
-                case $data_pkl->lokasi_lantai_id == 111:
-                    $lantai = 'Basement';
-                    break;
-                case $data_pkl->lokasi_lantai_id == 112:
-                    $lantai = 'Lantai 1';
-                    break;
-                case $data_pkl->lokasi_lantai_id == 113:
-                    $lantai = 'Lantai 2';
-                    break;
-                case $data_pkl->lokasi_lantai_id == 121:
-                    $lantai = 'Lantai 1';
-                    break;
-                case $data_pkl->lokasi_lantai_id == 122:
-                    $lantai = 'Lantai 2';
-                    break;
-            }
-            
-            switch ($teras) {
-                case $data_pkl->lokasi_teras_id == 1:
-                    $teras = 'Teras Malioboro 1';
-                    break;
-                case $data_pkl->lokasi_teras_id == 2:
-                    $teras = 'Teras Malioboro 2';
-                    break;
-            }
-            
-            switch ($gedung) {
-                case $data_pkl->lokasi_gedung_id == 11:
-                    $gedung = 'Gedung A';
-                    break;
-                case $data_pkl->lokasi_gedung_id == 12:
-                    $gedung = 'Gedung B';
-                    break;
-                case $data_pkl->lokasi_gedung_id == 13:
-                    $gedung = 'Gedung C';
-                    break;
-                case $data_pkl->lokasi_gedung_id == 14:
-                    $gedung = 'Gedung D';
-                    break;
-                case $data_pkl->lokasi_gedung_id == 15:
-                    $gedung = 'Selasar';
-                    break;
-            }
-            
+            }            
         @endphp
 
         <section class="iq-feature1 overview-block-ptb-25 grey-bg" id="layanan">
@@ -159,7 +110,7 @@
                                         <tr>
                                             <td><h6>Lokasi</h6></td>
                                             <td><h6> : </h6></td>
-                                            <td colspan="2"><h6>{{ $lantai }}, {{ $gedung }}, {{ $teras }}</h6></td>
+                                            <td colspan="2"><h6>{{$lokasi_teras->nama}} {{$lokasi_gedung->nama}} {{$lokasi_lantai->nama}}, <br> kios nomor {{$lokasi_no_kios->nama}}</h6></td>
                                         </tr>
                                     </table>
                                     <div class="iq-pb-20">
@@ -194,7 +145,7 @@
                         if ($barang->gambar == null) $foto= "notfound.jpg";                
                     @endphp
                 <div class ="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; width:auto; max-width: 75%; height:25%; max-height:100px" >
-                    <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100" style="height:auto; max-height:175px; width:auto;" alt="''.$barang->gambar.''">
+                    <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100" style="height:auto; max-height:175px; padding-top:5%;; width:auto;" alt="''.$barang->gambar.''">
                 </div>
                 <div class="card m-auto justify-content-center bg-transparent border-0" >                                         
                 <h5 class="iq-tw-6 iq-pb-5 m-auto" style=" font-size: 100%; padding-top: 60%">{{$barang->barang}}</h5> 
