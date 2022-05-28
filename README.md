@@ -32,4 +32,4 @@ Laman Teras Malioboro yang ditujukan untuk publik dimana publik dapat menikmati 
 
 ### Link hosting aplikasi yang berjalan pada production
 
-**[Link 1](https://v3420049.mhs.d3tiuns.com/teras-malioboro/public/)** atau **[Link 2](https://v3420029.mhs.d3tiuns.com/teras-malioboro/public/)**
+**[Link Hosting](https://v3420029.mhs.d3tiuns.com/teras-malioboro/public/)**
