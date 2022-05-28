@@ -30,7 +30,7 @@
                             <div class="col-lg-7 col-md-12 col-sm-12">
                                 <div class="card border-0 justify-content-center">
                                   <div class="iq-plr-20 iq-pt-20">
-                                    <h3 class="iq-tw-9 iq-plr-10">{{ $data_pkl->nama_lengkap }}</h3>
+                                    <h4 class="iq-tw-9 iq-plr-10">{{ $data_pkl->nama_lengkap }}</h4>
                                     <hr class="iq-pb-10 iq-mb-10">
                                     <table class="table table-borderless table-striped">
                                         {{-- <tr>
@@ -39,14 +39,14 @@
                                             <td><h6>{{ $data_pkl->nama_lengkap }}</h6></td>
                                         </tr> --}}
                                         <tr>
-                                            <td><h6>Dagangan</h6></td>
-                                            <td><h6> : </h6></td>
-                                            <td colspan="2"><h6>{{ $data_pkl->dagangan }}</h6></td>
+                                            <td><h7>Dagangan</h7></td>
+                                            <td><h7> : </h7></td>
+                                            <td colspan="2"><h7>{{ $data_pkl->dagangan }}</h7></td>
                                         </tr>
                                         <tr>
-                                            <td><h6>Nomor HP</h6></td>
-                                            <td><h6> : </h6></td>
-                                            <td><h6>{{ $nomor }}</h6></td>
+                                            <td><h7>Nomor HP</h7></td>
+                                            <td><h7> : </h7></td>
+                                            <td><h7>{{ $nomor }}</h7></td>
                                             <td align="right">
                                                 @php
                                                 $no_hp = ltrim($nomor, "0");
@@ -60,12 +60,12 @@
                                         </tr>
                                         @foreach($linktree as $linktree)
                                         <tr>
-                                            <td><h6>Instagram</h6></td>
-                                            <td><h6> : </h6></td>
+                                            <td><h7>Instagram</h7></td>
+                                            <td><h7> : </h7></td>
                                             @php
                                                 $ig = $linktree->ig_username;
                                             @endphp
-                                            <td><h6>{{ $ig }}</h6></td>
+                                            <td><h7>{{ $ig }}</h7></td>
                                             <td align="right">
                                             @if ($ig == null)
                                             <a href="https://www.instagram.com/{{$ig}}/" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #E1306C; border-color: #E1306C ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a> 
@@ -75,12 +75,12 @@
                                         </td>
                                         </tr>
                                         <tr>
-                                            <td><h6>Shopee</h6></td>
-                                            <td><h6> : </h6></td>
+                                            <td><h7>Shopee</h7></td>
+                                            <td><h7> : </h7></td>
                                             @php
                                                 $shopee = $linktree->shopee_username;
                                             @endphp
-                                            <td><h6>{{ $shopee }}</h6></td>
+                                            <td><h7>{{ $shopee }}</h7></td>
                                             <td align="right">
                                             @if ($shopee == null)
                                             <a href="https://shopee.co.id/{{$shopee}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #FF6600 ; border-color: #FF6600  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i></a>  
@@ -90,13 +90,13 @@
                                         </td>
                                         </tr> 
                                         <tr>
-                                            <td><h6>Facebook</h6></td>
-                                            <td><h6> : </h6></td>
+                                            <td><h7>Facebook</h7></td>
+                                            <td><h7> : </h7></td>
                                             @php
                                                 $fb = $linktree->fb_nama;
                                                 $fb_link = $linktree->fb_link;
                                             @endphp
-                                            <td><h6>{{ $fb }}</h6></td>
+                                            <td><h7>{{ $fb }}</h7></td>
                                             <td align="right">
                                             @if ($fb_link == null)
                                             <a href="{{$fb_link}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #29487d ; border-color: #29487d  ;color: #FFFFFF"> <i class="fa fa-facebook-official  " style="color: #FFFFFF;"></i></a>  
@@ -108,9 +108,9 @@
                                         @endforeach
                                         
                                         <tr>
-                                            <td><h6>Lokasi</h6></td>
-                                            <td><h6> : </h6></td>
-                                            <td colspan="2"><h6>{{$lokasi_teras->nama}} {{$lokasi_gedung->nama}} {{$lokasi_lantai->nama}}, <br> kios nomor {{$lokasi_no_kios->nama}}</h6></td>
+                                            <td><h7>Lokasi</h7></td>
+                                            <td><h7> : </h7></td>
+                                            <td colspan="2"><h7>{{$lokasi_teras->nama}} {{$lokasi_gedung->nama}} {{$lokasi_lantai->nama}}, <br> kios nomor {{$lokasi_no_kios->nama}}</h7></td>
                                         </tr>
                                     </table>
                                     <div class="iq-pb-20">
