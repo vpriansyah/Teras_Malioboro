@@ -176,9 +176,14 @@
                     </div>
                 </div>
             </div>                                    
-    @endforeach
-
+    @endforeach        
+    
+        
     <div class="container">
+    <hr style="padding-top:33px;">
+    <div class="heading-title-layanan text-center" style="padding-top:33px">
+        <h2 class="title iq-tw-6">Barang Dagangan</h2>
+    </div>
         <div class="row justify-content-md-center">
             @foreach($barang as $barang)
                 <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch bg-transparent border-0" style="width:50%;">
@@ -200,6 +205,7 @@
             @endforeach
             
         </div>
+
         <div class="iq-pt-20">
             <button type="button" class="btn btn-danger" onclick="history.back();">Kembali</button>
         </div>
