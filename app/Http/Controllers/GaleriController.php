@@ -31,11 +31,15 @@ class GaleriController extends Controller
     {   
         $data_pkl = DB::table('data_pkl')->where("id",$id)->get();
 //        dd($data_pkl);
+        $barang = DB::table('barang')->where("id_pedagang", $id)->get();
+        //dd($barang);
+        $linktree = DB::table('linktree')->where("id", $id)->get();
+        //dd($linktree);
         $lokasi_no_kios = DB::table('data_pkl')
                 ->join('lokasi_no_kios', 'lokasi_no_kios.id', '=', 'data_pkl.lokasi_no_kios_id')
                 ->select('lokasi_no_kios.*')
                 ->get();
-        return view('publik.galeri-data', ['data_pkl' => $data_pkl],['lokasi_no_kios' => $lokasi_no_kios]);
+        return view('publik.galeri-data', ['data_pkl' => $data_pkl,'lokasi_no_kios' => $lokasi_no_kios, 'barang' => $barang, 'linktree' => $linktree]);
     }
 
     public function group($id)
