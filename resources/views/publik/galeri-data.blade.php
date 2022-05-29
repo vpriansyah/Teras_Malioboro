@@ -52,23 +52,35 @@
                                                 $no_hp = ltrim($nomor, "0");
                                                 @endphp
                                                 @if ($data_pkl->no_hp == null)
-                                                <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success btn disabled" aria-disabled="true"><i class="fab fa-whatsapp"></i></a>
+                                                <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey; border-color: grey"><i class="fab fa-whatsapp" style="color: #FFFFFF"></i></a>
                                                  @else 
                                                 <a href="https://api.whatsapp.com/send?phone=62{{$no_hp}}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera." type="button" class="btn btn-success" ><i class="fab fa-whatsapp"></i></a>  
                                                 @endif 
                                             </td>
                                         </tr>
                                         @foreach($linktree as $linktree)
+                                            @php
+                                                $ig = $linktree->ig_username;
+                                                $shopee = $linktree->shopee_username;
+                                                $fb = $linktree->fb_nama;
+                                                $fb_link = $linktree->fb_link;
+                                                if ($ig == null) {
+                                                    $ig = '-';
+                                                }
+                                                if ($shopee == null) {
+                                                    $shopee = '-';
+                                                }
+                                                if ($fb == null) {
+                                                    $fb = '-';
+                                                }
+                                            @endphp
                                         <tr>
                                             <td><h7>Instagram</h7></td>
                                             <td><h7> : </h7></td>
-                                            @php
-                                                $ig = $linktree->ig_username;
-                                            @endphp
                                             <td><h7>{{ $ig }}</h7></td>
                                             <td align="right">
-                                            @if ($ig == null)
-                                            <a href="https://www.instagram.com/{{$ig}}/" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #E1306C; border-color: #E1306C ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a> 
+                                            @if ($ig == '-')
+                                            <a href="https://www.instagram.com/{{$ig}}/" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey; border-color: grey ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a> 
                                             @else
                                             <a href="https://www.instagram.com/{{$ig}}/" type="button" class="btn btn-light" style="background-color: #E1306C; border-color: #E1306C ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a> 
                                             @endif
@@ -76,14 +88,11 @@
                                         </tr>
                                         <tr>
                                             <td><h7>Shopee</h7></td>
-                                            <td><h7> : </h7></td>
-                                            @php
-                                                $shopee = $linktree->shopee_username;
-                                            @endphp
+                                            <td><h7> : </h7></td>                                                
                                             <td><h7>{{ $shopee }}</h7></td>
                                             <td align="right">
-                                            @if ($shopee == null)
-                                            <a href="https://shopee.co.id/{{$shopee}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #FF6600 ; border-color: #FF6600  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i></a>  
+                                            @if ($shopee == '-')
+                                            <a href="https://shopee.co.id/{{$shopee}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey ; border-color: grey  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i></a>  
                                             @else
                                             <a href="https://shopee.co.id/{{$shopee}}" type="button" class="btn btn-light " style="background-color: #FF6600 ; border-color: #FF6600  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i></a>  
                                             @endif
@@ -91,15 +100,11 @@
                                         </tr> 
                                         <tr>
                                             <td><h7>Facebook</h7></td>
-                                            <td><h7> : </h7></td>
-                                            @php
-                                                $fb = $linktree->fb_nama;
-                                                $fb_link = $linktree->fb_link;
-                                            @endphp
+                                            <td><h7> : </h7></td>                                               
                                             <td><h7>{{ $fb }}</h7></td>
                                             <td align="right">
                                             @if ($fb_link == null)
-                                            <a href="{{$fb_link}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: #29487d ; border-color: #29487d  ;color: #FFFFFF"> <i class="fa fa-facebook-official  " style="color: #FFFFFF;"></i></a>  
+                                            <a href="{{$fb_link}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey ; border-color: grey  ;color: #FFFFFF"> <i class="fa fa-facebook-official  " style="color: #FFFFFF;"></i></a>  
                                             @else
                                             <a href="{{$fb_link}}" type="button" class="btn btn-light " style="background-color: #29487d ; border-color: #29487d  ;color: #FFFFFF"> <i class="fa fa-facebook-official" style="color: #FFFFFF;"></i></a>  
                                             @endif
