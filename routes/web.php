@@ -59,6 +59,8 @@ Route::get('/search', 'App\Http\Controllers\InfoPedagangController@search');
 //    return view('/pedagang/informasi');
 //});
 
+Route::get('/tindaklanjut/search', [TindakLanjutController::class, 'search']);
+
 //Publik
 Route::get('/', [PublikController::class, 'index']);
 Route::get('/publik', [PublikController::class, 'index']);
@@ -121,3 +123,4 @@ Route::get('/publik/statistik', [StatistikPublikController::class, 'index']);
 // Route::get('/publik/statistik', function () {
 //     return view('/publik/statistik');
 // });
+
