@@ -7,7 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Galeri2Controller;
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\FullCalenderController;
+
 use App\Http\Controllers\StatistikPublikController;
 
 /*
@@ -45,17 +45,12 @@ Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
 })->middleware('auth');
 
-Route::get('pedagang/full-calender', [FullCalenderController::class, 'index'])->middleware('auth');
-Route::post('/pedagang/full-calender/action', [FullCalenderController::class, 'action']);
+Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@index')->middleware('auth');
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
 
 Route::get('pedagang/statistik', function () {
     return view('/pedagang/statistik');
-})->middleware('auth');
-
-Route::get('pedagang/agenda', function () {
-    return view('/pedagang/agenda');
 })->middleware('auth');
 
 Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index')->middleware('auth');
