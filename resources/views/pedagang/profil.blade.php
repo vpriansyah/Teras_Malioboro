@@ -19,7 +19,7 @@
             <div class="col-lg-12 col-md-6 col-sm-12 iq-mtb-15">
                 <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                     <div class="content-blog iq-pr-50">
-                        <h3 class="">Nama Pedagang</h3>
+                        <h3 class="">{{ auth()->user()->username }}</h3>
                         <h5 class="text-success">Status AKTIF</h5>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         </div>
                         <br>
                         <div class="col-lg-6 align-self-center">
-                            <img class="iq-works-img" style="width: 370px; height: 250px; border-radius:10%; align-self-center;" src="{!! asset('images/fototoko.png') !!}" alt="">
+                            <img class="iq-works-img" style="width: 370px; height: 250px; border-radius:10%;" src="{!! asset('images/fototoko.png') !!}" alt="">
                         </div>
                         <br>
                         <br>

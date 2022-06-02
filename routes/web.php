@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\TicketingController;
 use App\Http\Controllers\Galeri2Controller;
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
@@ -37,9 +37,7 @@ Route::get('pedagang/daftar', function () {
     return view('/pedagang/daftar');
 })->middleware('auth');
 
-Route::get('pedagang/saran', function () {
-    return view('/pedagang/saran');
-})->middleware('auth');
+Route::get('pedagang/saran', [TicketingController::class, 'index'])->middleware('auth');
 
 Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
@@ -128,4 +126,3 @@ Route::get('/publik/statistik', [StatistikPublikController::class, 'index']);
 // Route::get('/publik/statistik', function () {
 //     return view('/publik/statistik');
 // });
-
