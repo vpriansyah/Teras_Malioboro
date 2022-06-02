@@ -27,6 +27,7 @@
                 <div class="container">
                     <h1 class="display-5 text-white mb-20">Tindak Lanjut Saran dan Aduan.</h1>
                     <div class="form-group w-100 mb-0">
+                        <form action="/tindaklanjut/search" methot="GET">
                         <div class="input-group">
                             <input class="form-control form-control-lg filled-input bg-white" placeholder="Search by keywords" type="text">
                             <div class="input-group-append">
