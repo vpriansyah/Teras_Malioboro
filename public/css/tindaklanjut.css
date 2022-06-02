@@ -94,11 +94,12 @@ section{
     font-size: 14px;
 	font-weight: 400;
 	font-size: 1em;
-	line-height: 1.5;
+	line-height: 18px;
 	margin: 0px;
 	margin-bottom: 20px;
 	padding: 0;
 	font-family: 'Raleway', sans-serif;
+    overflow: hidden;
 }
 .btn-card{
 	background-color: #28a745;
@@ -120,6 +121,16 @@ section{
     white-space: normal;
     word-wrap: break-word;
     color: #fff;
+}
+
+.btn-readmore::after {
+    content: 'Read more'
+}
+
+.btn-readmore {
+    padding: 5px 10px;
+    background: #efefef;
+    cursor: pointer;
 }
 .btn-card:hover {
     background: rgb(243, 211, 4);
