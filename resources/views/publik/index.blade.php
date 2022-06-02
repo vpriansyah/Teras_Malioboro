@@ -126,7 +126,7 @@
                     </a>
                 </div> --}}
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/galeri">
+                    <a href="publik/galeri2">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-android-cart iq-mb-10"></i>
