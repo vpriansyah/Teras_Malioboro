@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class="row justify-content-md-center">
-                <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
+                {{-- <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
                     <a href="publik/selfassessment">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> --}}
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
                     <a href="publik/galeri">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
@@ -175,7 +175,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 iq-mtb-15">
+                <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
                     <a role="button" data-toggle="modal" data-target="#informasi">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
