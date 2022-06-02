@@ -44,12 +44,14 @@
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
-                        <img src="https://placeimg.com/380/230/nature" alt="">
+                        <img src="https://kissparry.files.wordpress.com/2022/05/malioboro-2022-05-16-at-08.27.38a.jpeg?w=768" alt="">
                     
                     </div>
                     <div class="card-desc">
                         <h3>Pedagang</h3>
-                        <p>Pedagang Asongan Mengadu Tak Bisa Berjualan di Malioboro</p>
+                        <p class="description">Pedagang Asongan Mengadu Tak Bisa Berjualan di Malioboro Teras Malioboro 1 dan Teras Malioboro 2 yang bentuknya seperti mall atau pasar adalah sebagai pengganti bagi pedagang kaki lima yang biasanya berjualan di atas trotoar jalan sepanjang Jl Malioboro, dengan begitu para pelancong bisa lebih nyaman.
+
+Teras Malioboro 1 Jogja merupakan bekas Gedung Bioskop Indra dan Teras Malioboro 2 Jogja adalah bekas Kantor Dinas Pariwisata DIY. Teras Malioboro 1 dan 2 Jogja masih berada di kawasan Malioboro.</p>
                             <a href="#" class="btn-card">Read More</a>   
                     </div>
                 </div>
