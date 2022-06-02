@@ -56,7 +56,7 @@
                                 <th style="width:55%"></th>
                                 <th style="width:5%"></th>
                             </tr>
-                            @foreach($data_pkl as $data)
+                            @foreach($data_pkl as $data) 
                             <tr>
                                 <td></td>
                                 <td>Nama Toko</td>
