@@ -64,58 +64,53 @@
                                                 $shopee = $linktree->shopee_username;
                                                 $fb = $linktree->fb_nama;
                                                 $fb_link = $linktree->fb_link;
-                                                if ($ig == null) {
-                                                    $ig = '-';
-                                                }
-                                                if ($shopee == null) {
-                                                    $shopee = '-';
-                                                }
-                                                if ($fb == null) {
-                                                    $fb = '-';
-                                                }
                                             @endphp
-                                        <tr>
+                                        <tr>                                           
+                                            @if ($ig == null)
+                                            <!-- <a href="https://www.instagram.com/{{$ig}}/" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey; border-color: grey ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a>  -->
+                                            @else
                                             <td><h7>Instagram</h7></td>
                                             <td><h7> : </h7></td>
                                             <td><h7>{{ $ig }}</h7></td>
                                             <td align="right">
-                                            @if ($ig == '-')
-                                            <a href="https://www.instagram.com/{{$ig}}/" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey; border-color: grey ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a> 
-                                            @else
                                             <a href="https://www.instagram.com/{{$ig}}/" type="button" class="btn btn-light" style="background-color: #E1306C; border-color: #E1306C ;color: #FFFFFF"> <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a> 
-                                            @endif
-                                        </td>
+                                            </td>
+                                            @endif                                      
                                         </tr>
-                                        <tr>
+                                        <tr>                                         
+                                            @if ($shopee == null)
+                                            <!-- <a href="https://shopee.co.id/{{$shopee}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey ; border-color: grey  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i></a>   -->
+                                            @else
                                             <td><h7>Shopee</h7></td>
                                             <td><h7> : </h7></td>                                                
                                             <td><h7>{{ $shopee }}</h7></td>
                                             <td align="right">
-                                            @if ($shopee == '-')
-                                            <a href="https://shopee.co.id/{{$shopee}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey ; border-color: grey  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i></a>  
-                                            @else
                                             <a href="https://shopee.co.id/{{$shopee}}" type="button" class="btn btn-light " style="background-color: #FF6600 ; border-color: #FF6600  ;color: #FFFFFF"> <i class="fa fa-shopping-cart" style="color: #FFFFFF;"></i></a>  
-                                            @endif
-                                        </td>
+                                            </td>
+                                            @endif                                        
                                         </tr> 
                                         <tr>
+                                            @if ($fb_link == null)
+                                            <!-- <a href="{{$fb_link}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey ; border-color: grey  ;color: #FFFFFF"> <i class="fa fa-facebook-official  " style="color: #FFFFFF;"></i></a>   -->
+                                            @else
                                             <td><h7>Facebook</h7></td>
                                             <td><h7> : </h7></td>                                               
                                             <td><h7>{{ $fb }}</h7></td>
                                             <td align="right">
-                                            @if ($fb_link == null)
-                                            <a href="{{$fb_link}}" type="button" class="btn btn-light btn disabled" aria-disabled="true" style="background-color: grey ; border-color: grey  ;color: #FFFFFF"> <i class="fa fa-facebook-official  " style="color: #FFFFFF;"></i></a>  
-                                            @else
                                             <a href="{{$fb_link}}" type="button" class="btn btn-light " style="background-color: #29487d ; border-color: #29487d  ;color: #FFFFFF"> <i class="fa fa-facebook-official" style="color: #FFFFFF;"></i></a>  
+                                            </td>
                                             @endif
-                                        </td>
                                         </tr>
                                         @endforeach
-                                        
                                         <tr>
                                             <td><h7>Lokasi</h7></td>
                                             <td><h7> : </h7></td>
-                                            <td colspan="2"><h7>{{$lokasi_teras->nama}} {{$lokasi_gedung->nama}} {{$lokasi_lantai->nama}}, <br> kios nomor {{$lokasi_no_kios->nama}}</h7></td>
+                                            <td colspan="2"><h7>{{$lokasi_teras->nama}} {{$lokasi_gedung->nama}} {{$lokasi_lantai->nama}}, <br> Kios Nomor {{$lokasi_no_kios->nama}}</h7></td>
+                                        </tr>
+                                        <tr>
+                                            <td><h7>Lokasi Lama</h7></td>
+                                            <td><h7> : </h7></td>
+                                            <td colspan="2"><h7>{{$data_pkl->lokasi_lama}}</h7></td>
                                         </tr>
                                     </table>
                                     <div class="iq-pb-20">
