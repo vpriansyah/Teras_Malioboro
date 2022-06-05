@@ -3,11 +3,10 @@
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\TicketingController;
+use App\Http\Controllers\SaranController;
 use App\Http\Controllers\Galeri2Controller;
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
-
 use App\Http\Controllers\StatistikPublikController;
 
 /*
@@ -37,7 +36,8 @@ Route::get('pedagang/daftar', function () {
     return view('/pedagang/daftar');
 })->middleware('auth');
 
-Route::get('pedagang/saran', [TicketingController::class, 'index'])->middleware('auth');
+Route::get('pedagang/saran', [SaranController::class, 'index']);
+Route::get('pedagang/saran/detail/{id}', [TicketingController::class, 'index']);
 
 Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
