@@ -3,14 +3,11 @@
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-<<<<<<< Updated upstream
 use App\Http\Controllers\SaranController;
 use App\Http\Controllers\Galeri2Controller;
-=======
 
->>>>>>> Stashed changes
+
 use App\Http\Controllers\PublikController;
-use App\Http\Controllers\Galeri2Controller;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;

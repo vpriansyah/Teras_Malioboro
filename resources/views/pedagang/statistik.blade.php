@@ -15,6 +15,24 @@
                         </div>
                     </div>
                     <br>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 iq-pb-30">
+                            <div class="card">
+                                <h5 class="card-header">Pembelian terbanyak</h5>
+                                <div class="card-body">
+                                    <canvas id="lokasi_pedagang" style="width:100%;max-width:100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="card">
+                                <h5 class="card-header">Pencarian Terfavorit</h5>
+                                <div class="card-body">
+                                    <canvas id="kategori_dagangan" style="width:100%;max-width:100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
