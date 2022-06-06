@@ -20,8 +20,10 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/pedagang');
+            if (Auth::user()->role == 0) {
+                $request->session()->regenerate();
+                return redirect()->intended('/pedagang');
+            }
         }
 
         return back()->with('loginError', 'Login gagal!');

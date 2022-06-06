@@ -44,41 +44,48 @@
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
-                        <img src="https://kissparry.files.wordpress.com/2022/05/malioboro-2022-05-16-at-08.27.38a.jpeg?w=768" alt="">
-                    
-                    </div>
-                    <div class="card-desc">
-                        <h3>Pedagang</h3>
-                        <p class="description">Pedagang Asongan Mengadu Tak Bisa Berjualan di Malioboro Teras Malioboro 1 dan Teras Malioboro 2 yang bentuknya seperti mall atau pasar adalah sebagai pengganti bagi pedagang kaki lima yang biasanya berjualan di atas trotoar jalan sepanjang Jl Malioboro, dengan begitu para pelancong bisa lebih nyaman.
-
-Teras Malioboro 1 Jogja merupakan bekas Gedung Bioskop Indra dan Teras Malioboro 2 Jogja adalah bekas Kantor Dinas Pariwisata DIY. Teras Malioboro 1 dan 2 Jogja masih berada di kawasan Malioboro.</p>
-                            <a href="#" class="btn-card">Read More</a>   
+                        
+                              <!-- Input checkbox for readmore -->
+                              <input type="checkbox" id="check-readmore">
+                              <img src="https://img.okezone.com/content/2022/01/27/408/2538583/dear-traveler-jangan-lupa-ini-2-lokasi-baru-pkl-malioboro-QtpBuJnS7Y.jpg" alt="">
+                              <h4 style="color: #000000;font-weight: 600;margin-top: 10px;margin-left: 30px">Lantai Retak</h4>
+                              <p class="description">Meski baru sekitar seminggu diresmikan, ternyata sudah banyak masalah yang dikeluhkan oleh para pedagang di Teras Malioboro I. 
+                                  Salah satu masalah yang paling dirisaukan pedagang adalah banyaknya retakan di lantai 3 Teras Malioboro I. 
+                                  Retakan itu terdapat hampir di seluruh bagian lantai, terutama pada sambungan antarbagian lantai.</p>
+                              <!-- Readmore button -->
+                              <label for="check-readmore" class="button-readmore"></label>  
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
-                        <img src="https://placeimg.com/380/230/animals" alt="">
+                        <!-- Input checkbox for readmore -->
+                        <input type="checkbox" id="check-readmore">
+                        <img src="https://tripjogja.co.id/wp-content/uploads/2022/02/paket-wisata-jogja-by-tripjogja-376.jpg" alt="">
                         
-                    </div>
-                    <div class="card-desc">
-                        <h3>Pedagang</h3>
-                        <p>Lantai yang retak</p>
-                            <a href="#" class="btn-card">Read More</a>   
+                        <h4 style="color: #000000;font-weight: 600;margin-top: 10px;margin-left: 30px">Pedagang Kaki Lima</h4>
+                        <p class="description">Meski banyak pedagang kaki lima yang masih enggan pindah berjualan di teras Malioboro 1 dan 2, 
+                            namun Pemerintah Kota Yogyakarta menegaskan hanya memberikan batas waktu relokasi hingga tanggal 7 Februari mendatang.
+                        </p>
+                            <!-- Readmore button -->
+                            <label for="check-readmore" class="button-readmore"></label>     
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
-                        <img src="https://placeimg.com/380/230/tech" alt="">
-                        
-                    </div>
-                    <div class="card-desc">
-                        <h3>Pedagang</h3>
-                        <p>Pengunjung yang bruntal</p>
-                            <a href="#" class="btn-card">Read More</a>   
+                         <!-- Input checkbox for readmore -->
+                         <input type="checkbox" id="check-readmore">
+                         <img src="https://t-2.tstatic.net/jogja/foto/bank/images/Hampir-Dua-Pekan-Menempati-Teras-Malioboro-2-PKL-Sekarang-Nyari-Penglaris-Aja-Susah.jpg" alt="">
+                         
+                         <h4 style="color: #000000;font-weight: 600;margin-top: 10px;margin-left: 30px">Pedagang Mengeluh</h4>
+                         <p class="description">Keluhan yang sama disampaikan oleh Rubiyanti (50) pedagang bakpia. Menurutnya sebelum direlokasi, jualan di bawah ramai. 
+                             Lokasinya yang strategis membuat pembeli lebih mudah mengakses. Semetara untuk lokasi baru ini cukup jauh.
+                         </p>
+                             <!-- Readmore button -->
+                             <label for="check-readmore" class="button-readmore"></label>  
                     </div>
                 </div>
             </div>

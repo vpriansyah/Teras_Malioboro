@@ -16,7 +16,7 @@ class AduanController extends Controller
         // dd($kat_aduan);
         return view('publik.aduansaran', ['kat_aduan' => $kat_aduan]);
     }
-    
+
     public function tambah(Request $request)
     {
         $captchaResult = $_POST["captchaResult"];
@@ -36,13 +36,9 @@ class AduanController extends Controller
                 'kategori' => $request->kategori,
                 'waktu' => $request->waktu
             ]);
-            return redirect('/publik')->with('message','Berhasil mengajukan aduan/saran.');
-
+            return redirect('/publik')->with('message', 'Berhasil mengajukan aduan/saran.');
         } else {
-            return back()->with('message','Hasil penjumlahan salah.');
+            return back()->with('message', 'Hasil penjumlahan salah.');
         }
-
-        
     }
 }
-

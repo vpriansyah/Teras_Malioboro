@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class InfoPedagangController extends Controller
-{    
-    public function index(Request $request)
+{
+    public function index()
     {
         $info_penting_pedagang = DB::table('info_penting_pedagang')->paginate(2);
         return view('pedagang.informasi', ['info_penting_pedagang' => $info_penting_pedagang]);
@@ -16,7 +16,7 @@ class InfoPedagangController extends Controller
 
     public function search(Request $request)
     {
-        $search = DB::table('info_penting_pedagang')->where('judul', 'like', "%" .$request->search. "%")->paginate(2);
+        $search = DB::table('info_penting_pedagang')->where('judul', 'like', "%" . $request->search . "%")->paginate(2);
         return view('pedagang.informasi', ['info_penting_pedagang' => $search]);
     }
 }
