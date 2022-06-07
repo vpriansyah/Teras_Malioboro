@@ -68,7 +68,7 @@
 </div>
 
 @foreach($info_penting_pedagang as $info)
-<div class="container justify-content-end">
+<!--<div class="container justify-content-end">
     <div class="card" style="width:max">
         <br>
         <img class="mx-auto d-block" src="{!! asset('images/festival_bakpia.jpg') !!}" alt="Card image" style="width:50%">
@@ -76,6 +76,29 @@
             <h4 class="card-title">{{$info->judul}}</h4>
             <p class="card-title">{{$info->tanggal}}</p>
             <p class="card-title">{{$info->isi}}</p>
+        </div>
+    </div>
+    <br>
+</div>-->
+
+    <?php
+    $isi = substr($info->isi, 0, 175); 
+    ?>
+    <div class="container justify-content-end">
+        <div class="card shadow-sm p-3 mb-3 bg-body rounded" style="max-width:auto;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                <img src="{!! asset('images/festival_bakpia.jpg') !!}" class="img-fluid rounded-start" style="height:230px">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$info->judul}}</h5>
+                        <p class="card-text"><small class="text-muted">{{$info->tanggal}}</small></p>
+                        <p class="card-text">{{$info->isi}}</p>
+                        <!--<a href="{{ url('pedagang/informasi/readmore-info');}}/{{$info->id}}" class="btn btn-success">Selengkapnya</a>-->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <br>

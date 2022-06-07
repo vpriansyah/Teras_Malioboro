@@ -28,9 +28,10 @@
                         </div>
                     </div>
                     @endforeach
-                    <br><br>
+                    <br><br><br>
 
                     <!-- Form -->
+                    <h5 class="title iq-tw-6">Form Saran Aduan</h5>
                     <form action="/action_page.php">
                         <div class="mb-3">
                             <label for="jenis" class="form-label">Jenis Aduan</label>
@@ -41,7 +42,7 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="jenis" class="form-label">Kategori Aduan</label>
+                            <label for="kategori" class="form-label">Kategori Aduan</label>
                             <select class="form-select" aria-label="Default select example">
                             <option selected>Klik untuk pilih</option>
                             <option value="Publik">Umum</option>
@@ -53,8 +54,8 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="pwd" class="form-label">Saran dan Aduan</label>
-                            <textarea type="password" class="form-control" id="pwd" placeholder="Masukkan saran dan aduan anda" name="pswd"></textarea>
+                            <label for="areasaran" class="form-label">Saran dan Aduan</label>
+                            <textarea type="text" class="form-control" id="areasaran" placeholder="Masukkan saran dan aduan anda" name="areasaran" rows="5"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

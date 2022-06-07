@@ -19,4 +19,10 @@ class InfoPedagangController extends Controller
         $search = DB::table('info_penting_pedagang')->where('judul', 'like', "%" . $request->search . "%")->paginate(2);
         return view('pedagang.informasi', ['info_penting_pedagang' => $search]);
     }
+
+    public function readmore(Info $info)
+    {
+        $info = DB::table('info_penting_pedagang')->where("id",$info)->get();
+        return view('pedagang.informasi.readmore-info.{{$info->id}}', compact('info'));
+    }
 }
