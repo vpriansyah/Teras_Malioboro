@@ -19,7 +19,7 @@
             <div class="col-lg-12 col-md-6 col-sm-12 iq-mtb-15">
                 <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                     <div class="content-blog iq-pr-50">
-                        <h3 class="">{{ auth()->user()->username }}</h3>
+                        <h3 class="">Nama Pedagang</h3>
                         <h5 class="text-success">Status AKTIF</h5>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         </div>
                         <br>
                         <div class="col-lg-6 align-self-center">
-                            <img class="iq-works-img" style="width: 370px; height: 250px; border-radius:10%;" src="{!! asset('images/fototoko.png') !!}" alt="">
+                            <img class="iq-works-img" style="width: 370px; height: 250px; border-radius:10%; align-self-center;" src="{!! asset('images/fototoko.png') !!}" alt="">
                         </div>
                         <br>
                         <br>
@@ -56,7 +56,7 @@
                                 <th style="width:55%"></th>
                                 <th style="width:5%"></th>
                             </tr>
-                            @foreach($data_pkl as $data) 
+                            @foreach($data_pkl as $data)
                             <tr>
                                 <td></td>
                                 <td>Nama Toko</td>
@@ -165,17 +165,35 @@
             </div>
             @endforeach
     </section>
-<br>
-<div class="container">
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+    <br>
+    
+    <div class="container">
+        <div class="col-lg-12 col-md-12">
+            <div class="heading-title text-center">
+                <h2 class="title iq-tw-6">Barang Dagangan</h2>
+            </div>
+        </div>
+        
+     @foreach($barang as $barang)
+   
+   <?php 
+     $foto = ($barang->gambar);               
+   ?>
+
+     <div class="row justify-content-md-center">
+        
+        <div class="card" style="width: 18rem;">
+        <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="card-img-top" alt="Foto Barang">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{$barang->barang}}</h5>
+          <p class="card-text">Harga Menyesuaikan SiBakul Jogja</p>
+          <a href="https://sibakuljogja.jogjaprov.go.id/app/Beranda" class="btn btn-primary">SiBakul Jogja</a>
+        </div>    
+    </div>
         </div>
       </div>
-</div>
+      @endforeach
+    </div>
 
     <section class="iq-feature1 overview-block-ptb grey-bg" id="menupilihan">
         <div class="container">
