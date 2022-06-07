@@ -92,7 +92,7 @@
 
     {{-- Modal Informasi Agenda --}}
     <div class="modal fade" id="infoo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -101,7 +101,7 @@
                 <div class="modal-body">
                     <div class="modalError"></div>
                     <div id="modalMdContent"></div>
-                    <div class="row" style="margin-top:10px">
+                    <div class="row">
                         <!-- <div class="col-12"> -->
                         <div class="container table-responsive">
                             <table class="table table-bordered table-hover">

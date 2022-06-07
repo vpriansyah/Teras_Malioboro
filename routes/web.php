@@ -5,9 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SaranController;
 use App\Http\Controllers\Galeri2Controller;
+
+
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\StatistikPublikController;
+use App\Http\Controllers\StatistikPedagangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +50,7 @@ Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@in
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
 
-Route::get('pedagang/statistik', function () {
-    return view('/pedagang/statistik');
-})->middleware('auth');
+Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
 
 Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index')->middleware('auth');
 Route::get('/search', 'App\Http\Controllers\InfoPedagangController@search');
