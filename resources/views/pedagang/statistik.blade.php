@@ -7,7 +7,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <br>
                     <div class="card">
                         <h5 class="card-header">Statistik Pengunjung</h5>
                         <div class="card-body">
@@ -20,7 +19,7 @@
                             <div class="card">
                                 <h5 class="card-header">Pembelian terbanyak</h5>
                                 <div class="card-body">
-                                    <canvas id="lokasi_pedagang" style="width:100%;max-width:100%"></canvas>
+                                    <canvas id="pembelian" style="width:100%;max-width:100%"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -28,7 +27,7 @@
                             <div class="card">
                                 <h5 class="card-header">Pencarian Terfavorit</h5>
                                 <div class="card-body">
-                                    <canvas id="kategori_dagangan" style="width:100%;max-width:100%"></canvas>
+                                    <canvas id="pencarian" style="width:100%;max-width:100%"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -43,27 +42,15 @@
         var pag_xValues = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
             "September", "Oktober", "November", "Desember"
         ];
-        var pag_yValues = [
-            {{ $data['Januari'] }},
-            {{ $data['Februari'] }},
-            {{ $data['Maret'] }},
-            {{ $data['April'] }},
-            {{ $data['Mei'] }},
-            {{ $data['Juni'] }},
-            {{ $data['Juli'] }},
-            {{ $data['Agustus'] }},
-            {{ $data['September'] }},
-            {{ $data['Oktober'] }},
-            {{ $data['November'] }}
-            {{ $data['Desember'] }}
-        ];
+        var pag_yValues = [20, 30, 50, 35, 60, 40, 65, 80, 60, 50, 40, 90];
 
         new Chart("kunjungan", {
             type: "line",
             data: {
                 labels: pag_xValues,
                 datasets: [{
-                    backgroundColor: "#1e7145",
+                    // backgroundColor: "#1e7145",
+                    borderColor: "#1e7145",
                     data: pag_yValues
                 }]
             },
@@ -76,6 +63,56 @@
                 //     text: "Pedagang per Paguyuban"
                 // }
             }
+        });
+
+        var pxValues = ["Pakaian", "Blangkon", "Celana", "Aksesoris"];
+        var pyValues = [55, 49, 44, 24];
+        var p_barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+        ];
+
+        new Chart("pembelian", {
+            type: "pie",
+            data: {
+                labels: pxValues,
+                datasets: [{
+                    backgroundColor: p_barColors,
+                    data: pyValues
+                }]
+            },
+            // options: {
+            //     title: {
+            //         display: false,
+            //     }
+            // }
+        });
+
+        var sxValues = ["Pakaian", "Blangkon", "Celana", "Aksesoris"];
+        var syValues = [20, 25, 30, 10];
+        var s_barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+        ];
+
+        new Chart("pencarian", {
+            type: "pie",
+            data: {
+                labels: sxValues,
+                datasets: [{
+                    backgroundColor: s_barColors,
+                    data: syValues
+                }]
+            },
+            // options: {
+            //     title: {
+            //         display: false,
+            //     }
+            // }
         });
     </script>
 @endsection
