@@ -17,12 +17,12 @@
                     @foreach($saran as $faq)
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <h2 class="accordion-header" id="flush-heading{{$faq->id_faq}}">
+                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#flush-collapse{{$faq->id_faq}}" aria-expanded="false" aria-controls="flush-collapse{{$faq->id_faq}}">
                                 {{$faq->subject}}
                             </button>
                             </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-parent="#accordionFlushExample">
+                            <div id="flush-collapse{{$faq->id_faq}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{$faq->id_faq}}" data-parent="#accordionFlushExample">
                             <div class="accordion-body">{{$faq->jawaban}}</div>
                             </div>
                         </div>
