@@ -108,7 +108,7 @@
         @foreach ($data_pkl as $data)
         {{--
         <?php if ($data != null) {?> --}}
-        <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
+        <div class="card col-lg-2 col-md-3 col-sm-4 col-6 iq-mtb-15 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
           <a href="{{ url('publik/galeri-data') }}/{{ $data->id }}" style="text-decoration: none">
             <div class="iq-blog text-left iq-ptb-30 d-flex  ">
               <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
@@ -127,8 +127,8 @@
                                 max-width: 150%; 
                                 min-height:100%;
                                 max-height:150%;
-                                max-width: 150px;
-                                min-width: 100px;
+                                max-width: 160px;
+                                min-width: 105px;
                                 max-height:150px;
                                 min-height: 100px; 
 
@@ -138,9 +138,9 @@
                 <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; margin-left:10%; margin-right:10%;">{{$data->nama_lengkap}}</h5> 
                 
                 <p class='text-center m-auto' style="font-size: 75%;">{{$data->dagangan}}
-                <p style="padding-left: 15%; font-size: 75%;">{{$data->operasional}}<br>
+                <p style="padding-left: 16%; padding-right:3%; font-size: 75%;">{{$data->operasional}}<br>
                          Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
-                <p style="padding-left: 15%; font-size: 75%;">
+                <p style="padding-left: 16%; padding-right:3%; font-size: 75%;">
                 </div>
               </div>
             </div>

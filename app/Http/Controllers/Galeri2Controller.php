@@ -70,15 +70,35 @@ class Galeri2Controller extends Controller
     }
 
     public function data($id)
-    {
-        $data_pkl = DB::table('data_pkl')->where("id", $id)->get();
-        //        dd($data_pkl);
-        $barang = DB::table('barang')->where("id_pedagang", 1)->first();
+    {   
+        $data_pkl = DB::table('data_pkl')->where("id",$id)->get();
+//        dd($data_pkl);
+        $barang = DB::table('barang')->where("id_pedagang", $id)->get();
+        //dd($barang);
+        $linktree = DB::table('linktree')->where("id", $id)->get();
+        //dd($linktree);
         $lokasi_no_kios = DB::table('data_pkl')
-            ->join('lokasi_no_kios', 'lokasi_no_kios.id', '=', 'data_pkl.lokasi_no_kios_id')
-            ->select('lokasi_no_kios.*')
-            ->get();
-        return view('publik.galeri-data', ['data_pkl' => $data_pkl, 'lokasi_no_kios' => $lokasi_no_kios, 'barang'=>$barang]);
+                ->join('lokasi_no_kios', 'lokasi_no_kios.id', '=', 'data_pkl.lokasi_no_kios_id')
+                ->select('lokasi_no_kios.*')
+                ->where('data_pkl.id','=',$id)
+                ->first();
+        $lokasi_lantai = DB::table('data_pkl')
+                ->join('lokasi_lantai', 'lokasi_lantai.id', '=', 'data_pkl.lokasi_lantai_id')
+                ->select('lokasi_lantai.*')
+                ->where('data_pkl.id','=',$id)
+                ->first();
+        $lokasi_gedung = DB::table('data_pkl')
+                ->join('lokasi_gedung', 'lokasi_gedung.id', '=', 'data_pkl.lokasi_gedung_id')
+                ->select('lokasi_gedung.*')
+                ->where('data_pkl.id','=',$id)
+                ->first();
+        $lokasi_teras = DB::table('data_pkl')
+                ->join('lokasi_teras', 'lokasi_teras.id', '=', 'data_pkl.lokasi_teras_id')
+                ->select('lokasi_teras.*')
+                ->where('data_pkl.id','=',$id)
+                ->first();
+        //dd($lokasi_no_kios);
+        return view('publik.galeri-data', compact('data_pkl', 'barang', 'linktree','lokasi_teras','lokasi_gedung','lokasi_lantai','lokasi_no_kios'));
     }
 
     public function group($id)
