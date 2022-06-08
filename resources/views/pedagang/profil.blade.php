@@ -19,8 +19,8 @@
             <div class="col-lg-12 col-md-6 col-sm-12 iq-mtb-15">
                 <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                     <div class="content-blog iq-pr-50">
-                        <h3 class="">Nama Pedagang</h3>
-                        <h5 class="text-success">Status AKTIF</h5>
+                        <h3 class="">{{ auth()->user()->username }}</h3>
+                        <h5 class="text-success">Pedagang AKTIF</h5>
                     </div>
                 </div>
             </div>
@@ -52,34 +52,34 @@
                         <br>
                         <table>
                             <tr>
-                                <th style="width:10%"></th>
-                                <th style="width:55%"></th>
                                 <th style="width:5%"></th>
+                                <th style="width:40%"></th>
+                                <th style="width:10%"></th>
                             </tr>
                             @foreach($data_pkl as $data)
                             <tr>
                                 <td></td>
                                 <td>Nama Toko</td>
                                 <td>:</td>
-                                <td></td>
+                                <td>Toko Setia Abadi</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Jam Operasional</td>
                                 <td>:</td>
-                                <td></td>
+                                <td>{{$data->operasional_jam_buka}} AM sampai {{$data->operasional_jam_tutup}} PM</td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td>Dagangan</td>
                                 <td>:</td>
-                                <td></td>
+                                <td>{{$data->dagangan}}</td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>Lokasi</td>
+                                <td>Lokasi no Kios</td>
                                 <td>:</td>
-                                <td></td>
+                                <td>{{$data->lokasi_no_kios_id}}</td>
                             </tr>
                         </table>
                         <br>
@@ -95,10 +95,10 @@
                         <br>
                         <table>
                             <tr>
-                                <th style="width: 30%"></th>
-                                <th style="width: 40%"></th>
+                                <th style="width: 10%"></th>
                                 <th style="width: 5%"></th>
-                                <th style="width: 30%"></th>
+                                <th style="width: 5%"></th>
+                                <th style="width: 10%"></th>
                             </tr>
 
 
@@ -166,7 +166,7 @@
             @endforeach
     </section>
     <br>
-    
+ 
     <div class="container">
         <div class="col-lg-12 col-md-12">
             <div class="heading-title text-center">
@@ -180,20 +180,25 @@
      $foto = ($barang->gambar);               
    ?>
 
-     <div class="row justify-content-md-center">
+<div class="row justify-content-md-center">
         
         <div class="card" style="width: 18rem;">
+            <div class=" iq-blog text-left iq-ptb-15 iq-pr-10 iq-pl-10 d-flex ">
+                <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:275px; height:100%; max-height:800px">
         <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="card-img-top" alt="Foto Barang">
         <div class="card-body">
           <h5 class="card-title">{{$barang->barang}}</h5>
           <p class="card-text">Harga Menyesuaikan SiBakul Jogja</p>
-          <a href="https://sibakuljogja.jogjaprov.go.id/app/Beranda" class="btn btn-primary">SiBakul Jogja</a>
+          <a href="https://sibakuljogja.jogjaprov.go.id/app/Beranda" class="btn btn-success">SiBakul Jogja</a>
         </div>    
     </div>
         </div>
-      </div>
+        </div>
+        </div>
+    </div>
       @endforeach
     </div>
+
 
     <section class="iq-feature1 overview-block-ptb grey-bg" id="menupilihan">
         <div class="container">
