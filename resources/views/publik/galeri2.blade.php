@@ -104,13 +104,13 @@
 
     <!--card galeri-->
     <div class="container">
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-center">
         @foreach ($data_pkl as $data)
         {{--
         <?php if ($data != null) {?> --}}
-        <div class="card col-lg-2 col-md-3 col-sm-4 col-6 iq-mtb-15 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-6 iq-mtb-10 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
           <a href="{{ url('publik/galeri-data') }}/{{ $data->id }}" style="text-decoration: none">
-            <div class="iq-blog text-left iq-ptb-30 d-flex  ">
+            <div class="iq-blog text-left iq-pt-30 d-flex  ">
               <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
                 @php
                 $foto = $data->foto_lapak;
