@@ -11,7 +11,7 @@ class Galeri2Controller extends Controller
 {
     public function index()
     {
-        $data_pkl = Galeri::filter(request(['search', 'kat_dagangan', 'lokasi_teras', 'lokasi_gedung', 'lokasi_lantai']))->paginate(12);
+        $data_pkl = Galeri::filter(request(['search', 'kat_dagangan', 'lokasi_teras', 'lokasi_gedung', 'lokasi_lantai']))->orderBy('nama_lengkap')->paginate(12);
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
 
@@ -83,7 +83,7 @@ class Galeri2Controller extends Controller
 
     public function group($id)
     {
-        $data_pkl = DB::table('data_pkl')->where('kat_dagangan_id', $id)->paginate(12);
+        $data_pkl = DB::table('data_pkl')->where('kat_dagangan_id', $id)->orderBy('nama_lengkap')->paginate(12);
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
         $lokasi_kios = DB::table('lokasi_no_kios')->get();
@@ -96,7 +96,7 @@ class Galeri2Controller extends Controller
     {
         $data['q'] = $request->query('search');
         $dagangan = DB::table('data_pkl')->where('dagangan', 'like', '%' . $data["q"] . '%');
-        $data_pkl = DB::table('data_pkl')->where('nama_lengkap', 'like', '%' . $data["q"] . '%')->union($dagangan)->paginate(12);
+        $data_pkl = DB::table('data_pkl')->where('nama_lengkap', 'like', '%' . $data["q"] . '%')->union($dagangan)->orderBy('nama_lengkap')->paginate(12);
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
         $lokasi_kios = DB::table('lokasi_no_kios')->get();
