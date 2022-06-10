@@ -13,4 +13,5 @@ class PublikController extends Controller
         $info_penting = DB::table('info')->where('status', 'Aktif')->get();
         return view('publik.index', ['info' => $info_penting]);
     }
+
 }

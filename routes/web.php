@@ -9,8 +9,10 @@ use App\Http\Controllers\Galeri2Controller;
 
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;
+use App\Models\Profil;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,8 @@ Route::get('pedagang/tindaklanjut', function () {
 Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@index')->middleware('auth');
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
+Route::resource('Profil', PublikController::class);
+
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
 
