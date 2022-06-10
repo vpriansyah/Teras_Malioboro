@@ -39,8 +39,9 @@ Route::get('pedagang/daftar', function () {
     return view('/pedagang/daftar');
 })->middleware('auth');
 
-Route::get('pedagang/saran', [SaranController::class, 'index']);
+Route::get('pedagang/saran', [SaranController::class, 'index'])->middleware('auth');
 Route::get('pedagang/saran/detail/{id}', [TicketingController::class, 'index']);
+Route::post('pedagang/input', [SaranController::class, 'input'])->middleware('auth');
 
 Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');

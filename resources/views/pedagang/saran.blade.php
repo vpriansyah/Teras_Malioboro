@@ -32,10 +32,15 @@
 
                     <!-- Form -->
                     <h5 class="title iq-tw-6">Form Saran Aduan</h5>
-                    <form action="/action_page.php">
+                    <form action="/pedagang/input/" method="post">
+                    {{ csrf_field() }}
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama Lengkap</label>
+                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama lengkap anda" required>
+                        </div>
                         <div class="mb-3">
                             <label for="jenis" class="form-label">Jenis Aduan</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="jenis" required>
                             <option selected>Klik untuk pilih</option>
                             <option value="Publik">Publik</option>
                             <option value="Private">Private</option>
@@ -43,21 +48,21 @@
                         </div>
                         <div class="mb-3">
                             <label for="kategori" class="form-label">Kategori Aduan</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="kategori" required>
                             <option selected>Klik untuk pilih</option>
-                            <option value="Publik">Umum</option>
-                            <option value="Private">Keuangan</option>
-                            <option value="Private">Pungli</option>
-                            <option value="Private">Teknik</option>
-                            <option value="Private">Kondisi Gedung</option>
-                            <option value="Private">Lainnya</option>
+                            <option value="Umum">Umum</option>
+                            <option value="Keuangan">Keuangan</option>
+                            <option value="Pungli">Pungli</option>
+                            <option value="Teknik">Teknik</option>
+                            <option value="Kondisi Gedung">Kondisi Gedung</option>
+                            <option value="Lainnya">Lainnya</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="areasaran" class="form-label">Saran dan Aduan</label>
-                            <textarea type="text" class="form-control" id="areasaran" placeholder="Masukkan saran dan aduan anda" name="areasaran" rows="5"></textarea>
+                            <label for="aduan" class="form-label">Saran dan Aduan</label>
+                            <textarea type="text" class="form-control" name="saran_aduan" id="aduan" placeholder="Masukkan saran dan aduan anda" name="areasaran" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Kirim</button>
                     </form>
                     <!-- Form End-->
 
