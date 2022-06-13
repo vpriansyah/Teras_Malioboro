@@ -27,9 +27,19 @@
                         <h5 class="iq-font-black iq-mtb-40">Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
                             Lima (PKL) Malioboro.</h5>
                         <div>
-                            <a href="{{ url('auth/login') }}" class="rounded-pill btn btn-success">Masuk</a><br>
+                            <div class="btn-group dropright">
+                                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                  Masuk
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ url('auth/login'); }}">Pedagang</a>
+                                    <a class="dropdown-item" href="#">Operator</a>
+                                    <a class="dropdown-item" href="#">Eksekutif</a>
+                                </div>
+                              </div>
+                            {{-- <a href="{{ url('auth/login') }}" class="rounded-pill btn btn-success">Masuk</a><br> --}}
                         </div>
-                        <br>
+                        <div class="iq-ptb-30"></div>
 
                     </div>
                     <div class="col-md-6">
@@ -108,9 +118,9 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="heading-title text-center">
                         <h2 class="title iq-tw-6">Layanan</h2>
-                        <p>Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a
+                        {{-- <p>Lorem Ipsum is simply dummy text ever sincehar the 1500s, when an unknownshil printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries.</p>
+                            centuries.</p> --}}
                     </div>
                 </div>
             </div>
