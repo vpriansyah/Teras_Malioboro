@@ -66,10 +66,6 @@ Route::get('/readmore-info/{info}', 'App\Http\Controllers\InfoPedagangController
 
 Route::get('/tindaklanjut/search', [TindakLanjutController::class, 'search']);
 
-Route::group(['middleware' => ['cekrole:admin,eksekutif']], function(){
-    Route::get('/pedagang', function () {
-        return view('/pedagang/dashboard');});
-});
 
 //Publik
 Route::get('/', [PublikController::class, 'index']);
