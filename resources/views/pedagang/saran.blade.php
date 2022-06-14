@@ -36,7 +36,7 @@
                     {{ csrf_field() }}
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama Lengkap</label>
-                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama lengkap anda" required>
+                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan nama anda" required>
                         </div>
                         <div class="mb-3">
                             <label for="jenis" class="form-label">Jenis Aduan</label>
@@ -58,15 +58,16 @@
                             <option value="Lainnya">Lainnya</option>
                             </select>
                         </div>
+                            <input type="hidden" name="status" id="status" value="1">
+                        <div>
+                        </div>
                         <div class="mb-3">
                             <label for="aduan" class="form-label">Saran dan Aduan</label>
                             <textarea type="text" class="form-control" name="saran_aduan" id="aduan" placeholder="Masukkan saran dan aduan anda" name="areasaran" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Kirim</button>
+                        <button type="submit" class="btn btn-success">Kirim</button>
                     </form>
                     <!-- Form End-->
-
-                </div>
             </div>
         </div>
     </section>
