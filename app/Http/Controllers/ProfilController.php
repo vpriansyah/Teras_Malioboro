@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Profil;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProfilController extends Controller
 {
@@ -62,9 +63,9 @@ class ProfilController extends Controller
      */
     public function edit($id)
     {
-        $model = Profil::find($id);
-        return view('pedagang.profil.edit', compact(
-            'model'
+        $data_pkl = Profil::find($id);
+        return view('pedagang.edit', compact(
+            'data_pkl'
         ));
     }
 
@@ -75,9 +76,46 @@ class ProfilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $this->validate($request, [
+
+            'nama_lengkap' => 'required',
+            'no_hp' => 'required',
+            'alamat_ktp' => 'required',
+            'paguyuban_id' => 'required',
+            'nik' => 'required',
+            'no_kk' => 'required',
+
+        ]);
+
+        $profil = Profil::where('id', $request->id);
+        $profil->update([
+
+            'nama_lengkap' => $request->nama_lengkap,
+            'no_hp' => $request->no_hp,
+            'alamat_ktp' => $request->alamat_ktp,
+            'paguyuban_id' => $request->paguyuban_id,
+            'nik' => $request->nik,
+            'no_kk' => $request->no_kk,
+            'nomor_nib' => $request->nomor_nib
+
+        ]);
+
+        if ($profil) {
+            return redirect()
+                ->route('pedagang.profil')
+                ->with([
+                    Alert::success('Berhasil', 'Artikel Berhasil Diubah')
+                ]);
+        } else {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with([
+                    Alert::error('Gagal', 'Artikel Gagal Diubah')
+                ]);
+        }
     }
 
     /**

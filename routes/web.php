@@ -54,8 +54,9 @@ Route::get('pedagang/edit', function () {
 
 Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@index')->middleware('auth');
 
-Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
+Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth')->name('pedagang.profil');
 Route::resource('profil', ProfilController::class);
+Route::put('profil/{profil}','ProductController@update')->name('profil.update2');
 
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');

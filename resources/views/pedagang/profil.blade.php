@@ -69,9 +69,9 @@
                                         <td></td>
                                         <td>Jam Operasional</td>
                                         <td>:</td>
-                                        <td>{{ $data->operasional_jam_buka }} AM sampai
+                                        <td>{{ $data->operasional_jam_buka }} Pagi sampai
                                             {{ $data->operasional_jam_tutup }}
-                                            PM</td>
+                                            </td>
                                     </tr>
                                     <tr>
                                         <td></td>
@@ -158,7 +158,7 @@
 
                             </table>
                             <br>
-                            <center><a href="{{ route('profil.edit'), $model->id }}"
+                            <center><a href="{{ url('profil/'.$data->id.'/edit') }}"
                                 class="btn btn-success">Edit</a></center>
                         </div>
                         <br>

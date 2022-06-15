@@ -13,4 +13,9 @@ class Profil extends Model
     {
         return $this->belongsTo(Pengguna::class);
     }
+
+    protected $fillable = [
+        'nama_lengkap','no_hp','alamat_ktp','paguyuban_id','nik','no_kk','nomor_nib', 'updated_at'
+    ];
+    
 }
