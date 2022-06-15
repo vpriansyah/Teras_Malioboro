@@ -22,10 +22,10 @@
         <div class="container" id="home">
             <div class="banner-text text-left">
                 <div class="row justify-content-between">
-                    <div class="col-md-6 align-self-center">
+                    <div class="col-md-5 align-self-center">
                         <h1 class="iq-font-black iq-tw-4"><b>Teras Malioboro</b></h1>
-                        <h5 class="iq-font-black iq-mtb-40">Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
-                            Lima (PKL) Malioboro.</h5>
+                        <h6 class="iq-font-black iq-mtb-40" style="text-align: justify; text-justify: inter-word;"> &emsp; &emsp; Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
+                            Lima (PKL) Malioboro.</h6>
                         <div>
                             <div class="btn-group dropright">
                                 <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
@@ -136,6 +136,16 @@
                     </a>
                 </div> --}}
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
+                    <a href="publik/agenda">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <div>
+                                <i class="ion-clipboard iq-mb-10"></i>
+                                <h5 class="iq-tw-6 iq-pb-10">Agenda Teras</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
                     <a href="publik/galeri2">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
@@ -156,11 +166,11 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/agenda">
+                    <a href="publik/peta">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
-                                <i class="ion-clipboard iq-mb-10"></i>
-                                <h5 class="iq-tw-6 iq-pb-10">Agenda Teras</h5>
+                                <i class="ion-map iq-mb-10"></i>
+                                <h5 class="iq-tw-6 iq-pb-10">Peta Interaktif</h5>
                             </div>
                         </div>
                     </a>
@@ -207,7 +217,7 @@
     ?>
 
     <!-- Peta Interaktif -->
-    <section class="overview-block-ptb white-bg " id="peta">
+    {{-- <section class="overview-block-ptb white-bg " id="peta">
         <div class="container">
 
             <div class="heading-title blck text-center">
@@ -222,8 +232,29 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Peta Interaktif-->
+
+    <!-- Tentang -->
+    <section class="overview-block-ptb white-bg " id="tentang">
+        <div class="container">
+
+            <div class="heading-title blck text-center">
+                <h2 class="title black iq-tw-6 iq-font-black">Tentang</h2>
+            </div>
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-5 col-sm-8 col-8 d-flex align-items-md-center">
+                        <img class="banner-img img-fluid iq-pb-20" src="{!! asset('images/LOGO_TERAS_HITAM.png') !!}" alt="teras-malioboro">
+                    </div>
+                    <div class="col-lg-8 col-md-7 col-sm-12 col-12 d-flex align-item-center" style="text-align: justify; text-justify: inter-word;">
+                        <p> &emsp; &emsp; Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laboriosam consequuntur explicabo vel ipsam aspernatur perspiciatis labore expedita deleniti molestias doloribus, sequi hic ratione saepe eum nam tenetur pariatur placeat. Veritatis, ab rerum. Doloremque earum neque perferendis quo aliquid eveniet ut voluptatum atque dolore, distinctio eligendi cum quis quia debitis eos, harum dolorem alias, nisi aut illum sequi corrupti! Ad, architecto expedita. Architecto sequi magni sit in voluptatum! Iste eligendi sint quod, asperiores rem aliquam a quisquam culpa incidunt modi quam fugit tempora aliquid laudantium quia quis voluptas voluptatem placeat labore veritatis. Quia, accusantium reprehenderit necessitatibus nulla fuga est. Quia omnis quod natus iure animi excepturi ab a libero ex officiis?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tentang-->
 
     <!-- Footer -->
     <footer id="kontak" class="iq-footerr">
