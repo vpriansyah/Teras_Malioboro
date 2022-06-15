@@ -23,6 +23,12 @@ class LoginController extends Controller
             if (Auth::user()->role == 0) {
                 $request->session()->regenerate();
                 return redirect()->intended('/pedagang');
+            } elseif (Auth::user()->role == 1) {
+                $request->session()->regenerate();
+                return redirect()->intended('/pedagang/admin/dashboard');
+            } elseif (Auth::user()->role == 2) {
+                $request->session()->regenerate();
+                return redirect()->intended('/pedagang');
             }
         }
 

@@ -137,18 +137,18 @@
     </div>
         <div class="row justify-content-md-center">
             @foreach($barang as $barang)
-                <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch bg-transparent border-0" style="width:50%;">
-                <div class=" iq-blog text-left iq-ptb-15 iq-pr-10 iq-pl-10 d-flex ">
-                <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:275px; height:100%; max-height:800px">
+                <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mt-10 d-flex align-items-stretch bg-transparent border-0" style="width:50%;">
+                <div class=" iq-blog text-left iq-pt-10 iq-pr-10 iq-pl-10">
+                <div class="justify-content-center align-items-center" style="padding-top:5% ;width: 100%; /*min-height:250px;*/ height:80%; max-height:800px">
                     @php 
                         $foto = ($barang->gambar);
                         if ($barang->gambar == null) $foto= "notfound.jpg";                
                     @endphp
-                <div class ="card m-auto justify-content-center bg-transparent border-0" style="padding-top:30%; width:auto; max-width: 75%; height:25%; max-height:100px" >
-                    <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100" style="height:auto; max-height:175px; padding-top:5%;; width:auto;" alt="''.$barang->gambar.''">
+                <div class ="card m-auto justify-content-center bg-transparent border-0" style=" background-size:cover; background-position: center;padding-top: 15%; width:auto; max-width: 75%; height:75%; max-height:100px" >
+                    <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="" style="height:auto; max-height:175px; padding-top:5%;; width:auto;" alt="''.$barang->gambar.''">
                 </div>
-                <div class="card m-auto justify-content-center bg-transparent border-0" >                                         
-                <h5 class="iq-tw-6 iq-pb-5 m-auto" style=" font-size: 100%; padding-top: 60%">{{$barang->barang}}</h5> 
+                <div class="card justify-content-center bg-transparent border-0" >                                         
+                <h5 class="iq-tw-6 text-center" style=" font-size: 100%; padding-top: 25%">{{$barang->barang}}</h5> 
                 </div>
                 </div>
                 </div>

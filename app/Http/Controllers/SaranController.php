@@ -24,4 +24,5 @@ class SaranController extends Controller
         //     return redirect('/pedagang/saran')->with('status', 'Data gagal disimpan');
         // }
     }
+
 }

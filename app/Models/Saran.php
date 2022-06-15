@@ -10,6 +10,6 @@ class Saran extends Model
 
     protected $table = "saran";
     protected $fillable = [
-		'nama', 'jenis', 'kategori','saran_aduan'
+		'nama', 'jenis', 'kategori','saran_aduan', 'status'
 	];
 }

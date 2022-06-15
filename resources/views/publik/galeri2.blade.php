@@ -140,7 +140,6 @@
                 <p class='text-center m-auto' style="font-size: 75%;">{{$data->dagangan}}
                 <p style="padding-left: 16%; padding-right:3%; font-size: 75%;">{{$data->operasional}}<br>
                          Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
-                <p style="padding-left: 16%; padding-right:3%; font-size: 75%;">
                 </div>
               </div>
             </div>

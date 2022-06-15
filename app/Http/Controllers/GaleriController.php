@@ -31,7 +31,7 @@ class GaleriController extends Controller
     {   
         $data_pkl = DB::table('data_pkl')->where("id",$id)->get();
 //        dd($data_pkl);
-        $barang = DB::table('barang')->where("id_pedagang", $id)->get();
+        $barang = DB::table('barang')->where("id_pedagang", $id)->orderBy('barang')->get();
         //dd($barang);
         $linktree = DB::table('linktree')->where("id", $id)->get();
         //dd($linktree);
