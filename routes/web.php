@@ -49,10 +49,14 @@ Route::get('pedagang/tindaklanjut', function () {
     return view('/pedagang/tindaklanjut');
 })->middleware('auth');
 
+Route::get('pedagang/edit', function () {
+    return view('/pedagang/edit');
+})->middleware('auth');
+
 Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@index')->middleware('auth');
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
-Route::resource('Profil', PublikController::class);
+Route::resource('Profil', ProfilController::class);
 
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');

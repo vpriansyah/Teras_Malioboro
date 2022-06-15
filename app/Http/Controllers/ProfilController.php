@@ -62,7 +62,10 @@ class ProfilController extends Controller
      */
     public function edit($id)
     {
-        //
+        $model = Profil::find($id);
+        return view('pedagang.profil.edit', compact(
+            'model'
+        ));
     }
 
     /**

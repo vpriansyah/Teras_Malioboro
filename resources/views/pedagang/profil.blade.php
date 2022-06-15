@@ -58,7 +58,7 @@
                                     <th style="width:40%"></th>
                                     <th style="width:10%"></th>
                                 </tr>
-                                @foreach ($data_pkl as $data)
+                                @foreach ($data_pkl as $key=>$data)
                                     <tr>
                                         <td></td>
                                         <td>Nama Toko</td>
@@ -87,7 +87,8 @@
                                     </tr>
                             </table>
                             <br>
-                            <center><button type="button" class="btn btn-success">Edit</button></center>
+                            <center><center><a href="{{ url('profil/'.$data->id.'/edit') }}"
+                                class="btn btn-success">Edit</a></center></center>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 iq-mtb-15">
@@ -158,8 +159,8 @@
 
                             </table>
                             <br>
-                            <center><button type="button" class="btn btn-success"><span
-                                        class="spinner-border spinner-border-sm"></span>Edit</button></center>
+                            <center><a href="{{ url('profil/'.$data->id.'/edit') }}"
+                                class="btn btn-success">Edit</a></center>
                         </div>
                         <br>
                         <div class="alert alert-warning">
