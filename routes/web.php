@@ -42,7 +42,6 @@ Route::get('pedagang/daftar', function () {
 })->middleware('auth');
 
 Route::get('pedagang/saran', [SaranController::class, 'index'])->middleware('auth');
-Route::get('pedagang/saran/detail/{id}', [TicketingController::class, 'index']);
 Route::post('pedagang/input', [SaranController::class, 'input'])->middleware('auth');
 
 Route::get('pedagang/tindaklanjut', function () {
@@ -56,7 +55,7 @@ Route::get('pedagang/edit', function () {
 Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@index')->middleware('auth');
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth');
-Route::resource('Profil', ProfilController::class);
+Route::resource('profil', ProfilController::class);
 
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
@@ -68,7 +67,8 @@ Route::get('/readmore-info/{info}', 'App\Http\Controllers\InfoPedagangController
 //    return view('/pedagang/informasi');
 //});
 
-Route::get('/tindaklanjut/search', [TindakLanjutController::class, 'search']);
+
+// Route::get('/tindaklanjut/search', [TindakLanjutController::class, 'search']);
 
 
 //Publik

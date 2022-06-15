@@ -8,40 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit</title>
+    <title>Document</title>
 </head>
 <body>
-<form method="POST" action="{{ url('profil/'.$model->id) }}">
-<input type="hidden" name="_method" value="PATCH">
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-Nama : <input type="text" name="nama">
-<br>
-
-<button type="submit">SIMPAN</button>
-
-</form>
-
+    <form action="">
+        
+    </form>
+    
 </body>
 </html>
 

@@ -87,8 +87,7 @@
                                     </tr>
                             </table>
                             <br>
-                            <center><center><a href="{{ url('profil/'.$data->id.'/edit') }}"
-                                class="btn btn-success">Edit</a></center></center>
+                
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 iq-mtb-15">
@@ -159,7 +158,7 @@
 
                             </table>
                             <br>
-                            <center><a href="{{ url('profil/'.$data->id.'/edit') }}"
+                            <center><a href="{{ route('profil.edit'), $model->id }}"
                                 class="btn btn-success">Edit</a></center>
                         </div>
                         <br>
