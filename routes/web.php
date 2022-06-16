@@ -97,6 +97,7 @@ Route::get('/publik/galeri/{id}/{id2}', 'App\Http\Controllers\GaleriController@g
 Route::get('/publik/cari', 'App\Http\Controllers\GaleriController@cari');
 Route::get('/publik/cari2', 'App\Http\Controllers\Galeri2Controller@cari');
 Route::get('/publik/galeri-data/{id}', 'App\Http\Controllers\GaleriController@data');
+Route::get('/publik/galeri-data/{id}/{id2}', 'App\Http\Controllers\GaleriController@barang');
 Route::get('/publik/cctv', 'App\Http\Controllers\CctvController@index');
 Route::get('/publik/peta', 'App\Http\Controllers\PetaController@index');
 Route::get('/publik/aduansaran', 'App\Http\Controllers\AduanController@index');

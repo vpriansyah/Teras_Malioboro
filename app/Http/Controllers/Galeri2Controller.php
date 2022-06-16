@@ -97,8 +97,16 @@ class Galeri2Controller extends Controller
                 ->select('lokasi_teras.*')
                 ->where('data_pkl.id','=',$id)
                 ->first();
+        // $barang_dagangan = DB::table('barang')->where("id",$id)->get();
         //dd($lokasi_no_kios);
         return view('publik.galeri-data', compact('data_pkl', 'barang', 'linktree','lokasi_teras','lokasi_gedung','lokasi_lantai','lokasi_no_kios'));
+    }
+
+    public function barang($id)
+    {
+        $barang_dagangan = DB::table('barang')->where("id",$id)->get();
+
+        return view('publik.galeri-data', compact('barang_dagangan'));
     }
 
     public function group($id)
