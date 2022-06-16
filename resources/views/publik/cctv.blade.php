@@ -13,8 +13,8 @@
             </div>
 
             @php
-                $gambar1 = $tm1->gambar;
-                $gambar2 = $tm2->gambar;
+                $gambar1 = $tm1->gambar1;
+                $gambar2 = $tm2->gambar1;
                 $status1 = $stat_tm1->status;
                 $status2 = $stat_tm2->status;
             @endphp
@@ -28,14 +28,46 @@
                             <h5 class="title iq-tw-6 iq-pt-10" align="center">Status : <i
                                     style="color: {{ $stat_tm1->warna }};">{{ $status1 }}</i></h5>
                             @php
-                                $foto = $tm1->gambar;
-                                if ($tm1->gambar == null) {
+                                $foto1 = $tm1->gambar1;
+                                $foto2 = $tm1->gambar2;
+                                $foto3 = $tm1->gambar3;
+
+                                if ($tm1->gambar1 == null) {
                                     $foto = 'notfound.jpg';
                                 }
                             @endphp
-                            <div class="iq-ptb-20" align="center">
-                                <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100"
-                                    style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar.''">
+                            <div id="tm1" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{!! asset('images/Publik_Galeri/' . $foto1 . '') !!}" class="d-block mw-100"
+                                        style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar1.''">                                
+                                        <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="color: #FFFFFF"><b>Lantai 1</b></h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{!! asset('images/Publik_Galeri/' . $foto2 . '') !!}" class="d-block mw-100"
+                                        style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar2.''">                                
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="color: #FFFFFF"><b>Lantai 2</b></h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{!! asset('images/Publik_Galeri/' . $foto3 . '') !!}" class="d-block mw-100"
+                                        style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar3.''">                                
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="color: #FFFFFF"><b>Lantai 3</b></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-target="#tm1" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-target="#tm1" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </button>
                             </div>
                             <h5 class="title iq-tw-6">Keterangan :</h5>
                             <p>{{ $tm1->keterangan }}</p>
@@ -50,14 +82,45 @@
                             <h5 class="title iq-tw-6 iq-pt-10" align="center">Status : <i
                                     style="color: {{ $stat_tm2->warna }};">{{ $status2 }}</i></h5>
                             @php
-                                $foto = $tm2->gambar;
-                                if ($tm2->gambar == null) {
+                                $foto1 = $tm2->gambar1;
+                                $foto2 = $tm2->gambar2;
+                                $foto3 = $tm2->gambar3;
+                                if ($tm2->gambar1 == null) {
                                     $foto = 'notfound.jpg';
                                 }
                             @endphp
-                            <div class="iq-ptb-20" align="center">
-                                <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100"
-                                    style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar.''">
+                            <div id="tm2" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{!! asset('images/Publik_Galeri/' . $foto1 . '') !!}" class="d-block mw-100"
+                                        style="height:auto; max-height:100%; width:auto;" alt="''.$tm2->gambar1.''">                                
+                                        <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="color: #FFFFFF"><b>Lantai 1</b></h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{!! asset('images/Publik_Galeri/' . $foto2 . '') !!}" class="d-block mw-100"
+                                        style="height:auto; max-height:100%; width:auto;" alt="''.$tm2->gambar2.''">                                
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="color: #FFFFFF"><b>Lantai 2</b></h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{!! asset('images/Publik_Galeri/' . $foto3 . '') !!}" class="d-block mw-100"
+                                        style="height:auto; max-height:100%; width:auto;" alt="''.$tm2->gambar3.''">                                
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="color: #FFFFFF"><b>Lantai 3</b></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-target="#tm2" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-target="#tm2" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </button>
                             </div>
                             <h5 class="title iq-tw-6">Keterangan :</h5>
                             <p>{{ $tm2->keterangan }}</p>
