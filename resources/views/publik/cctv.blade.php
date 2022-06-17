@@ -42,21 +42,21 @@
                                     <img src="{!! asset('images/Publik_Galeri/' . $foto1 . '') !!}" class="d-block mw-100"
                                         style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar1.''">                                
                                         <div class="carousel-caption d-none d-md-block">
-                                        <h5 style="color: #FFFFFF"><b>Lantai 1</b></h5>
+                                        <h4 style="color: #FFFFFF"><b>Lantai 1</b></h4>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{!! asset('images/Publik_Galeri/' . $foto2 . '') !!}" class="d-block mw-100"
                                         style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar2.''">                                
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5 style="color: #FFFFFF"><b>Lantai 2</b></h5>
+                                        <h4 style="color: #FFFFFF"><b>Lantai 2</b></h4>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{!! asset('images/Publik_Galeri/' . $foto3 . '') !!}" class="d-block mw-100"
                                         style="height:auto; max-height:100%; width:auto;" alt="''.$tm1->gambar3.''">                                
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5 style="color: #FFFFFF"><b>Lantai 3</b></h5>
+                                        <h4 style="color: #FFFFFF"><b>Lantai 3</b></h4>
                                     </div>
                                 </div>
                             </div>
@@ -71,6 +71,7 @@
                             </div>
                             <h5 class="title iq-tw-6">Keterangan :</h5>
                             <p>{{ $tm1->keterangan }}</p>
+                            <center><p><b>Tanggal : {{$tm1->waktu}}</b></p></center>
                         </div>
                     </div>
                 </div>
@@ -95,21 +96,21 @@
                                     <img src="{!! asset('images/Publik_Galeri/' . $foto1 . '') !!}" class="d-block mw-100"
                                         style="height:auto; max-height:100%; width:auto;" alt="''.$tm2->gambar1.''">                                
                                         <div class="carousel-caption d-none d-md-block">
-                                        <h5 style="color: #FFFFFF"><b>Lantai 1</b></h5>
+                                        <h4 style="color: #FFFFFF"><b>Lantai 1</b></h4>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{!! asset('images/Publik_Galeri/' . $foto2 . '') !!}" class="d-block mw-100"
                                         style="height:auto; max-height:100%; width:auto;" alt="''.$tm2->gambar2.''">                                
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5 style="color: #FFFFFF"><b>Lantai 2</b></h5>
+                                        <h4 style="color: #FFFFFF"><b>Lantai 2</b></h4>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{!! asset('images/Publik_Galeri/' . $foto3 . '') !!}" class="d-block mw-100"
                                         style="height:auto; max-height:100%; width:auto;" alt="''.$tm2->gambar3.''">                                
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5 style="color: #FFFFFF"><b>Lantai 3</b></h5>
+                                        <h4 style="color: #FFFFFF"><b>Lantai 3</b></h4>
                                     </div>
                                 </div>
                             </div>
@@ -124,6 +125,7 @@
                             </div>
                             <h5 class="title iq-tw-6">Keterangan :</h5>
                             <p>{{ $tm2->keterangan }}</p>
+                            <center><p><b>Tanggal : {{$tm2->waktu}}</b></p></center>
                         </div>
                     </div>
                 </div>
