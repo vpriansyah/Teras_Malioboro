@@ -215,8 +215,6 @@
             </div>
     @endforeach
 
-    {{-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> --}}
-
     <style>
         /* The Modal (background) */
         .modal {
@@ -349,12 +347,6 @@
                             </div>
                         </div>
                     </a>
-                    {{-- <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                    <div class="w3-modal-content w3-animate-zoom">
-                        <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" style="width:100%">
-                    </div>
-                </div> --}}
                 </div>
             @endforeach
         </div>
@@ -363,7 +355,7 @@
             <button type="button" class="btn btn-danger" onclick="history.back();">Kembali</button>
         </div>
 
-        <!-- The Modal -->
+        {{-- Modal Barang Dagangan --}}
 
         <div id="myModal" class="modal">
             <span class="close" aria-hidden="true">&times;</span>
@@ -400,59 +392,5 @@
         </script>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-    {{-- Modal Barang Dagangan --}}
-
-    {{-- <div class="modal fade " id="barang" tabindex="-1" role="log">
-        <div class="modal-dialog modal-lg" role="document" style="width:90%">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" aria-label="Close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-
-
-                    @foreach ($barang_dagangan as $barang_dagangan)
-                    @php
-                    $foto = $barang_dagangan->gambar;
-                    if ($barang_dagangan->gambar == null) {
-                    $foto = 'notfound.jpg';
-                    }
-                    @endphp
-                    <div class="container-fluid">
-                        <div class="justify-content-center align-items-center"
-                            style="padding-top:5% ;width: 100%; /*min-height:250px;*/ height:80%; max-height:800px">
-
-                            <div class="card m-auto justify-content-center bg-transparent border-0"
-                                style=" background-size:cover; background-position: center;padding-top: 15%; width:auto; max-width: 75%; height:75%; max-height:100px">
-                                <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class=""
-                                    alt="''.$barang_dagangan->gambar.''">
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
-
-
-
-    {{-- Modal Barang Dagangan END --}}
     </section>
 @endsection
