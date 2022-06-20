@@ -17,6 +17,8 @@ class ProfilController extends Controller
             ->where('nik',  '=', Auth::user()->name)
             ->get();
         $barang = DB::table('barang')
+            ->join('data_pkl', 'data_pkl.id', '=', 'barang.id_pedagang')
+            ->where('nik',  '=', Auth::user()->name)
             ->get();
         return view('pedagang.profil', ['data_pkl' => $data_pkl, 'barang' => $barang] );
 
