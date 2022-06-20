@@ -36,6 +36,9 @@ Route::post('auth/register', [RegisterController::class, 'post']);
 Route::get('/admin', function () {
     return view('/admin/dashboard');
 })->name('admin');
+Route::get('admin/saran', function () {
+    return view('/admin/saran');
+})->name('admin');
 
 //Pedagang
 Route::get('/pedagang', function () {
@@ -61,7 +64,7 @@ Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@in
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth')->name('pedagang.profil');
 Route::resource('profil', ProfilController::class);
-Route::put('profil/{profil}','ProductController@update')->name('profil.update2');
+Route::put('profil/{profil}', 'ProductController@update')->name('profil.update2');
 
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
