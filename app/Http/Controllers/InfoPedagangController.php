@@ -22,7 +22,7 @@ class InfoPedagangController extends Controller
 
     public function readmore(Info $info)
     {
-        $info = DB::table('info_penting_pedagang')->where("id",$info)->get();
+        $info = DB::table('info_penting_pedagang')->where("id", $info)->get();
         return view('pedagang.informasi.readmore-info.{{$info->id}}', compact('info'));
     }
 }

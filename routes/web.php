@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SaranController;
+use App\Http\Controllers\FaqAdminController;
 use App\Http\Controllers\Galeri2Controller;
 
 
@@ -39,7 +40,8 @@ Route::get('/admin', function () {
 })->name('admin');
 Route::get('admin/saran', function () {
     return view('/admin/saran');
-})->name('admin');
+})->name('admin.saran');
+Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('admin.faq');
 
 //Pedagang
 Route::get('/pedagang', function () {

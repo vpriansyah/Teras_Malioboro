@@ -20,10 +20,10 @@
             <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.css' rel='stylesheet' />
         </head>
         <!-- <div class="row mx-auto justify-content-center">
-            <div class="col-lg-8">
-                        <div id="calendar"></div>
-                    </div>
-            </div> -->
+                    <div class="col-lg-8">
+                                <div id="calendar"></div>
+                            </div>
+                    </div> -->
         <div class="row mx-auto justify-content-center">
             <div class="col-lg-8">
                 <div class="card">
@@ -78,7 +78,7 @@
                         return event.rendering === 'background';
 
                     },
-                    
+
                     //dateClick: function() {
                     //     // alert('a day has been clicked!');
                     //}
