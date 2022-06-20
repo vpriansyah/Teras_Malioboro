@@ -24,19 +24,21 @@
                 <div class="row justify-content-between">
                     <div class="col-md-5 align-self-center">
                         <h1 class="iq-font-black iq-tw-4"><b>Teras Malioboro</b></h1>
-                        <h6 class="iq-font-black iq-mtb-40" style="text-align: justify; text-justify: inter-word;"> &emsp; &emsp; Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
+                        <h6 class="iq-font-black iq-mtb-40" style="text-align: justify; text-justify: inter-word;"> &emsp;
+                            &emsp; Teras Malioboro ini merupakan tempat baru bagi para Pedagang Kaki
                             Lima (PKL) Malioboro.</h6>
                         <div>
                             <div class="btn-group dropright">
-                                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                                  Masuk
+                                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    Masuk
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{ url('auth/login'); }}">Pedagang</a>
+                                    <a class="dropdown-item" href="{{ url('auth/login') }}">Pedagang</a>
                                     <a class="dropdown-item" href="#">Operator</a>
                                     <a class="dropdown-item" href="#">Eksekutif</a>
                                 </div>
-                              </div>
+                            </div>
                             {{-- <a href="{{ url('auth/login') }}" class="rounded-pill btn btn-success">Masuk</a><br> --}}
                         </div>
                         <div class="iq-ptb-30"></div>
@@ -69,47 +71,33 @@
     </section>
     <!-- Banner End -->
 
-    <!-- Tentang -->
-    <!-- <section class="overview-block-pt">
-                                            <div class="container" id="tentang">
-                                              <div class="row iq-mt-10">
-                                                <div class="col-sm-12">
-                                                  <div class="heading-title iq-mt-50">
-                                                    <h3 class="title iq-tw-7">Tentang</h3>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </section> -->
-    <!-- Tentang -->
-
     <!-- Rincian -->
     <!-- <section class="how-works r-mt-40 overview-block-ptb">
-                                            <div class="container">
-                                              <div class="row flex-row-reverse">
-                                                <div class="col-lg-8 ">
-                                                  <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
-                                                </div>
-                                                <div class="col-lg-4  align-self-center">
-                                                  <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
-                                                  <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
-                                                  <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                                </div>
-                                                <div class="iq-objectsnew">
-                                                  <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
-                                                    <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                                                  </span>
-                                                  <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
-                                                    <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
-                                                  </span>
-                                                  <span class="iq-objects-04 iq-fadebounce">
-                                                    <span class="iq-round"></span>
-                                                  </span>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </section> -->
+        <div class="container">
+            <div class="row flex-row-reverse">
+            <div class="col-lg-8 ">
+                <img class="iq-works-img pull-right img-fluid" src="images/LOGO_TERAS_HITAM.png" alt="drive01">
+            </div>
+            <div class="col-lg-4  align-self-center">
+                <span class="badge iq-badge blue-bg iq-font-white iq-mtb-40">Rincian</span>
+                <h3 class="iq-tw-6 iq-mb-15 iq-font-30">All four Productivity Dashboards in one click</h3>
+                <p class="iq-font-15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="iq-objectsnew">
+                <span class="iq-objects-02" data-bottom="transform:translatey(50px)" data-top="transform:translatey(-100px);">
+                <img src="images/03(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                </span>
+                <span class="iq-objects-03" data-bottom="transform:translatex(50px)" data-top="transform:translatex(-100px);">
+                <img src="images/04(2).png" class="img-fluid" alt="drive02" style="opacity: 0.3;">
+                </span>
+                <span class="iq-objects-04 iq-fadebounce">
+                <span class="iq-round"></span>
+                </span>
+            </div>
+            </div>
+        </div>
+        </section> -->
+    <!-- Rincian -->
 
     <!-- Layanan -->
     <section class="iq-feature1 overview-block-ptb grey-bg" id="layanan">
@@ -208,6 +196,7 @@
             </div>
         </div>
     </section>
+    <!-- Layanan -->
 
     <?php
     $peta1 = '<iframe class="map" src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Teras%20Malioboro%201%20Jl.%20Margo%20Mulyo,%20Ngupasan,%20Kec.%20Gondomanan,%20Kota%20Yogyakarta,%20Daerah%20Istimewa%20Yogyakarta%2055122+(Teras%20Malioboro%201)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="border:0" allowfullscreen></iframe>';
@@ -247,8 +236,18 @@
                     <div class="col-lg-4 col-md-5 col-sm-8 col-8 d-flex align-items-md-center">
                         <img class="banner-img img-fluid iq-pb-20" src="{!! asset('images/LOGO_TERAS_HITAM.png') !!}" alt="teras-malioboro">
                     </div>
-                    <div class="col-lg-8 col-md-7 col-sm-12 col-12 d-flex align-item-center" style="text-align: justify; text-justify: inter-word;">
-                        <p> &emsp; &emsp; Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laboriosam consequuntur explicabo vel ipsam aspernatur perspiciatis labore expedita deleniti molestias doloribus, sequi hic ratione saepe eum nam tenetur pariatur placeat. Veritatis, ab rerum. Doloremque earum neque perferendis quo aliquid eveniet ut voluptatum atque dolore, distinctio eligendi cum quis quia debitis eos, harum dolorem alias, nisi aut illum sequi corrupti! Ad, architecto expedita. Architecto sequi magni sit in voluptatum! Iste eligendi sint quod, asperiores rem aliquam a quisquam culpa incidunt modi quam fugit tempora aliquid laudantium quia quis voluptas voluptatem placeat labore veritatis. Quia, accusantium reprehenderit necessitatibus nulla fuga est. Quia omnis quod natus iure animi excepturi ab a libero ex officiis?</p>
+                    <div class="col-lg-8 col-md-7 col-sm-12 col-12 d-flex align-item-center"
+                        style="text-align: justify; text-justify: inter-word;">
+                        <p> &emsp; &emsp; Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laboriosam
+                            consequuntur explicabo vel ipsam aspernatur perspiciatis labore expedita deleniti molestias
+                            doloribus, sequi hic ratione saepe eum nam tenetur pariatur placeat. Veritatis, ab rerum.
+                            Doloremque earum neque perferendis quo aliquid eveniet ut voluptatum atque dolore, distinctio
+                            eligendi cum quis quia debitis eos, harum dolorem alias, nisi aut illum sequi corrupti! Ad,
+                            architecto expedita. Architecto sequi magni sit in voluptatum! Iste eligendi sint quod,
+                            asperiores rem aliquam a quisquam culpa incidunt modi quam fugit tempora aliquid laudantium quia
+                            quis voluptas voluptatem placeat labore veritatis. Quia, accusantium reprehenderit
+                            necessitatibus nulla fuga est. Quia omnis quod natus iure animi excepturi ab a libero ex
+                            officiis?</p>
                     </div>
                 </div>
             </div>
@@ -256,14 +255,57 @@
     </section>
     <!-- Tentang-->
 
+    <!-- S&A Pilihan -->
+    <section id="pilihan" class="overview-block-ptb grey-bg iq-blog">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="heading-title">
+                <h2 class="title black iq-tw-6 iq-font-black">Saran & Aduan Pilihan</h2>
+                {{-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley,</p> --}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="3" data-items-laptop="3" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-margin="30" >
+                @foreach ($pilihan as $pilihan)
+                <div class="item">
+                  <div class="iq-blog-box">
+                    <div class="iq-blog-detail">
+                      <div class="blog-title"><h5 class="iq-tw-6 iq-mb-10">{{ $pilihan->jenis }}</h5></div>
+                      <div class="blog-content">
+                        <p>{{ $pilihan->saran_aduan }}</p>
+                      </div>
+                      <div class="iq-blog-meta">
+                        <div class="blog-title"><h7 class="iq-tw-6 iq-mb-10">Jawaban Pengelola</h7></div>
+                        <p>Isi jawaban - Quae laboriosam sunt consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. hic perspiciatis.</p>
+                      </div>
+                      <div class="iq-blog-meta">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ $pilihan->nama }}</li>
+                          {{-- <li class="list-inline-item"><i class="fa fa-calendar" aria-hidden="true"></i> {{ $pilihan->waktu }}</li> --}}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                @endforeach
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- S&A Pilihan -->
+
     <!-- Footer -->
     <footer id="kontak" class="iq-footerr">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 iq-pt-10 iq-mb-20">
-                        <div class="footer-info" style="height: 100%; width: 100%; padding: 0%;">
-                            <?= $peta1 ?>
-                        </div>
+                    <div class="footer-info" style="height: 100%; width: 100%; padding: 0%;">
+                        <?= $peta1 ?>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 iq-pt-10 iq-mtb-20">
                     <div class="row">

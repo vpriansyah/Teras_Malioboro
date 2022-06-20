@@ -10,8 +10,12 @@ class PublikController extends Controller
 {
     public function index()
     {
+        $aduan_saran_pilihan = DB::table('aduan_saran_publik')->where('tampil', 'true')->orderBy('waktu')
+            ->join('kat_aduan', 'kat_aduan.id', '=', 'aduan_saran_publik.kategori')
+            ->get();
+        // dd($aduan_saran_pilihan);
         $info_penting = DB::table('info')->where('status', 'Aktif')->get();
-        return view('publik.index', ['info' => $info_penting]);
+        return view('publik.index', ['info' => $info_penting, 'pilihan' => $aduan_saran_pilihan]);
     }
 
 }

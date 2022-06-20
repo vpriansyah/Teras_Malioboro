@@ -34,6 +34,7 @@ class AduanController extends Controller
                 'no_hp' => $request->no_hp,
                 'saran_aduan' => $request->saran_aduan,
                 'kategori' => $request->kategori,
+                'tampil' => $request->tampil,
                 'waktu' => $request->waktu
             ]);
             return redirect('/publik')->with('message', 'Berhasil mengajukan aduan/saran.');

@@ -90,6 +90,7 @@
                             <font color='#ff0000'>*</font>) Tanda Tersebut Wajib Di isi :)
                         </div>
                         <div class="form-group">
+                            <input name="tampil" type="hidden" value="false">
                             <input name="waktu" type="hidden" value="<?php echo date('Y-m-d h:i:s'); ?>">
                             <input name="firstNumber" type="hidden" value="<?php echo $random_number1; ?>" />
                             <input name="secondNumber" type="hidden" value="<?php echo $random_number2; ?>" />

@@ -53,6 +53,9 @@
                                 <a class="nav-link" href="#tentang">Tentang</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#pilihan">Pilihan</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#kontak">Kontak</a>
                             </li>
                             <li>
