@@ -32,6 +32,11 @@ Route::post('auth/logout', [LoginController::class, 'logout']);
 Route::get('auth/register', [RegisterController::class, 'index']);
 Route::post('auth/register', [RegisterController::class, 'post']);
 
+//Admin
+Route::get('/admin', function () {
+    return view('/admin/dashboard');
+})->name('admin');
+
 //Pedagang
 Route::get('/pedagang', function () {
     return view('/pedagang/dashboard');
