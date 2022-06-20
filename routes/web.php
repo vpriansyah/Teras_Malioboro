@@ -12,6 +12,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;
+use App\Http\Controllers\TindakLanjutController;
 use App\Models\Profil;
 
 /*
@@ -44,9 +45,11 @@ Route::get('pedagang/daftar', function () {
 Route::get('pedagang/saran', [SaranController::class, 'index'])->middleware('auth');
 Route::post('pedagang/input', [SaranController::class, 'input'])->middleware('auth');
 
-Route::get('pedagang/tindaklanjut', function () {
-    return view('/pedagang/tindaklanjut');
-})->middleware('auth');
+// Route::get('pedagang/tindaklanjut', function () {
+//     return view('/pedagang/tindaklanjut');
+// })->middleware('auth');
+Route::get('pedagang/tindaklanjut', 'App\Http\Controllers\TindakLanjutController@index')->middleware('auth');
+Route::get('/search', 'App\Http\Controllers\TindakLanjutController@search');
 
 Route::get('pedagang/edit', function () {
     return view('/pedagang/edit');

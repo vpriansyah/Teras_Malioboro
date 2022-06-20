@@ -38,60 +38,31 @@
                 </div>
             </div>
     </div>
+
+    @foreach($tindak_lanjut as $tindak)
+    <?php
+    $Deskripsi = substr($tindak->Deskripsi, 0, 127); 
+    ?>
     <section class="details-card">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card-content">
-                    <div class="card-img">
-                        
-                              <!-- Input checkbox for readmore -->
-                              <input type="checkbox" id="check-readmore">
-                              <img src="https://img.okezone.com/content/2022/01/27/408/2538583/dear-traveler-jangan-lupa-ini-2-lokasi-baru-pkl-malioboro-QtpBuJnS7Y.jpg" alt="">
-                              <h4 style="color: #000000;font-weight: 600;margin-top: 10px;margin-left: 30px">Lantai Retak</h4>
-                              <p class="description">Meski baru sekitar seminggu diresmikan, ternyata sudah banyak masalah yang dikeluhkan oleh para pedagang di Teras Malioboro I. 
-                                  Salah satu masalah yang paling dirisaukan pedagang adalah banyaknya retakan di lantai 3 Teras Malioboro I. 
-                                  Retakan itu terdapat hampir di seluruh bagian lantai, terutama pada sambungan antarbagian lantai.</p>
-                              <!-- Readmore button -->
-                              <label for="check-readmore" class="button-readmore"></label>  
-                    </div>
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{$tindak->Judul}}</h5>
+                    <p class="card-text">{{$Deskripsi}}</p>
+                    <a href="#" class="btn btn-success">Baca Selengkapnya</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card-content">
-                    <div class="card-img">
-                        <!-- Input checkbox for readmore -->
-                        <input type="checkbox" id="check-readmore">
-                        <img src="https://tripjogja.co.id/wp-content/uploads/2022/02/paket-wisata-jogja-by-tripjogja-376.jpg" alt="">
-                        
-                        <h4 style="color: #000000;font-weight: 600;margin-top: 10px;margin-left: 30px">Pedagang Kaki Lima</h4>
-                        <p class="description">Meski banyak pedagang kaki lima yang masih enggan pindah berjualan di teras Malioboro 1 dan 2, 
-                            namun Pemerintah Kota Yogyakarta menegaskan hanya memberikan batas waktu relokasi hingga tanggal 7 Februari mendatang.
-                        </p>
-                            <!-- Readmore button -->
-                            <label for="check-readmore" class="button-readmore"></label>     
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-content">
-                    <div class="card-img">
-                         <!-- Input checkbox for readmore -->
-                         <input type="checkbox" id="check-readmore">
-                         <img src="https://t-2.tstatic.net/jogja/foto/bank/images/Hampir-Dua-Pekan-Menempati-Teras-Malioboro-2-PKL-Sekarang-Nyari-Penglaris-Aja-Susah.jpg" alt="">
-                         
-                         <h4 style="color: #000000;font-weight: 600;margin-top: 10px;margin-left: 30px">Pedagang Mengeluh</h4>
-                         <p class="description">Keluhan yang sama disampaikan oleh Rubiyanti (50) pedagang bakpia. Menurutnya sebelum direlokasi, jualan di bawah ramai. 
-                             Lokasinya yang strategis membuat pembeli lebih mudah mengakses. Semetara untuk lokasi baru ini cukup jauh.
-                         </p>
-                             <!-- Readmore button -->
-                             <label for="check-readmore" class="button-readmore"></label>  
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
+@endforeach
+
+<div class="container justify-content-between">
+    <div class="mx-auto d-block">
+        {{ $tindak_lanjut->links()}}
+    </div>
+</div>
 <!-- details card section starts from here -->
 <!-- /Row -->
 </div>
