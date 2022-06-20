@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Saran extends Model
 {
 
-    protected $table = "saran";
-    protected $fillable = [
-		'nama', 'jenis', 'kategori','saran_aduan', 'status'
-	];
+  protected $table = "saran";
+  protected $fillable = [
+    'nama', 'jenis', 'id_kategori', 'saran_aduan', 'status'
+  ];
 }
