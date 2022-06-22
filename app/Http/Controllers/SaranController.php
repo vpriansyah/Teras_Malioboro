@@ -11,7 +11,9 @@ class SaranController extends Controller
 {
     public function index()
     {
-        $saran = DB::table('FAQ')->get();
+        $saran = DB::table('FAQ')
+            ->where('status',  '=', 'aktif')
+            ->get();
         return view('pedagang.saran', ['saran' => $saran]);
     }
 

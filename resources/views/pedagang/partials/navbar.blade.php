@@ -9,7 +9,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{!! asset('images/SiBakul.png') !!}" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;Raleway:300,400,500,600,700,800,900"
+        rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
     <!-- owl-carousel -->
@@ -36,6 +38,8 @@
     <link rel="stylesheet" href="{!! asset('css/custom.css') !!}" />
     <link rel="stylesheet" href="{!! asset('css/tindaklanjut.css') !!}" />
     <script src="https://kit.fontawesome.com/5014e491f0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
 
@@ -67,9 +71,12 @@
                 <div class="col-sm-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="/pedagang">
-                            <img class="img-fluid logo_img" id="logo_img" src="{!! asset('images/Logo SiBakul.png') !!}">
+                            <img class="img-fluid logo_img" id="logo_img"
+                                src="{!! asset('images/Logo SiBakul.png') !!}">
                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class="ion-navicon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -87,7 +94,8 @@
                         </div>
                         <div class="d-flex">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="pt-1 fa-solid fa-user"></i>
                                     {{ auth()->user()->username }}
                                 </a>

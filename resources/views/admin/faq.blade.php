@@ -3,9 +3,11 @@
 @extends('pedagang.layouts.footer')
 <div class="container mt-5 mb-3">
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Launch static backdrop modal
-    </button>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Tambah FAQ
+        </button>
+    </div>
 
     <table class="table table-hover mt-3">
         <thead>
@@ -14,6 +16,7 @@
                 <th scope="col">Subject</th>
                 <th scope="col">Jawaban</th>
                 <th scope="col">Ditulis oleh</th>
+                <th scope="col">Status</th>
                 <th scope="col">Keterangan</th>
             </tr>
         </thead>
@@ -25,7 +28,11 @@
                 <td>{{ $f->subject }}</td>
                 <td>{{ $f->jawaban }}</td>
                 <td>{{ $f->nama }}</td>
-                <td>kosong</td>
+                <td>{{ $f->status }}</td>
+                <td>
+                    <span class="badge text-bg-success">Edit</span>
+                    <span class="badge text-bg-danger">Hapus</span>
+                </td>
             </tr>
             @endforeach
         </tbody>
@@ -38,16 +45,40 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">TAMBAH FAQ</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
+            <form action="{{url('/admin/faq/simpan')}}" method="POST">
+                <div class="modal-body">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="pertanyaan" class="form-label">Pertanyaan</label>
+                        <input type="text" class="form-control" id="subject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="jawaban" class="form-label">Jawaban</label>
+                        <input type="text" class="form-control" id="jawaban">
+                    </div>
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Pilih Status</option>
+                            <option value="aktif">Aktif</option>
+                            <option value="tidak aktif">Tidak Aktif</option>
+                        </select>
+                    </div>
+                    @foreach ($operator as $op)
+                    <div class="mb-3">
+                        <label for="operator" class="form-label">Pembuat</label>
+                        <input type="text" class="form-control" id="id_operator" value={{ $op->id }} disabled>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SaranController;
 use App\Http\Controllers\FaqAdminController;
 use App\Http\Controllers\Galeri2Controller;
+use App\Http\Controllers\ProductController;
 
 
 use App\Http\Controllers\PublikController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;
 use App\Http\Controllers\TindakLanjutController;
 use App\Models\Profil;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,9 +41,17 @@ Route::post('auth/register', [RegisterController::class, 'post']);
 Route::get('/admin', function () {
     return view('/admin/dashboard');
 })->name('admin');
+<<<<<<< Updated upstream
 Route::get('admin/saran', [SaranAdminController::class, 'index'])->name('admin.saran');
 
 Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('admin.faq');
+=======
+Route::get('admin/saran', function () {
+    return view('/admin/saran');
+})->name('admin.saran');
+Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('adminfaq');
+Route::post('admin/faq/simpan', [FaqAdminController::class, 'simpan'])->name('simpanfaq');
+>>>>>>> Stashed changes
 
 //Pedagang
 Route::get('/pedagang', function () {
@@ -69,7 +79,7 @@ Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@in
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth')->name('pedagang.profil');
 Route::resource('profil', ProfilController::class);
-Route::put('profil/{profil}', 'ProductController@update')->name('profil.update2');
+Route::put('profil/{profil}', [ProductController::class, 'update'])->name('profil.update2');
 
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
