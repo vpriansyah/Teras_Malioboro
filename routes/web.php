@@ -41,17 +41,9 @@ Route::post('auth/register', [RegisterController::class, 'post']);
 Route::get('/admin', function () {
     return view('/admin/dashboard');
 })->name('admin');
-<<<<<<< Updated upstream
 Route::get('admin/saran', [SaranAdminController::class, 'index'])->name('admin.saran');
-
-Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('admin.faq');
-=======
-Route::get('admin/saran', function () {
-    return view('/admin/saran');
-})->name('admin.saran');
 Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('adminfaq');
 Route::post('admin/faq/simpan', [FaqAdminController::class, 'simpan'])->name('simpanfaq');
->>>>>>> Stashed changes
 
 //Pedagang
 Route::get('/pedagang', function () {
