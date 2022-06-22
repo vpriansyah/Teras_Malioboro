@@ -134,7 +134,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="publik/galeri2">
+                    <a href="publik/galeri">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
                             <div>
                                 <i class="ion-android-cart iq-mb-10"></i>
@@ -238,16 +238,8 @@
                     </div>
                     <div class="col-lg-8 col-md-7 col-sm-12 col-12 d-flex align-item-center"
                         style="text-align: justify; text-justify: inter-word;">
-                        <p> &emsp; &emsp; Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laboriosam
-                            consequuntur explicabo vel ipsam aspernatur perspiciatis labore expedita deleniti molestias
-                            doloribus, sequi hic ratione saepe eum nam tenetur pariatur placeat. Veritatis, ab rerum.
-                            Doloremque earum neque perferendis quo aliquid eveniet ut voluptatum atque dolore, distinctio
-                            eligendi cum quis quia debitis eos, harum dolorem alias, nisi aut illum sequi corrupti! Ad,
-                            architecto expedita. Architecto sequi magni sit in voluptatum! Iste eligendi sint quod,
-                            asperiores rem aliquam a quisquam culpa incidunt modi quam fugit tempora aliquid laudantium quia
-                            quis voluptas voluptatem placeat labore veritatis. Quia, accusantium reprehenderit
-                            necessitatibus nulla fuga est. Quia omnis quod natus iure animi excepturi ab a libero ex
-                            officiis?</p>
+                        <p> &emsp; &emsp; Sugeng Rawuh, Selamat datang di Teras Malioboro <br>
+                            Pusat Pedagang kaki lima di kawasan Malioboro untuk menemukan pedagang favorit anda, melakukan pemesanan, melihat lokasi pedagang dan mengirimkan aduan maupun saran</p>
                     </div>
                 </div>
             </div>
