@@ -38,6 +38,7 @@
                 </div>
             </div>
     </div>
+    </div>
 
     @foreach($tindak_lanjut as $tindak)
     <?php
@@ -54,7 +55,7 @@
                     <a href="#" class="btn btn-success">Baca Selengkapnya</a>
                 </div>
             </div>
-    </div>
+            </div>
 </section>
 @endforeach
 
