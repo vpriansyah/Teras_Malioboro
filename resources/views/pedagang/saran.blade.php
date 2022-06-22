@@ -42,7 +42,7 @@
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama Lengkap</label>
                                 <input type="text" name="nama" class="form-control" id="nama"
-                                    placeholder="Masukkan nama anda" required>
+                                    value="{{ auth()->user()->username }}" placeholder="Masukkan nama anda" disabled>
                             </div>
                             <div class="mb-3">
                                 <label for="jenis" class="form-label">Jenis Aduan</label>
@@ -54,8 +54,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="kategori" class="form-label">Kategori Aduan</label>
-                                <select class="form-select" aria-label="Default select example" name="id_kategori"
-                                    required>
+                                <select class="form-select" aria-label="Default select example" name="id_kategori" required>
                                     <option selected>Klik untuk pilih</option>
                                     <option value="Umum">Umum</option>
                                     <option value="Keuangan">Keuangan</option>
@@ -66,12 +65,13 @@
                                 </select>
                             </div>
                             <input type="hidden" name="status" id="status" value="1">
+                            <input type="hidden" name="feedback" id="feedback" value="Menunggu jawaban admin">
                             <div>
                             </div>
                             <div class="mb-3">
                                 <label for="aduan" class="form-label">Saran dan Aduan</label>
-                                <textarea type="text" class="form-control" name="saran_aduan" id="aduan" placeholder="Masukkan saran dan aduan anda"
-                                    name="areasaran" rows="5" required></textarea>
+                                <textarea type="text" class="form-control" name="saran_aduan" id="aduan"
+                                    placeholder="Masukkan saran dan aduan anda" name="areasaran" rows="5" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-success">Kirim</button>
                         </form>

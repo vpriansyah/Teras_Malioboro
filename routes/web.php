@@ -11,6 +11,7 @@ use App\Http\Controllers\Galeri2Controller;
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\SaranAdminController;
 use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;
 use App\Http\Controllers\TindakLanjutController;
@@ -38,9 +39,8 @@ Route::post('auth/register', [RegisterController::class, 'post']);
 Route::get('/admin', function () {
     return view('/admin/dashboard');
 })->name('admin');
-Route::get('admin/saran', function () {
-    return view('/admin/saran');
-})->name('admin.saran');
+Route::get('admin/saran', [SaranAdminController::class, 'index'])->name('admin.saran');
+
 Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('admin.faq');
 
 //Pedagang
