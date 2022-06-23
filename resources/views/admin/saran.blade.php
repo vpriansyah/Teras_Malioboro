@@ -2,31 +2,76 @@
 @section('content')
     @extends('pedagang.layouts.footer')
 
-    <div class="container">
-        <div class="heading-title text-center">
-            <br>
-            <br>
-            <h2 class="title iq-tw-6">Saran Aduan</h2>
-        </div>
-        <div class="row justify-content-md-center">
-            @foreach ($saran as $s)
-                <div
-                    class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch mx-auto">
-                    <div class=" iq-blog text-left iq-ptb-15 iq-pr-10 iq-pl-10 d-flex ">
-                        <div class="m-auto justify-content-center align-items-center"
-                            style="width: 100%;  height:200px; max-height:800px">
-                            <div class="card m-auto justify-content-center bg-transparent border-0">
-                                <h3 class="iq-tw-6 iq-pb-5 m-auto" style=" font-size: 150%; padding-top: 10%">
-                                    {{ $s->nama }}</h3>
-                                <p class="card-text">
-                                    <center>{{ $s->saran_aduan }}</center>
-                                </p>
-                                <a href="" class="btn btn-success">Feedback</a>
+    <section id="pilihan" class="overview-block-ptb grey-bg iq-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="">Saran Aduan</h2>
+                        <hr class="mx-auto" style="width: 20%">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true"
+                        data-items="3" data-items-laptop="3" data-items-tab="2" data-items-mobile="1"
+                        data-items-mobile-sm="1" data-margin="30">
+                        @foreach ($saran as $s)
+                            <div class="item">
+                                <div class="iq-blog-box">
+                                    <div class="iq-blog-detail">
+                                        <div class="blog-title">
+                                            <h5 class="iq-tw-6 iq-mb-10"></h5>
+                                        </div>
+                                        <div class="blog-content">
+                                            <p><b>{{ $s->nama }}</b></p>
+                                        </div>
+                                        <div class="iq-blog-meta">
+                                            <div class="blog-title">
+                                                <h7 class="iq-tw-6 iq-mb-10">Kartegori</h7>
+                                            </div>
+                                            <p>{{ $s->id_kategori }}</p>
+                                        </div>
+                                        <div class="iq-blog-meta">
+                                            <div class="blog-title">
+                                                <h7>Saran dan Aduan</h7>
+                                            </div>
+                                            <p class="iq-tw-6 iq-mb-10">{{ $s->saran_aduan }}</p>
+                                        </div>
+                                        <div class="">
+                                            <center><button class="btn btn-success" data-toggle="modal"
+                                                    data-target="#feedback">Feedback</button></center>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="Feedback">Feedback</label>
+                            <textarea type="text" style="width: 100%"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
-    </div>
+    </section>
 @endsection
