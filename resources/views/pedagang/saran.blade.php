@@ -42,7 +42,7 @@
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama Lengkap</label>
                                 <input type="text" name="nama" class="form-control" id="nama"
-                                    value="{{ auth()->user()->username }}" placeholder="Masukkan nama anda" disabled>
+                                    placeholder="Masukkan nama anda">
                             </div>
                             <div class="mb-3">
                                 <label for="jenis" class="form-label">Jenis Aduan</label>

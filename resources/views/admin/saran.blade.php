@@ -58,13 +58,15 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true"></span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <label for="Feedback">Feedback</label>
-                            <textarea type="text" style="width: 100%"></textarea>
-                        </div>
+                        <form action="" method="POST">
+                            <div class="modal-body">
+                                <label for="Feedback">Feedback</label>
+                                <textarea type="text" style="width: 100%"></textarea>
+                            </div>
+                        </form>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary">Save changes</button>

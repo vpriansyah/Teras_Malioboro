@@ -20,10 +20,7 @@ class SaranController extends Controller
     public function input(Request $request)
     {
         Saran::create($request->all());
-        // if($request->all()){
         return redirect('/pedagang/saran')->with('message', 'Data Berhasil disimpan');
-        // }else{
-        //     return redirect('/pedagang/saran')->with('status', 'Data gagal disimpan');
-        // }
+
     }
 }
