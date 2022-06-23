@@ -37,35 +37,89 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
+<<<<<<< Updated upstream
     </div>
+=======
+<!-- details card section starts from here -->
+<!-- /Row -->
+</div>
+>>>>>>> Stashed changes
 
-    @foreach($tindak_lanjut as $tindak)
+<!-- @foreach($tindak_lanjut as $tindak)
     <?php
     $Deskripsi = substr($tindak->Deskripsi, 0, 127); 
     ?>
-    <section class="details-card">
-    <div class="container">
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{$tindak->Judul}}</h5>
-                    <p class="card-text">{{$Deskripsi}}</p>
-                    <a href="#" class="btn btn-success">Baca Selengkapnya</a>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                <img src="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$tindak->Judul}}</h5>
+                        <p class="card-text">{{$tindak->Deskripsi}}</p>
+                        <a href="" class="btn btn-success">Selengkapnya</a>
+                    </div>
                 </div>
             </div>
+        </div>
+@endforeach -->
+
+<div class="container">
+    <div class="heading-title text-center">
+        <h2 class="title iq-tw-6"></h2>
+    </div>
+    <div class="row justify-content-md-center">
+        @foreach ($tindak_lanjut as $tindak)
+            <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch mx-auto"
+                style="width:50%;">
+                <div class=" iq-blog text-left iq-ptb-15 iq-pr-10 iq-pl-10 d-flex ">
+                    <div class="m-auto justify-content-center align-items-center"
+                        style="width: 100%; min-height:275px; height:auto; max-height:1000px">
+                        @php
+                            $foto = $tindak->Foto;
+                            if ($tindak->Foto == null) {
+                                $foto = 'notfound.jpg';
+                            }
+                        @endphp
+                        <div class="card m-auto justify-content-center bg-transparent border-0"
+                            style="padding-top:30%; width:auto; max-width: 75%; height:25%; max-height:100px">
+                            <img src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100"
+                                style="height:auto; max-height:300px; padding-top:5%;; width:auto;"
+                                alt="''.$tindak->Foto.''">
+                        </div>
+                        <div class="card m-auto bg-transparent border-0">
+                            <h3 class="" style=" font-size: 150%; padding-top: 40%">
+                                {{ $tindak->Judul }}</h3>
+                            <p class="card-text" style="height:50px; overflow:hidden;">
+                                {{$Deskripsi}}
+                            </p>
+                        </div>
+                        <a href="javascript:void(1);" class="readmore-btn btn btn-success">Selengkapnya</a>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                        <script>
+                        $(".readmore-btn").on('click', function(){
+                            $(this).parent().toggleClass("showContent");
+                        });
+                        </script>
+                    </div>
+                </div>
+            </div>
+<<<<<<< Updated upstream
             </div>
 </section>
 @endforeach
+=======
+        @endforeach
+    </div>
+</div>
+>>>>>>> Stashed changes
 
 <div class="container justify-content-between">
     <div class="mx-auto d-block">
         {{ $tindak_lanjut->links()}}
     </div>
 </div>
-<!-- details card section starts from here -->
-<!-- /Row -->
-</div>
+
 </body>
 @endsection
