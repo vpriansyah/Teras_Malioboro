@@ -58,7 +58,8 @@
                                     <th style="width:40%"></th>
                                     <th style="width:10%"></th>
                                 </tr>
-                                @foreach ($data_pkl as $key=>$data)
+                                {{-- <?= var_dump($data_pkl) ?> --}}
+                                @foreach ($data_pkl as $key => $data)
                                     <tr>
                                         <td></td>
                                         <td>Nama Toko</td>
@@ -71,7 +72,7 @@
                                         <td>:</td>
                                         <td>{{ $data->operasional_jam_buka }} Pagi sampai
                                             {{ $data->operasional_jam_tutup }}
-                                            </td>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td></td>
@@ -87,7 +88,7 @@
                                     </tr>
                             </table>
                             <br>
-                
+
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 iq-mtb-15">
@@ -158,8 +159,8 @@
 
                             </table>
                             <br>
-                            <center><a href="{{ url('profil/'.$data->id.'/edit') }}"
-                                class="btn btn-success">Edit</a></center>
+                            <center><a href="{{ url('profil/' . $data->id . '/edit') }}" class="btn btn-success">Edit</a>
+                            </center>
                         </div>
                         <br>
                         <div class="alert alert-warning">
@@ -179,11 +180,11 @@
             </div>
             <div class="row justify-content-md-center">
                 @foreach ($barang as $barang)
-                    <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch mx-auto"
-                        style="width:50%;">
+                    <div
+                        class="card col-lg-4 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch mx-auto">
                         <div class=" iq-blog text-left iq-ptb-15 iq-pr-10 iq-pl-10 d-flex ">
                             <div class="m-auto justify-content-center align-items-center"
-                                style="width: 100%; min-height:275px; height:100%; max-height:800px">
+                                style="width: 50%; min-height:275px; height:100%; max-height:800px">
                                 @php
                                     $foto = $barang->gambar;
                                     if ($barang->gambar == null) {

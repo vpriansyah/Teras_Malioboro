@@ -123,7 +123,8 @@
                     <div class="row justify-content-between">
                         <div class="col-md-6 align-self-center">
                             <h1><b class="iq-font-black iq-tw-4">Teras Malioboro</b></h1><br>
-                            <h5 class="iq-font-black iq-mtb-20">Teras Malioboro ini merupakan tempat baru bagi para Pedagang
+                            <h5 class="iq-font-black iq-mtb-20">Teras Malioboro ini merupakan tempat baru bagi para
+                                Pedagang
                                 Kaki Lima (PKL) Malioboro.</h5><br>
                             <h5 class="text-danger iq-mtb-20">*Laman ini khusus untuk pedagang.</h5><br>
                         </div>
@@ -180,7 +181,8 @@
                     <div class="col-lg-6">
                         <h4 class="iq-tw-6 iq-mb-25 text-danger">INFORMASI LANJUT</h4>
                         <h1><b>TERAS MALIOBORO</b></h1>
-                        <p class="iq-font-15 iq-mt-20">Teras Malioboro 1 berlokasi di Gedung Eks Bioskop Indra, tepat berada
+                        <p class="iq-font-15 iq-mt-20">Teras Malioboro 1 berlokasi di Gedung Eks Bioskop Indra, tepat
+                            berada
                             di seberang Pasar Beringharjo.
                             Sementara itu, Teras Malioboro 2 bertempat di eks Gedung Kantor Dinas Pariwisata DIY, tepatnya
                             di
@@ -215,7 +217,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                            <a href="pedagang/profil">
+                            <a href="pedagang/profile">
                                 <div>
                                     <i class="ion-ios-grid-view-outline iq-mb-10"></i>
                                     <h5 class="iq-tw-6">Profil</h5>

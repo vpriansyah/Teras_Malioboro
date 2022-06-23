@@ -12,6 +12,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SaranAdminController;
 use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;
@@ -73,6 +74,7 @@ Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->mi
 Route::resource('profil', ProfilController::class);
 Route::put('profil/{profil}', [ProductController::class, 'update'])->name('profil.update2');
 
+Route::get('pedagang/profile', 'App\Http\Controllers\ProfileController@index')->middleware('auth');
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
 

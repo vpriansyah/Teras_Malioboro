@@ -16,15 +16,16 @@ class ProfilController extends Controller
         $data_pkl = DB::table('data_pkl')
             ->where('nik',  '=', Auth::user()->name)
             ->get();
+        // var_dump(Auth::user()->name);
+        // exit;
         $barang = DB::table('barang')
             ->join('data_pkl', 'data_pkl.id', '=', 'barang.id_pedagang')
             ->where('nik',  '=', Auth::user()->name)
             ->get();
-        return view('pedagang.profil', ['data_pkl' => $data_pkl, 'barang' => $barang] );
-
+        return view('pedagang.profil', ['data_pkl' => $data_pkl, 'barang' => $barang]);
     }
 
-    
+
     /**
      * Show the form for creating a new resource.
      *
