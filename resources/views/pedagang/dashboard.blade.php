@@ -217,7 +217,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 iq-mtb-15">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                            <a href="pedagang/profile">
+                            <a href="pedagang/profil">
                                 <div>
                                     <i class="ion-ios-grid-view-outline iq-mb-10"></i>
                                     <h5 class="iq-tw-6">Profil</h5>

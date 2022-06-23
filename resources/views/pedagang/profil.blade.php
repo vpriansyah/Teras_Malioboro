@@ -198,7 +198,7 @@
                                         alt="''.$barang->gambar.''">
                                 </div>
                                 <div class="card m-auto justify-content-center bg-transparent border-0">
-                                    <h3 class="iq-tw-6 iq-pb-5 m-auto" style=" font-size: 150%; padding-top: 40%">
+                                    <h3 class="iq-tw-6 iq-pb-5 mx-auto" style=" font-size: 150%; padding-top: 40%">
                                         {{ $barang->barang }}</h3>
                                     <p class="card-text">
                                         <center>Harga Menyesuaikan SiBakul Jogja</center>
