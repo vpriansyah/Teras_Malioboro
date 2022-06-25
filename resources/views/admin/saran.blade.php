@@ -61,10 +61,13 @@
                                 <span aria-hidden="true"></span>
                             </button>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('saran.admin.update', $s->id) }}" method="POST">
+                            @csrf
+                            @method('PUT')
+
                             <div class="modal-body">
                                 <label for="Feedback">Feedback</label>
-                                <textarea type="text" style="width: 100%"></textarea>
+                                <textarea type="text" style="width: 100%">{{ $s->feedback }}</textarea>
                             </div>
                         </form>
                         <div class="modal-footer">

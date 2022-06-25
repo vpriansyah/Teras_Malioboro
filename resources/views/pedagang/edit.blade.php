@@ -43,9 +43,9 @@
                             value="{{ $data_pkl->paguyuban_id }}" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">NIK</label>
+                        {{-- <label for="exampleFormControlInput1" class="form-label">NIK</label> --}}
                         <input type="number" class="form-control" id="nik" name="nik"
-                            value="{{ $data_pkl->nik }}" required disabled>
+                            value="{{ $data_pkl->nik }}" required hidden>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">No KK</label>

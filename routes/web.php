@@ -44,7 +44,7 @@ Route::get('/admin', function () {
 })->name('admin');
 Route::get('admin/saran', [SaranAdminController::class, 'index'])->name('admin.saran');
 Route::resource('saran', SaranAdminController::class);
-Route::put('saran/{saran}', [AduanController::class, 'update'])->name('saran.update2');
+// Route::put('saran/{saran}', [AduanController::class, 'update'])->name('saran.update2');
 
 Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('adminfaq');
 Route::post('admin/faq/simpan', [FaqAdminController::class, 'simpan'])->name('simpanfaq');
@@ -75,7 +75,7 @@ Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@in
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth')->name('pedagang.profil');
 Route::resource('profil', ProfilController::class);
-Route::put('profil/{profil}', [ProductController::class, 'update'])->name('profil.update2');
+// Route::put('profil/{profil}', [ProductController::class, 'update'])->name('profil.update2');
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
 

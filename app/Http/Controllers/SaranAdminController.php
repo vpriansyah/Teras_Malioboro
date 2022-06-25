@@ -62,8 +62,8 @@ class SaranAdminController extends Controller
      */
     public function edit($id)
     {
-        // $saran = SaranAdmin::find($id);
-        // return view('saranadmin.edit', compact('saran'));
+        $saran = SaranAdmin::find($id);
+        return view('saranadmin.edit', compact('saran'));
     }
 
     /**
@@ -75,29 +75,29 @@ class SaranAdminController extends Controller
      */
     public function update(Request $request)
     {
-        // $this->validate($request, [
-        //     'feedback' => 'required',
-        // ]);
+        $this->validate($request, [
+            'feedback' => 'required',
+        ]);
 
-        // $saran = SaranAdmin::where('id', $request->id);
-        // $saran->update([
-        //     'feedback' => $request->feedback
-        // ]);
+        $saran = SaranAdmin::where('id', $request->id);
+        $saran->update([
+            'feedback' => $request->feedback
+        ]);
 
-        // if ($saran) {
-        //     return redirect()
-        //     ->route('admin.saran')
-        //     ->with([
-        //         Alert::success('Berhasil', 'Artikel Berhasil Diubah')
-        //     ]);
-        // } else {
-        //     return redirect()
-        //     ->back()
-        //     ->withInput()
-        //     ->with([
-        //         Alert::error('Gagal', 'Artikel Gagal Diubah')
-        //     ]);
-        // }
+        if ($saran) {
+            return redirect()
+                ->route('admin.saran')
+                ->with([
+                    Alert::success('Berhasil', 'Artikel Berhasil Diubah')
+                ]);
+        } else {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with([
+                    Alert::error('Gagal', 'Artikel Gagal Diubah')
+                ]);
+        }
     }
 
     /**
