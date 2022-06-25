@@ -12,7 +12,6 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublikController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SaranAdminController;
 use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;

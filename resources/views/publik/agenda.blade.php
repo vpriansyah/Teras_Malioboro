@@ -63,13 +63,13 @@
                     eventDisplay: 'auto',
                     selectHelper: true,
                     events: [
-                        @foreach ($info_agenda as $item)
+                        @foreach ($tanggalan as $tanggalan)
                             {
-                                id: '{{ $item->id }}',
-                                title: '{{ $item->nama }}',
-                                start: '{{ $item->tanggal }}',
-                                end: '{{ $item->tanggal_akhir }}',
-                                // url: '{{ url('#infoo ', $item->keterangan) }}',
+                                id: '{{ $tanggalan->id }}',
+                                title: '{{ $tanggalan->nama }}',
+                                start: '{{ $tanggalan->tanggal }}',
+                                end: '{{ $tanggalan->tanggal_akhir }}',
+                                // url: '{{ url('#infoo ', $tanggalan->keterangan) }}',
                                 color: '#28a745',
                             },
                         @endforeach
@@ -105,7 +105,7 @@
             <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title iq-tw-6" id="modalMdTitle">Agenda Teras Malioboro</h4>
+                        <h4 class="modal-title iq-tw-6" id="modalMdTitle">Agenda Mingguan Teras Malioboro</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
                     </div>
@@ -133,13 +133,14 @@
                                         @endphp
                                         <tr id="isi-info">
                                             <td>{{ $item->nama }}</td>
-                                            <td>{{ $item->tanggal }}</td>
-                                            <td>{{ $item->tanggal_akhir }}</td>
-                                            <td>{{ $jam }} </td>
+                                            <td>{{ \Carbon\Carbon::parse($item->tanggal)->format('j F, Y') }}</td>
+                                            <td>{{ \Carbon\Carbon::parse($item->tanggal_akhir)->format('j F, Y') }}</td>
+                                            <td>{{ $jam }}</td>
                                             <td>{{ $item->keterangan }}</td>
                                         </tr>
                                     @endforeach
                                     <!-- </tbody> -->
+                                    
                                 </table>
                             </div>
                         </div>
