@@ -67,7 +67,7 @@
 
                             <div class="modal-body">
                                 <label for="Feedback">Feedback</label>
-                                <textarea type="text" style="width: 100%">{{ $s->feedback }}</textarea>
+                                <input type="text" style="width: 100%" id="feedback" name="feedback" value="{{ $s->feedback }}" required>
                             </div>
                         
                         <div class="modal-footer">
