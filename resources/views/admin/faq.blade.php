@@ -48,20 +48,20 @@
                 <h5 class="modal-title" id="staticBackdropLabel">TAMBAH FAQ</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{url('/admin/faq/simpan')}}" method="POST">
+            <form action="{{url('/admin/faq')}}" method="POST">
                 <div class="modal-body">
                     @csrf
                     <div class="mb-3">
                         <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                        <input type="text" class="form-control" id="subject">
+                        <input type="text" class="form-control" id="subject" name="subject">
                     </div>
                     <div class="mb-3">
                         <label for="jawaban" class="form-label">Jawaban</label>
-                        <input type="text" class="form-control" id="jawaban">
+                        <input type="text" class="form-control" id="jawaban" name="jawaban">
                     </div>
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example" name="status">
                             <option selected>Pilih Status</option>
                             <option value="aktif">Aktif</option>
                             <option value="tidak aktif">Tidak Aktif</option>
@@ -69,8 +69,9 @@
                     </div>
                     @foreach ($operator as $op)
                     <div class="mb-3">
-                        <label for="operator" class="form-label">Pembuat</label>
-                        <input type="text" class="form-control" id="id_operator" value={{ $op->id }} disabled>
+                        <label for="operator" class="form-label">Dibuat Oleh</label>
+                        <input type="text" class="form-control" id="id_operator" name="id_operator" value={{ $op->id }}
+                        disabled>
                     </div>
                     @endforeach
                 </div>

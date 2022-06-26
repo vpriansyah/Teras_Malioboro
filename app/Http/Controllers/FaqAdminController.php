@@ -23,13 +23,14 @@ class FaqAdminController extends Controller
 
     public function simpan(Request $request)
     {
-        $saran = FAQ::create([
-            'subject' => $request->subject,
-            'jawaban' => $request->jawaban,
-            'id_operator' => $request->id_operator,
-            'status' => $request->status,
+        $validateData = $request->validate([
+            'subject' => 'required',
+            'jawaban' => 'required',
+            'id_operator' => 'required',
+            'status' => 'required',
         ]);
 
-        return redirect()->route('adminfaq');
+        FAQ::create($validateData);
+        return redirect('/admin/faq');
     }
 }
