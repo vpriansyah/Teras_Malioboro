@@ -61,7 +61,7 @@
                                 <span aria-hidden="true"></span>
                             </button>
                         </div>
-                        <form action="{{ route('saran.admin.update', $s->id) }}" method="POST">
+                        <form action="{{ route('saran.update', $s->id) }}" method="POST">
                             @csrf
                             @method('PUT')
 
@@ -69,11 +69,12 @@
                                 <label for="Feedback">Feedback</label>
                                 <textarea type="text" style="width: 100%">{{ $s->feedback }}</textarea>
                             </div>
-                        </form>
+                        
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
+                    </form>
                     </div>
                 </div>
             </div>

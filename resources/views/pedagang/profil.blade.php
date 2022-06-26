@@ -70,8 +70,8 @@
                                         <td></td>
                                         <td>Jam Operasional</td>
                                         <td>:</td>
-                                        <td>{{ $data->operasional_jam_buka }} Pagi sampai
-                                            {{ $data->operasional_jam_tutup }}
+                                        <td>{{ $data->operasional_jam_buka }}.00 - 
+                                            {{ $data->operasional_jam_tutup }}.00
                                         </td>
                                     </tr>
                                     <tr>
@@ -210,11 +210,12 @@
                         </div>
                     </div>
                 @endforeach
-
+                <center><br><a href="{{ url('profil/' . $data->id . '/edit') }}" class="btn btn-primary">Tambahkan Barang</a>
+                </center>
             </div>
         </div>
 
-
+<br>
         <section class="iq-feature1 overview-block-ptb grey-bg" id="menupilihan">
             <div class="container">
                 <div class="row">
