@@ -239,7 +239,8 @@
                     <div class="col-lg-8 col-md-7 col-sm-12 col-12 d-flex align-item-center"
                         style="text-align: justify; text-justify: inter-word;">
                         <p> &emsp; &emsp; Sugeng Rawuh, Selamat datang di Teras Malioboro <br>
-                            Pusat Pedagang kaki lima di kawasan Malioboro untuk menemukan pedagang favorit anda, melakukan pemesanan, melihat lokasi pedagang dan mengirimkan aduan maupun saran</p>
+                            Pusat Pedagang kaki lima di kawasan Malioboro untuk menemukan pedagang favorit anda, melakukan pemesanan, melihat lokasi pedagang dan mengirimkan aduan maupun saran.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius qui excepturi adipisci suscipit corrupti incidunt at, commodi voluptatem autem dolor saepe tempora ullam animi ut magni nam tempore, numquam quasi aspernatur obcaecati soluta nemo ratione, sint similique. Dolorem natus, rem suscipit voluptates error sunt corrupti accusantium debitis. Unde ipsam perspiciatis beatae, fugiat iusto saepe delectus aliquam ullam ducimus, voluptates consectetur harum ipsa a autem exercitationem id culpa aperiam dicta et, magni quae quo libero dolores? Commodi aspernatur tempore excepturi in magnam alias vel voluptas tenetur laborum nulla tempora atque dignissimos, sequi maiores recusandae quam, totam voluptate non beatae? Ratione, quas!</p>
                     </div>
                 </div>
             </div>
