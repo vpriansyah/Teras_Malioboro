@@ -47,6 +47,7 @@ Route::resource('saran', SaranAdminController::class);
 
 Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('adminfaq');
 Route::post('admin/faq/simpan', [FaqAdminController::class, 'simpan'])->name('simpanfaq');
+Route::post('admin/faq/edit', [FaqAdminController::class, 'edit'])->name('simpanfaq');
 
 //Pedagang
 Route::get('/pedagang', function () {
