@@ -35,14 +35,6 @@ class FaqAdminController extends Controller
         return redirect('/admin/faq');
     }
 
-    public function edit($id)
-    {
-        $faq = FAQ::find($id);
-        return view('pedagang.edit', compact(
-            'faq'
-        ));
-    }
-
     public function update(Request $request)
     {
         $this->validate($request, [
@@ -75,5 +67,12 @@ class FaqAdminController extends Controller
                     Alert::error('Gagal', 'Artikel Gagal Diubah')
                 ]);
         }
+    }
+
+    public function hapus($id_faq)
+    {
+        FAQ::where('id_faq', $id_faq)->delete();
+
+        return redirect()->route('adminfaq');
     }
 }

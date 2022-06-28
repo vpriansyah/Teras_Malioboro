@@ -2,6 +2,14 @@
 @section('content')
 @extends('pedagang.layouts.footer')
 <div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="heading-title">
+                <h2 class="">FAQ</h2>
+                <hr class="mx-auto" style="width: 20%">
+            </div>
+        </div>
+    </div>
     <!-- Button trigger modal -->
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahFAQ">
@@ -30,8 +38,11 @@
                 <td>{{ $f->nama }}</td>
                 <td>{{ $f->status }}</td>
                 <td>
-                    <span class="badge text-bg-success" data-bs-toggle="modal" data-bs-target="#editFAQ">Edit</span>
-                    <span class="badge text-bg-danger">Hapus</span>
+                    <a href="/admin/faq/edit/{{ $f->id_faq }}" data-bs-toggle="modal"
+                        data-bs-target="#editFAQ{{ $f->id_faq }}" class="btn btn-outline-success btn-sm">Edit</a>
+                    <a href="/admin/faq/hapus/{{ $f->id_faq }}"
+                        onclick="return confirm('Apakah Anda Yakin Menghapus Data?');"
+                        class="btn btn-outline-danger btn-sm">Hapus</a>
                 </td>
             </tr>
             @endforeach
@@ -53,11 +64,11 @@
                     @csrf
                     <div class="mb-3">
                         <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                        <input type="text" class="form-control" id="subject" name="subject">
+                        <textarea class="form-control" id="subject" name="subject"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="jawaban" class="form-label">Jawaban</label>
-                        <input type="text" class="form-control" id="jawaban" name="jawaban">
+                        <textarea class="form-control" id="jawaban" name="jawaban"></textarea>
                     </div>
                     @foreach ($operator as $op)
                     <div class="mb-3">
@@ -83,7 +94,8 @@
     </div>
 </div>
 
-<div class="modal fade" id="editFAQ" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+@foreach ($faq as $f)
+<div class="modal fade" id="editFAQ{{ $f->id_faq }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -91,16 +103,18 @@
                 <h5 class="modal-title" id="staticBackdropLabel">EDIT FAQ</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{url('/admin/faq/simpan')}}" method="POST">
+            <form action="{{url('admin/faq/edit/', )}}" method="POST">
                 <div class="modal-body">
                     @csrf
                     <div class="mb-3">
                         <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                        <input type="text" class="form-control" id="subject" name="subject">
+                        <textarea class="form-control" id="subject" name="subject" value={{ old('subject',
+                            $f->subject ) }}>{{ $f->subject }}</textarea>
                     </div>
                     <div class="mb-3">
                         <label for="jawaban" class="form-label">Jawaban</label>
-                        <input type="text" class="form-control" id="jawaban" name="jawaban">
+                        <textarea class="form-control" id="jawaban" name="jawaban" value={{ old('subject',
+                            $f->jawaban) }}>{{ $f->jawaban }}</textarea>
                     </div>
                     @foreach ($operator as $op)
                     <div class="mb-3">
@@ -111,7 +125,7 @@
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
                         <select class="form-select" aria-label="Default select example" name="status">
-                            <option selected>Pilih Status</option>
+                            <option value={{ old('subject',$f->status) }}>{{ $f->status }}</option>
                             <option value="aktif">Aktif</option>
                             <option value="tidak aktif">Tidak Aktif</option>
                         </select>
@@ -125,5 +139,6 @@
         </div>
     </div>
 </div>
+@endforeach
 </div>
 @endsection
