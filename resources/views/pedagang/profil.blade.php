@@ -177,6 +177,48 @@
         <div class="container">
             <div class="heading-title text-center">
                 <h2 class="title iq-tw-6">Barang Dagangan</h2>
+                <center><a href="{{ url('profil/' . $data->id . '/edit') }}" class="btn btn-primary" data-toggle="modal"
+                    data-target="#tambahbarang">Tambahkan Barang</a>
+                </center>
+
+                {{-- Modal --}}
+
+                <div class="modal fade" id="tambahbarang" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Barang</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="container">
+                        <div class="mb-3">
+                            <br>
+                            <form action="{{url('/pedagang/profil/simpan')}}" method="POST">
+                                @csrf
+
+                            <input type="text" class="form-control id="id"
+                            aria-describedby="id" name="id_pedagang" value="{{ $data->id }}" required hidden>
+                            <label for="nama" class="form-label" style="text-align: left">Nama Barang</label>
+                            <input type="text" class="form-control" id="barang" name="barang" required>
+                            <br>
+                            <label for="upload" class="form-label" style="text-align: left">Upload Foto</label>
+                            <input type="file" class="form-control" id="gambar" name="gambar"  required>
+                            <br>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             </div>
             <div class="row justify-content-md-center">
                 @foreach ($barang as $barang)
@@ -203,15 +245,22 @@
                                     <p class="card-text">
                                         <center>Harga Menyesuaikan SiBakul Jogja</center>
                                     </p>
+                                    
                                     <a href="https://sibakuljogja.jogjaprov.go.id/app/Beranda"
                                         class="btn btn-success">SiBakul Jogja</a>
+                                    <br>
+                                    <center><form action="/profil/barang/{{ $barang->id }}" method="POST">
+                                        @method('delete')
+                                        @csrf
+                                        {{-- <input type="hidden" name="_method" value="DELETE"> --}}
+                                        <button class="btn btn-danger">Delete</button>
+                                    </form></center>
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                <center><br><a href="{{ url('profil/' . $data->id . '/edit') }}" class="btn btn-primary">Tambahkan Barang</a>
-                </center>
+                
             </div>
         </div>
 

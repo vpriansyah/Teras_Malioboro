@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SaranController;
 use App\Http\Controllers\FaqAdminController;
 use App\Http\Controllers\Galeri2Controller;
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\ProductController;
 
 
@@ -75,7 +76,8 @@ Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@in
 
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth')->name('pedagang.profil');
 Route::resource('profil', ProfilController::class);
-// Route::put('profil/{profil}', [ProductController::class, 'update'])->name('profil.update2');
+Route::resource('profil/barang', BarangController::class);
+Route::post('pedagang/profil/simpan', [ProfilController::class, 'simpan'])->middleware('auth');
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
 

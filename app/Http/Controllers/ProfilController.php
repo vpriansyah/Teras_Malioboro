@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Barang;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,13 +17,27 @@ class ProfilController extends Controller
         $data_pkl = DB::table('data_pkl')
             ->where('nik',  '=', Auth::user()->name)
             ->get();
-        // var_dump(Auth::user()->name);
-        // exit;
+       
         $barang = DB::table('barang')
-            ->join('data_pkl', 'data_pkl.id', '=', 'barang.id_pedagang')
+        
+        ->join('data_pkl', 'data_pkl.id', '=', 'barang.id_pedagang')
             ->where('nik',  '=', Auth::user()->name)
             ->get();
+
+    
         return view('pedagang.profil', ['data_pkl' => $data_pkl, 'barang' => $barang]);
+    }
+
+    public function simpan(Request $request)
+    {
+        $validateData = $request->validate([
+            'barang' => 'required',
+            'gambar' => 'required',
+            'id_pedagang' => 'required'
+        ]);
+
+        Barang::create($validateData);
+        return redirect('/pedagang/profil');
     }
 
 
@@ -70,6 +85,13 @@ class ProfilController extends Controller
         return view('pedagang.edit', compact(
             'data_pkl'
         ));
+        
+        $barang = Profil::find($id);
+        return view('pedagang.profil', compact(
+            'barang'
+        ));;
+
+        
     }
 
     /**
@@ -89,6 +111,7 @@ class ProfilController extends Controller
             'paguyuban_id' => 'required',
             'nik' => 'required',
             'no_kk' => 'required',
+            'namabarang' => 'required'
 
         ]);
 
@@ -127,8 +150,9 @@ class ProfilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, Barang $barang)
     {
-        //
+     Barang::where('id',$barang->id)->delete();
+        return redirect('pedagang/profil');
     }
 }
