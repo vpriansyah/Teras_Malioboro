@@ -81,7 +81,7 @@ Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])
 
 Route::get('pedagang/informasi', 'App\Http\Controllers\InfoPedagangController@index')->middleware('auth');
 Route::get('/search', 'App\Http\Controllers\InfoPedagangController@search');
-Route::get('/readmore-info/{info}', 'App\Http\Controllers\InfoPedagangController@readmore');
+Route::get('pedagang/moreinfo/{id}', 'App\Http\Controllers\InfoPedagangController@readmore');
 //Route::get('pedagang/informasi', function () {
 //    return view('/pedagang/informasi');
 //});

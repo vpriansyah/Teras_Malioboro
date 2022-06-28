@@ -39,13 +39,10 @@
             </div>
         </div>
     </div>
-<<<<<<< Updated upstream
-    </div>
-=======
+</div>
+
 <!-- details card section starts from here -->
 <!-- /Row -->
-</div>
->>>>>>> Stashed changes
 
 <!-- @foreach($tindak_lanjut as $tindak)
     <?php
@@ -105,15 +102,9 @@
                     </div>
                 </div>
             </div>
-<<<<<<< Updated upstream
-            </div>
-</section>
-@endforeach
-=======
         @endforeach
     </div>
 </div>
->>>>>>> Stashed changes
 
 <div class="container justify-content-between">
     <div class="mx-auto d-block">

@@ -12,6 +12,7 @@ class InfoPedagangController extends Controller
     {
         $info_penting_pedagang = DB::table('info_penting_pedagang')->paginate(2);
         return view('pedagang.informasi', ['info_penting_pedagang' => $info_penting_pedagang]);
+    
     }
 
     public function search(Request $request)
@@ -20,9 +21,12 @@ class InfoPedagangController extends Controller
         return view('pedagang.informasi', ['info_penting_pedagang' => $search]);
     }
 
-    public function readmore(Info $info)
+    public function readmore($id)
     {
-        $info = DB::table('info_penting_pedagang')->where("id", $info)->get();
-        return view('pedagang.informasi.readmore-info.{{$info->id}}', compact('info'));
+        $info = DB::table('info_penting_pedagang')->where("id", $id)->get();
+        return view('pedagang.moreinfo', ['info_penting_pedagang' => $info]);
+
+        $info_penting_pedagang = DB::table('info_penting_pedagang')->first();
+        return view('pedagang.informasi', ['info_penting_pedagang' => $info_penting_pedagang]);
     }
 }

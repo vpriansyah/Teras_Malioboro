@@ -81,21 +81,19 @@
     <br>
 </div>-->
 
-    <?php
-    $isi = substr($info->isi, 0, 175); 
-    ?>
     <div class="container justify-content-end">
         <div class="card shadow-sm p-3 mb-3 bg-body rounded" style="max-width:auto;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <img src="{!! asset('images/festival_bakpia.jpg') !!}" class="img-fluid rounded-start" style="height:200px">
+                <img src="{!! asset('images/festival_bakpia.jpg') !!}" class="img-fluid rounded-start" style="height:230px">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{$info->judul}}</h5>
                         <p class="card-text"><small class="text-muted">{{$info->tanggal}}</small></p>
-                        <p class="card-text">{{$isi}}</p>
-                        <a href="{{ url('pedagang/moreinfo');}}/{{$info->id}}" class="btn btn-success">Selengkapnya</a>
+                        <p class="card-text">{{$info->isi}}</p>
+                        <a href="" class="btn btn-success">Selengkapnya</a>
+                        {{$info->id}}
                     </div>
                 </div>
             </div>
@@ -104,12 +102,6 @@
     <br>
 </div>
 @endforeach
-
-<div class="container">
-    <div class="mx-auto d-block">
-        {{ $info_penting_pedagang->links()}}
-    </div>
-</div>
 
 <!-- Banner End -->
 @endsection
