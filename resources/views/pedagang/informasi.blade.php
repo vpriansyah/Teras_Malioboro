@@ -3,7 +3,7 @@
 @extends('pedagang.layouts.footer')
 
 <!-- Banner -->
-<section id="home" class="iq-banner-12 light-green-bg">
+<!-- <section id="home" class="iq-banner-12 light-green-bg">
     <div class="container" id="home">
         <div class="banner-text text-left">
             <div class="row justify-content-between">
@@ -53,8 +53,16 @@
             <span class="iq-round"></span>
         </span>
     </div>
-</section>
-<br><br><br>
+</section> -->
+
+<div class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-success">
+        <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">Info Penting</h1>
+        <p class="lead my-3">Info penting bertujuan untuk memberika informasi seputar teras malioboro kepada pedagang secara khusus.</p>
+        </div>
+    </div>
+</div>
 <!-- Banner End -->
 <!-- Banner -->
 <div class="navbar">
@@ -68,18 +76,6 @@
 </div>
 
 @foreach($info_penting_pedagang as $info)
-<!--<div class="container justify-content-end">
-    <div class="card" style="width:max">
-        <br>
-        <img class="mx-auto d-block" src="{!! asset('images/festival_bakpia.jpg') !!}" alt="Card image" style="width:50%">
-        <div class="card-body">
-            <h4 class="card-title">{{$info->judul}}</h4>
-            <p class="card-title">{{$info->tanggal}}</p>
-            <p class="card-title">{{$info->isi}}</p>
-        </div>
-    </div>
-    <br>
-</div>-->
 
     <?php
     $isi = substr($info->isi, 0, 175); 
@@ -105,11 +101,9 @@
 </div>
 @endforeach
 
-<div class="container">
-    <div class="mx-auto d-block">
-        {{ $info_penting_pedagang->links()}}
-    </div>
-</div>
+  <ul class="pagination justify-content-center">
+  {{ $info_penting_pedagang->links()}}
+  </ul><br>
 
 <!-- Banner End -->
 @endsection
