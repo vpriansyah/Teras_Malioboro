@@ -30,14 +30,7 @@ class ProfilController extends Controller
 
     public function simpan(Request $request)
     {
-        $validateData = $request->validate([
-            'barang' => 'required',
-            'gambar' => 'required',
-            'id_pedagang' => 'required'
-        ]);
-
-        Barang::create($validateData);
-        return redirect('/pedagang/profil');
+      
     }
 
 
@@ -59,7 +52,22 @@ class ProfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'barang' => 'required',
+            'gambar' => 'required',
+            'id_pedagang' => 'required'
+        ]);
+
+        // dd($validateData);
+
+        if ($request->file('barang') === null){
+            Barang::create($validateData);
+        } else {
+            $validateData['barang'] = $request->file('gambar')->store('Publik_Galeri');
+            Barang::create($validateData);
+        }
+
+        return redirect('/pedagang/profil');
     }
 
     /**

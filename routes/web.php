@@ -79,7 +79,7 @@ Route::get('/pedagang/agenda', 'App\Http\Controllers\AgendaPedagangController@in
 Route::get('pedagang/profil', 'App\Http\Controllers\ProfilController@index')->middleware('auth')->name('pedagang.profil');
 Route::resource('profil', ProfilController::class);
 Route::resource('profil/barang', BarangController::class);
-Route::post('pedagang/profil/simpan', [ProfilController::class, 'simpan'])->middleware('auth');
+Route::post('pedagang/profil/store', [ProfilController::class, 'store'])->middleware('auth');
 
 Route::get('/pedagang/statistik', [StatistikPedagangController::class, 'index'])->middleware('auth');
 

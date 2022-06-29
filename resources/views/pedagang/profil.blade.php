@@ -58,7 +58,6 @@
                                     <th style="width:40%"></th>
                                     <th style="width:10%"></th>
                                 </tr>
-                                {{-- <?= var_dump($data_pkl) ?> --}}
                                 @foreach ($data_pkl as $key => $data)
                                     <tr>
                                         <td></td>
@@ -196,7 +195,7 @@
                         <div class="container">
                         <div class="mb-3">
                             <br>
-                            <form action="{{url('/pedagang/profil/simpan')}}" method="POST">
+                            <form action="{{url('/pedagang/profil/store')}}" method="POST">
                                 @csrf
 
                             <input type="text" class="form-control id="id"
@@ -205,7 +204,7 @@
                             <input type="text" class="form-control" id="barang" name="barang" required>
                             <br>
                             <label for="upload" class="form-label" style="text-align: left">Upload Foto</label>
-                            <input type="file" class="form-control" id="gambar" name="gambar"  required>
+                            <input type="file" class="form-control" id="gambar" name="gambar" enctype="multipart/form-data" required>
                             <br>
                         </div>
                         </div>
@@ -249,12 +248,12 @@
                                     <a href="https://sibakuljogja.jogjaprov.go.id/app/Beranda"
                                         class="btn btn-success">SiBakul Jogja</a>
                                     <br>
-                                    <center><form action="/profil/barang/{{ $barang->id }}" method="POST">
+                                    {{-- <center><form action="/profil/barang/{{ $barang->id }}" method="POST">
                                         @method('delete')
-                                        @csrf
+                                        @csrf --}}
                                         {{-- <input type="hidden" name="_method" value="DELETE"> --}}
-                                        <button class="btn btn-danger">Delete</button>
-                                    </form></center>
+                                        {{-- <button class="btn btn-danger">Delete</button>
+                                    </form></center> --}}
                                 </div>
                             </div>
                         </div>
