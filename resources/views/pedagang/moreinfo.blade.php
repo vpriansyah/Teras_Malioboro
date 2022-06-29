@@ -10,7 +10,7 @@
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="/pedagang/informasi">Informasi</a>
+                    <a class="text-success fw-bolder text-decoration-none" href="/pedagang/informasi">Informasi</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">{{$info->judul}}</li>
             </ol>
@@ -22,9 +22,17 @@
         <h2 class="blog-post-title">{{$info->judul}}</h2>
         <p class="blog-post-meta">{{$info->tanggal}}</p>
         <hr>
-        <img src="{!! asset('images/festival_bakpia.jpg') !!}" class="img-thumbnail" alt="...">
+        @php
+            $Foto = $info->foto;
+            if ($info->foto == null) {
+                $Foto = 'notfound.jpg';
+            }
+        @endphp
+        <img width="100%" src="{!! asset('images/Publik_Galeri/' . $Foto . '') !!}" class="img-thumbnail" alt="...">
         <hr>
-        <p>{{$info->isi}}</p>
+        <p class="fw-bolder">Teras Malioboro - 
+        <a class="fw-normal">{{$info->isi}}</a>
+        </p>
       </article>
     </div>
 

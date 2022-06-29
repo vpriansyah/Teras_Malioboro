@@ -84,7 +84,13 @@
         <div class="card shadow-sm p-3 mb-3 bg-body rounded" style="max-width:auto;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <img src="{!! asset('images/festival_bakpia.jpg') !!}" class="img-fluid rounded-start" style="height:200px">
+                @php
+                $Foto = $info->foto;
+                if ($info->foto == null) {
+                    $Foto = 'notfound.jpg';
+                }
+            @endphp
+                <img src="{!! asset('images/Publik_Galeri/' . $Foto . '') !!}" class="img-fluid rounded-start" style="height:200px">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
