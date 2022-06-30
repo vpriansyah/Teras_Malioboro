@@ -22,6 +22,12 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       @foreach($tindak_lanjut as $tindak)
+      <?php
+      $desc = substr($tindak->Deskripsi, 0, 100); 
+      ?>
+      <?php
+      $desc2 = substr($tindak->Deskripsi, 100, 10000); 
+      ?>
         <div class="col">
           <div class="card shadow-sm">
           @php
@@ -33,10 +39,12 @@
             <img width="100%" height="225px" src="{!! asset('images/Publik_Galeri/' . $foto . '') !!}" alt="">
             <div class="card-body">
               <h5>{{$tindak->Judul}}</h5>
-              <p class="card-text">{{$tindak->Deskripsi}}</p>
+              <div class="card-text">{{$desc}}</div>
+              <div class="card-text collapse" id="demo{{$tindak->id_tindaklanjut}}">{{$desc2}}</div>
+              <!-- <p class="card-text collapse" id="demo{{$tindak->id_tindaklanjut}}">{{$tindak->Deskripsi}}</p> -->
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-success">View</button>
+                  <button data-bs-target="#demo{{$tindak->id_tindaklanjut}}" class="readmore-btn btn btn-sm btn-success" data-bs-toggle="collapse">Baca Lengkap</button>
                 </div>
               </div>
             </div>
@@ -46,6 +54,15 @@
       </div>
     </div>
   </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(".readmore-btn").on('click', function(){
+  $(this).parent().toggleClass("gantiText");
+  var replaceText = $(this).parent().hasClass("gantiText") ? "Baca Singkat" : "Baca Lengkap";
+  $(this).text(replaceText);
+});
+</script>
 
 </main>
 
