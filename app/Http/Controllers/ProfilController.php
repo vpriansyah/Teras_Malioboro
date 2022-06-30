@@ -24,8 +24,14 @@ class ProfilController extends Controller
             ->where('nik',  '=', Auth::user()->name)
             ->get();
 
+        $barang_pedagang = DB::table('barang_pedagang')
 
-        return view('pedagang.profil', ['data_pkl' => $data_pkl, 'barang' => $barang]);
+            ->join('data_pkl', 'data_pkl.id', '=', 'barang_pedagang.id_pedagang')
+            ->where('nik',  '=', Auth::user()->name)
+            ->get();
+
+
+        return view('pedagang.profil', ['data_pkl' => $data_pkl, 'barang' => $barang, 'barang_pedagang' => $barang_pedagang]);
     }
 
     public function simpan(Request $request)

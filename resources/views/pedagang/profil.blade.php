@@ -223,7 +223,7 @@
 
             </div>
             <div class="row justify-content-md-center">
-                @foreach ($barang as $barang)
+                @foreach ($barang_pedagang as $barang)
                     <div
                         class="card col-lg-4 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex align-items-stretch mx-auto">
                         <div class=" iq-blog text-left iq-ptb-15 iq-pr-10 iq-pl-10 d-flex ">
@@ -237,7 +237,7 @@
                                 @endphp
                                 <div class="card m-auto justify-content-center bg-transparent border-0"
                                     style="padding-top:30%; width:auto; max-width: 75%; height:25%; max-height:100px">
-                                    <img src="{!! asset('storage/Publik_Galeri/' . $foto . '') !!}" class="d-block mw-100"
+                                    <img src="{{ asset('storage/' . $foto) }}" class="d-block mw-100"
                                         style="height:auto; max-height:175px; padding-top:5%;; width:auto;"
                                         alt="''.$barang->gambar.''">
                                 </div>
