@@ -26,9 +26,8 @@ class TindakLanjutAdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
     }
 
     /**
@@ -39,7 +38,14 @@ class TindakLanjutAdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'Judul' => 'required',
+            'Deskripsi' => 'required',
+            'Foto' => 'required',
+        ]);
+        $validateData['Foto'] = $request->file('Foto')->store('post-images');
+        TindakLanjutAdmin::create($validateData);
+        return redirect('/admin/tindaklanjut');
     }
 
     /**

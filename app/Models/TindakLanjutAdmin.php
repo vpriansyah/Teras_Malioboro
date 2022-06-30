@@ -9,4 +9,7 @@ class TindakLanjutAdmin extends Model
 {
     use HasFactory;
     protected $table = 'tindak_lanjut';
+    protected $fillable = [
+        'Judul', 'Deskripsi', 'Foto'
+    ];
 }

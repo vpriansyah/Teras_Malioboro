@@ -54,6 +54,7 @@ Route::post('admin/faq/edit/{id_faq}', [FaqAdminController::class, 'update'])->n
 Route::get('admin/faq/hapus/{id_faq}', [FaqAdminController::class, 'hapus'])->name('hapusfaq');
 
 Route::get('admin/tindaklanjut', [TindakLanjutAdminController::class, 'index']);
+Route::post('admin/tindaklanjut/store', [TindakLanjutAdminController::class, 'store']);
 
 
 //Pedagang

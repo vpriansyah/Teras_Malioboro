@@ -17,20 +17,19 @@ class ProfilController extends Controller
         $data_pkl = DB::table('data_pkl')
             ->where('nik',  '=', Auth::user()->name)
             ->get();
-       
+
         $barang = DB::table('barang')
-        
-        ->join('data_pkl', 'data_pkl.id', '=', 'barang.id_pedagang')
+
+            ->join('data_pkl', 'data_pkl.id', '=', 'barang.id_pedagang')
             ->where('nik',  '=', Auth::user()->name)
             ->get();
 
-    
+
         return view('pedagang.profil', ['data_pkl' => $data_pkl, 'barang' => $barang]);
     }
 
     public function simpan(Request $request)
     {
-      
     }
 
 
@@ -54,18 +53,13 @@ class ProfilController extends Controller
     {
         $validateData = $request->validate([
             'barang' => 'required',
-            'gambar' => 'required',
+            'gambar' => 'image|file|required',
             'id_pedagang' => 'required'
         ]);
 
         // dd($validateData);
-
-        if ($request->file('barang') === null){
-            Barang::create($validateData);
-        } else {
-            $validateData['barang'] = $request->file('gambar')->store('Publik_Galeri');
-            Barang::create($validateData);
-        }
+        $validateData['gambar'] = $request->file('gambar')->store('Publik_Galeri');
+        Barang::create($validateData);
 
         return redirect('/pedagang/profil');
     }
@@ -93,13 +87,11 @@ class ProfilController extends Controller
         return view('pedagang.edit', compact(
             'data_pkl'
         ));
-        
+
         $barang = Profil::find($id);
         return view('pedagang.profil', compact(
             'barang'
         ));;
-
-        
     }
 
     /**
@@ -160,7 +152,7 @@ class ProfilController extends Controller
      */
     public function destroy($id, Barang $barang)
     {
-     Barang::where('id',$barang->id)->delete();
+        Barang::where('id', $barang->id)->delete();
         return redirect('pedagang/profil');
     }
 }
