@@ -1,23 +1,25 @@
 <?php
 
+use App\Models\Profil;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AduanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SaranController;
-use App\Http\Controllers\FaqAdminController;
-use App\Http\Controllers\Galeri2Controller;
 use App\Http\Controllers\BarangController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\GaleriController;
 
 
-use App\Http\Controllers\PublikController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\PublikController;
+use App\Http\Controllers\Galeri2Controller;
+use App\Http\Controllers\FaqAdminController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SaranAdminController;
+use App\Http\Controllers\TindakLanjutController;
 use App\Http\Controllers\StatistikPublikController;
 use App\Http\Controllers\StatistikPedagangController;
-use App\Http\Controllers\TindakLanjutController;
-use App\Models\Profil;
+use App\Http\Controllers\TindakLanjutAdminController;
 
 
 /*
@@ -50,6 +52,8 @@ Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('adminfaq');
 Route::post('admin/faq/simpan', [FaqAdminController::class, 'simpan'])->name('simpanfaq');
 Route::post('admin/faq/edit/{id_faq}', [FaqAdminController::class, 'update'])->name('editfaq');
 Route::get('admin/faq/hapus/{id_faq}', [FaqAdminController::class, 'hapus'])->name('hapusfaq');
+
+Route::get('admin/tindaklanjut', [TindakLanjutAdminController::class, 'index']);
 
 
 //Pedagang
