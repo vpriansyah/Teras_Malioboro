@@ -16,7 +16,7 @@ class TindakLanjutAdminController extends Controller
      */
     public function index()
     {
-        $tindaklanjut = DB::table('saran')
+        $tindaklanjut = DB::table('tindak_lanjut')
             ->get();
         return view('admin.tindaklanjut', ['tindaklanjut' => $tindaklanjut]);
     }

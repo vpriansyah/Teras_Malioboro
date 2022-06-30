@@ -22,11 +22,9 @@
             <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Jenis</th>
-                    <th scope="col">Kartegori</th>
-                    <th scope="col">Saran dan Aduan</th>
-                    <th scope="col">Feedback</th>
+                    <th scope="col">Judul</th>
+                    <th scope="col">Deskripsi</th>
+                    <th scope="col">Foto</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -35,11 +33,9 @@
                 @foreach ($tindaklanjut as $f)
                     <tr>
                         <th>{{ $no++ }}</th>
-                        <td>{{ $f->nama }}</td>
-                        <td>{{ $f->jenis }}</td>
-                        <td>{{ $f->id_kategori }}</td>
-                        <td>{{ $f->saran_aduan }}</td>
-                        <td>{{ $f->feedback }}</td>
+                        <td>{{ $f->Judul }}</td>
+                        <td>{{ $f->Deskripsi }}</td>
+                        <td>{{ $f->Foto }}</td>
                         <td>
                             <a href="/admin/faq/edit/" data-bs-toggle="modal" data-bs-target="#editFAQ"
                                 class="btn btn-outline-success btn-sm"><i class="fa-solid fa-pencil"></i></a>
