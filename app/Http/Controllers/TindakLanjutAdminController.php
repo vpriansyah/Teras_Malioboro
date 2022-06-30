@@ -77,9 +77,9 @@ class TindakLanjutAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_)
     {
-        //
+        
     }
 
     /**
@@ -88,8 +88,9 @@ class TindakLanjutAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_tindaklanjut)
     {
-        //
+        TindakLanjutAdmin::where('id_tindaklanjut', $id_tindaklanjut)->delete();
+        return redirect()->route('admintindaklanjut');
     }
 }

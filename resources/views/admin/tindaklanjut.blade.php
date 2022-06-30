@@ -37,9 +37,8 @@
                         <td>{{ $f->Deskripsi }}</td>
                         <td>{{ $f->Foto }}</td>
                         <td>
-                            <a href="/admin/faq/edit/" data-bs-toggle="modal" data-bs-target="#editFAQ"
-                                class="btn btn-outline-success btn-sm"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="/admin/faq/hapus/" onclick="return confirm('Apakah Anda Yakin Menghapus Data?');"
+                            <a href="/admin/tindaklanjut/destroy/{{ $f->id_tindaklanjut }}"
+                                onclick="return confirm('Apakah Anda Yakin Menghapus Data?');"
                                 class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>

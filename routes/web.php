@@ -53,8 +53,9 @@ Route::post('admin/faq/simpan', [FaqAdminController::class, 'simpan'])->name('si
 Route::put('admin/faq/edit/{FAQ}', [FaqAdminController::class, 'update'])->name('editfaq');
 Route::get('admin/faq/hapus/{id_faq}', [FaqAdminController::class, 'hapus'])->name('hapusfaq');
 
-Route::get('admin/tindaklanjut', [TindakLanjutAdminController::class, 'index']);
+Route::get('admin/tindaklanjut', [TindakLanjutAdminController::class, 'index'])->name('admintindaklanjut');
 Route::post('admin/tindaklanjut/store', [TindakLanjutAdminController::class, 'store']);
+Route::get('admin/tindaklanjut/destroy/{id_tindaklanjut}', [TindakLanjutAdminController::class, 'destroy']);
 
 
 //Pedagang
