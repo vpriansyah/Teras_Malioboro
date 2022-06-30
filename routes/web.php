@@ -50,7 +50,7 @@ Route::resource('saran', SaranAdminController::class);
 
 Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('adminfaq');
 Route::post('admin/faq/simpan', [FaqAdminController::class, 'simpan'])->name('simpanfaq');
-Route::post('admin/faq/edit/{id_faq}', [FaqAdminController::class, 'update'])->name('editfaq');
+Route::put('admin/faq/edit/{FAQ}', [FaqAdminController::class, 'update'])->name('editfaq');
 Route::get('admin/faq/hapus/{id_faq}', [FaqAdminController::class, 'hapus'])->name('hapusfaq');
 
 Route::get('admin/tindaklanjut', [TindakLanjutAdminController::class, 'index']);

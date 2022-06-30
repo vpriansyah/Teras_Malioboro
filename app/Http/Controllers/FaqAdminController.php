@@ -35,38 +35,16 @@ class FaqAdminController extends Controller
         return redirect('/admin/faq');
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id_faq)
     {
-        $this->validate($request, [
+        $update_faq = FAQ::find($id_faq);
 
-            'subject' => 'required',
-            'jawaban' => 'required',
-            'id_operator' => 'required',
-            'status' => 'required',
-        ]);
-
-        $faq = FAQ::where('id', $request->id);
-        $faq->update([
-            'subject' => $request->subject,
-            'jawaban' => $request->jawaban,
-            'id_operator' => $request->id_operator,
-            'status' => $request->status,
-        ]);
-
-        if ($faq) {
-            return redirect()
-                ->route('pedagang.profil')
-                ->with([
-                    Alert::success('Berhasil', 'Artikel Berhasil Diubah')
-                ]);
-        } else {
-            return redirect()
-                ->back()
-                ->withInput()
-                ->with([
-                    Alert::error('Gagal', 'Artikel Gagal Diubah')
-                ]);
-        }
+        $update_faq->subject = $request->updateSubject;
+        $update_faq->jawaban = $request->updateJawaban;
+        $update_faq->id_operator = $request->updateIdOperator;
+        $update_faq->status = $request->updateStatus;
+        $update_faq->save();
+        return redirect('/admin/faq');
     }
 
     public function hapus($id_faq)
