@@ -35,7 +35,7 @@
                         <th>{{ $no++ }}</th>
                         <td>{{ $f->Judul }}</td>
                         <td>{{ $f->Deskripsi }}</td>
-                        <td>{{ $f->Foto }}</td>
+                        <td><img width="30%" src="{{ asset('storage/' . $f->Foto) }}"</td>
                         <td>
                             <a href="/admin/tindaklanjut/destroy/{{ $f->id_tindaklanjut }}"
                                 onclick="return confirm('Apakah Anda Yakin Menghapus Data?');"
