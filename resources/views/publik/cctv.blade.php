@@ -69,9 +69,9 @@
                                 <span class="sr-only">Next</span>
                             </button>
                             </div>
+                            <center><p style="user-select: none;"><b>{{$tm1->waktu}}</b></p></center>
                             <h5 class="title iq-tw-6">Keterangan :</h5>
                             <p>{{ $tm1->keterangan }}</p>
-                            <center><p><b>Tanggal : {{$tm1->waktu}}</b></p></center>
                         </div>
                     </div>
                 </div>
@@ -123,9 +123,9 @@
                                 <span class="sr-only">Next</span>
                             </button>
                             </div>
+                            <center><p style="user-select: none;"><b>{{$tm2->waktu}}</b></p></center>
                             <h5 class="title iq-tw-6">Keterangan :</h5>
-                            <p>{{ $tm2->keterangan }}</p>
-                            <center><p><b>Tanggal : {{$tm2->waktu}}</b></p></center>
+                            <p>{{ $tm2->keterangan }}</p>      
                         </div>
                     </div>
                 </div>
