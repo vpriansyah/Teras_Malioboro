@@ -61,20 +61,20 @@
                                 <span aria-hidden="true"></span>
                             </button>
                         </div>
-                        <form action="{{ route('saran.update', $s->id) }}" method="POST">
+                        <form action="{{ url('/admin/saran/simpan') }}" method="POST">
                             @csrf
-                            @method('PUT')
-
                             <div class="modal-body">
+                                <input type="text" class="form-control" id="id" aria-describedby="id"
+                                    name="id_feedback" value="{{ $s->id }}" required>
                                 <label for="Feedback">Feedback</label>
-                                <input type="text" style="width: 100%" id="feedback" name="feedback" value="{{ $s->feedback }}" required>
+                                <input type="text" style="width: 100%" id="isi_feedback" name="isi_feedback" required>
                             </div>
-                        
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </form>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

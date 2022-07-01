@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\SaranAdmin;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -20,8 +21,22 @@ class SaranAdminController extends Controller
         $saran = DB::table('saran')
             ->get();
         return view('admin.saran', ['saran' => $saran]);
+
+        $feedback = DB::table('feedback_saran_pedagang')
+            ->join('feedback_saran_pedagang', 'feedback_saran_pedagang.id_saran', '=', 'saran.id');
+
+        return view('admin.saran', ['feedback' => $feedback]);
     }
 
+    public function simpan(Request $request)
+    {
+        $validateData = $request->validate([
+            'saran_id' => 'required',
+            'isi_feedback' => 'required',
+        ]);
+        Feedback::create($validateData);
+        return redirect('/admin/saran');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -75,29 +90,29 @@ class SaranAdminController extends Controller
      */
     public function update(Request $request)
     {
-        $this->validate($request, [
-            'feedback' => 'required',
-        ]);
+        // $this->validate($request, [
+        //     'feedback' => 'required',
+        // ]);
 
-        $saran = SaranAdmin::where('id', $request->id);
-        $saran->update([
-            'feedback' => $request->feedback
-        ]);
+        // $saran = SaranAdmin::where('id', $request->id);
+        // $saran->update([
+        //     'feedback' => $request->feedback
+        // ]);
 
-        if ($saran) {
-            return redirect()
-                ->route('admin.saran')
-                ->with([
-                    Alert::success('Berhasil', 'Artikel Berhasil Diubah')
-                ]);
-        } else {
-            return redirect()
-                ->back()
-                ->withInput()
-                ->with([
-                    Alert::error('Gagal', 'Artikel Gagal Diubah')
-                ]);
-        }
+        // if ($saran) {
+        //     return redirect()
+        //         ->route('admin.saran')
+        //         ->with([
+        //             Alert::success('Berhasil', 'Artikel Berhasil Diubah')
+        //         ]);
+        // } else {
+        //     return redirect()
+        //         ->back()
+        //         ->withInput()
+        //         ->with([
+        //             Alert::error('Gagal', 'Artikel Gagal Diubah')
+        //         ]);
+        // }
     }
 
     /**

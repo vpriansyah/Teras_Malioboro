@@ -67,10 +67,6 @@
                                         <option value="Lainnya">Lainnya</option>
                                     </select>
                                 </div>
-                                <input type="hidden" name="status" id="status" value="1">
-                                <input type="hidden" name="feedback" id="feedback" value="Menunggu jawaban admin">
-                                <div>
-                                </div>
                                 <div class="mb-3">
                                     <label for="aduan" class="form-label text-body">Saran dan Aduan</label>
                                     <textarea type="text" class="form-control border border-success" name="saran_aduan" id="aduan"

@@ -46,6 +46,7 @@ Route::get('/admin', function () {
 })->name('admin');
 Route::get('admin/saran', [SaranAdminController::class, 'index'])->name('admin.saran');
 Route::resource('saran', SaranAdminController::class);
+Route::post('admin/saran/simpan', [SaranAdminController::class, 'simpan'])->name('simpansaran');
 // Route::put('saran/{saran}', [AduanController::class, 'update'])->name('saran.update2');
 
 Route::get('admin/faq', [FaqAdminController::class, 'index'])->name('adminfaq');
