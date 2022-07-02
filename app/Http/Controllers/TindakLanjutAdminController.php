@@ -65,10 +65,6 @@ class TindakLanjutAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -77,9 +73,14 @@ class TindakLanjutAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id_)
+    public function update(Request $request, $id_tindaklanjut)
     {
-        
+        $update_tl = TindakLanjutAdmin::find($id_tindaklanjut);
+
+        $update_tl->Judul = $request->updateJudul;
+        $update_tl->Deskripsi = $request->updateDeskripsi;
+        $update_tl->save();
+        return redirect('/admin/tindaklanjut');
     }
 
     /**

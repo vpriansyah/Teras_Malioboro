@@ -56,6 +56,7 @@ Route::get('admin/faq/hapus/{id_faq}', [FaqAdminController::class, 'hapus'])->na
 
 Route::get('admin/tindaklanjut', [TindakLanjutAdminController::class, 'index'])->name('admintindaklanjut');
 Route::post('admin/tindaklanjut/store', [TindakLanjutAdminController::class, 'store']);
+Route::put('admin/tindaklanjut/update/{TindakLanjutAdmin}', [TindakLanjutAdminController::class, 'update'])->name('edittindaklanjut');
 Route::get('admin/tindaklanjut/destroy/{id_tindaklanjut}', [TindakLanjutAdminController::class, 'destroy']);
 
 
