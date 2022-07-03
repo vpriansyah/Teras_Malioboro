@@ -248,4 +248,40 @@
             </div>
             </div>
         </section>
+
+        <!-- Menu Pilihan Publik -->
+        <section class="iq-feature1 overview-block-ptb grey-bg" id="menupilihanpublik">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="heading-title blck text-center">
+                            <h2 class="title black iq-tw-6 iq-font-black">Menu Pilihan Publik</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-30">
+                        <a href="admin/aduansaranpublik" style="text-decoration: none">
+                            <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                                <div>
+                                    <i class="ion-chatbubble-working iq-mb-10"></i>
+                                    <h5 class="iq-tw-6" style="color: black; font-size: 24px; padding-top: 12px">Daftar Aduan & Saran</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-30">
+                        <a href="admin/jawabanpublik" style="text-decoration: none">
+                            <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                                <div>
+                                    <i class="ion-chatbubble-working iq-mb-10"></i>
+                                    <h5 class="iq-tw-6" style="color: black; font-size: 24px; padding-top: 12px">Jawaban Aduan & Saran</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Menu Pilihan Publik-->
     @endsection

@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SaranController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\PublikAdminController;
 
 
 use App\Http\Controllers\ProfilController;
@@ -59,6 +60,13 @@ Route::post('admin/tindaklanjut/store', [TindakLanjutAdminController::class, 'st
 Route::put('admin/tindaklanjut/update/{TindakLanjutAdmin}', [TindakLanjutAdminController::class, 'update'])->name('edittindaklanjut');
 Route::get('admin/tindaklanjut/destroy/{id_tindaklanjut}', [TindakLanjutAdminController::class, 'destroy']);
 
+Route::get('admin/aduansaranpublik', [PublikAdminController::class, 'aduansaran'])->name('aduansaran');
+Route::post('admin/aduansaranpublik/jawab', [PublikAdminController::class, 'tambah_jawaban']);
+Route::get('admin/jawabanpublik', [PublikAdminController::class, 'jawabanpublik'])->name('jawabanpublik');
+Route::post('admin/jawabanpublik/ubah/{id}', [PublikAdminController::class, 'ubah_jawaban']);
+Route::get('admin/jawabanpublik/tampil/{id}', [PublikAdminController::class, 'tampilkan']);
+Route::get('admin/jawabanpublik/sembunyi/{id}', [PublikAdminController::class, 'sembunyikan']);
+Route::get('admin/jawabanpublik/hapus/{id}', [PublikAdminController::class, 'hapus_jawaban']);
 
 //Pedagang
 Route::get('/pedagang', function () {
