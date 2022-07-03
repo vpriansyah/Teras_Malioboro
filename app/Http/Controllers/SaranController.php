@@ -25,7 +25,11 @@ class SaranController extends Controller
         ->join('data_pkl', 'data_pkl.id', '=', 'feedback_saran_pedagang.id_pedagang')
         ->where('nik',  '=', Auth::user()->name)
             ->get();
-        return view('pedagang.saran', ['data_pkl' => $data_pkl, 'saran' => $saran, 'kategori' => $kategori, 'feedback' => $feedback]);
+        $aduan = DB::table('saran')
+        ->join('data_pkl', 'data_pkl.id', '=', 'saran.pedagang_id')
+        ->where('nik',  '=', Auth::user()->name)
+        ->get();    
+        return view('pedagang.saran', ['data_pkl' => $data_pkl, 'saran' => $saran, 'kategori' => $kategori, 'feedback' => $feedback, 'aduan'=>$aduan]);
     }
 
     public function input(Request $request)
