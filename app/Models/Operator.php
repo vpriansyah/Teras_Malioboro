@@ -15,4 +15,9 @@ class Operator extends Model
     {
         return $this->hasMany(FAQ::class);
     }
+
+    public function Feedback()
+    {
+        return $this->hasMany(FeedbackPedagang::class);
+    }
 }

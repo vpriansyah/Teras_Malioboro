@@ -19,13 +19,15 @@ class SaranAdminController extends Controller
     public function index()
     {
         $saran = DB::table('saran')
+            ->join('data_pkl', 'saran.pedagang_id', '=', 'data_pkl.id')
+            ->join('kat_aduan', 'saran.kategori_id', '=', 'kat_aduan.id')
             ->get();
         return view('admin.saran', ['saran' => $saran]);
 
         $feedback = DB::table('feedback_saran_pedagang')
-            ->join('feedback_saran_pedagang', 'feedback_saran_pedagang.id_saran', '=', 'saran.id');
+            ->join('feedback_saran_pedagang', 'feedback_saran_pedagang.id_saran', '=', 'saran.id_saran');
 
-        return view('admin.saran', ['feedback' => $feedback]);
+        return view('admin.saran', ['saran' => $saran, 'feedback' => $feedback]);
     }
 
     public function simpan(Request $request)

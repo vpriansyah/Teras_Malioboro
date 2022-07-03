@@ -9,7 +9,18 @@ class Feedback extends Model
 {
     use HasFactory;
     protected $table = 'feedback_saran_pedagang';
+    protected $primaryKey = 'id_feedback';
     protected $fillable = [
-        'saran_id', 'isi_feedback'
+        'saran_id', 'isi_feedback', 'operator_id'
     ];
+
+    public function Saran()
+    {
+        return $this->hasOne(Saran::class);
+    }
+
+    public function Operator()
+    {
+        return $this->belongsTo(Operator::class);
+    }
 }
