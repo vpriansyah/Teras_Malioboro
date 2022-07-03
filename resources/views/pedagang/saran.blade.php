@@ -83,9 +83,10 @@
                             <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false"
                                 data-dots="true" data-items="3" data-items-laptop="3" data-items-tab="2"
                                 data-items-mobile="1" data-items-mobile-sm="1" data-margin="30">
+                               @foreach ($feedback as $f)
                                 <div class="card mt-4 align-items-center rounded rounded-lg" style="width: 18rem;">
                                     <div class="card-body shadow-sm rounded rounded-lg border-success border">
-                                        <h5 class="card-title">Card title</h5>
+                                        <h5 class="card-title">{{ $f->id_pedagang }}</h5>
                                         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                                         <p class="card-text">Some quick example text to build on the card title and make
                                             up the bulk of the card's content.</p>
@@ -93,56 +94,7 @@
                                         <a href="#" class="card-link">Another link</a>
                                     </div>
                                 </div>
-                                <div class="card mt-4 align-items-center rounded rounded-lg" style="width: 18rem;">
-                                    <div class="card-body shadow rounded rounded-lg border-success border">
-                                        <h5 class="card-title">Card title</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
-                                <div class="card mt-4 align-items-center rounded rounded-lg" style="width: 18rem;">
-                                    <div class="card-body shadow rounded rounded-lg border-success border">
-                                        <h5 class="card-title">Card title</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
-                                <div class="card mt-4 align-items-center rounded rounded-lg" style="width: 18rem;">
-                                    <div class="card-body shadow rounded rounded-lg border-success border">
-                                        <h5 class="card-title">Card title</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
-                                <div class="card mt-4 align-items-center rounded rounded-lg" style="width: 18rem;">
-                                    <div class="card-body shadow rounded rounded-lg border-success border">
-                                        <h5 class="card-title">Card title</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
-                                <div class="card mt-4 align-items-center rounded rounded-lg" style="width: 18rem;">
-                                    <div class="card-body shadow rounded rounded-lg border-success border">
-                                        <h5 class="card-title">Card title</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                            make up the bulk of the card's content.</p>
-                                        <a href="#" class="card-link">Card link</a>
-                                        <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                </div>
+                               @endforeach
                             </div>
                         </div>
                     </div>

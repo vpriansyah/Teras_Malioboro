@@ -11,7 +11,7 @@ class Feedback extends Model
     protected $table = 'feedback_saran_pedagang';
     protected $primaryKey = 'id_feedback';
     protected $fillable = [
-        'saran_id', 'isi_feedback', 'operator_id'
+        'saran_id', 'isi_feedback', 'operator_id', 'id_pedagang'
     ];
 
     public function Saran()

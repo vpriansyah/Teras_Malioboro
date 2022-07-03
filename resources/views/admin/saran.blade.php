@@ -78,8 +78,10 @@
                     <form action="{{ url('/admin/saran/simpan') }}" method="POST">
                         @csrf
                         <div class="modal-body">
-                            <input type="text" class="form-control" id="id" aria-describedby="id" name="id_feedback"
+                            <input type="text" class="form-control" id="id" aria-describedby="id" name="saran_id"
                                 value="{{ $s->id }}" required>
+                            <input type="text" class="form-control" id="id" aria-describedby="id" name="id_pedagang"
+                                value="{{ $s->pedagang_id }}" required>
                             <label for="Feedback">Feedback</label>
                             <input type="text" style="width: 100%" id="isi_feedback" name="isi_feedback" required>
                         </div>

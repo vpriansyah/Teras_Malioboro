@@ -34,6 +34,7 @@ class SaranAdminController extends Controller
     {
         $validateData = $request->validate([
             'saran_id' => 'required',
+            'id_pedagang' => 'required',
             'isi_feedback' => 'required',
         ]);
         Feedback::create($validateData);

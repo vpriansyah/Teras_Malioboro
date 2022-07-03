@@ -21,7 +21,11 @@ class SaranController extends Controller
         $kategori = DB::table('kat_aduan')
             ->where('status',  '=', 'Aktif')
             ->get();
-        return view('pedagang.saran', ['data_pkl' => $data_pkl, 'saran' => $saran, 'kategori' => $kategori]);
+        $feedback = DB::table('feedback_saran_pedagang')
+        ->join('data_pkl', 'data_pkl.id', '=', 'feedback_saran_pedagang.id_pedagang')
+        ->where('nik',  '=', Auth::user()->name)
+            ->get();
+        return view('pedagang.saran', ['data_pkl' => $data_pkl, 'saran' => $saran, 'kategori' => $kategori, 'feedback' => $feedback]);
     }
 
     public function input(Request $request)
