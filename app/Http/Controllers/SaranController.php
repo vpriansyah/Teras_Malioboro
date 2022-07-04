@@ -22,14 +22,16 @@ class SaranController extends Controller
             ->where('status',  '=', 'Aktif')
             ->get();
         $feedback = DB::table('feedback_saran_pedagang')
-        ->join('data_pkl', 'data_pkl.id', '=', 'feedback_saran_pedagang.id_pedagang')
-        ->where('nik',  '=', Auth::user()->name)
+            ->join('saran', 'saran.id', '=', 'feedback_saran_pedagang.saran_id')
+            ->join('data_pkl', 'data_pkl.id', '=', 'saran.pedagang_id')
+            ->where('nik',  '=', Auth::user()->name)
             ->get();
         $aduan = DB::table('saran')
-        ->join('data_pkl', 'data_pkl.id', '=', 'saran.pedagang_id')
-        ->where('nik',  '=', Auth::user()->name)
-        ->get();    
-        return view('pedagang.saran', ['data_pkl' => $data_pkl, 'saran' => $saran, 'kategori' => $kategori, 'feedback' => $feedback, 'aduan'=>$aduan]);
+            ->join('data_pkl', 'data_pkl.id', '=', 'saran.pedagang_id')
+            ->join('kat_aduan', 'kat_aduan.id', '=', 'saran.kategori_id')
+            ->where('nik',  '=', Auth::user()->name)
+            ->get();
+        return view('pedagang.saran', ['data_pkl' => $data_pkl, 'saran' => $saran, 'kategori' => $kategori, 'feedback' => $feedback, 'aduan' => $aduan]);
     }
 
     public function input(Request $request)

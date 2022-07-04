@@ -79,6 +79,7 @@
                             </form>
                         </div>
                         <!-- Form End-->
+                        <br>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false"
@@ -86,11 +87,36 @@
                                     data-items-mobile="1" data-items-mobile-sm="1" data-margin="30">
                                     @foreach ($feedback as $f)
                                         @foreach ($aduan as $a)
-                                            <div class="card mt-4 align-items-center" style="width: 18rem;">
-                                                <div class="card-body shadow-sm rounded rounded-lg border-success border">
-                                                    <h5 class="card-title" hidden>{{ $f->id_pedagang }}</h5>
-                                                    <h6 class="card-subtitle mb-2">{{ $a->saran_aduan }}</h6>
-                                                    <p class="card-text">{{ $f->isi_feedback }}</p>
+                                            <div class="item">
+                                                <div class="iq-blog-box">
+                                                    <div class="iq-blog-detail">
+                                                        <div class="blog-title">
+                                                            <h5 class="iq-tw-6 iq-mb-10"></h5>
+                                                        </div>
+                                                        <div class="blog-title">
+                                                            <div class="blog-content">
+                                                                <p><b>{{ $f->nama_lengkap }}</b></p>
+                                                            </div>
+                                                            <div class="iq-blog-meta">
+                                                                <div class="blog-title">
+                                                                    <h7 class="iq-tw-6 iq-mb-10">Kartegori</h7>
+                                                                </div>
+                                                                <p>{{ $a->jenis }}</p>
+                                                            </div>
+                                                            <div class="iq-blog-meta">
+                                                                <div class="blog-title">
+                                                                    <h7 class="iq-tw-6 iq-mb-10">Saran</h7>
+                                                                </div>
+                                                                <p>{{ $a->saran_aduan }}</p>
+                                                            </div>
+                                                            <div class="iq-blog-meta">
+                                                                <div class="blog-title">
+                                                                    <h7 class="iq-tw-6 iq-mb-10">Feedback Admin</h7>
+                                                                </div>
+                                                                <p>{{ $f->isi_feedback }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -104,4 +130,3 @@
         <!-- Row End -->
     </div>
 @endsection
-    
