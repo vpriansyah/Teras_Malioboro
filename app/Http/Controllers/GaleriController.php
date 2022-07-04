@@ -11,19 +11,32 @@ class GaleriController extends Controller
 {
     public function index()
     {
-        $data_pkl = Galeri::filter(request(['search', 'kat_dagangan', 'lokasi_teras', 'lokasi_gedung', 'lokasi_lantai']))->orderBy('nama_lengkap')->paginate(12);
+        $filter = Galeri::filter(request(['search', 'kat_dagangan', 'lokasi_teras', 'lokasi_gedung', 'lokasi_lantai']));
+        $data_pkl = $filter->orderBy('nama_lengkap')->paginate(12);
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
-
-         //dd($data_pkl);
+        $id_data = $filter->pluck("id");
+        $fil_jenis= DB::table('kat_dagangan')->where("id","=",(request("kat_dagangan")))->pluck("nama")->first();
+        $fil_kata = (request("search"));
+        $fil_loc_t = DB::table('lokasi_teras')->where("id","=",(request("lokasi_teras")))->pluck("nama")->first();
+        $fil_loc_g = DB::table('lokasi_gedung')->where("id","=",(request("lokasi_gedung")))->pluck("nama")->first();
+        $fil_loc_l = DB::table('lokasi_lantai')->where("id","=",(request("lokasi_gedung")))->pluck("nama")->first();
+        //dd($fil_loc);
+        
         // return view('publik.galeri', compact('kat_brg','lokasi_teras','data_pkl','lokasi_kios','lokasi_lantai','lokasi_gedung'));
+        //dd($id_data);
 
-        return view('publik.galeri', [
-            'data_pkl' => $data_pkl,
-            'kat_brg' => $kat_brg,
-            'lokasi_teras' => $lokasi_teras,
-            
-        ]);
+        //dd($data);
+        return view('publik.galeri', compact(
+        'data_pkl',
+        'kat_brg',
+        'lokasi_teras',
+        'id_data',
+        'fil_jenis',
+        'fil_kata',
+        'fil_loc_t',
+        'fil_loc_g',
+        'fil_loc_l'));
     }
 
     public function getgedung(Request $request)

@@ -105,9 +105,37 @@
     <!--card galeri-->
     <div class="container">
       <div class="row justify-content-center">
+        
+      <!--echo filters-->
+      @php
+      $margin = "margin-bottom:0rem"
+      @endphp
+        
+      @if(isset($fil_jenis))
+         <p style="'{{$margin}}'">Kategori = {{$fil_jenis}}<p>
+      @endif
+
+      @if(isset($fil_kata))
+        <p style=" {{$margin}}">Kata kunci = {{$fil_kata}}<p>
+      @endif
+
+      @php
+        $gedung = "semua gedung";
+          if(isset($fil_loc_g)){
+            $gedung = $fil_loc_g;
+          }
+        $lantai = "semua lantai";
+          if(isset($fil_loc_l)){
+            $lantai = "lantai " + $fil_loc_l;
+          }
+      @endphp
+      @if(isset($fil_loc_t))
+          <p style="{{$margin}}">Lokasi = {{$fil_loc_t}}, {{$gedung}}, {{$lantai}}<p>
+      @endif
+      <!---->
+
+        @if(count($id_data) > 0)
         @foreach ($data_pkl as $data)
-        {{--
-        <?php if ($data != null) {?> --}}
         <div class="card col-lg-3 col-md-4 col-sm-6 col-6 iq-mtb-10 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
           <a href="{{ url('publik/galeri-data') }}/{{ $data->id }}" style="text-decoration: none">
             <div class="iq-blog text-left iq-pt-30 d-flex  ">
@@ -145,13 +173,15 @@
             </div>
           </a>
         </div>
-        {{--
-        <?php } else { ?>
-        <h5>Data tidak ditemukan</h5>
-        <?php } ?> --}}
+        
         @endforeach
         <!---->
-        
+        @else 
+        <p class="text-center">Data tidak ditemukan</p>
+        <!--<div class="iq-pt-20">
+          <button type="button" class="btn btn-danger" onclick="history.back();">Kembali</button>
+        </div>-->
+        @endif
       </div>
       <div class="row mx-auto justify-content-center">
         {{ $data_pkl->links() }}
