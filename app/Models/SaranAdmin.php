@@ -12,4 +12,7 @@ class SaranAdmin extends Model
     protected $fillable = [
         'nama', 'jenis', 'id_kategori', 'saran_aduan', 'status', 'feedback'
     ];
+    protected $guarded = [
+        'id'
+    ];
 }

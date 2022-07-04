@@ -13,6 +13,10 @@ class Feedback extends Model
     protected $fillable = [
         'saran_id', 'isi_feedback', 'operator_id', 'id_pedagang'
     ];
+    protected $guarded = [
+        'id'
+    ];
+
 
     public function Saran()
     {

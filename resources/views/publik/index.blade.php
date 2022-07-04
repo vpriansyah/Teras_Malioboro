@@ -273,8 +273,8 @@
                       </div>
                       <div class="iq-blog-meta">
                         <div class="blog-title"><h7 class="iq-tw-6 iq-mb-10">Jawaban Pengelola</h7></div>
-                        <p>Isi jawaban - Quae laboriosam sunt consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. hic perspiciatis.</p>
-                      </div>
+                        <p>{{ $pilihan->jawaban }}</p>
+                    </div>
                       <div class="iq-blog-meta">
                         <ul class="list-inline">
                           <li class="list-inline-item"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ $pilihan->nama }}</li>

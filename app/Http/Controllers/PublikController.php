@@ -12,6 +12,7 @@ class PublikController extends Controller
     {
         $aduan_saran_pilihan = DB::table('aduan_saran_publik')->where('tampil', 'true')->orderBy('waktu')
             ->join('kat_aduan', 'kat_aduan.id', '=', 'aduan_saran_publik.kategori')
+            ->join('jawaban_publik', 'jawaban_publik.id_aduan_saran', '=', 'aduan_saran_publik.id')
             ->get();
         // dd($aduan_saran_pilihan);
         $info_penting = DB::table('info')->where('status', 'Aktif')->get();
