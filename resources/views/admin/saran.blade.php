@@ -43,18 +43,27 @@
                                 </div>
                                 <div class="">
                                     <center><button class="btn btn-success" data-toggle="modal"
-                                            data-target="#feedback">Feedback</button></center>
+                                            data-target="#feedback{{ $s->id_saran }}">Feedback</button></center>
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
+                    {{-- @foreach ($feedback as $f)
+                    <div class="iq-blog-meta">
+                        <div class="blog-title">
+                            <h7>Feedback</h7>
+                        </div>
+                        <p class="iq-tw-6 iq-mb-10">{{ $f->isi_feedback }}</p>
+                    </div>
+                    @endforeach --}}
                 </div>
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        @foreach ($saran as $s)
+        <div class="modal fade" id="feedback{{ $s->id_saran }}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -66,10 +75,8 @@
                     <form action="{{ url('/admin/saran/simpan') }}" method="POST">
                         @csrf
                         <div class="modal-body">
-                            @foreach ($saran as $s)
                             <input type="hidden" class="form-control" id="id" aria-describedby="id" name="saran_id"
                                 value="{{ $s->id_saran }}" required>
-                            @endforeach
                             <label for="Feedback">Feedback</label>
                             <input type="text" style="width: 100%" id="isi_feedback" name="isi_feedback" required>
                         </div>
@@ -82,6 +89,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 </section>
 @endsection
