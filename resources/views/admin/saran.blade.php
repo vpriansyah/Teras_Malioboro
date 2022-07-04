@@ -39,28 +39,12 @@
                                 <div class="iq-blog-meta">
                                     <div class="blog-title">
                                         <h7>Status</h7>
-                                        @if ( $s->status == 1 )
-                                        <button type="button" class="btn btn-primary btn-sm">Diajukan</button>
-                                        @elseif ( $s->status == 0 )
-                                        <button type="button" class="btn btn-danger btn-sm">Ditolak</button>
-                                        @elseif ( $s->status == 2 )
-                                        <button type="button" class="btn btn-info btn-sm">Diproses</button>
-                                        @else
-                                        <button type="button" class="btn btn-success btn-sm">Selesai</button>
-                                        @endif
                                     </div>
                                 </div>
-                                @if ( $s->status == 2 )
                                 <div class="">
                                     <center><button class="btn btn-success" data-toggle="modal"
                                             data-target="#feedback">Feedback</button></center>
                                 </div>
-                                @elseif ( $s->status != 2 )
-                                <div class="">
-                                    <center><button class="btn btn-secondary" data-toggle="modal"
-                                            data-target="#feedback" disabled>Feedback</button></center>
-                                </div>
-                                @endif
                             </div>
                         </div>
                     </div>
@@ -82,10 +66,10 @@
                     <form action="{{ url('/admin/saran/simpan') }}" method="POST">
                         @csrf
                         <div class="modal-body">
-                            <input type="text" class="form-control" id="id" aria-describedby="id" name="saran_id"
-                                value="{{ $s->id }}" required>
-                            <input type="text" class="form-control" id="id" aria-describedby="id" name="id_pedagang"
-                                value="{{ $s->pedagang_id }}" required>
+                            @foreach ($saran as $s)
+                            <input type="hidden" class="form-control" id="id" aria-describedby="id" name="saran_id"
+                                value="{{ $s->id_saran }}" required>
+                            @endforeach
                             <label for="Feedback">Feedback</label>
                             <input type="text" style="width: 100%" id="isi_feedback" name="isi_feedback" required>
                         </div>

@@ -22,19 +22,16 @@ class SaranAdminController extends Controller
             ->join('data_pkl', 'saran.pedagang_id', '=', 'data_pkl.id')
             ->join('kat_aduan', 'saran.kategori_id', '=', 'kat_aduan.id')
             ->get();
+        // $feedback = DB::table('feedback_saran_pedagang')
+        //     ->join('feedback_saran_pedagang', 'feedback_saran_pedagang.saran_id', '=', 'saran.id_saran')
+        //     ->get();
         return view('admin.saran', ['saran' => $saran]);
-
-        $feedback = DB::table('feedback_saran_pedagang')
-            ->join('feedback_saran_pedagang', 'feedback_saran_pedagang.id_saran', '=', 'saran.id_saran');
-
-        return view('admin.saran', ['saran' => $saran, 'feedback' => $feedback]);
     }
 
     public function simpan(Request $request)
     {
         $validateData = $request->validate([
             'saran_id' => 'required',
-            'id_pedagang' => 'required',
             'isi_feedback' => 'required',
         ]);
         Feedback::create($validateData);
