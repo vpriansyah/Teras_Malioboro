@@ -22,10 +22,7 @@
                         <div class="iq-blog-box">
                             <div class="iq-blog-detail">
                                 <div class="blog-title">
-                                    <h5 class="iq-tw-6 iq-mb-10"></h5>
-                                </div>
-                                <div class="blog-content">
-                                    <p><b>{{ $s->nama_lengkap }}</b></p>
+                                    <h5 class="iq-tw-6 iq-mb-10"><b>{{ $s->nama_lengkap }}</b></h5>
                                 </div>
                                 <div class="iq-blog-meta">
                                     <div class="blog-title">
@@ -42,21 +39,28 @@
                                 <div class="iq-blog-meta">
                                     <div class="blog-title">
                                         <h7>Status</h7>
-                                        @if ( $s->status == 1)
-                                        <span class="badge text-bg-primary">Diajukan</span>
-                                        @elseif ( $s->status == 0)
-                                        <span class="badge text-bg-danger">Ditolak</span>
-                                        @elseif ( $s->status == 2)
-                                        <span class="badge text-bg-info">Diproses</span>
-                                        @elseif ( $s->status == 3)
-                                        <span class="badge text-bg-success">Ditolak</span>
+                                        @if ( $s->status == 1 )
+                                        <button type="button" class="btn btn-primary btn-sm">Diajukan</button>
+                                        @elseif ( $s->status == 0 )
+                                        <button type="button" class="btn btn-danger btn-sm">Ditolak</button>
+                                        @elseif ( $s->status == 2 )
+                                        <button type="button" class="btn btn-info btn-sm">Diproses</button>
+                                        @else
+                                        <button type="button" class="btn btn-success btn-sm">Selesai</button>
                                         @endif
                                     </div>
                                 </div>
+                                @if ( $s->status == 2 )
                                 <div class="">
                                     <center><button class="btn btn-success" data-toggle="modal"
                                             data-target="#feedback">Feedback</button></center>
                                 </div>
+                                @elseif ( $s->status != 2 )
+                                <div class="">
+                                    <center><button class="btn btn-secondary" data-toggle="modal"
+                                            data-target="#feedback" disabled>Feedback</button></center>
+                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
