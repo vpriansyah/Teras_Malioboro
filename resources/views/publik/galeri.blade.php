@@ -102,21 +102,20 @@
     </div>
     <!---->
 
-    <!--card galeri-->
-    <div class="container">
-      <div class="row justify-content-center">
-        
-      <!--echo filters-->
-      @php
-      $margin = "margin-bottom:0rem"
-      @endphp
-        
-      @if(isset($fil_jenis))
-         <p style="'{{$margin}}'">Kategori = {{$fil_jenis}}<p>
-      @endif
+    <!--echo filters-->
+    <div class="row" style="width:80%; padding-left:10%; padding-bottom:2%">
+      
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" style="padding-right:1%; font-weight:bold; width:auto">Filter:</div>
 
-      @if(isset($fil_kata))
-        <p style=" {{$margin}}">Kata kunci = {{$fil_kata}}<p>
+      @if(isset($fil_jenis))
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
+          <p><span style="font-weight:bold">Kategori : </span>{{$fil_jenis}}</p>
+        </div>
+        
+          @else
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto;">
+            Semua Kategori Dagangan
+        </div>
       @endif
 
       @php
@@ -130,59 +129,75 @@
           }
       @endphp
       @if(isset($fil_loc_t))
-          <p style="{{$margin}}">Lokasi = {{$fil_loc_t}}, {{$gedung}}, {{$lantai}}<p>
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
+          <p><span style="font-weight:bold">Lokasi = </span>{{$fil_loc_t}}, {{$gedung}}, {{$lantai}}</p>
+        </div>
+        @else
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
+          Semua Lokasi
+        </div>
       @endif
-      <!---->
 
+      @if(isset($fil_kata))
+      <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
+        <p><span style="font-weight:bold">Kata kunci = </span>{{$fil_kata}}</p>
+      </div>
+      @endif 
+    </div>
+    <!---->
+
+    <!--card galeri-->
+    <div class="container">
+      <div class="row justify-content-center">              
         @if(count($id_data) > 0)
-        @foreach ($data_pkl as $data)
-        <div class="card col-lg-3 col-md-4 col-sm-6 col-6 iq-mtb-10 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
-          <a href="{{ url('publik/galeri-data') }}/{{ $data->id }}" style="text-decoration: none">
-            <div class="iq-blog text-left iq-pt-30 d-flex  ">
-              <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
-                @php
-                $foto = $data->foto_lapak;
-                if ($data->foto_lapak == null) $foto = 'notfound.jpg';
-                @endphp
-                <div class="card m-auto justify-content-center bg-transparent border-0" 
-                style="
-                                background: url({!! asset('images/Publik_Galeri/' . $foto . '') !!});
-                                background-size:cover;
-                                background-position: center;
-                                padding-top:30%; 
-                                width:auto; 
-                                min-width:100%;
-                                max-width: 150%; 
-                                min-height:100%;
-                                max-height:150%;
-                                max-width: 160px;
-                                min-width: 105px;
-                                max-height:150px;
-                                min-height: 100px; 
+          @foreach ($data_pkl as $data)
+          <div class="card col-lg-3 col-md-4 col-sm-6 col-6 iq-mtb-10 d-flex bg-transparent border-0"style=" padding-left:2%; padding-right:2%; min-width:25%; max-width: 50%; max-height:100%">
+            <a href="{{ url('publik/galeri-data') }}/{{ $data->id }}" style="text-decoration: none">
+              <div class="iq-blog text-left iq-pt-30 d-flex  ">
+                <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
+                  @php
+                  $foto = $data->foto_lapak;
+                  if ($data->foto_lapak == null) $foto = 'notfound.jpg';
+                  @endphp
+                  <div class="card m-auto justify-content-center bg-transparent border-0" 
+                  style="
+                                  background: url({!! asset('images/Publik_Galeri/' . $foto . '') !!});
+                                  background-size:cover;
+                                  background-position: center;
+                                  padding-top:30%; 
+                                  width:auto; 
+                                  min-width:100%;
+                                  max-width: 150%; 
+                                  min-height:100%;
+                                  max-height:150%;
+                                  max-width: 160px;
+                                  min-width: 105px;
+                                  max-height:150px;
+                                  min-height: 100px; 
 
-                              ">
-                </div>
-                <div class="card m-auto justify-content-center bg-transparent border-0"> 
-                <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; margin-left:10%; margin-right:10%;">{{$data->nama_lengkap}}</h5> 
-                
-                <p class='text-center m-auto' style="font-size: 75%;">{{$data->dagangan}}
-                <p style="padding-left: 16%; padding-right:3%; font-size: 75%;">{{$data->operasional}}<br>
-                         Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+                                ">
+                  </div>
+                  <div class="card m-auto justify-content-center bg-transparent border-0"> 
+                  <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; margin-left:10%; margin-right:10%;">{{$data->nama_lengkap}}</h5> 
+                  
+                  <p class='text-center m-auto' style="font-size: 75%;">{{$data->dagangan}}
+                  <p style="padding-left: 16%; padding-right:3%; font-size: 75%;">{{$data->operasional}}<br>
+                          Jam Buka: {{$data->operasional_jam_buka}}.00 - {{$data->operasional_jam_tutup}}.00</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </div>
-        
-        @endforeach
-        <!---->
+            </a>
+          </div>  
+          @endforeach
+    
         @else 
-        <p class="text-center">Data tidak ditemukan</p>
-        <!--<div class="iq-pt-20">
-          <button type="button" class="btn btn-danger" onclick="history.back();">Kembali</button>
-        </div>-->
+          <p class="text-center" style="padding-top: 5%; font-weight: bold; padding-bottom:5%">Data tidak ditemukan</p>
+          <!--<div class="iq-pt-20">
+            <button type="button" class="btn btn-danger" onclick="history.back();">Kembali</button>
+          </div>-->
         @endif
       </div>
+    <!---->
       <div class="row mx-auto justify-content-center">
         {{ $data_pkl->links() }}
       </div>

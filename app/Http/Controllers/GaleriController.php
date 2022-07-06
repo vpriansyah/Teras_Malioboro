@@ -16,6 +16,7 @@ class GaleriController extends Controller
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
         $id_data = $filter->pluck("id");
+        
         $fil_jenis= DB::table('kat_dagangan')->where("id","=",(request("kat_dagangan")))->pluck("nama")->first();
         $fil_kata = (request("search"));
         $fil_loc_t = DB::table('lokasi_teras')->where("id","=",(request("lokasi_teras")))->pluck("nama")->first();
