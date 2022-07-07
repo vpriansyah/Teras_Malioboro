@@ -105,17 +105,17 @@
     <!--echo filters-->
     <div class="row" style="width:80%; padding-left:10%; padding-bottom:2%">
       
-      <div class="col-lg-3 col-md-4 col-sm-6 col-6" style="padding-right:1%; font-weight:bold; width:auto">Filter:</div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6" style="padding-right:1%; font-weight:bold; width:auto">Filter :</div>
 
       @if(isset($fil_jenis))
-        <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
-          <p><span style="font-weight:bold">Kategori : </span>{{$fil_jenis}}</p>
-        </div>
+        <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto;">
+          Kategori : {{$fil_jenis}}
+        </div>&ensp;
         
           @else
         <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto;">
             Semua Kategori Dagangan
-        </div>
+        </div>&ensp;
       @endif
 
       @php
@@ -130,18 +130,18 @@
       @endphp
       @if(isset($fil_loc_t))
         <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
-          <p><span style="font-weight:bold">Lokasi = </span>{{$fil_loc_t}}, {{$gedung}}, {{$lantai}}</p>
-        </div>
+          Lokasi : {{$fil_loc_t}}, {{$gedung}}, {{$lantai}}
+        </div>&ensp;
         @else
         <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
           Semua Lokasi
-        </div>
+        </div>&ensp;
       @endif
 
       @if(isset($fil_kata))
       <div class="card col-lg-3 col-md-4 col-sm-6 col-6" style="width:auto">
-        <p><span style="font-weight:bold">Kata kunci = </span>{{$fil_kata}}</p>
-      </div>
+        Kata kunci : {{$fil_kata}}
+      </div>&ensp;
       @endif 
     </div>
     <!---->

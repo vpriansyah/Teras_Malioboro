@@ -12,7 +12,7 @@ class GaleriController extends Controller
     public function index()
     {
         $filter = Galeri::filter(request(['search', 'kat_dagangan', 'lokasi_teras', 'lokasi_gedung', 'lokasi_lantai']));
-        $data_pkl = $filter->orderBy('nama_lengkap')->paginate(12);
+        $data_pkl = $filter->orderBy('nama_lengkap')->paginate(12)->withQueryString();
         $kat_brg = DB::table('kat_dagangan')->get();
         $lokasi_teras = DB::table('lokasi_teras')->get();
         $id_data = $filter->pluck("id");
