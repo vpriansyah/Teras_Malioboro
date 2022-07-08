@@ -143,6 +143,13 @@
         Kata kunci : {{$fil_kata}}
       </div>&ensp;
       @endif 
+
+      @if(isset($fil_jenis)||($fil_kata)||($fil_loc_t))      
+      <div class="card col-lg-3 col-md-4 col-sm-6 col-6 bg-danger border-danger" style="width:auto;">
+        <a href="{{url('publik/galeri')}}" style="text-decoration: none; color:white">Hapus filter<a>
+      </div>&ensp;
+      @endif
+
     </div>
     <!---->
 
