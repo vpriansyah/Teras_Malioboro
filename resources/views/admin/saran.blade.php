@@ -36,11 +36,7 @@
                                     </div>
                                     <p class="iq-tw-6 iq-mb-10">{{ $s->saran_aduan }}</p>
                                 </div>
-                                <div class="iq-blog-meta">
-                                    <div class="blog-title">
-                                        <h7>Status</h7>
-                                    </div>
-                                </div>
+                                
                                 <div class="">
                                     <center><button class="btn btn-success" data-toggle="modal"
                                             data-target="#feedback{{ $s->id_saran }}">Feedback</button></center>

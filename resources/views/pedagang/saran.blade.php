@@ -77,55 +77,63 @@
                             <button type="submit" class="btn btn-success">Kirim</button>
                         </form>
                     </div>
+                </div>
+            </div>
+</div>
+                </section>
                     <!-- Form End-->
                     <br>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false"
-                                data-dots="true" data-items="3" data-items-laptop="3" data-items-tab="2"
-                                data-items-mobile="1" data-items-mobile-sm="1" data-margin="30">
-                                @foreach ($aduan as $a)
-                                <div class="item">
-                                    <div class="iq-blog-box">
-                                        <div class="iq-blog-detail">
-                                            <div class="blog-title">
-                                                <h5 class="iq-tw-6 iq-mb-10"></h5>
-                                            </div>
-                                            <div class="blog-title">
-                                                <div class="blog-content">
-                                                    <p><b>{{ $a->nama_lengkap }}</b></p>
-                                                </div>
-                                                <div class="iq-blog-meta">
-                                                    <div class="blog-title">
-                                                        <h7 class="iq-tw-6 iq-mb-10">Kategori</h7>
-                                                    </div>
-                                                    <p>{{ $a->jenis }}</p>
-                                                </div>
-                                                <div class="iq-blog-meta">
-                                                    <div class="blog-title">
-                                                        <h7 class="iq-tw-6 iq-mb-10">Saran</h7>
-                                                    </div>
-                                                    <p>{{ $a->saran_aduan }}</p>
-                                                </div>
-                                                @endforeach
-                                                @foreach ($feedback as $f)
-                                                <div class="iq-blog-meta">
-                                                    <div class="blog-title">
-                                                        <h7 class="iq-tw-6 iq-mb-10">Feedback Admin</h7>
-                                                    </div>
-                                                    <p>{{ $f->isi_feedback }}</p>
-                                                </div>
-                                                @endforeach
-                                            </div>
-                                        </div>
+                    
+                    <section id="pilihan" class="overview-block-ptb grey-bg iq-blog">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="heading-title">
+                                        <h2 class="">Feedback Admin</h2>
+                                        <hr class="mx-auto" style="width: 20%">
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true"
+                                        data-items="2" data-items-laptop="2" data-items-tab="2" data-items-mobile="1"
+                                        data-items-mobile-sm="1" data-margin="30">
+                                        @foreach ($aduan as $a)
+                                        <div class="item">
+                                            <div class="iq-blog-box">
+                                                <div class="iq-blog-detail">
+                                                    <div class="blog-title">
+                                                        <h5 class="iq-tw-6 iq-mb-10"><b>{{ $a->nama_lengkap }}</b></h5>
+                                                    </div>
+                                                    <div class="iq-blog-meta">
+                                                        <div class="blog-title">
+                                                            <h7 class="iq-tw-6 iq-mb-10">Kartegori</h7>
+                                                        </div>
+                                                        <p>{{ $a->jenis }}</p>
+                                                    </div>
+                                                    <div class="iq-blog-meta">
+                                                        <div class="blog-title">
+                                                            <h7>Saran dan Aduan</h7>
+                                                        </div>
+                                                        <p class="iq-tw-6 iq-mb-10">{{ $a->saran_aduan }}</p>
+                                                    </div>
+                                                    <div class="iq-blog-meta">
+                                                        <div class="blog-title">
+                                                            <h7 class="iq-tw-6 iq-mb-10">Feedback Admin</h7>
+                                                        </div>
+                                                        <p>{{ $a->isi_feedback }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                           
                         </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- Row End -->
-</div>
+                    </section>
+
+        
 @endsection
