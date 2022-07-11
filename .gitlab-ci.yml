@@ -15,6 +15,6 @@ main:
     - lftp -c "set ftp:ssl-allow no; open -u $USER7,$PASS7 $HOST7; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/ --exclude .env "
     - lftp -c "set ftp:ssl-allow no; open -u $USER8,$PASS8 $HOST8; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/ --exclude .env "
     - lftp -c "set ftp:ssl-allow no; open -u $USER9,$PASS9 $HOST9; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/ --exclude .env "
-    - lftp -c "set ftp:ssl-allow no; open -u $USER10,$PASS10 $HOST10; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/ --exclude .env "
+    - lftp -c "set ftp:ssl-allow no; open -u $USER10,$PASS10 $HOST10; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/ --exclude .env --exclude assets/"
   only:
     - main
