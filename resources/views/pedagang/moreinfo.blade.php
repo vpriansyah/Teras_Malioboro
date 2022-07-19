@@ -32,6 +32,7 @@
         <hr>
         <p class="fw-bolder">Teras Malioboro - 
         <a class="fw-normal">{{$info->isi}}</a>
+        <br>
         </p>
       </article>
     </div>
@@ -43,23 +44,14 @@
           <p class="mb-0">Info penting bertujuan untuk memberika informasi seputar teras malioboro kepada pedagang secara khusus.</p>
         </div>
 
-        <!-- <div class="p-4">
-          <h4 class="fst-italic">Info penting lainnya</h4>
-          <ol class="list-unstyled mb-0">
-            <li><a href="#">March 2021</a></li>
-            <li><a href="#">February 2021</a></li>
-            <li><a href="#">January 2021</a></li>
-            <li><a href="#">December 2020</a></li>
-            <li><a href="#">November 2020</a></li>
-            <li><a href="#">October 2020</a></li>
-            <li><a href="#">September 2020</a></li>
-            <li><a href="#">August 2020</a></li>
-            <li><a href="#">July 2020</a></li>
-            <li><a href="#">June 2020</a></li>
-            <li><a href="#">May 2020</a></li>
-            <li><a href="#">April 2020</a></li>
-          </ol>
-        </div> -->
+        <button onclick="download()" class="btn btn-success ml-3">Download Info</button>
+                        
+        <script>
+            function download(){
+            window.print();
+            }
+        </script>
+       
       </div>
     </div>
   </div>
