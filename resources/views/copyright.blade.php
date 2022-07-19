@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row justify-content-center iq-ptb-10">
+    <div class="row justify-content-center iq-pt-20 iq-pb-10">
         <div class="col-auto">
             <img src="{{ asset('images/UNS.png') }}" alt="UNS">
         </div>
@@ -23,7 +23,7 @@
                 Copyright @ <script>document.write(new Date().getFullYear())</script>
                 <a href="#" data-toggle="modal" data-target="#tim1Modal">Indomitable Team</a>
                 & 
-                <a href="#" data-toggle="modal" data-target="#tim2Modal">Another Team</a> |
+                <a href="#" data-toggle="modal" data-target="#tim2Modal">Kelompok 4</a> |
                 Powered by D3 Teknik Informatika - Universitas Sebelas Maret (UNS)
             </div>
         </div>
