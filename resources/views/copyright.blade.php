@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row justify-content-center iq-pt-20 iq-pb-10">
+    {{-- <div class="row justify-content-center iq-pt-20 iq-pb-10">
         <div class="col-auto">
             <img src="{{ asset('images/UNS.png') }}" alt="UNS">
         </div>
@@ -9,7 +9,7 @@
         <div class="col-auto">
             <img src="{{ asset('images/SIMS.png') }}" alt="SIMS">
         </div>
-    </div>
+    </div> --}}
 
     <style>
         .iq-copyright a:focus { color: #e0c103; text-decoration-line: underline !important;}
@@ -18,18 +18,16 @@
         .cv { color: rgba(40, 167, 69, 0.7); text-decoration: none !important; }
     </style>
     <div class="row justify-content-center">
-        <div class="mx-auto iq-pb-10">
+        <div class="mx-auto iq-ptb-10">
             <div class="iq-copyright">
                 Copyright @ <script>document.write(new Date().getFullYear())</script>
-                <a href="#" data-toggle="modal" data-target="#tim1Modal">Indomitable Team</a>
-                & 
-                <a href="#" data-toggle="modal" data-target="#tim2Modal">Kelompok 4</a> |
-                Powered by D3 Teknik Informatika - Universitas Sebelas Maret (UNS)
+                PT. SIMS | 
+                Supported by <a href="#" target=”_blank”>D3 Teknik Informatika - Universitas Sebelas Maret</a>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="tim1Modal" tabindex="-1" aria-labelledby="tim1ModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="tim1Modal" tabindex="-1" aria-labelledby="tim1ModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -71,5 +69,5 @@
         </div>
         </div>
     </div>
-    </div> 
+    </div>  --}}
 </div>

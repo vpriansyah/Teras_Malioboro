@@ -233,7 +233,7 @@
             </center> --}}
             </br>
             <div class="row justify-content-center">
-                <a href="https://cctv.jogjakota.go.id/" type="button" class="btn btn-success btn-lg iq-tw-6">
+                <a href="https://cctv.jogjakota.go.id/" target=”_blank” type="button" class="btn btn-success btn-lg iq-tw-6">
                     Lihat CCTV</a>
             </div>
         </div>

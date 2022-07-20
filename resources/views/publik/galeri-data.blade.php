@@ -70,13 +70,13 @@
                                                     @endphp
                                                     @if ($data_pkl->no_hp == null)
                                                         <a href="https://api.whatsapp.com/send?phone=62{{ $no_hp }}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera."
-                                                            type="button" class="btn btn-light btn disabled"
+                                                            type="button" class="btn btn-light btn disabled" target=”_blank”
                                                             aria-disabled="true"
                                                             style="background-color: grey; border-color: grey"><i
                                                                 class="fab fa-whatsapp" style="color: #FFFFFF"></i></a>
                                                     @else
                                                         <a href="https://api.whatsapp.com/send?phone=62{{ $no_hp }}&text=Saya%20tertarik%20untuk%20membeli%20produk%20anda%20segera."
-                                                            type="button" class="btn btn-success"><i
+                                                            type="button" class="btn btn-success" target=”_blank”><i
                                                                 class="fab fa-whatsapp"></i></a>
                                                     @endif
                                                 </td>
@@ -105,7 +105,7 @@
                                                         </td>
                                                         <td align="right">
                                                             <a href="https://www.instagram.com/{{ $ig }}/"
-                                                                type="button" class="btn btn-light"
+                                                                type="button" class="btn btn-light" target=”_blank”
                                                                 style="background-color: #E1306C; border-color: #E1306C ;color: #FFFFFF">
                                                                 <i class="fab fa-instagram" style="color: #FFFFFF;"></i></a>
                                                         </td>
@@ -126,7 +126,7 @@
                                                         </td>
                                                         <td align="right">
                                                             <a href="https://shopee.co.id/{{ $shopee }}"
-                                                                type="button" class="btn btn-light "
+                                                                type="button" class="btn btn-light " target=”_blank”
                                                                 style="background-color: #FF6600 ; border-color: #FF6600  ;color: #FFFFFF">
                                                                 <i class="fa fa-shopping-cart"
                                                                     style="color: #FFFFFF;"></i></a>
@@ -148,7 +148,7 @@
                                                         </td>
                                                         <td align="right">
                                                             <a href="{{ $fb_link }}" type="button"
-                                                                class="btn btn-light "
+                                                                class="btn btn-light " target=”_blank”
                                                                 style="background-color: #29487d ; border-color: #29487d  ;color: #FFFFFF">
                                                                 <i class="fa fa-facebook-official"
                                                                     style="color: #FFFFFF;"></i></a>
@@ -170,7 +170,7 @@
                                                         </td>
                                                         <td align="right">
                                                             <a href="https://www.tokopedia.com/{{ $tokped_link }}"
-                                                                type="button" class="btn btn-light "
+                                                                type="button" class="btn btn-light " target=”_blank”
                                                                 style="background-color: #32cd32 ; border-color: #32cd32  ;color: #FFFFFF">
                                                                 <i class="fa fa-shopping-cart"
                                                                     style="color: #FFFFFF;"></i></a>
