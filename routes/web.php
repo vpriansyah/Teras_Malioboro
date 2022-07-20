@@ -109,6 +109,9 @@ Route::get('pedagang/moreinfo/{id}', 'App\Http\Controllers\InfoPedagangControlle
 
 // Route::get('/tindaklanjut/search', [TindakLanjutController::class, 'search']);
 
+Route::get('/developer', function () {
+    return view('/developer');
+});
 
 //Publik
 Route::get('/', [PublikController::class, 'index']);

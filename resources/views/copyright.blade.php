@@ -1,16 +1,4 @@
 <div class="container">
-    {{-- <div class="row justify-content-center iq-pt-20 iq-pb-10">
-        <div class="col-auto">
-            <img src="{{ asset('images/UNS.png') }}" alt="UNS">
-        </div>
-        <div class="col-auto">
-            <img src="{{ asset('images/D3TI.png') }}" alt="D3TI">
-        </div>
-        <div class="col-auto">
-            <img src="{{ asset('images/SIMS.png') }}" alt="SIMS">
-        </div>
-    </div> --}}
-
     <style>
         .iq-copyright a:focus { color: #e0c103; text-decoration-line: underline !important;}
         .iq-copyright a:hover { color: #e0c103; text-decoration-line: underline !important;}
@@ -22,7 +10,7 @@
             <div class="iq-copyright">
                 Copyright @ <script>document.write(new Date().getFullYear())</script>
                 PT. SIMS | 
-                Supported by <a href="#" target=”_blank”>D3 Teknik Informatika - Universitas Sebelas Maret</a>
+                Supported by <a href="developer" target="_blank">D3 Teknik Informatika - Universitas Sebelas Maret</a>
             </div>
         </div>
     </div>
