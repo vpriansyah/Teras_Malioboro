@@ -233,7 +233,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 iq-mtb-15">
                         <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                            <a href="/admin/faq">
+                            <a href="admin/faq">
                                 <div>
                                     <i class="ion-ios-albums-outline iq-mb-10"></i>
                                     <h5 class="iq-tw-6">FAQ</h5>
