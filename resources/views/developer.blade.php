@@ -242,7 +242,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/something.png') !!}" class="d-flex" alt="Devanza" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/devan.jpg') !!}" class="d-flex" alt="Devanza" style="object-fit: cover; height: 100%;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -254,17 +254,17 @@
                                             <tr>
                                                 <td><h7>Email</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> vpriansyah@student.uns.ac.id</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Nomor HP</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> 081217171661</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Alamat</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> Pesantren, Kota Kediri, Jawa Timur</h7></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3"><h7><a href="#" target="_blank">Lebih Lanjut ></a></h7></td>
@@ -277,7 +277,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/something.png') !!}" class="d-flex" alt="Gustynov" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/severo.jpg') !!}" class="d-flex" alt="Gustynov" style="object-fit: cover; height: 100%;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -289,17 +289,17 @@
                                             <tr>
                                                 <td><h7>Email</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> Adhysevero13@student.uns.ac.id</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Nomor HP</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> 085726900666</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Alamat</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> Colomadu, Kab. Karanganyar, Jawa Tengah</h7></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3"><h7><a href="#" target="_blank">Lebih Lanjut ></a></h7></td>
@@ -312,7 +312,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/something.png') !!}" class="d-flex" alt="Harjuno" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/Arjun.jpg') !!}" class="d-flex" alt="Harjuno" style="object-fit: cover; height: 100%;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -324,17 +324,17 @@
                                             <tr>
                                                 <td><h7>Email</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> harjunosetyawan@student.uns.ac.id</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Nomor HP</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> 08226187928</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Alamat</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> Mojosongo, Kota Surakarta, Jawa Tengah</h7></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3"><h7><a href="#" target="_blank">Lebih Lanjut ></a></h7></td>
@@ -347,7 +347,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/something.png') !!}" class="d-flex" alt="Hemas" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/hemas.jpg') !!}" class="d-flex" alt="Hemas" style="object-fit: cover; height: 100%;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -359,17 +359,17 @@
                                             <tr>
                                                 <td><h7>Email</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> Hemas@gmail.com</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Nomor HP</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> 081326622854</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Alamat</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> Kab. Klaten, Jawa Tengah</h7></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3"><h7><a href="#" target="_blank">Lebih Lanjut ></a></h7></td>
@@ -382,7 +382,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/something.png') !!}" class="d-flex" alt="Ismaturrofiah" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/isma.jpg') !!}" class="d-flex" alt="Ismaturrofiah" style="object-fit: cover; height: 100%;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -394,17 +394,17 @@
                                             <tr>
                                                 <td><h7>Email</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7>Ismaturrofiah@student.uns.ac.id</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Nomor HP</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> 081392761700</h7></td>
                                             </tr>
                                             <tr>
                                                 <td><h7>Alamat</h7></td>
                                                 <td><h7> : </h7></td>
-                                                <td><h7></h7></td>
+                                                <td><h7> Kab. Temanggung, Jawa Tengah</h7></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="3"><h7><a href="#" target="_blank">Lebih Lanjut ></a></h7></td>
