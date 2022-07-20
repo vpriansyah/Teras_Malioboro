@@ -117,10 +117,9 @@ class ProfilController extends Controller
             'paguyuban_id' => 'required',
             'nik' => 'required',
             'no_kk' => 'required',
-            'namabarang' => 'required'
+            // 'namabarang' => 'required'
 
         ]);
-
         $profil = Profil::where('id', $request->id);
         $profil->update([
 
