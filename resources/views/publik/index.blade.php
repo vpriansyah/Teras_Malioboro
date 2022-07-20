@@ -347,16 +347,7 @@
                 </div>
             </div>
             <hr>
-            <div class="row iq-mt-10">
-                <div class="mx-auto">
-                    <div class="iq-copyright ">
-                        Copyright @
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script> Kelompok 2 All Rights Reserved
-                    </div>
-                </div>
-            </div>
+            @include('copyright')
         </div>
     </footer>
     <!-- Footer END -->

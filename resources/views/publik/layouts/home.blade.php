@@ -20,7 +20,7 @@
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{!! asset('css/magnific-popup/magnific-popup.css')!!}" />
     <!-- media element player -->
-    <link href="css/mediaelementplayer.min.css" rel="stylesheet" type="text/css')!!}" />
+    <link href="{!! asset('css/mediaelementplayer.min.css')!!}" rel="stylesheet" type="text/css" />
     <!-- Animate -->
     <link rel="stylesheet" href="{!! asset('css/animate.css')!!}" />
     <!-- Ionicons -->

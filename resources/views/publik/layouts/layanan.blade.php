@@ -22,7 +22,7 @@
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{!! asset('css/magnific-popup/magnific-popup.css') !!}" />
     <!-- media element player -->
-    <link href="css/mediaelementplayer.min.css" rel="stylesheet" type="text/css')!!}" />
+    <link href="{!! asset('css/mediaelementplayer.min.css')!!}" rel="stylesheet" type="text/css" />
     <!-- Animate -->
     <link rel="stylesheet" href="{!! asset('css/animate.css') !!}" />
     <!-- Ionicons -->
@@ -59,18 +59,7 @@
 
     <!-- Footer -->
     <footer class="iq-footer-box">
-        <div class="container">
-            <div class="row iq-mtb-10">
-                <div class="mx-auto">
-                    <div class="iq-copyright ">
-                        Copyright @
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script> Kelompok 2 All Rights Reserved
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('copyright')
     </footer>
     <!-- Footer END -->
 
