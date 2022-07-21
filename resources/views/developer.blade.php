@@ -232,7 +232,7 @@
                 </div>
             </div>
         </section>
-        <section class="iq-feature1 overview-block-ptb-25 white-bg">
+        <section class="iq-feature1 overview-block-ptb-25" style="background-color: white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
@@ -242,7 +242,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/devan.jpg') !!}" class="d-flex" alt="Devanza" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/devan.jpeg') !!}" class="d-flex" alt="Devanza" style="object-fit: cover; height: 100%; background-color: #f8f9fa;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -277,7 +277,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/severo.jpg') !!}" class="d-flex" alt="Gustynov" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/severo.jpeg') !!}" class="d-flex" alt="Gustynov" style="object-fit: cover; height: 100%; background-color: #f8f9fa;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -312,7 +312,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/Arjun.jpg') !!}" class="d-flex" alt="Harjuno" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/Arjun.jpg') !!}" class="d-flex" alt="Harjuno" style="object-fit: cover; height: 100%; background-color: #f8f9fa;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -347,7 +347,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/hemas.jpg') !!}" class="d-flex" alt="Hemas" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/hemas.jpg') !!}" class="d-flex" alt="Hemas" style="object-fit: cover; height: 100%; background-color: #f8f9fa;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
@@ -382,7 +382,7 @@
                         <div class="row iq-pb-10">
                             <div class="col-lg-2 col-md-2 col-sm-2">
                                 <div class="card border-0 justify-content-end" style="height: 100%;">
-                                    <img src="{!! asset('images/developer/pedagang/isma.jpg') !!}" class="d-flex" alt="Ismaturrofiah" style="object-fit: cover; height: 100%;">
+                                    <img src="{!! asset('images/developer/pedagang/isma.jpeg') !!}" class="d-flex" alt="Ismaturrofiah" style="object-fit: cover; height: 100%; background-color: #f8f9fa;">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10">
